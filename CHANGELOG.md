@@ -123,11 +123,7 @@ After confirming clean, create the freeze record explicitly:
 .\freeze_01.ps1
 ```
 
-Review the generated record:
-
-```shell
-Get-Content contracts/FREEZE_01_COMMITMENT_EVALUATOR.md
-```
+Review the generated record at `contracts/FREEZE_01_COMMITMENT_EVALUATOR.md`
 
 Commit the freeze record:
 

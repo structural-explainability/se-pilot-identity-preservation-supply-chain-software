@@ -15,7 +15,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$FreezeFile = "contracts/FREEZE_FIRST.md"
+$FreezeFile = "contracts/FREEZE_01_COMMITMENT_EVALUATOR.md"
 
 $FrozenFiles = @(
     "contracts/schema.md"
