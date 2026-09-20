@@ -1,0 +1,99 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "components": [
+    {
+      "name": "A",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "purl": "pkg:pypi/requests@2.31.0"
+    },
+    {
+      "name": "B",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "example:source-purl",
+          "value": "pkg:deb/debian/tzdata@2025b-0"
+        }
+      ]
+    },
+    {
+      "name": "C",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ]
+    },
+    {
+      "name": "D",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "purl": "pkg:npm/left-pad@1.2.0"
+    },
+    {
+      "name": "E",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+        }
+      ],
+      "purl": "pkg:gem/rails@7.0"
+    },
+    {
+      "name": "F",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      ]
+    },
+    {
+      "name": "G",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+        }
+      ],
+      "purl": "pkg:pypi/example@1.0"
+    },
+    {
+      "name": "H1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+        }
+      ],
+      "purl": "pkg:golang/example.org/h@1.0.0"
+    },
+    {
+      "name": "H2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+        }
+      ],
+      "purl": "pkg:golang/example.org/h@1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# contracts/sources.toml
+# Provenance records.
+# Authoritative sources grounding normative interpretation claims.
+#
+# Historical examples known during development may motivate the research
+# question and engineering validation, but they are not normative grounds for
+# the commitments declared here.
+#
+# Where the authoritative specifications do not prescribe cross-format
+# evaluation behavior, the study protocol defines that behavior explicitly
+# rather than attributing it to these sources.
+
+[source.purl_spec]
+name = "Package URL (PURL) specification"
+what = "Defines PURL syntax and canonicalization behavior used by the same_when rule."
+ref = "https://github.com/package-url/purl-spec"
+note = "Canonicalization is delegated to packageurl-python, a Python implementation maintained by the Package-URL project, rather than reimplemented locally."
+
+[source.spdx_2_3]
+name = "SPDX 2.3 specification"
+what = "Defines Package ExternalRef records with category, type, and locator, with ExternalRef cardinality 0..*. The pilot interprets a PACKAGE-MANAGER external reference of type purl as the SPDX 2.3 canonical PURL slot. Grounds canonical_slot[spdx-2.3], representable_in, and the need for an explicit pilot cardinality rule."
+ref = "https://spdx.github.io/spdx-spec/v2.3/"
+
+[source.spdx_3_0]
+name = "SPDX 3.0.1 specification"
+what = "Software.Package defines packageUrl as a Package URL property with cardinality 0..1. The pilot uses package.packageUrl as the SPDX 3.0.1 canonical PURL slot. Grounds canonical_slot[spdx-3.0], representable_in, and relevant format cardinality."
+ref = "https://spdx.github.io/spdx-spec/v3.0.1/model/Software/Properties/packageUrl/"
+
+[source.cyclonedx]
+name = "CycloneDX 1.6 specification"
+what = "Defines component.purl as a single string field containing the component Package URL. The pilot uses component.purl as the CycloneDX canonical PURL slot. Generic component properties are not treated as the canonical PURL slot. Grounds canonical_slot[cyclonedx], noncanonical_slots[cyclonedx], representable_in, and relevant format cardinality."
+ref = "https://cyclonedx.org/docs/1.6/json/#components_items_purl"
+
+[source.cisa_crosswalk]
+name = "CISA, Framing Software Component Transparency (3rd ed., 2024)"
+what = "Provides supporting SBOM interoperability context and identifies PURL as an example of a software-component unique identifier. It is contextual evidence only; format-specific PURL slots and preservation obligations are grounded in the PURL, SPDX, and CycloneDX specifications."
+ref = "https://www.cisa.gov/resources-tools/resources/framing-software-component-transparency-2024"
+
+[source.anchor_hash]
+name = "Content-hash fields used by the pilot anchoring protocol"
+what = "SPDX packages and CycloneDX components can carry cryptographic hashes. The pilot uses shared declared content hashes to associate source and target components across a transformation. The cross-format anchoring rule, ambiguity handling, and hash-selection behavior are study-protocol choices rather than requirements imposed by either format specification."
+ref = "https://spdx.github.io/spdx-spec/v2.3/package-information/#710-package-checksum-field ; https://cyclonedx.org/docs/1.6/json/#components_items_hashes"
+note = "The pilot normalizes hash algorithm labels and hash-value casing before comparing declared content hashes across formats."

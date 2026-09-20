@@ -1,0 +1,63 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Declaration)
+# ============================================================
+
+schema = "se-manifest-schema"
+schema_version = "0.5.0"
+schema_url = "https://raw.githubusercontent.com/structural-explainability/se-manifest-schema/main/manifest-schema.toml"
+
+[meta]
+framework = "Structural Explainability"
+framework_url = "https://github.com/structural-explainability"
+purpose = "Declares this repository's role in the Structural Explainability ecosystem."
+
+[repository]
+organization = "structural-explainability"
+name = "se-pilot-identity-preservation-supply-chain-software"
+class = "pilot"
+kind = "identity-preservation"
+status = "active"
+since = "2026"
+summary = "Pilot study of source-grounded identity preservation across software supply-chain representations."
+
+[layer]
+space = "research"
+role = "pilot"
+
+[depends]
+required = []
+optional = []
+
+[provides]
+artifacts = [
+    "contracts",
+    "contracts/FREEZE_01_COMMITMENT_EVALUATOR.md",
+    "docs",
+    "known",
+    "src/preservation_test",
+    "tests",
+    "README.md",
+]
+
+[scope]
+includes = [
+    "typed representation-preservation commitments",
+    "source-grounded PURL preservation rules",
+    "SPDX and CycloneDX representation adapters",
+    "finite preservation-conformance evaluation",
+    "explicit refusal, underdetermination, and anchoring outcomes",
+    "synthetic engineering validation of commitment verdicts",
+]
+
+excludes = [
+    "general vulnerability-scanner correctness",
+    "directional VEX matching conformance in the initial commitment kind",
+    "claims of generalization from cases known during design or engineering validation",
+]
+
+[citation]
+cff = "CITATION.cff"
+preferred = "CITATION.cff"
+
+[traceability]
+identifier_map = "none"

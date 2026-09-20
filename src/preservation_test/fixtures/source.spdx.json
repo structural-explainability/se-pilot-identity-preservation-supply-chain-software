@@ -1,0 +1,140 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-A",
+      "name": "A",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/Requests@2.31.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-B",
+      "name": "B",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:deb/debian/tzdata@2025b-0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-C",
+      "name": "C",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache/log@2.20"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-D",
+      "name": "D",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/left-pad@1.3.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-E",
+      "name": "E",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:gem/rails@7.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-F",
+      "name": "F",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-G",
+      "name": "G",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/example@1.0"
+        },
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/example@1.0?repository_url=https://example.invalid"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-H",
+      "name": "H",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/example.org/h@1.0.0"
+        }
+      ]
+    }
+  ]
+}

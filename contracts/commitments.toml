@@ -1,0 +1,57 @@
+# Commitment instances.
+# Initial pilot: one implemented commitment kind, PURL only.
+#
+# The pilot was motivated in part by previously known preservation failures,
+# including the general failure shape reported in cyclonedx-cli #424.
+#
+# Normative commitment fields are grounded in the authoritative sources
+# declared in sources.toml. Known historical examples may inform the research
+# question and engineering validation, but they are not treated as held-out
+# evidence of generalization.
+
+[[commitment]]
+id = "purl_preservation_v1"
+kind = "representation_preservation"
+identifier = "purl"
+
+# same_when: two PURLs are the same iff they have the same canonical form
+# under the declared Package URL interpretation rule.
+# Grounds: source.purl_spec.
+same_when = "purl_canonical_equal"
+
+# representable_in: these format specifications provide a defined location
+# for representing a PURL. Loss is therefore eligible for preservation
+# evaluation rather than automatically treated as unsupported.
+# Grounds: source.spdx_2_3, source.spdx_3_0, source.cyclonedx.
+representable_in = ["spdx-2.3", "spdx-3.0", "cyclonedx"]
+
+# anchor: source and target components are associated by shared content hash.
+# Grounds: source.anchor_hash.
+anchor = "content_hash"
+
+# cardinality: the initial commitment evaluates exactly one canonical source
+# PURL per component. Multiple canonical source PURLs are UNDERDETERMINED
+# regardless of target contents; the evaluator must not infer a selection rule
+# retrospectively from the transformation output.
+cardinality = "exactly_one_source_purl"
+
+# canonical_slot / noncanonical_slots are representation-specific and are read
+# by the format adapters. The evaluator does not hardcode a particular
+# historical bug, converter, package, or artifact.
+[commitment.canonical_slot]
+"spdx-2.3" = "package.externalRefs[referenceCategory=PACKAGE-MANAGER,referenceType=purl].referenceLocator"
+"spdx-3.0" = "package.packageUrl"
+"cyclonedx" = "component.purl"
+
+[commitment.noncanonical_slots]
+"cyclonedx" = ["component.properties[].value"]
+
+# provenance: authoritative source records grounding normative commitment
+# claims. Cardinality and anchoring evaluation behavior are further specified
+# by the frozen protocol where the source specifications do not prescribe a
+# cross-format transformation rule.
+[commitment.provenance]
+same_when = ["purl_spec"]
+canonical_slot = ["spdx_2_3", "spdx_3_0", "cyclonedx"]
+representable_in = ["spdx_2_3", "spdx_3_0", "cyclonedx"]
+anchor = ["anchor_hash"]

@@ -1,0 +1,11 @@
+# Labels for known historical violations, used to assemble the "rediscovered"
+# pile in G. Fill these in from the historical cases (Phase 2 / F) AFTER the
+# freeze. Anchor is the content hash so a rediscovery can be matched mechanically.
+#
+# [[known]]
+# case = "cyclonedx-cli#424"
+# converter = "cyclonedx-cli"
+# direction = "spdx-2.3 -> cyclonedx"
+# component_hint = "tzdata"
+# anchor_sha256 = "a17042cb951b80d0c9462a73dec6ad31fc6adeae4ed92209601dc97d1019d7f2"
+# expected_verdict = "VIOLATED_RELOCATED"

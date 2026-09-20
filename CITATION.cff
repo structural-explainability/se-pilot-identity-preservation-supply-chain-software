@@ -1,0 +1,43 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+cff-version: "1.2.0"
+type: software
+message: "If you use this work, please cite it using the metadata in this file."
+
+title: "SE Pilot: Identity Preservation in Software Supply Chains"
+version: "0.1.0"
+date-released: "2026-09-20"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software"
+url: "https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software"
+license: MIT
+
+abstract: >
+  Research software for testing source-grounded identity-preservation
+  commitments across software supply-chain representations. The initial
+  feasibility pilot evaluates whether Package URL identity information is
+  preserved across SPDX and CycloneDX transformations using typed commitments,
+  representation-specific adapters, explicit limitation and refusal outcomes,
+  and finite conformance evidence.
+
+keywords:
+  - structural-explainability
+  - operational-identity
+  - identity-preservation
+  - identity-conformance
+  - software-supply-chain
+  - software-bill-of-materials
+  - SBOM
+  - SPDX
+  - CycloneDX
+  - package-url
+  - cybersecurity
+  - reproducibility
