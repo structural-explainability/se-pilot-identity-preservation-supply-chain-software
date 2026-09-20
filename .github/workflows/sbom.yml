@@ -1,0 +1,88 @@
+# ============================================================
+# .github/workflows/sbom.yml (CUSTOM, might later add to ALL-PY-SRC-REPOS)
+# ============================================================
+# Updated: 2026-09-18
+#
+# REQ: Generate machine-readable Software Bills of Materials (SBOMs)
+# for the repository on every push to main and on manual request.
+#
+# WHY: An SBOM is an inventory of software components and dependencies,
+# analogous to an ingredients list for software.
+# It supports dependency visibility, vulnerability analysis,
+# provenance, and reproducibility.
+#
+# Generate both common machine-readable formats:
+# - SPDX JSON: aligns with GitHub's native dependency-graph/SBOM ecosystem.
+# - CycloneDX JSON: widely used by vulnerability-management and
+#   software-supply-chain security tooling.
+#
+# The generated SBOMs are generated artifacts rather than committed files.
+# This avoids repository churn while preserving an SBOM for each
+# workflow execution.
+#
+# The SPDX SBOM is also submitted to GitHub's Dependency Graph so
+# GitHub can associate the detected dependencies with this repository.
+#
+# This workflow inventories the repository.
+# It does not determine whether a
+# dependency is vulnerable or exploitable;
+# vulnerability and VEX (Vulnerability Exploitability Exchange)
+# interpretation are separate analyses.
+#
+# This repository studies SBOM/VEX behavior, so generating its own
+# SBOMs also provides a concrete example of the artifacts discussed by
+# the research project.
+
+name: SBOM
+
+on:
+  push:
+    branches: [main]   # WHY: Refresh SBOM metadata after changes reach main.
+  workflow_dispatch:   # WHY: Allow manual generation from the Actions tab.
+
+# REQ: Dependency submission requires repository write permission.
+# WHY: The SPDX step submits its dependency snapshot to GitHub's
+# Dependency Graph. No secrets or broader repository permissions are needed.
+permissions:
+  contents: write
+
+jobs:
+  sbom:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ============================================================
+      # A) ASSEMBLE: Checkout repository contents
+      # ============================================================
+
+      - name: A1) Checkout repository code
+        uses: actions/checkout@v7
+        # WHY: Syft must inspect the checked-out repository and its
+        # dependency metadata to construct the SBOM.
+
+      # ============================================================
+      # B) BUILD: Generate machine-readable SBOM artifacts
+      # ============================================================
+
+      - name: B1) Generate SPDX JSON SBOM
+        uses: step-security/sbom-action@v0
+        with:
+          path: .
+          format: spdx-json
+          artifact-name: sbom.spdx.json
+          dependency-snapshot: true
+        # WHY: SPDX is GitHub's native SBOM export format.
+        # The generated file is uploaded as a workflow artifact.
+        # dependency-snapshot=true also submits the detected dependency
+        # inventory to GitHub's Dependency Graph.
+
+      - name: B2) Generate CycloneDX JSON SBOM
+        uses: step-security/sbom-action@v0
+        with:
+          path: .
+          format: cyclonedx-json
+          artifact-name: sbom.cdx.json
+        # WHY: CycloneDX is commonly used by vulnerability-management,
+        # SBOM, VEX, and software-supply-chain security tooling.
+        # Keeping both formats provides interoperable examples without
+        # making either representation authoritative over the other.
