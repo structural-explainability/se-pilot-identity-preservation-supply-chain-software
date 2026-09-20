@@ -90,6 +90,7 @@ automatically as part of every software release.
 
 The first commitment/evaluator freeze is created after the applicable
 scientific artifacts have been reviewed, validated, and committed.
+
 Prepare the committed pre-freeze state:
 
 ```shell
@@ -100,13 +101,23 @@ uvx cffconvert --validate
 
 uv run python -m preservation_test.fixtures.build_and_selftest
 
-git status
 git add -A
 git commit -m "Prepare commitment/evaluator freeze"
+
+# Regenerate and verify the synthetic fixture against the committed state
+uv run python -m preservation_test.fixtures.build_and_selftest
+
+git status
+# must report a clean working tree before creating the freeze.
 ```
 
 The working tree must be clean before creating the freeze.
-Create the freeze record explicitly:
+If rerunning the self-test modifies either generated fixture file, do not
+create the freeze.
+Review the difference, commit the corrected pre-freeze
+state, rerun the self-test, and confirm that the working tree remains clean.
+
+After confirming clean, create the freeze record explicitly:
 
 ```shell
 .\freeze_01.ps1
