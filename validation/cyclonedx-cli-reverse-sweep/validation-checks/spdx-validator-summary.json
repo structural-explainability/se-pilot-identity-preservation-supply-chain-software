@@ -1,0 +1,20 @@
+[
+  {
+    "version": "0.31.0",
+    "exit_code": 1,
+    "invalid_external_document_ref": 167,
+    "invalid_internal_spdx_id": 167,
+    "missing_external_document_ref": 167,
+    "license_expression": 1,
+    "other_validation_issue": 1
+  },
+  {
+    "version": "0.32.0",
+    "exit_code": 1,
+    "invalid_external_document_ref": 167,
+    "invalid_internal_spdx_id": 167,
+    "missing_external_document_ref": 167,
+    "license_expression": 1,
+    "other_validation_issue": 1
+  }
+]

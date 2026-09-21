@@ -53,7 +53,7 @@ Repository = "https://github.com/structural-explainability/se-pilot-identity-pre
 # WHY: Consistent test discovery and coverage visibility.
 minversion = "9.0"
 testpaths = ["tests"]
-addopts = "--cov=src/preservation_test/ --cov-fail-under=50 --cov-report=term-missing"
+addopts = "--cov=src/preservation_test/ --cov-fail-under=60 --cov-report=term-missing"
 filterwarnings = [
     "ignore:FigureCanvasAgg is non-interactive, and thus cannot be shown:UserWarning",
 ]
@@ -109,7 +109,7 @@ packages = ["src/preservation_test"]
 
 [tool.hatch.version]
 # Used when no git tags present (fresh clone, CI). Keep in sync with CITATION.cff.
-fallback-version = "0.2.0"
+fallback-version = "0.3.0"
 # WHY: Version derived from git tags at build time.
 source = "vcs"
 # WHY: Allow hatch-vcs to find the Git root when built from a subdirectory,

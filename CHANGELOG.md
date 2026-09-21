@@ -13,6 +13,50 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.3.0] - 2026-09-20
+
+### Added
+
+- Added the reverse-direction exploratory engineering-validation sweep for
+  CycloneDX-to-SPDX PURL representation preservation.
+- Added the fixed reverse-sweep source artifact from the CycloneDX
+  `bom-examples` repository, with recorded provenance and SHA-256 digest.
+- Added an explicit reverse release matrix covering cyclonedx-cli
+  0.29.0 through 0.33.1 and the associated CycloneDX.Spdx.Interop versions.
+- Added `reverse_sweep.py` to execute the fixed release set, run the frozen
+  `purl_preservation_v1` evaluator, preserve per-release artifacts, and produce
+  aggregate results.
+- Added reverse-direction coverage reporting, including applicable,
+  evaluable, preserved, violated, unanchorable, underdetermined, unsupported,
+  and not-applicable outcomes.
+- Added reverse-sweep engineering evidence showing a stable 167-component
+  evaluation population across all tested releases.
+- Added the observed reverse preservation boundary:
+  cyclonedx-cli 0.29.0 through 0.31.0 produced 167/167
+  `VIOLATED_DROPPED` results, while 0.32.0 through 0.33.1 produced 167/167
+  `PRESERVED` results.
+- Added manual structural inspection of generated SPDX 2.3 targets to confirm
+  that pre-boundary PURLs are absent from the canonical
+  `PACKAGE-MANAGER/purl` ExternalRef representation.
+- Added evidence that PURL text is incorporated into generated `SPDXID` values
+  whose syntax does not conform to the SPDX 2.3 identifier grammar.
+- Added independent SPDX validation with `spdx-tools` for pre-boundary and
+  post-boundary targets.
+- Added validator evidence showing that the malformed PURL-derived `SPDXID`
+  pattern persists across the 0.32.0 preservation boundary, even after
+  canonical PURL ExternalRefs begin to appear.
+- Added explicit separation between PURL representation-preservation
+  conformance and whole-document SPDX validity.
+- Added the two-direction engineering-validation comparison:
+  forward pre-boundary behavior is `VIOLATED_RELOCATED`, while reverse
+  pre-boundary behavior is `VIOLATED_DROPPED`.
+- Added preservation of raw validator output and machine-readable validator
+  summaries for the reverse sweep.
+- Added documentation distinguishing exploratory engineering-validation
+  evidence from later held-out generalization evidence.
+
+---
+
 ## [0.2.0] - 2026-09-20
 
 ### Added
@@ -110,9 +154,6 @@ npx markdownlint-cli2 --fix
 uvx se-manifest-schema validate-manifest --strict
 uvx cffconvert --validate
 .\sit.ps1
-
-# run for initial commit / freeze
-uv run python -m preservation_test.fixtures.build_and_selftest
 ```
 
 ### Task 3. Commit, push, tag
@@ -209,7 +250,8 @@ git push origin :refs/tags/vX.Y.Z
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.3.0
 [0.2.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.2.0
 [0.1.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.1.0
 

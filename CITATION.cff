@@ -7,7 +7,7 @@ type: software
 message: "If you use this work, please cite it using the metadata in this file."
 
 title: "SE Pilot: Identity Preservation in Software Supply Chains"
-version: "0.2.0"
+version: "0.3.0"
 date-released: "2026-09-20"
 
 authors:
