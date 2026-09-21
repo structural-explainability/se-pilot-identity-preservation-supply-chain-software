@@ -1,0 +1,49 @@
+{
+  "source_format": "spdx-2.3",
+  "target_format": "cyclonedx",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "SPDXRef--slash--slash-base-colon-static-underscore-root-underscore-amd64-underscore-debian12",
+      "verdict": "NOT_APPLICABLE",
+      "purl": null,
+      "detail": "source component has no canonical purl"
+    },
+    {
+      "ref": "SPDXRef--at-rules-underscore-distroless~~apt~bookworm-underscore-base-files-underscore-12.4-p-deb12u10-underscore-amd64",
+      "verdict": "PRESERVED",
+      "purl": "pkg:deb/debian/base-files@12.4%2Bdeb12u10?arch=amd64",
+      "detail": ""
+    },
+    {
+      "ref": "SPDXRef--at-bookworm-slash--slash-base-files-slash-amd64-colon-spdx",
+      "verdict": "NOT_APPLICABLE",
+      "purl": null,
+      "detail": "source component has no canonical purl"
+    },
+    {
+      "ref": "SPDXRef--at-rules-underscore-distroless~~apt~bookworm-underscore-netbase-underscore-6.4-underscore-amd64",
+      "verdict": "PRESERVED",
+      "purl": "pkg:deb/debian/netbase@6.4?arch=all",
+      "detail": ""
+    },
+    {
+      "ref": "SPDXRef--at-bookworm-slash--slash-netbase-slash-amd64-colon-spdx",
+      "verdict": "NOT_APPLICABLE",
+      "purl": null,
+      "detail": "source component has no canonical purl"
+    },
+    {
+      "ref": "SPDXRef--at-rules-underscore-distroless~~apt~bookworm-underscore-tzdata-underscore-2025b-0-p-deb12u1-underscore-amd64",
+      "verdict": "PRESERVED",
+      "purl": "pkg:deb/debian/tzdata@2025b-0%2Bdeb12u1?arch=all",
+      "detail": ""
+    },
+    {
+      "ref": "SPDXRef--at-bookworm-slash--slash-tzdata-slash-amd64-colon-spdx",
+      "verdict": "NOT_APPLICABLE",
+      "purl": null,
+      "detail": "source component has no canonical purl"
+    }
+  ]
+}

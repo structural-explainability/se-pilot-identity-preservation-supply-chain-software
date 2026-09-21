@@ -1,0 +1,415 @@
+# validation/cyclonedx-cli-424-first-post/metadata.toml
+# Metadata for first post engineering validation of CycloneDX CLI issue #424.
+#
+# Provenance convention:
+# - "Issue-derived" values come directly from GitHub issue #424.
+# - "Repository-chosen" values are names or identifiers defined by this study.
+# - "Artifact-derived" values are read from or calculated from reproduced files.
+# - "Execution-derived" values are recorded from the actual reproduction run.
+# - "Protocol-defined" values come from this study's frozen research protocol.
+
+# Repository-chosen validation-case identifier FIXED
+id = "VAL-cyclonedx-cli-424-first-post"
+
+# Protocol-defined evidence category.
+evidence_role = "engineering_validation"
+
+# Repository-maintained execution state.
+# This validation case has been executed, evaluated, and adjudicated.
+status = "completed"
+
+# Repository-authored description.
+description = "First-post engineering-validation execution for the historical SPDX-to-CycloneDX PURL relocation behavior reported in CycloneDX/cyclonedx-cli issue #424."
+
+#===========================
+[provenance]
+#===========================
+
+# Historical report that motivated this engineering-validation case.
+# This issue is evidence of the reported behavior, not the authoritative
+# source of the reproduced SBOM contents.
+issue = "https://github.com/CycloneDX/cyclonedx-cli/issues/424"
+issue_number = 424
+issue_opened = "2025-04-03"
+known_during_design = true
+
+# Issue-derived discovery pointer.
+# The issue identified the immutable OCI image digest used to locate the
+# source attestation.
+source_discovered_via_issue = true
+
+#===========================
+[source]
+#===========================
+
+# Artifact-derived.
+# Read from source.spdx.json after extraction.
+# Use PowerShell to read and parse the SPDX JSON file.
+# $Source = Get-Content validation/cyclonedx-cli-424/source.spdx.json -Raw |
+#   ConvertFrom-Json
+#
+# $Source.spdxVersion
+format = "SPDX-2.3"
+
+# Repository-chosen filename for the preserved extracted SPDX SBOM.
+file = "validation/cyclonedx-cli-424/source.spdx.json"
+
+# Artifact-derived.
+# Calculate from the exact committed source.spdx.json bytes.
+# Get-FileHash validation/cyclonedx-cli-424/source.spdx.json -Algorithm SHA256
+sha256 = "969E75AB32BB499957298365C43896B6A2F204951D7EF9FA12DB9482AB7504E2"
+
+# Issue-derived discovery information only.
+# This immutable OCI digest identifies the container whose attestation is
+# retrieved. The issue is not treated as the authority for the SBOM contents.
+container_image = "gcr.io/distroless/static-debian12:debug-nonroot@sha256:3d0f463de06b7ddff27684ec3bfd0b54a425149d0f8685308b1fdf297b0265e9"
+
+#===========================
+[source.attestation]
+#===========================
+
+# Repository-chosen filename preserving the raw newline-delimited JSON
+# emitted by `cosign download attestation`.
+file = "validation/cyclonedx-cli-424/attestation.jsonl"
+
+# Artifact-derived.
+# Calculate from the exact committed attestation.jsonl bytes.
+# Get-FileHash validation/cyclonedx-cli-424/attestation.jsonl -Algorithm SHA256
+sha256 = "2C22B2E256DFE3B41468C0ADB0F576B9867FA074A0B42130CF123ADB303A6E2E"
+
+# Execution-derived.
+# Record when this attestation was retrieved.
+retrieved_at = "2026-09-20"
+
+# Execution-derived.
+# Record the exact cosign version used for retrieval.
+cosign_version = "v3.0.2"
+
+# Protocol-recorded PowerShell acquisition command.
+# Unlike the historical issue command, preserve the complete attestation
+# before extracting the SPDX payload.
+acquisition_command = """
+cosign download attestation `
+  --platform linux/amd64 `
+  gcr.io/distroless/static-debian12:debug-nonroot@sha256:3d0f463de06b7ddff27684ec3bfd0b54a425149d0f8685308b1fdf297b0265e9 `
+  > validation/cyclonedx-cli-424/attestation.jsonl
+"""
+
+# Protocol-recorded extraction command.
+# Select the historical attestation whose decoded SPDX payload contains the
+# Debian snapshot timestamp reported in issue #424, then extract that exact
+# SPDX predicate into source.spdx.json.
+extraction_command = """
+$Matches = @(
+  Get-Content validation/cyclonedx-cli-424/attestation.jsonl |
+    ForEach-Object {
+      $envelope = $_ | ConvertFrom-Json
+
+      $statementText = [System.Text.Encoding]::UTF8.GetString(
+        [System.Convert]::FromBase64String($envelope.payload)
+      )
+
+      if ($statementText -match "20250327T204130Z") {
+        $statement = $statementText | ConvertFrom-Json
+        $statement.predicate
+      }
+    }
+)
+
+$DistinctPredicates = @(
+  $Matches |
+    Sort-Object -Unique
+)
+
+if ($DistinctPredicates.Count -ne 1) {
+  throw "Expected exactly one distinct historical SPDX predicate; found $($DistinctPredicates.Count)."
+}
+
+$spdx = $DistinctPredicates[0] | ConvertFrom-Json
+
+$spdx |
+  ConvertTo-Json -Depth 100 |
+  Set-Content validation/cyclonedx-cli-424/source.spdx.json
+"""
+
+#===========================
+[source.example_component]
+#===========================
+
+# Artifact-derived from the reproduced source.spdx.json.
+# Confirmed with:
+# $Source.packages |
+#   Where-Object { $_.name -eq "tzdata" } |
+#   Select-Object name, versionInfo, checksums, externalRefs
+name = "tzdata"
+
+# Artifact-derived from source.spdx.json for the example_component SPDXID.
+spdx_id = "SPDXRef--at-rules-underscore-distroless~~apt~bookworm-underscore-tzdata-underscore-2025b-0-p-deb12u1-underscore-amd64"
+
+# Artifact-derived from source.spdx.json for the example_component versionInfo.
+version = "2025b-0+deb12u1"
+
+# Artifact-derived from source.spdx.json package.checksums.
+content_hash_algorithm = "SHA256"
+content_hash = "a17042cb951b80d0c9462a73dec6ad31fc6adeae4ed92209601dc97d1019d7f2"
+
+# Artifact-derived from the PACKAGE-MANAGER/purl external reference in
+# source.spdx.json in the "name": "tzdata" json entry under
+# externalRefs referenceLocator entry.
+purl = "pkg:deb/debian/tzdata@2025b-0+deb12u1?arch=all"
+
+#===========================
+[library_change]
+#===========================
+
+# Repository-derived from CycloneDX/cyclonedx-dotnet-library PR #394.
+# This is the implementation change relevant to the PURL behavior reported
+# in cyclonedx-cli issue #424.
+repository = "https://github.com/CycloneDX/cyclonedx-dotnet-library"
+pull_request = 394
+pull_request_url = "https://github.com/CycloneDX/cyclonedx-dotnet-library/pull/394"
+title = "Convert a SPDX purl externalReference into the item level purl field"
+merged_at = "2026-02-27"
+
+# Repository-derived from the cyclonedx-dotnet-library release history.
+# Release 12.0.0 explicitly lists PR #394 in its release notes and is
+# therefore the first identified released library version containing the
+# relevant PURL conversion change.
+first_fixed_release = "12.0.0"
+first_fixed_release_date = "2026-03-04"
+first_fixed_tag = "v12.0.0"
+first_fixed_commit = "5194c90"
+
+# Repository-derived immediately preceding released library version.
+# This release predates inclusion of PR #394 and establishes the pre-fix
+# side of the library release boundary.
+preceding_release = "11.0.0"
+preceding_release_date = "2026-02-10"
+preceding_tag = "v11.0.0"
+preceding_commit = "d80bf2f"
+
+#===========================
+[cli_release_boundary]
+#===========================
+
+# Repository-derived from tagged cyclonedx-cli project files.
+# CycloneDX.Spdx.Interop provides the CLI's SPDX conversion functionality.
+repository = "https://github.com/CycloneDX/cyclonedx-cli"
+dependency = "CycloneDX.Spdx.Interop"
+
+#===========================
+# KNOWN-BAD CLI RELEASE
+#===========================
+
+# Repository-derived from cyclonedx-cli v0.31.0.
+# The tagged project file references CycloneDX.Spdx.Interop 11.0.0,
+# which Step 3 established as the library release immediately preceding
+# the first release containing PR #394.
+known_bad_candidate = "0.31.0"
+known_bad_release_date = "2026-04-29"
+known_bad_tag = "v0.31.0"
+known_bad_commit = "1ca06b9"
+known_bad_library_version = "11.0.0"
+
+# Repository-chosen local path for the preserved known-bad executable.
+known_bad_executable = ".\\bin\\cyclonedx-cli-0.31.0.exe"
+
+# Protocol-recorded acquisition command for the known-bad CLI release.
+known_bad_acquisition_command = """
+Invoke-WebRequest `
+  -Uri "https://github.com/CycloneDX/cyclonedx-cli/releases/download/v0.31.0/cyclonedx-win-x64.exe" `
+  -OutFile ".\\bin\\cyclonedx-cli-0.31.0.exe"
+"""
+
+# Protocol-recorded command used to confirm the acquired executable version.
+known_bad_version_command = """
+.\\bin\\cyclonedx-cli-0.31.0.exe --version
+"""
+
+#===========================
+# FIRST CLI RELEASE USING POST-FIX LIBRARY
+#===========================
+
+# Repository-derived from cyclonedx-cli v0.32.0.
+# The tagged project file references CycloneDX.Spdx.Interop 12.1.1,
+# which postdates the first library release containing PR #394.
+first_post_fix_library_candidate = "0.32.0"
+first_post_fix_library_release_date = "2026-05-14"
+first_post_fix_library_tag = "v0.32.0"
+first_post_fix_library_commit = "0ed788d"
+first_post_fix_library_version = "12.1.1"
+
+# Repository-chosen local path for the preserved first post-fixed executable.
+first_post_fix_library_executable = ".\\bin\\cyclonedx-cli-0.32.0.exe"
+
+# Protocol-recorded acquisition command for the first post-fixed CLI release.
+first_post_fix_library_acquisition_command = """
+Invoke-WebRequest `
+  -Uri "https://github.com/CycloneDX/cyclonedx-cli/releases/download/v0.32.0/cyclonedx-win-x64.exe" `
+  -OutFile ".\\bin\\cyclonedx-cli-0.32.0.exe"
+"""
+
+# Protocol-recorded command used to confirm the acquired executable version.
+first_post_fix_library_version_command = """
+.\\bin\\cyclonedx-cli-0.32.0.exe --version
+"""
+
+#===========================
+[target] # UPDATE
+#===========================
+
+# Execution-confirmed.
+# The conversion command requests CycloneDX JSON; confirm the generated
+# target artifact actually has the expected CycloneDX representation.
+format = "cyclonedx-json"
+
+# Repository-chosen filename for the preserved generated target artifact.
+# The historical issue called this file "sbom.cdx.json".
+file = "validation/cyclonedx-cli-424-first-post/target.cdx.json"
+
+# Protocol-recorded command used to verify that the generated target parses
+# as JSON and reports the expected CycloneDX format.
+verification_command = """
+$Target = Get-Content validation/cyclonedx-cli-424-first-post/target.cdx.json -Raw |
+  ConvertFrom-Json
+
+$Target |
+  Select-Object bomFormat, specVersion
+"""
+
+# Artifact-derived from the generated target document.
+# see target.cdx.json:
+#   "bomFormat": "CycloneDX",
+#   "specVersion": "1.7",
+bom_format = "CycloneDX"
+spec_version = "1.7"
+
+# Protocol-recorded command used to calculate the target artifact digest.
+sha256_command = """
+Get-FileHash validation/cyclonedx-cli-424-first-post/target.cdx.json -Algorithm SHA256
+"""
+
+# Artifact-derived.
+# Calculate SHA-256 from the complete generated target.cdx.json file after
+# executing the historical transformation.
+sha256 = "984315E7EA24DD43D1DD5FF1DAF26E1FBA82427C6E77B792A33BDD04253A6A5B"
+
+#===========================
+[transformation] # UPDATE
+#===========================
+
+# Issue-derived tool identity.
+tool = "cyclonedx-cli"
+
+version_command = """
+.\\bin\\cyclonedx-cli-0.32.0.exe --version
+"""
+
+# Execution-derived historical tool version.
+# Populate only after identifying and reproducing the applicable CLI
+# release. Issue #424 does not itself establish this version.
+version = "0.32.0+0ed788d25c13cef9e9a3029603f6b708e3279390"
+
+# Issue-derived transformation shape, adapted to use this repository's
+# preserved source and target filenames.
+command = """
+.\\bin\\cyclonedx-cli-0.32.0.exe convert `
+  --input-format spdxjson `
+  --input-file validation/cyclonedx-cli-424/source.spdx.json `
+  --output-format json `
+  --output-file validation/cyclonedx-cli-424-first-post/target.cdx.json
+"""
+
+#===========================
+[execution_environment] # UPDATE
+#===========================
+
+# Execution-derived.
+# Record the environment used for the known-bad reproduction.
+operating_system = "Windows"
+architecture = "x64"
+
+# Protocol-recorded command used to calculate the digest.
+sha256_command = """
+Get-FileHash .\\bin\\cyclonedx-cli-0.32.0.exe -Algorithm SHA256
+"""
+
+# Artifact-derived from the exact executable used for the transformation.
+executable_sha256 = "B1C00DBB40E628EC8C1252771871341AC4D4AAF032F832D83BD22CB2B1D258AE"
+
+#===========================
+[freeze]
+#===========================
+
+# Protocol-defined.
+# Identifies the frozen scientific apparatus against which this validation
+# case must be evaluated.
+commitment_evaluator = "contracts/FREEZE_01_COMMITMENT_EVALUATOR.md"
+
+#===========================
+[evaluator] # UPDATE
+#===========================
+
+# Protocol-defined.
+# Commitment identifier from the frozen contracts/commitments.toml.
+commitment_id = "purl_preservation_v1"
+
+# Protocol-defined evaluator invocation for this repository.
+command = """
+uv run python -m preservation_test.evaluator.evaluate `
+  validation/cyclonedx-cli-424/source.spdx.json `
+  validation/cyclonedx-cli-424-first-post/target.cdx.json `
+  --json `
+  > validation/cyclonedx-cli-424-first-post/result.json
+"""
+
+# Repository-chosen filename for the machine-readable evaluator output.
+result_file = "validation/cyclonedx-cli-424-first-post/result.json"
+
+#===========================
+[expected] # UPDATE
+#===========================
+
+# Historical example component used for this engineering-validation execution.
+component = "tzdata"
+
+# Artifact-derived from the preserved historical SPDX source.
+source_purl = "pkg:deb/debian/tzdata@2025b-0+deb12u1?arch=all"
+
+# Study-defined expected classification before executing the frozen evaluator.
+# This execution tests the first identified CLI release using a library version
+# that postdates the PURL conversion fix established in PR #394.
+expected_verdict = "PRESERVED"
+
+#===========================
+[adjudication] # UPDATE
+#===========================
+
+# Researcher-adjudicated engineering-validation result.
+status = "confirmed_preserved"
+
+# Researcher-authored adjudication based on the frozen commitment, preserved
+# source, generated target, evaluator result, and historical report.
+notes = """
+The preserved SPDX source contains the expected tzdata PURL
+pkg:deb/debian/tzdata@2025b-0+deb12u1?arch=all.
+
+The cyclonedx-cli 0.32.0 first-post-fix-library transformation places that
+PURL in the canonical CycloneDX component.purl slot.
+
+The frozen purl_preservation_v1 evaluator classifies the corresponding tzdata
+component as PRESERVED.
+
+The evaluator also classifies the applicable base-files and netbase
+components as PRESERVED. Components without canonical source PURLs are
+classified as NOT_APPLICABLE.
+
+The observed verdict matches the predeclared expected verdict.
+
+The observed result establishes that the PURL relocation behavior reported in
+cyclonedx-cli issue #424 is not observed for this preserved source when
+transformed by cyclonedx-cli 0.32.0.
+
+This result is engineering-validation evidence.
+It is not held-out evidence of generalization.
+"""

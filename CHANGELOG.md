@@ -13,6 +13,54 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.2.0] - 2026-09-20
+
+### Added
+
+- Real-artifact engineering validation for CycloneDX/cyclonedx-cli issue #424.
+- Preserved historical SPDX source provenance recovered from the immutable
+  Google Distroless attestation.
+- Known-bad validation execution using `cyclonedx-cli` `0.31.0` with
+  `CycloneDX.Spdx.Interop` `11.0.0`.
+- First-post validation execution using `cyclonedx-cli` `0.32.0` with
+  `CycloneDX.Spdx.Interop` `12.1.1`.
+- Automated deterministic CycloneDX CLI release sweep using the same preserved
+  source, frozen commitment, and frozen evaluator across configured releases.
+- Explicit separation of converter execution outcomes from preservation
+  verdicts, including `source_parse_failure` when transformation does not
+  complete.
+- Release-sweep configuration recording dependent library versions, whether
+  the dependent library includes the relevant PURL fix, expected execution
+  states, and expected evaluator verdicts.
+- Per-release generated target and evaluator evidence plus aggregate
+  machine-readable release-sweep results.
+- Tests for release-sweep configuration invariants and the declared PURL-fix
+  boundary.
+
+### Validated
+
+- `cyclonedx-cli` `0.29.0` produces the expected source parse failure for the
+  preserved historical source.
+- `cyclonedx-cli` `0.29.1` through `0.31.0` produce the expected
+  `VIOLATED_RELOCATED` classification.
+- `cyclonedx-cli` `0.32.0` through `0.33.1` produce the expected `PRESERVED`
+  classification.
+- All configured release-sweep execution states and evaluator verdicts match
+  their predeclared engineering-validation expectations.
+
+### Documentation
+
+- Documented the known-bad and first-post engineering-validation records.
+- Documented the automated release sweep, evidence role, execution/verdict
+  distinction, generated artifacts, and interpretation boundaries.
+- Updated study status to distinguish completed engineering validation from
+  future held-out generalization execution.
+
+These results remain **engineering-validation** evidence
+and do not constitute held-out evidence of generalization.
+
+---
+
 ## [0.1.0] - 2026-09-20
 
 ### Added
@@ -32,9 +80,9 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 ## Notes on Versioning and Releases
 
 - We use **SemVer**:
-  - **MAJOR** - breaking changes
-  - **MINOR** - backward-compatible features
-  - **PATCH** - fixes, documentation, tests, tooling
+  - \*_MAJOR_- - breaking changes
+  - \*_MINOR_- - backward-compatible features
+  - \*_PATCH_- - fixes, documentation, tests, tooling
 - Versions are driven by git tags. Tag `vX.Y.Z` to release.
 - Docs are deployed per version tag and aliased to **latest**.
 
@@ -63,6 +111,7 @@ uvx se-manifest-schema validate-manifest --strict
 uvx cffconvert --validate
 .\sit.ps1
 
+# run for initial commit / freeze
 uv run python -m preservation_test.fixtures.build_and_selftest
 ```
 
@@ -160,7 +209,8 @@ git push origin :refs/tags/vX.Y.Z
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.2.0
 [0.1.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.1.0
 
 <!-- markdownlint-enable MD024 -->

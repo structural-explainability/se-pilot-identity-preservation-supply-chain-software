@@ -1,11 +1,18 @@
 {
     "cSpell.words": [
+        "Bdeb",
         "CISA",
         "cyclonedx",
         "Distroless",
         "elems",
         "hexlower",
+        "netbase",
+        "NOASSERTION",
+        "noncompleted",
+        "nonroot",
         "packageurl",
+        "pluggy",
+        "predeclared",
         "sdoc",
         "selftest",
         "SPDXID",

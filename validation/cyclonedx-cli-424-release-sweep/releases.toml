@@ -1,0 +1,135 @@
+# validation/cyclonedx-cli-424-release-sweep/releases.toml
+#
+# Deterministic engineering-validation release sweep for
+# CycloneDX/cyclonedx-cli issue #424.
+#
+# This sweep is supplementary engineering-validation evidence.
+# It does not constitute held-out evidence of generalization.
+#
+# Release inclusion rule:
+# - include released cyclonedx-cli versions beginning with v0.29.0,
+#   the first release in this sequence identified as supporting SPDX 2.3;
+# - include every subsequent released version through v0.33.1;
+# - preserve the release set explicitly in this file rather than discovering
+#   releases dynamically during execution.
+#
+# Expected-boundary rule:
+# - CycloneDX.Spdx.Interop versions preceding the first released library
+#   containing PR #394 are expected to produce VIOLATED_RELOCATED;
+# - CLI releases using library versions after that change are expected to
+#   produce PRESERVED.
+#
+# Expectations are declared here before execution of the automated sweep.
+# Observed results must not be used to rewrite these expectations.
+
+#===========================
+[sweep]
+#===========================
+
+id = "cyclonedx-cli-424-release-sweep"
+
+evidence_role = "engineering_validation"
+
+repository = "https://github.com/CycloneDX/cyclonedx-cli"
+
+asset_name = "cyclonedx-win-x64.exe"
+
+source_file = "validation/cyclonedx-cli-424/source.spdx.json"
+
+source_sha256 = "969E75AB32BB499957298365C43896B6A2F204951D7EF9FA12DB9482AB7504E2"
+
+commitment_id = "purl_preservation_v1"
+
+freeze_file = "contracts/FREEZE_01_COMMITMENT_EVALUATOR.md"
+
+evaluator_module = "preservation_test.evaluator.evaluate"
+
+artifact_directory = "validation/cyclonedx-cli-424-release-sweep/artifacts"
+
+results_file = "validation/cyclonedx-cli-424-release-sweep/results.json"
+
+binary_directory = "bin/cyclonedx-cli-release-sweep"
+
+# Historical example component from issue #424.
+example_component = "tzdata"
+
+example_ref = "SPDXRef--at-rules-underscore-distroless~~apt~bookworm-underscore-tzdata-underscore-2025b-0-p-deb12u1-underscore-amd64"
+
+example_source_purl = "pkg:deb/debian/tzdata@2025b-0+deb12u1?arch=all"
+
+# Maximum time allowed for an individual external command.
+command_timeout_seconds = 120
+
+
+#===========================
+# PRE-FIX LIBRARY RELEASES
+#===========================
+
+[[release]]
+version = "0.29.0"
+tag = "v0.29.0"
+library_version = "10.0.0"
+dependent_library_includes_purl_fix = false
+expected_execution = "source_parse_failure"
+expected_verdict = ""
+
+[[release]]
+version = "0.29.1"
+tag = "v0.29.1"
+library_version = "10.0.1"
+dependent_library_includes_purl_fix = false
+expected_execution = "completed"
+expected_verdict = "VIOLATED_RELOCATED"
+
+[[release]]
+version = "0.29.2"
+tag = "v0.29.2"
+library_version = "10.0.2"
+dependent_library_includes_purl_fix = false
+expected_execution = "completed"
+expected_verdict = "VIOLATED_RELOCATED"
+
+[[release]]
+version = "0.30.0"
+tag = "v0.30.0"
+library_version = "11.0.0"
+dependent_library_includes_purl_fix = false
+expected_execution = "completed"
+expected_verdict = "VIOLATED_RELOCATED"
+
+[[release]]
+version = "0.31.0"
+tag = "v0.31.0"
+library_version = "11.0.0"
+dependent_library_includes_purl_fix = false
+expected_execution = "completed"
+expected_verdict = "VIOLATED_RELOCATED"
+
+
+#===========================
+# POST-FIX LIBRARY RELEASES
+#===========================
+
+[[release]]
+version = "0.32.0"
+tag = "v0.32.0"
+library_version = "12.1.1"
+dependent_library_includes_purl_fix = true
+expected_execution = "completed"
+expected_verdict = "PRESERVED"
+
+[[release]]
+version = "0.33.0"
+tag = "v0.33.0"
+library_version = "12.1.1"
+dependent_library_includes_purl_fix = true
+expected_execution = "completed"
+expected_verdict = "PRESERVED"
+
+[[release]]
+version = "0.33.1"
+tag = "v0.33.1"
+library_version = "12.1.2"
+dependent_library_includes_purl_fix = true
+expected_execution = "completed"
+expected_verdict = "PRESERVED"

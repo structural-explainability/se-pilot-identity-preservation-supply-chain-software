@@ -57,7 +57,7 @@ representation-specific adapters
         ↓
 generic evaluator
         ↓
-preserved / violated / refused / underdetermined
+explicit preservation or limitation classification
         ↓
 finite evidence
 ```
@@ -107,11 +107,13 @@ representation semantics, and adjudication rules.
 
 ### Engineering Validation Evidence
 
-Synthetic fixtures and previously known examples
-used to verify implementation behavior.
+Synthetic fixtures, previously known examples, controlled regression pairs,
+and exploratory release sweeps used to verify evaluator behavior and
+repeatability.
 
-Known examples are not treated as blind evidence
-when they were available during development.
+Known examples and behaviors observed during engineering validation are not
+treated as held-out evidence when they were available before the
+generalization corpus is frozen.
 
 ### Generalization Evidence
 
@@ -158,15 +160,32 @@ including energy, AI, or legal domains.
 
 ## Current Status
 
-Before creating the first commitment/evaluator freeze, the researcher will
-review the commitment schema, source grounding, implementation, engineering
-tests, and adjudication protocol.
+The initial commitment and evaluator are frozen under:
 
-After engineering validation, the generalization corpus and execution
-conditions will be fixed separately before any generalization run.
+`contracts/FREEZE_01_COMMITMENT_EVALUATOR.md`
 
-No generalization evidence is claimed before the applicable freezes and
-subsequent execution.
+Engineering validation has been completed against real historical artifacts
+from CycloneDX/cyclonedx-cli issue #424.
+
+The known-bad execution using `cyclonedx-cli` `0.31.0` with
+`CycloneDX.Spdx.Interop` `11.0.0` produces `VIOLATED_RELOCATED`.
+
+The first identified CLI release using a dependent library that includes the
+relevant PURL fix, `cyclonedx-cli` `0.32.0` with
+`CycloneDX.Spdx.Interop` `12.1.1`, produces `PRESERVED`.
+
+An automated release sweep additionally evaluates the same preserved source,
+transformation direction, frozen commitment, and evaluator across surrounding
+released CLI versions.
+
+The release sweep remains engineering-validation evidence because its release
+history and results are examined before any separately frozen generalization
+corpus.
+
+No held-out generalization evidence is currently claimed.
+
+The generalization corpus and execution conditions will be fixed separately
+before any generalization execution.
 
 For freeze, execution, corpus, and adjudication procedures, see the
 [Run Protocol](./run.md).
@@ -189,6 +208,15 @@ The study separates the following.
   interpretation rules, evaluator, and adjudication protocol.
 - [Run Protocol](./run.md) defines freeze, corpus, execution, and adjudication procedures.
 - [Test Guide](./test.md) defines synthetic fixtures and engineering validation.
+
+### Validation Evidence
+
+- [Engineering validation](https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/blob/main/validation/README.md)
+  records the known historical validation cases and their adjudicated results.
+
+- [Release sweep](https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/blob/main/validation/cyclonedx-cli-424-release-sweep/README.md)
+  documents the automated engineering-validation sweep across released
+  `cyclonedx-cli` versions.
 
 ## Repository Guidance
 

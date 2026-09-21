@@ -31,6 +31,50 @@ See the [Study Overview](./docs/en/index.md) for the research design,
 the [Run Protocol](./docs/en/run.md) for freeze and execution procedures,
 and the [Test Guide](./docs/en/test.md) for engineering validation.
 
+## Current Engineering Validation
+
+The frozen `purl_preservation_v1` commitment and evaluator have been exercised
+against historical artifacts from CycloneDX/cyclonedx-cli issue #424.
+
+The engineering validation establishes a **release-history boundary** for the same
+preserved SPDX source and transformation direction:
+
+```text
+cyclonedx-cli 0.29.0
+    source_parse_failure
+
+cyclonedx-cli 0.29.1 through 0.31.0
+    VIOLATED_RELOCATED
+
+cyclonedx-cli 0.32.0 and subsequent releases in the configured sweep
+    PRESERVED
+```
+
+The applicable pre-fix releases therefore reproduce the historical PURL
+relocation behavior, while releases using the dependent library after the
+relevant PURL conversion fix preserve the PURL in the canonical CycloneDX
+`component.purl` slot.
+
+The automated release sweep evaluates the same preserved source with the same
+frozen commitment and evaluator across the explicitly declared release
+sequence.
+It also records execution failures separately from preservation verdicts,
+so inability to process the source is not conflated with a
+representation-preservation failure.
+
+This result demonstrates that the frozen evaluator distinguishes the known
+preservation defect from its absence across the tested release boundary rather
+than merely identifying differences between generated documents.
+
+These results remain **engineering-validation** evidence.
+The issue, defect shape, converter, transformation direction,
+and release boundary were known or examined during validation
+and therefore do not constitute held-out evidence of generalization.
+
+The preserved validation cases are under [`validation/`](./validation/), and
+the automated release-sweep specification and results are under
+[`validation/cyclonedx-cli-424-release-sweep/`](./validation/cyclonedx-cli-424-release-sweep/).
+
 ## Role in Structural Explainability
 
 This pilot is motivated by the SE-210 Operational Identity framework:
