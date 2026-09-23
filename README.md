@@ -135,13 +135,33 @@ uvx pre-commit run --all-files
 uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
+```
 
-# Run engineering self-test (complete; do not rerun)
+### Engineering Validation
+
+The engineering self-test is complete and is retained as validation evidence.
+Do not rerun it.
+
+```shell
+# Historical engineering-validation command:
 # uv run python -m preservation_test.fixtures.build_and_selftest
 
-# Verify Freeze 01
+# Verify that the frozen commitment and evaluator still match Freeze 01:
 uv run python -m preservation_test.generalization.verification.verify_freeze_01
+```
 
+### Generalization Preparation
+
+The numbered generalization steps are deterministic, write-once preparation steps.
+
+They intentionally do not overwrite existing scientific records or preserved
+evidence.
+Do not delete an existing numbered artifact to make a step run again.
+Before Freeze 02, an artifact should be regenerated only when its upstream
+input has intentionally changed and the resulting downstream records are being
+explicitly invalidated and rebuilt.
+
+```shell
 # Derive prior-validation exclusions for the sampling specification
 uv run python -m preservation_test.generalization.p01_build_candidates `
     --print-derived-exclusions
@@ -158,6 +178,25 @@ uv run python -m preservation_test.generalization.p01_build_candidates
 # Build the deterministic held-out corpus from eligible candidate units
 Remove-Item generalization/03-corpus.toml
 uv run python -m preservation_test.generalization.p02_build_corpus
+
+# Preserve the exact selected source bytes and provenance
+Remove-Item generalization/04-sources.toml
+uv run python -m preservation_test.generalization.p03_preserve_sources
+
+# Install tools
+.\install_generalization_tools.ps1
+
+# Build the frozen transformation matrix
+Remove-Item generalization/05-transformations.toml
+uv run python -m preservation_test.generalization.p04_build_transformations `
+    --syft bin/generalization/syft.exe `
+    --syft-version "1.52.0" `
+    --sbom-convert bin/generalization/sbom-convert.exe `
+    --sbom-convert-version "0.0.7" `
+    --cdx2spdx-jar bin/generalization/cdx2spdx.jar `
+    --cdx2spdx-version "0.1.5" `
+    --java "bin/generalization/jdk-21.0.12.1+1/bin/java.exe" `
+    --java-version "21.0.12.1+1"
 
 # save progress
 git add -A
