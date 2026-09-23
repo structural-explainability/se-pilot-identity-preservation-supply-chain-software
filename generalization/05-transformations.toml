@@ -19,6 +19,14 @@ execution_state = "not_started"
 transformation_outputs_examined = false
 results_directory = "generalization/results"
 
+[target_validator]
+
+name = "CycloneDX sbom-utility"
+version = "0.19.2"
+artifact_path = "bin/generalization/sbom-utility.exe"
+artifact_sha256 = "10721b959185940f7913f7e57ed512a9909a2b280df60ee7400235177608a76c"
+documentation = "https://github.com/CycloneDX/sbom-utility/tree/v0.19.2"
+
 [transformations_code_sha256]
 
 "src/preservation_test/evaluator/formats.py" = "6aac22257a25db0464588310af2dfd7e109bb6e31c31c644bee335febfc2a03a"
@@ -26,7 +34,7 @@ results_directory = "generalization/results"
 "src/preservation_test/generalization/models/__init__.py" = "c2c94a94afd7e14459fe6a233b2636b018fc62e690464674c2afe586049546cb"
 "src/preservation_test/generalization/models/candidate.py" = "992e975e62951c2ea9828cb6ed0734ae4a9088783d1678e1a2c684256000a067"
 "src/preservation_test/generalization/models/candidate_screening.py" = "de69b3558da1d64695413bffab9bae731d1f522e013e6bda62816b5220730a59"
-"src/preservation_test/generalization/p04_build_transformations.py" = "e96959258e21a5c0f5b34188fc2f573f3804aa412a33047cf52f50ad8091888f"
+"src/preservation_test/generalization/p04_build_transformations.py" = "ee1316ee52546f2c331545af9b9841f28950dd5a30e02f9ce817b052912bd6b0"
 "src/preservation_test/generalization/utils/__init__.py" = "63c4f60254d130b671b450548681bf48851ce26f21fc6dbdee5ccc903f27eef9"
 "src/preservation_test/generalization/utils/candidate_enumeration.py" = "ed056f5085e51835ee3a65558fb2668bc519cf8d2e8240c353ea4666c7e6be8c"
 "src/preservation_test/generalization/utils/candidate_ids.py" = "5ae880401dd5189cad768574eb4b0b54a41878e9539537090bb806193ebe3af8"
@@ -53,16 +61,16 @@ version = "1.52.0"
 artifact_path = "bin/generalization/syft.exe"
 artifact_sha256 = "dc71719e9995813f44115f87d6753456685efb0d4cd691373be165b0bb6efa07"
 runtime = "native executable"
-documentation = "https://oss.anchore.com/docs/guides/sbom/conversion/"
+documentation = "https://github.com/anchore/syft/tree/v1.52.0"
 
 [[converter]]
 id = "protobom"
 name = "Protobom sbom-convert"
-version = "0.0.7"
+version = "0.0.8"
 artifact_path = "bin/generalization/sbom-convert.exe"
-artifact_sha256 = "d4a8809ef029a97245b71f4e6bc0d7b88439267a68d55446c7913b0e24699300"
+artifact_sha256 = "8e1afc0ef0e128be8f4514c60e3d9119263c0584f1ac149a4e3719b5009556c2"
 runtime = "native executable"
-documentation = "https://github.com/protobom/sbom-convert"
+documentation = "https://github.com/protobom/sbom-convert/tree/v0.0.8"
 
 [[converter]]
 id = "cdx2spdx"
@@ -70,8 +78,11 @@ name = "SPDX cdx2spdx"
 version = "0.1.5"
 artifact_path = "bin/generalization/cdx2spdx.jar"
 artifact_sha256 = "8a570cf7f19fada550f850b3724d07ac9b67109d1fc8136fcf7306946b9162fa"
-runtime = "Java"
-documentation = "https://github.com/spdx/cdx2spdx"
+runtime = "repo-local Java executable"
+documentation = "https://github.com/spdx/cdx2spdx/tree/v0.1.5"
+runtime_artifact_path = "bin/generalization/jdk-21.0.12.1+1/bin/java.exe"
+runtime_version = "21.0.12.1+1"
+runtime_sha256 = "82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55"
 
 [[route]]
 route_id = "gen-cyclonedx-9dcf635da297--syft"
@@ -86,10 +97,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-9dcf635da297/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-9dcf635da297/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-9dcf635da297/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-9dcf635da297/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-9dcf635da297.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-9dcf635da297/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-9dcf635da297/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-9dcf635da297/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-9dcf635da297--protobom"
@@ -104,9 +118,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-9dcf635da297/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-9dcf635da297/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-9dcf635da297/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-9dcf635da297/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -122,10 +138,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-9dcf635da297.cdx.json", "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-9dcf635da297.cdx.json", "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-001a52237a69--syft"
@@ -140,10 +159,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-001a52237a69/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-001a52237a69/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-001a52237a69/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-001a52237a69/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-001a52237a69.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-001a52237a69/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-001a52237a69/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-001a52237a69/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-001a52237a69--protobom"
@@ -158,9 +180,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-001a52237a69/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-001a52237a69/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-001a52237a69/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-001a52237a69/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -176,10 +200,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-001a52237a69.cdx.json", "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-001a52237a69.cdx.json", "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-9179c4025ab4--syft"
@@ -194,10 +221,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-9179c4025ab4/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-9179c4025ab4/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-9179c4025ab4.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-9179c4025ab4--protobom"
@@ -212,9 +242,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-9179c4025ab4/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-9179c4025ab4/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-9179c4025ab4/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-9179c4025ab4/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -230,10 +262,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-9179c4025ab4.cdx.json", "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-9179c4025ab4.cdx.json", "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-f1c2f23c4645--syft"
@@ -248,10 +283,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-f1c2f23c4645.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-f1c2f23c4645/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-f1c2f23c4645--protobom"
@@ -266,9 +304,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -284,10 +324,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-f1c2f23c4645.cdx.json", "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-f1c2f23c4645.cdx.json", "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-0fc86e0249ef--syft"
@@ -302,10 +345,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-0fc86e0249ef.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-0fc86e0249ef/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-0fc86e0249ef--protobom"
@@ -320,9 +366,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -338,10 +386,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-0fc86e0249ef.cdx.json", "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-0fc86e0249ef.cdx.json", "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-2e4891eb0992--syft"
@@ -356,10 +407,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-2e4891eb0992/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-2e4891eb0992/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-2e4891eb0992/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-2e4891eb0992/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-2e4891eb0992.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-2e4891eb0992/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-2e4891eb0992/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-2e4891eb0992/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-2e4891eb0992--protobom"
@@ -374,9 +428,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-2e4891eb0992/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-2e4891eb0992/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-2e4891eb0992/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-2e4891eb0992/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -392,10 +448,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-2e4891eb0992.cdx.json", "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-2e4891eb0992.cdx.json", "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-445136956fe1--syft"
@@ -410,10 +469,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-445136956fe1/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-445136956fe1/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-445136956fe1/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-445136956fe1/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-445136956fe1.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-445136956fe1/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-445136956fe1/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-445136956fe1/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-445136956fe1--protobom"
@@ -428,9 +490,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-445136956fe1/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-445136956fe1/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-445136956fe1/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-445136956fe1/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -446,10 +510,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-445136956fe1.cdx.json", "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-445136956fe1.cdx.json", "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-a2e17be40185--syft"
@@ -464,10 +531,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-a2e17be40185/syft/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-a2e17be40185/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-a2e17be40185/syft/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-a2e17be40185/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-cyclonedx-a2e17be40185.cdx.json", "-o", "spdx-json@2.3=generalization/results/gen-cyclonedx-a2e17be40185/syft/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-a2e17be40185/syft/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-a2e17be40185/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-cyclonedx-a2e17be40185--protobom"
@@ -482,9 +552,11 @@ status = "unsupported_pre_execution"
 target_standard = "spdx"
 target_spec_version = "SPDX-2.3"
 target_path = "generalization/results/gen-cyclonedx-a2e17be40185/protobom/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-a2e17be40185/protobom/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-cyclonedx-a2e17be40185/protobom/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-a2e17be40185/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 unsupported_reason = "source CycloneDX version is outside documented protobom JSON read support"
 
 [[route]]
@@ -500,10 +572,13 @@ status = "planned"
 target_standard = "spdx"
 target_spec_version = "converter-defined"
 target_path = "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/target.spdx.json"
+validation_path = "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
-command_argv = ["java", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-a2e17be40185.cdx.json", "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/target.spdx.json"]
+command_argv = ["bin/generalization/jdk-21.0.12.1+1/bin/java.exe", "-jar", "bin/generalization/cdx2spdx.jar", "generalization/sources/gen-cyclonedx-a2e17be40185.cdx.json", "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/target.spdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/target.spdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/target-validation.json"]
 
 [[route]]
 route_id = "gen-spdx-e38ee905f9c0--syft"
@@ -518,10 +593,13 @@ status = "planned"
 target_standard = "cyclonedx"
 target_spec_version = "1.6"
 target_path = "generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json"
+validation_path = "generalization/results/gen-spdx-e38ee905f9c0/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-spdx-e38ee905f9c0/syft/evaluation.json"
 log_path = "generalization/results/gen-spdx-e38ee905f9c0/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-spdx-e38ee905f9c0.spdx.json", "-o", "cyclonedx-json@1.6=generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-spdx-e38ee905f9c0/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-spdx-e38ee905f9c0--protobom"
@@ -536,10 +614,13 @@ status = "planned"
 target_standard = "cyclonedx"
 target_spec_version = "1.4"
 target_path = "generalization/results/gen-spdx-e38ee905f9c0/protobom/target.cdx.json"
+validation_path = "generalization/results/gen-spdx-e38ee905f9c0/protobom/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-spdx-e38ee905f9c0/protobom/evaluation.json"
 log_path = "generalization/results/gen-spdx-e38ee905f9c0/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 command_argv = ["bin/generalization/sbom-convert.exe", "convert", "generalization/sources/gen-spdx-e38ee905f9c0.spdx.json", "-f", "cyclonedx-1.4", "-o", "generalization/results/gen-spdx-e38ee905f9c0/protobom/target.cdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-spdx-e38ee905f9c0/protobom/target.cdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-spdx-e38ee905f9c0/protobom/target-validation.json"]
 
 [[route]]
 route_id = "gen-spdx-e38ee905f9c0--cdx2spdx"
@@ -554,6 +635,8 @@ status = "unsupported_pre_execution"
 target_standard = "cyclonedx"
 target_spec_version = "not_applicable"
 target_path = "generalization/results/gen-spdx-e38ee905f9c0/cdx2spdx/target.cdx.json"
+validation_path = "generalization/results/gen-spdx-e38ee905f9c0/cdx2spdx/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-spdx-e38ee905f9c0/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-spdx-e38ee905f9c0/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"
@@ -572,10 +655,13 @@ status = "planned"
 target_standard = "cyclonedx"
 target_spec_version = "1.6"
 target_path = "generalization/results/gen-spdx-0d278129197b/syft/target.cdx.json"
+validation_path = "generalization/results/gen-spdx-0d278129197b/syft/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-spdx-0d278129197b/syft/evaluation.json"
 log_path = "generalization/results/gen-spdx-0d278129197b/syft/transform.log"
 capability_basis = "Syft format-conversion documentation declares SPDX and CycloneDX conversion; target schema version is fixed explicitly in command"
 command_argv = ["bin/generalization/syft.exe", "convert", "generalization/sources/gen-spdx-0d278129197b.spdx.json", "-o", "cyclonedx-json@1.6=generalization/results/gen-spdx-0d278129197b/syft/target.cdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-spdx-0d278129197b/syft/target.cdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-spdx-0d278129197b/syft/target-validation.json"]
 
 [[route]]
 route_id = "gen-spdx-0d278129197b--protobom"
@@ -590,10 +676,13 @@ status = "planned"
 target_standard = "cyclonedx"
 target_spec_version = "1.4"
 target_path = "generalization/results/gen-spdx-0d278129197b/protobom/target.cdx.json"
+validation_path = "generalization/results/gen-spdx-0d278129197b/protobom/target-validation.json"
+validation_required = true
 evaluation_path = "generalization/results/gen-spdx-0d278129197b/protobom/evaluation.json"
 log_path = "generalization/results/gen-spdx-0d278129197b/protobom/transform.log"
-capability_basis = "Protobom documentation declares JSON read support for SPDX 2.3 and CycloneDX 1.4, 1.5, and 1.6"
+capability_basis = "Protobom v0.6.1 documents JSON read support for SPDX SPDX-2.3 and CycloneDX 1.4, 1.5, 1.6, 1.7"
 command_argv = ["bin/generalization/sbom-convert.exe", "convert", "generalization/sources/gen-spdx-0d278129197b.spdx.json", "-f", "cyclonedx-1.4", "-o", "generalization/results/gen-spdx-0d278129197b/protobom/target.cdx.json"]
+validation_command_argv = ["bin/generalization/sbom-utility.exe", "validate", "-i", "generalization/results/gen-spdx-0d278129197b/protobom/target.cdx.json", "--format", "json", "--error-value=false", "--quiet", "-o", "generalization/results/gen-spdx-0d278129197b/protobom/target-validation.json"]
 
 [[route]]
 route_id = "gen-spdx-0d278129197b--cdx2spdx"
@@ -608,6 +697,8 @@ status = "unsupported_pre_execution"
 target_standard = "cyclonedx"
 target_spec_version = "not_applicable"
 target_path = "generalization/results/gen-spdx-0d278129197b/cdx2spdx/target.cdx.json"
+validation_path = "generalization/results/gen-spdx-0d278129197b/cdx2spdx/target-validation.json"
+validation_required = false
 evaluation_path = "generalization/results/gen-spdx-0d278129197b/cdx2spdx/evaluation.json"
 log_path = "generalization/results/gen-spdx-0d278129197b/cdx2spdx/transform.log"
 capability_basis = "spdx/cdx2spdx documentation declares CycloneDX JSON to SPDX conversion but does not publish an explicit CycloneDX source-version support matrix; selected source versions are not pretested"

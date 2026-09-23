@@ -14,14 +14,46 @@
 
 $ErrorActionPreference = "Stop"
 
+# ============================================================
+# PINNED TOOLCHAIN
+# ============================================================
+
 $SyftVersion = "1.52.0"
-$SbomConvertVersion = "0.0.7"
+$SbomConvertVersion = "0.0.8"
 $Cdx2SpdxVersion = "0.1.5"
 $JavaVersion = "21.0.12.1+1"
+$SbomUtilityVersion = "0.19.2"
+
+# ============================================================
+# TOOL SOURCES
+# ============================================================
+
+$GitHubApiBaseUrl = "https://api.github.com/repos"
+$MavenCentralBaseUrl = "https://repo1.maven.org/maven2"
+$AdoptiumApiBaseUrl = "https://api.adoptium.net/v3/binary/version"
+
+$SyftRepository = "anchore/syft"
+$SbomConvertRepository = "protobom/sbom-convert"
+$SbomUtilityRepository = "CycloneDX/sbom-utility"
+
+$Cdx2SpdxMavenGroupPath = "org/spdx/cdx2spdx"
+
+$DownloadUserAgent = "se-pilot-generalization-tool-installer"
+
+# ============================================================
+# LOCAL TOOLCHAIN PATHS
+# ============================================================
 
 $Root = (Get-Location).Path
 $ToolDir = Join-Path $Root "bin\generalization"
 $TempDir = Join-Path $ToolDir "_download"
+
+$SyftExe = Join-Path $ToolDir "syft.exe"
+$SbomConvertExe = Join-Path $ToolDir "sbom-convert.exe"
+$Cdx2SpdxJar = Join-Path $ToolDir "cdx2spdx.jar"
+$SbomUtilityExe = Join-Path $ToolDir "sbom-utility.exe"
+$JavaDir = Join-Path $ToolDir "jdk-$JavaVersion"
+$JavaExe = Join-Path $JavaDir "bin\java.exe"
 
 if (-not (Test-Path ".git")) {
     throw "Run this script from the repository root."
@@ -52,10 +84,10 @@ function Get-GitHubReleaseAsset {
     )
 
     $Headers = @{
-        "User-Agent" = "se-pilot-generalization-tool-installer"
+        "User-Agent" = $DownloadUserAgent
     }
 
-    $ReleaseUrl = "https://api.github.com/repos/$Repository/releases/tags/$Tag"
+    $ReleaseUrl = "$GitHubApiBaseUrl/$Repository/releases/tags/$Tag"
 
     $Release = Invoke-RestMethod `
         -Uri $ReleaseUrl `
@@ -157,14 +189,14 @@ function Copy-SingleExecutable {
 
 
 # ============================================================
-# Syft 1.52.0
+# Syft
 # ============================================================
 
 $SyftArchive = Join-Path $TempDir "syft.zip"
 $SyftExtract = Join-Path $TempDir "syft"
 
 Get-GitHubReleaseAsset `
-    -Repository "anchore/syft" `
+    -Repository $SyftRepository `
     -Tag "v$SyftVersion" `
     -AssetPattern "^syft_$([regex]::Escape($SyftVersion))_windows_amd64\.zip$" `
     -Destination $SyftArchive
@@ -173,8 +205,6 @@ Expand-ToolArchive `
     -Archive $SyftArchive `
     -Destination $SyftExtract
 
-$SyftExe = Join-Path $ToolDir "syft.exe"
-
 Copy-SingleExecutable `
     -SearchRoot $SyftExtract `
     -ExecutableName "syft.exe" `
@@ -182,18 +212,18 @@ Copy-SingleExecutable `
 
 
 # ============================================================
-# Protobom sbom-convert 0.0.7
+# Protobom sbom-convert
 # ============================================================
 
 $SbomArchive = Join-Path $TempDir "sbom-convert-archive"
 $SbomExtract = Join-Path $TempDir "sbom-convert"
 
 $Headers = @{
-    "User-Agent" = "se-pilot-generalization-tool-installer"
+    "User-Agent" = $DownloadUserAgent
 }
 
 $SbomRelease = Invoke-RestMethod `
-    -Uri "https://api.github.com/repos/protobom/sbom-convert/releases/tags/v$SbomConvertVersion" `
+    -Uri "$GitHubApiBaseUrl/$SbomConvertRepository/releases/tags/v$SbomConvertVersion" `
     -Headers $Headers
 
 $SbomAssets = @(
@@ -233,22 +263,39 @@ Expand-ToolArchive `
     -Archive $SbomArchive `
     -Destination $SbomExtract
 
-$SbomExe = Join-Path $ToolDir "sbom-convert.exe"
-
 Copy-SingleExecutable `
     -SearchRoot $SbomExtract `
     -ExecutableName "sbom-convert.exe" `
-    -Destination $SbomExe
-
+    -Destination $SbomConvertExe
 
 # ============================================================
-# SPDX cdx2spdx 0.1.5
+# CycloneDX sbom-utility
 # ============================================================
 
-$Cdx2SpdxJar = Join-Path $ToolDir "cdx2spdx.jar"
+$SbomUtilityArchive = Join-Path $TempDir "sbom-utility.zip"
+$SbomUtilityExtract = Join-Path $TempDir "sbom-utility"
+
+Get-GitHubReleaseAsset `
+    -Repository $SbomUtilityRepository `
+    -Tag "v$SbomUtilityVersion" `
+    -AssetPattern "^sbom-utility-v$([regex]::Escape($SbomUtilityVersion))-windows-amd64\.zip$" `
+    -Destination $SbomUtilityArchive
+
+Expand-ToolArchive `
+    -Archive $SbomUtilityArchive `
+    -Destination $SbomUtilityExtract
+
+Copy-SingleExecutable `
+    -SearchRoot $SbomUtilityExtract `
+    -ExecutableName "sbom-utility.exe" `
+    -Destination $SbomUtilityExe
+
+# ============================================================
+# SPDX cdx2spdx
+# ============================================================
 
 $Cdx2SpdxUrl = (
-    "https://repo1.maven.org/maven2/org/spdx/cdx2spdx/" +
+    "$MavenCentralBaseUrl/$Cdx2SpdxMavenGroupPath/" +
     "$Cdx2SpdxVersion/" +
     "cdx2spdx-$Cdx2SpdxVersion-jar-with-dependencies.jar"
 )
@@ -261,17 +308,16 @@ Invoke-WebRequest `
 
 
 # ============================================================
-# Portable Eclipse Temurin JDK 21.0.12.1+1
+# Portable Eclipse Temurin JDK
 # ============================================================
 
 $JavaArchive = Join-Path $TempDir "temurin-jdk.zip"
 $JavaExtract = Join-Path $TempDir "temurin-jdk"
-$JavaDir = Join-Path $ToolDir "jdk-$JavaVersion"
 
 $EncodedJavaVersion = $JavaVersion.Replace("+", "%2B")
 
 $JavaUrl = (
-    "https://api.adoptium.net/v3/binary/version/" +
+    "$AdoptiumApiBaseUrl/" +
     "jdk-$EncodedJavaVersion/windows/x64/jdk/hotspot/normal/adoptium"
 )
 
@@ -301,8 +347,6 @@ Move-Item `
     -Path $ExtractedJdk[0].FullName `
     -Destination $JavaDir
 
-$JavaExe = Join-Path $JavaDir "bin\java.exe"
-
 if (-not (Test-Path $JavaExe)) {
     throw "Portable Java executable not found: $JavaExe"
 }
@@ -327,7 +371,11 @@ Get-FileHash $SyftExe -Algorithm SHA256 |
     Select-Object Path, Hash |
     Format-Table -AutoSize
 
-Get-FileHash $SbomExe -Algorithm SHA256 |
+Get-FileHash $SbomConvertExe -Algorithm SHA256 |
+    Select-Object Path, Hash |
+    Format-Table -AutoSize
+
+Get-FileHash $SbomUtilityExe -Algorithm SHA256 |
     Select-Object Path, Hash |
     Format-Table -AutoSize
 
@@ -343,6 +391,7 @@ Write-Host ""
 Write-Host "Versions:"
 Write-Host "  Syft:         $SyftVersion"
 Write-Host "  sbom-convert: $SbomConvertVersion"
+Write-Host "  sbom-utility: $SbomUtilityVersion"
 Write-Host "  cdx2spdx:     $Cdx2SpdxVersion"
 Write-Host "  Java:         $JavaVersion"
 
@@ -350,5 +399,6 @@ Write-Host ""
 Write-Host "Toolchain ready:"
 Write-Host "  bin\generalization\syft.exe"
 Write-Host "  bin\generalization\sbom-convert.exe"
+Write-Host "  bin\generalization\sbom-utility.exe"
 Write-Host "  bin\generalization\cdx2spdx.jar"
 Write-Host "  bin\generalization\jdk-$JavaVersion\bin\java.exe"

@@ -186,17 +186,19 @@ uv run python -m preservation_test.generalization.p03_preserve_sources
 # Install tools
 .\install_generalization_tools.ps1
 
-# Build the frozen transformation matrix
+# Construct the complete pre-outcome transformation plan
 Remove-Item generalization/05-transformations.toml
 uv run python -m preservation_test.generalization.p04_build_transformations `
     --syft bin/generalization/syft.exe `
     --syft-version "1.52.0" `
     --sbom-convert bin/generalization/sbom-convert.exe `
-    --sbom-convert-version "0.0.7" `
+    --sbom-convert-version "0.0.8" `
     --cdx2spdx-jar bin/generalization/cdx2spdx.jar `
     --cdx2spdx-version "0.1.5" `
     --java "bin/generalization/jdk-21.0.12.1+1/bin/java.exe" `
-    --java-version "21.0.12.1+1"
+    --java-version "21.0.12.1+1" `
+    --sbom-utility bin/generalization/sbom-utility.exe `
+    --sbom-utility-version "0.19.2"
 
 # save progress
 git add -A

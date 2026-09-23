@@ -37,6 +37,25 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
   source-only screening, deterministic corpus construction,
   provenance and hash handling, and supporting utility behavior
 - added test modules corresponding to the generalization utility modules
+- added exact preservation of selected held-out Git blobs under
+  `generalization/sources/`
+- added `generalization/04-sources.toml` as the provenance and hash record for
+  preserved held-out source bytes
+- added deterministic pre-outcome transformation-matrix construction for every
+  held-out source and declared converter family
+- added `generalization/05-transformations.toml` as the pre-outcome execution
+  plan for the held-out generalization experiment
+- added explicit planned and unsupported-pre-execution route classification
+  without replacing unsupported corpus members
+- added repo-local installation of the pinned generalization converter toolchain,
+  including Syft, Protobom `sbom-convert`, SPDX `cdx2spdx`, and a portable
+  Eclipse Temurin JDK
+- added repo-local `sbom-utility` target validation as a separately frozen
+  experimental instrument
+- added predeclared target-validation paths and validation commands for planned
+  transformation routes
+- added separate target-validity handling so whole-document validity can be
+  recorded independently from frozen identity-preservation evaluation
 
 ## Updated
 
@@ -50,6 +69,14 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
   `source_standard + subject` selection unit, and lowest-source-SHA-256 within-unit rule
 - updated source-only screening tests to follow the numbered `p01` candidate-inventory and `p02` corpus-construction pipeline
 - increased automated test coverage of the repository to more than 70%
+- updated `.gitignore` to retain generalization transformation logs as research evidence
+- updated the generalization tool installer to pin tool versions and centralize
+  repository, download, and artifact-path configuration
+- updated the generalization transformation plan to freeze exact converter
+  artifacts, SHA-256 hashes, tagged documentation references, and the repo-local
+  Java runtime used by `cdx2spdx`
+- updated Protobom capability declarations to derive supported source versions
+  and target versions from centralized constants
 
 ---
 

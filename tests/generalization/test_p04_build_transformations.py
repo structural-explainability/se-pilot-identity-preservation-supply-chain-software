@@ -7,6 +7,7 @@ from preservation_test.generalization.p04_build_transformations import (
     UNSUPPORTED,
     Converter,
     Source,
+    TargetValidator,
     _cdx2spdx_route,
     _protobom_route,
     _syft_route,
@@ -27,10 +28,24 @@ def _source(
     )
 
 
+def _validator(
+    *,
+    artifact_path: Path,
+) -> TargetValidator:
+    return TargetValidator(
+        name="CycloneDX sbom-utility",
+        version="0.19.2",
+        artifact_path=artifact_path,
+        artifact_sha256="c" * 64,
+        documentation=("https://github.com/CycloneDX/sbom-utility/tree/v0.19.2"),
+    )
+
+
 def _converter(
     *,
     converter_id: str,
     artifact_path: Path,
+    runtime_artifact_path: Path | None = None,
 ) -> Converter:
     return Converter(
         converter_id=converter_id,
@@ -40,6 +55,9 @@ def _converter(
         artifact_sha256="b" * 64,
         documentation="https://example.org",
         runtime="test",
+        runtime_artifact_path=runtime_artifact_path,
+        runtime_version="21.0.12.1+1" if runtime_artifact_path else "",
+        runtime_sha256="d" * 64 if runtime_artifact_path else "",
     )
 
 
@@ -54,13 +72,22 @@ def test_protobom_marks_cyclonedx_1_3_unsupported(
         converter_id="protobom",
         artifact_path=tmp_path / "sbom-convert.exe",
     )
+    validator = _validator(
+        artifact_path=tmp_path / "sbom-utility.exe",
+    )
 
-    route = _protobom_route(source, converter)
+    route = _protobom_route(
+        source,
+        converter,
+        validator,
+    )
 
     assert route.status == UNSUPPORTED
     assert route.direction == "cyclonedx_to_spdx"
     assert route.target_standard == "spdx"
     assert route.command_argv == ()
+    assert route.validation_required is False
+    assert route.validation_command_argv == ()
     assert "outside documented protobom" in route.unsupported_reason
 
 
@@ -75,14 +102,26 @@ def test_protobom_plans_spdx_2_3_route(
         converter_id="protobom",
         artifact_path=tmp_path / "sbom-convert.exe",
     )
+    validator = _validator(
+        artifact_path=tmp_path / "sbom-utility.exe",
+    )
 
-    route = _protobom_route(source, converter)
+    route = _protobom_route(
+        source,
+        converter,
+        validator,
+    )
 
     assert route.status == PLANNED
     assert route.direction == "spdx_to_cyclonedx"
     assert route.target_standard == "cyclonedx"
     assert route.target_spec_version == "1.4"
     assert route.command_argv
+    assert route.validation_required is True
+    assert route.validation_command_argv
+    assert route.validation_command_argv[0].endswith("sbom-utility.exe")
+    assert "validate" in route.validation_command_argv
+    assert route.validation_path in route.validation_command_argv
 
 
 def test_cdx2spdx_marks_spdx_source_unsupported(
@@ -95,13 +134,23 @@ def test_cdx2spdx_marks_spdx_source_unsupported(
     converter = _converter(
         converter_id="cdx2spdx",
         artifact_path=tmp_path / "cdx2spdx.jar",
+        runtime_artifact_path=tmp_path / "java.exe",
+    )
+    validator = _validator(
+        artifact_path=tmp_path / "sbom-utility.exe",
     )
 
-    route = _cdx2spdx_route(source, converter)
+    route = _cdx2spdx_route(
+        source,
+        converter,
+        validator,
+    )
 
     assert route.status == UNSUPPORTED
     assert route.direction == "spdx_to_cyclonedx"
     assert route.command_argv == ()
+    assert route.validation_required is False
+    assert route.validation_command_argv == ()
     assert "CycloneDX-to-SPDX conversion only" in route.unsupported_reason
 
 
@@ -115,14 +164,28 @@ def test_cdx2spdx_keeps_cyclonedx_route_as_planned_attempt(
     converter = _converter(
         converter_id="cdx2spdx",
         artifact_path=tmp_path / "cdx2spdx.jar",
+        runtime_artifact_path=tmp_path / "java.exe",
+    )
+    validator = _validator(
+        artifact_path=tmp_path / "sbom-utility.exe",
     )
 
-    route = _cdx2spdx_route(source, converter)
+    route = _cdx2spdx_route(
+        source,
+        converter,
+        validator,
+    )
 
     assert route.status == PLANNED
     assert route.direction == "cyclonedx_to_spdx"
     assert route.target_standard == "spdx"
     assert route.command_argv
+    assert route.command_argv[0].endswith("java.exe")
+    assert route.validation_required is True
+    assert route.validation_command_argv
+    assert route.validation_command_argv[0].endswith("sbom-utility.exe")
+    assert "validate" in route.validation_command_argv
+    assert route.validation_path in route.validation_command_argv
 
 
 def test_syft_plans_cyclonedx_to_spdx(
@@ -136,14 +199,26 @@ def test_syft_plans_cyclonedx_to_spdx(
         converter_id="syft",
         artifact_path=tmp_path / "syft.exe",
     )
+    validator = _validator(
+        artifact_path=tmp_path / "sbom-utility.exe",
+    )
 
-    route = _syft_route(source, converter)
+    route = _syft_route(
+        source,
+        converter,
+        validator,
+    )
 
     assert route.status == PLANNED
     assert route.direction == "cyclonedx_to_spdx"
     assert route.target_standard == "spdx"
     assert route.target_spec_version == "SPDX-2.3"
     assert route.command_argv
+    assert route.validation_required is True
+    assert route.validation_command_argv
+    assert route.validation_command_argv[0].endswith("sbom-utility.exe")
+    assert "validate" in route.validation_command_argv
+    assert route.validation_path in route.validation_command_argv
 
 
 def test_syft_plans_spdx_to_cyclonedx(
@@ -157,11 +232,23 @@ def test_syft_plans_spdx_to_cyclonedx(
         converter_id="syft",
         artifact_path=tmp_path / "syft.exe",
     )
+    validator = _validator(
+        artifact_path=tmp_path / "sbom-utility.exe",
+    )
 
-    route = _syft_route(source, converter)
+    route = _syft_route(
+        source,
+        converter,
+        validator,
+    )
 
     assert route.status == PLANNED
     assert route.direction == "spdx_to_cyclonedx"
     assert route.target_standard == "cyclonedx"
     assert route.target_spec_version == "1.6"
     assert route.command_argv
+    assert route.validation_required is True
+    assert route.validation_command_argv
+    assert route.validation_command_argv[0].endswith("sbom-utility.exe")
+    assert "validate" in route.validation_command_argv
+    assert route.validation_path in route.validation_command_argv

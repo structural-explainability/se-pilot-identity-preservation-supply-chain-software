@@ -12,6 +12,7 @@
 
 bin/
 refs/
+generalization/results/**/transform.log
 
 # === pup-up fragments ===
 

@@ -15,7 +15,7 @@ For every preserved source and every declared converter family, p04 records:
 3. the transformation direction,
 4. the intended target format and version where known,
 5. the exact command arguments that will be used,
-6. the target, evaluator-output, and log paths,
+6. the target, target-validation, evaluator-output, and log paths,
 7. whether the route is planned or known to be unsupported before execution,
    and
 8. the pre-execution capability basis for that decision.
@@ -28,6 +28,23 @@ Unsupported routes remain in the matrix.
 A source is never replaced merely because a converter
 does not support its format or specification version.
 
+There are:
+
+3 converters
+    syft
+    protobom
+    cdx2spdx
+
+1 target validator
+    sbom-utility
+
+each planned route
+    transformation command
+    target path
+    validation command
+    validation result path
+    evaluation result path
+
 The resulting 05-transformations.toml is
 the pre-outcome execution plan for Freeze 02.
 
@@ -37,11 +54,13 @@ uv run python -m preservation_test.generalization.p04_build_transformations `
     --syft bin/generalization/syft.exe `
     --syft-version "1.52.0" `
     --sbom-convert bin/generalization/sbom-convert.exe `
-    --sbom-convert-version "0.0.7" `
+    --sbom-convert-version "0.0.8" `
     --cdx2spdx-jar bin/generalization/cdx2spdx.jar `
     --cdx2spdx-version "0.1.5" `
     --java "bin/generalization/jdk-21.0.12.1+1/bin/java.exe" `
-    --java-version "21.0.12.1+1"
+    --java-version "21.0.12.1+1" `
+    --sbom-utility bin/generalization/sbom-utility.exe `
+    --sbom-utility-version "0.19.2"
 
 Pre-freeze converter capability basis
 -------------------------------------
@@ -49,9 +68,11 @@ Syft documents SPDX-to-CycloneDX and CycloneDX-to-SPDX conversion and supports
 versioned output through SPDX 2.3 and CycloneDX 1.6.
 Its applicable routes are included as planned transformations.
 
-Protobom documents JSON input support for SPDX 2.3 and CycloneDX 1.4 through 1.6.
-The selected SPDX 2.3 sources are eligible for its declared
-SPDX-to-CycloneDX route.
+Protobom's pinned library version and documented JSON input support are
+declared as code constants below and recorded
+in the generated transformation plan.
+Sources within that declared support are eligible for its transformation
+routes.
 The selected CycloneDX sources are version 1.2 or 1.3
 and are recorded as unsupported pre-execution routes rather than
 being replaced by different source artifacts.
@@ -111,6 +132,12 @@ EXIT_REFUSED = 2
 PLANNED = "planned"
 UNSUPPORTED = "unsupported_pre_execution"
 
+PROTOBOM_LIBRARY_VERSION = "0.6.1"
+PROTOBOM_SPDX_READ_VERSIONS = ("SPDX-2.3",)
+PROTOBOM_CYCLONEDX_READ_VERSIONS = ("1.4", "1.5", "1.6", "1.7")
+PROTOBOM_CYCLONEDX_TARGET_VERSION = "1.4"
+PROTOBOM_SPDX_TARGET_VERSION = "SPDX-2.3"
+
 
 class TransformationPlanError(RuntimeError):
     """Raised when the transformation matrix cannot be defined safely."""
@@ -138,6 +165,20 @@ class Converter:
     artifact_sha256: str
     documentation: str
     runtime: str
+    runtime_artifact_path: Path | None = None
+    runtime_version: str = ""
+    runtime_sha256: str = ""
+
+
+@dataclass(frozen=True)
+class TargetValidator:
+    """One exact validator artifact declared for generated targets."""
+
+    name: str
+    version: str
+    artifact_path: Path
+    artifact_sha256: str
+    documentation: str
 
 
 @dataclass(frozen=True)
@@ -156,11 +197,14 @@ class RoutePlan:
     target_standard: str
     target_spec_version: str
     target_path: str
+    validation_path: str
+    validation_required: bool
     evaluation_path: str
     log_path: str
     capability_basis: str
     unsupported_reason: str
     command_argv: tuple[str, ...]
+    validation_command_argv: tuple[str, ...]
 
 
 def _required_string(data: dict[str, Any], key: str, where: str) -> str:
@@ -294,14 +338,33 @@ def _converter(
     artifact_path: Path,
     documentation: str,
     runtime: str,
+    runtime_artifact_path: Path | None = None,
+    runtime_version: str = "",
 ) -> Converter:
-    """Create one converter record from an exact local artifact."""
+    """Create one converter record from exact local artifacts."""
     if not version.strip():
         raise TransformationPlanError(
             f"{converter_id} version must be a non-empty string"
         )
 
     resolved = _resolve_tool(artifact_path)
+
+    resolved_runtime: Path | None = None
+    runtime_sha256 = ""
+
+    if runtime_artifact_path is not None:
+        if not runtime_version.strip():
+            raise TransformationPlanError(
+                f"{converter_id} runtime version must be a non-empty string"
+            )
+
+        resolved_runtime = _resolve_tool(runtime_artifact_path)
+        runtime_sha256 = sha256_file(resolved_runtime)
+
+    elif runtime_version.strip():
+        raise TransformationPlanError(
+            f"{converter_id} runtime version was supplied without a runtime artifact"
+        )
 
     return Converter(
         converter_id=converter_id,
@@ -311,6 +374,30 @@ def _converter(
         artifact_sha256=sha256_file(resolved),
         documentation=documentation,
         runtime=runtime,
+        runtime_artifact_path=resolved_runtime,
+        runtime_version=runtime_version.strip(),
+        runtime_sha256=runtime_sha256,
+    )
+
+
+def _target_validator(
+    artifact_path: Path,
+    version: str,
+) -> TargetValidator:
+    """Create the exact target-validator record."""
+    if not version.strip():
+        raise TransformationPlanError("sbom-utility version must be a non-empty string")
+
+    resolved = _resolve_tool(artifact_path)
+
+    return TargetValidator(
+        name="CycloneDX sbom-utility",
+        version=version.strip(),
+        artifact_path=resolved,
+        artifact_sha256=sha256_file(resolved),
+        documentation=(
+            f"https://github.com/CycloneDX/sbom-utility/tree/v{version.strip()}"
+        ),
     )
 
 
@@ -318,14 +405,15 @@ def _target_paths(
     source: Source,
     converter_id: str,
     target_standard: str,
-) -> tuple[str, str, str]:
-    """Return predeclared target, evaluation, and log paths."""
+) -> tuple[str, str, str, str]:
+    """Return predeclared target, validation, evaluation, and log paths."""
     directory = RESULTS_DIR / source.study_id / converter_id
 
     suffix = "spdx.json" if target_standard == "spdx" else "cdx.json"
 
     return (
         (directory / f"target.{suffix}").as_posix(),
+        (directory / "target-validation.json").as_posix(),
         (directory / "evaluation.json").as_posix(),
         (directory / "transform.log").as_posix(),
     )
@@ -341,7 +429,7 @@ def _unsupported(
     reason: str,
 ) -> RoutePlan:
     """Return one explicitly unsupported pre-execution route."""
-    target_path, evaluation_path, log_path = _target_paths(
+    target_path, validation_path, evaluation_path, log_path = _target_paths(
         source,
         converter.converter_id,
         target_standard,
@@ -360,17 +448,21 @@ def _unsupported(
         target_standard=target_standard,
         target_spec_version=target_spec_version,
         target_path=target_path,
+        validation_path=validation_path,
+        validation_required=False,
         evaluation_path=evaluation_path,
         log_path=log_path,
         capability_basis=capability_basis,
         unsupported_reason=reason,
         command_argv=(),
+        validation_command_argv=(),
     )
 
 
 def _planned(
     source: Source,
     converter: Converter,
+    validator: TargetValidator,
     direction: str,
     target_standard: str,
     target_spec_version: str,
@@ -378,7 +470,7 @@ def _planned(
     command_argv: tuple[str, ...],
 ) -> RoutePlan:
     """Return one predeclared transformation route."""
-    target_path, evaluation_path, log_path = _target_paths(
+    target_path, validation_path, evaluation_path, log_path = _target_paths(
         source,
         converter.converter_id,
         target_standard,
@@ -390,6 +482,24 @@ def _planned(
             target_path,
         )
         for argument in command_argv
+    )
+
+    validator_executable = relative_to_root(
+        validator.artifact_path,
+        REPOSITORY_ROOT,
+    )
+
+    validation_command_argv = (
+        validator_executable,
+        "validate",
+        "-i",
+        target_path,
+        "--format",
+        "json",
+        "--error-value=false",
+        "--quiet",
+        "-o",
+        validation_path,
     )
 
     return RoutePlan(
@@ -405,15 +515,22 @@ def _planned(
         target_standard=target_standard,
         target_spec_version=target_spec_version,
         target_path=target_path,
+        validation_path=validation_path,
+        validation_required=True,
         evaluation_path=evaluation_path,
         log_path=log_path,
         capability_basis=capability_basis,
         unsupported_reason="",
         command_argv=expanded,
+        validation_command_argv=validation_command_argv,
     )
 
 
-def _syft_route(source: Source, converter: Converter) -> RoutePlan:
+def _syft_route(
+    source: Source,
+    converter: Converter,
+    validator: TargetValidator,
+) -> RoutePlan:
     """Define one Syft route without executing it."""
     executable = relative_to_root(
         converter.artifact_path,
@@ -426,7 +543,7 @@ def _syft_route(source: Source, converter: Converter) -> RoutePlan:
     )
 
     if source.source_standard == "cyclonedx":
-        target_path, _, _ = _target_paths(
+        target_path, _, _, _ = _target_paths(
             source,
             converter.converter_id,
             "spdx",
@@ -435,6 +552,7 @@ def _syft_route(source: Source, converter: Converter) -> RoutePlan:
         return _planned(
             source=source,
             converter=converter,
+            validator=validator,
             direction="cyclonedx_to_spdx",
             target_standard="spdx",
             target_spec_version="SPDX-2.3",
@@ -449,7 +567,7 @@ def _syft_route(source: Source, converter: Converter) -> RoutePlan:
         )
 
     if source.source_standard == "spdx":
-        target_path, _, _ = _target_paths(
+        target_path, _, _, _ = _target_paths(
             source,
             converter.converter_id,
             "cyclonedx",
@@ -458,6 +576,7 @@ def _syft_route(source: Source, converter: Converter) -> RoutePlan:
         return _planned(
             source=source,
             converter=converter,
+            validator=validator,
             direction="spdx_to_cyclonedx",
             target_standard="cyclonedx",
             target_spec_version="1.6",
@@ -479,6 +598,7 @@ def _syft_route(source: Source, converter: Converter) -> RoutePlan:
 def _protobom_route(
     source: Source,
     converter: Converter,
+    validator: TargetValidator,
 ) -> RoutePlan:
     """Define one protobom/sbom-convert route from documented read support."""
     executable = relative_to_root(
@@ -486,19 +606,22 @@ def _protobom_route(
         REPOSITORY_ROOT,
     )
 
+    spdx_versions = ", ".join(PROTOBOM_SPDX_READ_VERSIONS)
+    cyclonedx_versions = ", ".join(PROTOBOM_CYCLONEDX_READ_VERSIONS)
+
     basis = (
-        "Protobom documentation declares JSON read support for SPDX 2.3 "
-        "and CycloneDX 1.4, 1.5, and 1.6"
+        f"Protobom v{PROTOBOM_LIBRARY_VERSION} documents JSON read support "
+        f"for SPDX {spdx_versions} and CycloneDX {cyclonedx_versions}"
     )
 
     if source.source_standard == "spdx":
-        if source.source_spec_version != "SPDX-2.3":
+        if source.source_spec_version not in PROTOBOM_SPDX_READ_VERSIONS:
             return _unsupported(
                 source=source,
                 converter=converter,
                 direction="spdx_to_cyclonedx",
                 target_standard="cyclonedx",
-                target_spec_version="1.4",
+                target_spec_version=PROTOBOM_CYCLONEDX_TARGET_VERSION,
                 capability_basis=basis,
                 reason=(
                     "source SPDX version is outside documented protobom "
@@ -509,29 +632,30 @@ def _protobom_route(
         return _planned(
             source=source,
             converter=converter,
+            validator=validator,
             direction="spdx_to_cyclonedx",
             target_standard="cyclonedx",
-            target_spec_version="1.4",
+            target_spec_version=PROTOBOM_CYCLONEDX_TARGET_VERSION,
             capability_basis=basis,
             command_argv=(
                 executable,
                 "convert",
                 "{source}",
                 "-f",
-                "cyclonedx-1.4",
+                f"cyclonedx-{PROTOBOM_CYCLONEDX_TARGET_VERSION}",
                 "-o",
                 "{target}",
             ),
         )
 
     if source.source_standard == "cyclonedx":
-        if source.source_spec_version not in {"1.4", "1.5", "1.6"}:
+        if source.source_spec_version not in PROTOBOM_CYCLONEDX_READ_VERSIONS:
             return _unsupported(
                 source=source,
                 converter=converter,
                 direction="cyclonedx_to_spdx",
                 target_standard="spdx",
-                target_spec_version="SPDX-2.3",
+                target_spec_version=PROTOBOM_SPDX_TARGET_VERSION,
                 capability_basis=basis,
                 reason=(
                     "source CycloneDX version is outside documented "
@@ -542,16 +666,17 @@ def _protobom_route(
         return _planned(
             source=source,
             converter=converter,
+            validator=validator,
             direction="cyclonedx_to_spdx",
             target_standard="spdx",
-            target_spec_version="SPDX-2.3",
+            target_spec_version=PROTOBOM_SPDX_TARGET_VERSION,
             capability_basis=basis,
             command_argv=(
                 executable,
                 "convert",
                 "{source}",
                 "-f",
-                "spdx-2.3",
+                f"spdx-{PROTOBOM_SPDX_TARGET_VERSION.split('-')[1]}",
                 "-o",
                 "{target}",
             ),
@@ -565,10 +690,21 @@ def _protobom_route(
 def _cdx2spdx_route(
     source: Source,
     converter: Converter,
+    validator: TargetValidator,
 ) -> RoutePlan:
     """Define one cdx2spdx route without pretesting held-out inputs."""
     jar = relative_to_root(
         converter.artifact_path,
+        REPOSITORY_ROOT,
+    )
+
+    if converter.runtime_artifact_path is None:
+        raise TransformationPlanError(
+            "cdx2spdx requires a frozen repo-local Java runtime"
+        )
+
+    java = relative_to_root(
+        converter.runtime_artifact_path,
         REPOSITORY_ROOT,
     )
 
@@ -597,12 +733,13 @@ def _cdx2spdx_route(
     return _planned(
         source=source,
         converter=converter,
+        validator=validator,
         direction="cyclonedx_to_spdx",
         target_standard="spdx",
         target_spec_version="converter-defined",
         capability_basis=basis,
         command_argv=(
-            "java",
+            java,
             "-jar",
             jar,
             "{source}",
@@ -614,23 +751,24 @@ def _cdx2spdx_route(
 def _route(
     source: Source,
     converter: Converter,
+    validator: TargetValidator,
 ) -> RoutePlan:
     """Dispatch one source/converter pair to its declared route rule."""
     if converter.converter_id == "syft":
-        return _syft_route(source, converter)
+        return _syft_route(source, converter, validator)
 
     if converter.converter_id == "protobom":
-        return _protobom_route(source, converter)
+        return _protobom_route(source, converter, validator)
 
     if converter.converter_id == "cdx2spdx":
-        return _cdx2spdx_route(source, converter)
+        return _cdx2spdx_route(source, converter, validator)
 
     raise TransformationPlanError(f"unknown converter_id: {converter.converter_id}")
 
 
 def _converter_row(converter: Converter) -> dict[str, Any]:
     """Return one exact converter artifact as a TOML-ready row."""
-    return {
+    row: dict[str, Any] = {
         "id": converter.converter_id,
         "name": converter.name,
         "version": converter.version,
@@ -641,6 +779,32 @@ def _converter_row(converter: Converter) -> dict[str, Any]:
         "artifact_sha256": converter.artifact_sha256,
         "runtime": converter.runtime,
         "documentation": converter.documentation,
+    }
+
+    if converter.runtime_artifact_path is not None:
+        row["runtime_artifact_path"] = relative_to_root(
+            converter.runtime_artifact_path,
+            REPOSITORY_ROOT,
+        )
+        row["runtime_version"] = converter.runtime_version
+        row["runtime_sha256"] = converter.runtime_sha256
+
+    return row
+
+
+def _target_validator_row(
+    validator: TargetValidator,
+) -> dict[str, Any]:
+    """Return the exact target-validator artifact as a TOML-ready row."""
+    return {
+        "name": validator.name,
+        "version": validator.version,
+        "artifact_path": relative_to_root(
+            validator.artifact_path,
+            REPOSITORY_ROOT,
+        ),
+        "artifact_sha256": validator.artifact_sha256,
+        "documentation": validator.documentation,
     }
 
 
@@ -659,6 +823,8 @@ def _route_row(route: RoutePlan) -> dict[str, Any]:
         "target_standard": route.target_standard,
         "target_spec_version": route.target_spec_version,
         "target_path": route.target_path,
+        "validation_path": route.validation_path,
+        "validation_required": route.validation_required,
         "evaluation_path": route.evaluation_path,
         "log_path": route.log_path,
         "capability_basis": route.capability_basis,
@@ -670,12 +836,16 @@ def _route_row(route: RoutePlan) -> dict[str, Any]:
     if route.command_argv:
         row["command_argv"] = list(route.command_argv)
 
+    if route.validation_command_argv:
+        row["validation_command_argv"] = list(route.validation_command_argv)
+
     return row
 
 
 def _render(
     sources: tuple[Source, ...],
     converters: tuple[Converter, ...],
+    validator: TargetValidator,
     routes: tuple[RoutePlan, ...],
 ) -> str:
     """Render 05-transformations.toml."""
@@ -704,6 +874,7 @@ def _render(
                 "transformation_outputs_examined": False,
                 "results_directory": RESULTS_DIR.as_posix(),
             },
+            "target_validator": _target_validator_row(validator),
             "transformations_code_sha256": screening_code_hashes(
                 REPOSITORY_ROOT,
                 extra=(THIS_STEP,),
@@ -723,6 +894,10 @@ def build_transformations(
     sbom_convert_version: str,
     cdx2spdx_jar: Path,
     cdx2spdx_version: str,
+    java_path: Path,
+    java_version: str,
+    sbom_utility_path: Path,
+    sbom_utility_version: str,
 ) -> int:
     """Build the complete pre-execution transformation matrix."""
     out = REPOSITORY_ROOT / OUT_FILE
@@ -747,7 +922,7 @@ def build_transformations(
                 name="Anchore Syft",
                 version=syft_version,
                 artifact_path=syft_path,
-                documentation=("https://oss.anchore.com/docs/guides/sbom/conversion/"),
+                documentation=(f"https://github.com/anchore/syft/tree/v{syft_version}"),
                 runtime="native executable",
             ),
             _converter(
@@ -755,7 +930,10 @@ def build_transformations(
                 name="Protobom sbom-convert",
                 version=sbom_convert_version,
                 artifact_path=sbom_convert_path,
-                documentation=("https://github.com/protobom/sbom-convert"),
+                documentation=(
+                    "https://github.com/protobom/sbom-convert/"
+                    f"tree/v{sbom_convert_version}"
+                ),
                 runtime="native executable",
             ),
             _converter(
@@ -763,13 +941,24 @@ def build_transformations(
                 name="SPDX cdx2spdx",
                 version=cdx2spdx_version,
                 artifact_path=cdx2spdx_jar,
-                documentation=("https://github.com/spdx/cdx2spdx"),
-                runtime="Java",
+                documentation=(
+                    f"https://github.com/spdx/cdx2spdx/tree/v{cdx2spdx_version}"
+                ),
+                runtime="repo-local Java executable",
+                runtime_artifact_path=java_path,
+                runtime_version=java_version,
             ),
         )
 
+        validator = _target_validator(
+            artifact_path=sbom_utility_path,
+            version=sbom_utility_version,
+        )
+
         routes = tuple(
-            _route(source, converter) for source in sources for converter in converters
+            _route(source, converter, validator)
+            for source in sources
+            for converter in converters
         )
 
         route_ids = [route.route_id for route in routes]
@@ -780,6 +969,7 @@ def build_transformations(
         text = _render(
             sources,
             converters,
+            validator,
             routes,
         )
 
@@ -862,6 +1052,17 @@ def main(argv: list[str] | None = None) -> int:
         required=True,
         help="Version label for the supplied Java runtime.",
     )
+    parser.add_argument(
+        "--sbom-utility",
+        type=Path,
+        required=True,
+        help="Exact sbom-utility executable used to validate generated targets.",
+    )
+    parser.add_argument(
+        "--sbom-utility-version",
+        required=True,
+        help="Version label for the supplied sbom-utility executable.",
+    )
 
     args = parser.parse_args(argv)
 
@@ -872,6 +1073,10 @@ def main(argv: list[str] | None = None) -> int:
         sbom_convert_version=args.sbom_convert_version,
         cdx2spdx_jar=args.cdx2spdx_jar,
         cdx2spdx_version=args.cdx2spdx_version,
+        java_path=args.java,
+        java_version=args.java_version,
+        sbom_utility_path=args.sbom_utility,
+        sbom_utility_version=args.sbom_utility_version,
     )
 
 
