@@ -1,0 +1,322 @@
+# ============================================================
+# 01-sampling.toml
+# ============================================================
+# Defines the predeclared sampling process used to construct the
+# held-out generalization corpus.
+#
+# This file specifies:
+# - the sampling frame,
+# - source-only eligibility and exclusion criteria,
+# - prohibited information during selection,
+# - the unit of selection,
+# - deterministic selection,
+# - reporting dimensions, and
+# - reproducibility requirements.
+#
+# This file MUST NOT contain transformation outputs, evaluator
+# results, observed preservation behavior, or candidate-specific
+# selection outcomes.
+#
+# Candidate screening outcomes are recorded in 02-candidates.toml.
+# Selected corpus membership is recorded in 03-corpus.toml.
+# Preserved source artifacts are recorded in 04-sources.toml.
+# ============================================================
+
+schema_version = 1
+sampling_id = "generalization-corpus-v1"
+
+
+# ------------------------------------------------------------
+# Objective
+# ------------------------------------------------------------
+
+[objective]
+
+description = """
+Construct a reproducible held-out corpus of example software SBOMs
+published by the CycloneDX and SPDX standards projects for
+generalization evaluation of the frozen identity-preservation
+commitment. Conclusions are scoped to this frame.
+"""
+
+
+# ------------------------------------------------------------
+# Sampling frame
+# ------------------------------------------------------------
+# Revisions are fixed. Candidate enumeration is mechanical:
+# every blob at the fixed revision whose path ends in ".json"
+# is a screened candidate. Other serializations are out of scope
+# because the frozen evaluator reads JSON only.
+
+[sampling_frame]
+
+repository_types = ["official-standard-example-repository"]
+
+[[sampling_frame.repository]]
+name = "CycloneDX/bom-examples"
+url = "https://github.com/CycloneDX/bom-examples.git"
+revision = "7d9172d00c88c05a8f1ccb90589d111870fc9d86"
+
+[[sampling_frame.repository]]
+name = "spdx/spdx-examples"
+url = "https://github.com/spdx/spdx-examples.git"
+revision = "2181917ef6ff74de89252ee785583c27a38d6199"
+
+[sampling_frame.enumeration]
+
+method = "git ls-tree -r --name-only <revision>"
+path_filter = "*.json"
+content_source = "git blob at fixed revision"
+
+[sampling_frame.constraints]
+
+publicly_accessible = true
+fixed_repository_revision = true
+
+
+# ------------------------------------------------------------
+# Disclosure
+# ------------------------------------------------------------
+
+[disclosure]
+
+prior_source_only_scan = """
+Before this file was fixed, an aggregate source-only feasibility
+scan was run at the revisions above: format/version counts and
+counts of documents with at least one component carrying a
+canonical PURL and a content-hash anchor, using the Freeze 01
+source adapter on source documents only. No transformation was
+executed and no evaluator comparison was run.
+"""
+
+
+# ------------------------------------------------------------
+# In-scope formats
+# ------------------------------------------------------------
+# Grounded in Freeze 01 sources.toml. SPDX 3.0 is out of scope
+# for this corpus: the Freeze 01 detect_format does not recognize
+# SPDX 3.0.1 JSON-LD serialization (recorded as a known Freeze 01
+# evaluator limitation in the Freeze 02 record).
+
+[formats]
+
+spdx_versions = ["SPDX-2.3"]
+cyclonedx_spec_versions = ["1.2", "1.3", "1.4", "1.5", "1.6"]
+serialization = "json"
+
+
+# ------------------------------------------------------------
+# Eligibility
+# ------------------------------------------------------------
+# Determined mechanically from the source document only, using the
+# Freeze 01 source adapter (formats.load) applied to the source.
+
+[eligibility]
+
+source_information_only = true
+
+inclusion_criteria = [
+    "Document parses as JSON.",
+    "Document is SPDX with spdxVersion exactly in [formats].spdx_versions, or CycloneDX with specVersion in [formats].cyclonedx_spec_versions.",
+    "Freeze 01 formats.load on the source yields at least one component with at least one canonical PURL and at least one content-hash anchor.",
+    "Document uses an in-scope source standard, specification version, and serialization declared in [formats].",
+]
+
+exclusion_criteria = [
+    "Document SHA-256 appears in [validation_exclusions].sha256.",
+    "Document subject matches a subject in [validation_exclusions].subjects.",
+    "Document fails any inclusion criterion (reason recorded).",
+]
+
+# ------------------------------------------------------------
+# Validation exclusions
+# ------------------------------------------------------------
+# These exclusions prevent artifacts or subjects already used in
+# engineering validation from contributing held-out evidence.
+#
+# Exclusion is based only on information known before the
+# generalization corpus is constructed.
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "0dd99e63e7af35823ed05089ae68d8b2724696aabe945c4fc3940c00bb133320"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-reverse-sweep/artifacts/0.29.0/target.spdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "35c6fddc1622b52b493e8c95a197b37088063a2ff294566ce58296dbe364d0d1"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-reverse-sweep/source.cdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "59a22b7dddddc4987f754e3baa693a75b41255b1b4047f9b9c0df29432c87a7a"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424-first-post/target.cdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "6dd83f2617a01169e0efc8758fa18fd099000d5d070a6b673ba61e79123331fb"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424-release-sweep/artifacts/0.30.0/target.cdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "969e75ab32bb499957298365c43896b6a2f204951d7ef9fa12db9482ab7504e2"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424/source.spdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "984315e7ea24dd43d1dd5ff1daf26e1fba82427c6e77b792a33bdd04253a6a5b"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424-release-sweep/artifacts/0.32.0/target.cdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "ad4a8dedb519174b318a3e58bdc31152fd9c3a387ab4182b7bfad6f51418d71e"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-reverse-sweep/artifacts/0.32.0/target.spdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "bcc6e76f6eac8c995e2cabb0ff84fd43099c8717590a7459f6d9dcf3ef155bce"
+reason = "used-in-engineering-validation"
+provenance = "src/preservation_test/fixtures/source.spdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "c6e1210c3a3c77aaaf9738768bbcef320a86c2c0918edb1ad0403ccc1d61ed16"
+reason = "used-in-engineering-validation"
+provenance = "src/preservation_test/fixtures/target.cdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "ccddaa32932d17b4d2b9f41b42dab206ac3ef8254f1fa095edbf49a0a7806571"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424-release-sweep/artifacts/0.29.1/target.cdx.json"
+
+[[validation_exclusion]]
+kind = "sha256"
+value = "fa6dec1e9e78c5c12741d54a4c2146a4278a20e26a4a864aa1d8bd04171f521a"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424/target.cdx.json"
+
+[[validation_exclusion]]
+kind = "subject"
+value = "//base:static_root_amd64_debian12"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-424/source.spdx.json"
+
+[[validation_exclusion]]
+kind = "subject"
+value = "io.dropwizard/dropwizard-parent@1.3.15"
+reason = "used-in-engineering-validation"
+provenance = "validation/cyclonedx-cli-reverse-sweep/source.cdx.json"
+
+
+# ------------------------------------------------------------
+# Prohibited information
+# ------------------------------------------------------------
+
+[prohibited_information]
+
+criteria = [
+    "Transformation output.",
+    "Evaluator output.",
+    "Observed identity-preservation behavior.",
+    "Known transformation-specific failure behavior.",
+    "Whether a candidate appears likely to produce a violation.",
+]
+
+
+# ------------------------------------------------------------
+# Unit of selection
+# ------------------------------------------------------------
+# A subject is the described primary component (name, version):
+# CycloneDX metadata.component; SPDX the package referenced by
+# documentDescribes or DESCRIBES. Where absent, the subject is the
+# repository-relative parent directory. Documents sharing a subject
+# are one unit.
+
+[unit]
+
+selection_unit = "source_standard + subject"
+one_document_per_unit = "lowest source SHA-256 among eligible documents for the same source_standard and subject"
+
+# ------------------------------------------------------------
+# Selection
+# ------------------------------------------------------------
+# Census: every eligible subject is selected. No allocation
+# decision remains after enumeration.
+
+[selection]
+
+method = "census-of-eligible-units"
+
+
+# ------------------------------------------------------------
+# Reporting dimensions
+# ------------------------------------------------------------
+# Used for reporting only; never for selection.
+
+[reporting]
+
+dimensions = ["source_standard", "source_spec_version", "package_ecosystem"]
+package_ecosystem_rule = "PURL type with the most canonical source PURLs; ties broken lexically; 'mixed' recorded when the top type covers under half"
+
+
+# ------------------------------------------------------------
+# Candidate enumeration
+# ------------------------------------------------------------
+
+[candidate_enumeration]
+
+record_all_screened_candidates = true
+record_exclusion_reason = true
+record_source_standard = true
+record_source_spec_version = true
+record_subject = true
+record_package_ecosystem = true
+record_sha256 = true
+record_repository = true
+record_repository_revision = true
+record_repository_relative_path = true
+
+
+# ------------------------------------------------------------
+# Reproducibility
+# ------------------------------------------------------------
+# SHA-256 is computed over the git blob bytes at the fixed
+# revision. Preserved copies are stored with -text in
+# .gitattributes so line-ending normalization cannot alter them.
+
+[reproducibility]
+
+preserve_candidate_inventory = true
+preserve_selected_sources = true
+record_sha256 = true
+record_repository_revision = true
+record_repository_relative_path = true
+screening_script_recorded = true
+
+
+# ------------------------------------------------------------
+# Selection boundary
+# ------------------------------------------------------------
+# Corpus selection is complete only after:
+# 1. repository revisions are fixed,
+# 2. validation exclusions are filled,
+# 3. all candidates are enumerated and screened mechanically,
+# 4. eligible subjects are resolved to one document each, and
+# 5. selected membership is written to 03-corpus.toml.
+#
+# No generalization transformation may be executed or inspected
+# before this process is complete.
+
+[selection_boundary]
+
+transform_before_selection_complete = false
+inspect_transformation_output_before_selection_complete = false
+inspect_evaluator_output_before_selection_complete = false

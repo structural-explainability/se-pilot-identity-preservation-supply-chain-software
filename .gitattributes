@@ -1,8 +1,9 @@
 # ============================================================
-# .gitattributes (ALL-REPOS)
+# .gitattributes (CUSTOM / PRESERVES EVIDENCE)
 # ============================================================
-# Updated: 2026-06-27
+# Updated: 2026-09-23
 #
+# REQ: Ignore critical evidence files
 # REQ: All professional GitHub repositories SHOULD include .gitattributes.
 # WHY: Keep line endings, diffs, and file classification consistent across
 # Windows, macOS, Linux, GitHub Actions, and environments.
@@ -168,3 +169,13 @@ project.log  binary
 # WHY: Exclude documentation and tests from GitHub language statistics.
 docs/**   linguist-documentation
 tests/**  linguist-documentation
+
+# === Preserved research evidence (repo-specific) ===
+
+# WHY: Evidence bytes are hash-recorded; git must not normalize them.
+# WHY: -text (not binary) keeps diffs readable while disabling EOL conversion.
+validation/**/source.*.json            -text
+validation/**/target.*.json            -text
+validation/**/attestation.jsonl        -text
+generalization/sources/**              -text
+generalization/results/**/target.*     -text

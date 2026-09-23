@@ -1,8 +1,9 @@
 # ============================================================
-# .pre-commit-config.yaml (ALL-PY-SRC-REPOS)
+# .pre-commit-config.yaml (CUSTOM / PRESERVES EVIDENCE)
 # ============================================================
-# Updated: 2026-08-13
+# Updated: 2026-09-23
 #
+# REQ: Ignore critical evidence files
 # REQ: Professional projects using Python src/ SHOULD include pre-commit checks.
 # WHY: Minimize git diffs, catch common issues early, and support collaboration.
 #
@@ -48,7 +49,11 @@ exclude: |
     lake-packages/|
     node_modules/|
     out/|
-    site/
+    site/ |
+    validation/.*/(source|target)\..*\.json|
+    validation/.*/attestation\.jsonl|
+    generalization/sources/|
+    generalization/results/.*/target\..*
   )
 
 repos:

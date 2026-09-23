@@ -136,8 +136,28 @@ uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
 
-# Run engineering self-test
-uv run python -m preservation_test.fixtures.build_and_selftest
+# Run engineering self-test (complete; do not rerun)
+# uv run python -m preservation_test.fixtures.build_and_selftest
+
+# Verify Freeze 01
+uv run python -m preservation_test.generalization.verification.verify_freeze_01
+
+# Derive prior-validation exclusions for the sampling specification
+uv run python -m preservation_test.generalization.p01_build_candidates `
+    --print-derived-exclusions
+
+# Copy the derived exclusions to generalization/01-sampling.toml.
+
+# Prepare the fixed external sampling frame
+uv run python -m preservation_test.generalization.p01_prepare_sampling_frame
+
+# Build the complete source-only candidate inventory
+Remove-Item generalization/02-candidates.toml
+uv run python -m preservation_test.generalization.p01_build_candidates
+
+# Build the deterministic held-out corpus from eligible candidate units
+Remove-Item generalization/03-corpus.toml
+uv run python -m preservation_test.generalization.p02_build_corpus
 
 # save progress
 git add -A

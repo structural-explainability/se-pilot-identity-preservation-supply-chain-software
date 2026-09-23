@@ -11,6 +11,46 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+## Added
+
+- added Freeze 01 integrity verification against the hashes recorded in `contracts/FREEZE_01_COMMITMENT_EVALUATOR.md`
+- added validation evidence hash tests for retained release-sweep targets
+- added the Freeze 02 generalization sampling specification in `generalization/01-sampling.toml`
+- added the `preservation_test.generalization` implementation for deterministic held-out corpus preparation
+- added generalization data models and reusable utilities for candidate enumeration,
+  candidate identification, source inspection, deterministic sorting, exclusions,
+  Git-blob access, repository preparation, hashing, PURL inspection,
+  sampling configuration, source detection, subject resolution,
+  TOML generation, and validation-exclusion derivation
+- added automated preparation of the fixed CycloneDX and SPDX sampling-frame repositories
+  at their pinned revisions
+- added deterministic source-only candidate enumeration and screening
+- added `generalization/02-candidates.toml` as the complete audit record of screened candidates
+- added deterministic corpus construction from eligible candidates using the
+  predeclared `source_standard + subject` selection unit and lowest-SHA-256 rule
+- added `generalization/03-corpus.toml` as the selected held-out generalization corpus
+- added corpus provenance verification against the recorded
+  `01-sampling.toml` and `02-candidates.toml` hashes
+- added initial Freeze 02 prerequisite verification for the corpus,
+  preserved-source record, transformation matrix, and Freeze 01 integrity
+- added generalization tests covering sampling configuration,
+  source-only screening, deterministic corpus construction,
+  provenance and hash handling, and supporting utility behavior
+- added test modules corresponding to the generalization utility modules
+
+## Updated
+
+- updated `.gitattributes` to preserve research evidence bytes without Git line-ending normalization
+- updated `.pre-commit-config.yaml` to prevent line-ending and
+  final-newline hooks from modifying preserved research evidence
+- restored retained validation sweep targets to the byte representation matching their previously recorded SHA-256 hashes
+- updated generalization tooling to verify Freeze 01 integrity before source-only candidate screening
+- updated generalization tooling to derive and enforce prior-validation exclusions before held-out corpus construction
+- updated sampling configuration validation to enforce the predeclared census-of-eligible-units method,
+  `source_standard + subject` selection unit, and lowest-source-SHA-256 within-unit rule
+- updated source-only screening tests to follow the numbered `p01` candidate-inventory and `p02` corpus-construction pipeline
+- increased automated test coverage of the repository to more than 70%
+
 ---
 
 ## [0.3.0] - 2026-09-20
@@ -100,7 +140,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - Updated study status to distinguish completed engineering validation from
   future held-out generalization execution.
 
-These results remain **engineering-validation** evidence
+These results remain \*_engineering-validation_- evidence
 and do not constitute held-out evidence of generalization.
 
 ---
@@ -124,9 +164,9 @@ and do not constitute held-out evidence of generalization.
 ## Notes on Versioning and Releases
 
 - We use **SemVer**:
-  - \*_MAJOR_- - breaking changes
-  - \*_MINOR_- - backward-compatible features
-  - \*_PATCH_- - fixes, documentation, tests, tooling
+  - **MAJOR** - breaking changes
+  - **MINOR** - backward-compatible features
+  - **PATCH** - fixes, documentation, tests, tooling
 - Versions are driven by git tags. Tag `vX.Y.Z` to release.
 - Docs are deployed per version tag and aliased to **latest**.
 
