@@ -204,6 +204,25 @@ git commit -m "your message here"
 git push -u origin main
 ```
 
+## Generalization Overview
+
+- [README.md](./generalization/README.md)
+
+## Generalization Inputs
+
+- [01-sampling.toml](./generalization/01-sampling.toml)
+
+## Generalization Toolchain
+
+- [install_generalization_tools.ps1](./install_generalization_tools.ps1)
+
+## Generalization Generated Artifacts
+
+- [02-candidates.toml](./generalization/02-candidates.toml)
+- [03-corpus.toml](./generalization/03-corpus.toml)
+- [04-sources.toml](./generalization/04-sources.toml)
+- [05-transformations.toml](./generalization/05-transformations.toml)
+
 ## Annotations
 
 [.annotations/annotations.md](./.annotations/annotations.md)
