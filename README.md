@@ -124,17 +124,22 @@ uv python install
 uv lock --upgrade
 uv sync
 
-uvx pre-commit install
-uv run pre-commit autoupdate
+uv run prek install -f
+uv run prek update --freeze --cooldown-days 7
 
 git add -A
-uvx pre-commit run --all-files
-# repeat if changes were made by pre-commit tasks
-uvx pre-commit run --all-files
+uv run prek run --all-files
+# repeat if changes were made
+uv run prek run --all-files
 
+# run common chores (formats Python in .md files also)
+uv run ruff format .
+uv run ruff check . --fix
 uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
+# audit dependencies (advisory: findings are reported, nothing blocks)
+uv audit --frozen
 ```
 
 ### Engineering Validation

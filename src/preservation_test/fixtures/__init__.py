@@ -1,1 +1,1 @@
-"Fixtures test package"
+"""Fixtures test package."""

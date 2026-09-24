@@ -16,6 +16,7 @@
         "packageurl",
         "pluggy",
         "predeclared",
+        "prek",
         "Protobom",
         "pyspdxtools",
         "sdoc",
@@ -25,6 +26,7 @@
         "syft",
         "tdoc",
         "Temurin",
-        "UNANCHORABLE"
+        "UNANCHORABLE",
+        "zizmor"
     ]
 }

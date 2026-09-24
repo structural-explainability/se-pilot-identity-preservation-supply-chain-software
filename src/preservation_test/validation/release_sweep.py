@@ -57,7 +57,6 @@ class ReleaseSpec:
 
 def resolve_repository_path(value: str) -> Path:
     """Resolve a repository-relative path."""
-
     return REPOSITORY_ROOT / value
 
 
@@ -65,7 +64,6 @@ def load_configuration(
     config_file: Path,
 ) -> tuple[SweepConfig, list[ReleaseSpec]]:
     """Load the release-sweep configuration."""
-
     with config_file.open("rb") as handle:
         document = tomllib.load(handle)
 
@@ -107,7 +105,6 @@ def load_configuration(
 
 def classify_transformation_failure(error: RuntimeError) -> str:
     """Classify a failed historical CLI transformation."""
-
     message = str(error)
 
     if (
@@ -121,7 +118,6 @@ def classify_transformation_failure(error: RuntimeError) -> str:
 
 def calculate_sha256(path: Path) -> str:
     """Calculate the uppercase SHA-256 digest of a file."""
-
     digest = hashlib.sha256()
 
     with path.open("rb") as handle:
@@ -133,7 +129,6 @@ def calculate_sha256(path: Path) -> str:
 
 def verify_source(config: SweepConfig) -> None:
     """Verify that the preserved source is unchanged."""
-
     if not config.source_file.is_file():
         raise FileNotFoundError(
             f"Preserved source does not exist: {config.source_file}"
@@ -151,7 +146,6 @@ def verify_source(config: SweepConfig) -> None:
 
 def verify_freeze(config: SweepConfig) -> None:
     """Verify that the configured freeze record exists."""
-
     if not config.freeze_file.is_file():
         raise FileNotFoundError(f"Freeze record does not exist: {config.freeze_file}")
 
@@ -161,7 +155,6 @@ def build_download_url(
     release: ReleaseSpec,
 ) -> str:
     """Build the GitHub release-asset URL."""
-
     repository = config.repository.rstrip("/")
 
     return f"{repository}/releases/download/{release.tag}/{config.asset_name}"
@@ -172,7 +165,6 @@ def download_file(
     destination: Path,
 ) -> None:
     """Download one release asset unless it is already present."""
-
     if destination.is_file():
         return
 
@@ -196,7 +188,6 @@ def run_command(
     timeout_seconds: int,
 ) -> subprocess.CompletedProcess[str]:
     """Run an external command and report failures with captured output."""
-
     completed = subprocess.run(
         arguments,
         check=False,
@@ -225,7 +216,6 @@ def get_cli_version(
     timeout_seconds: int,
 ) -> str:
     """Return the version string reported by a CLI executable."""
-
     completed = run_command(
         [str(executable), "--version"],
         timeout_seconds,
@@ -239,7 +229,6 @@ def verify_cli_version(
     reported_version: str,
 ) -> None:
     """Confirm that the executable reports the selected release version."""
-
     if not reported_version.startswith(release.version):
         raise RuntimeError(
             f"Unexpected version for {release.tag}.\n"
@@ -255,7 +244,6 @@ def run_transformation(
     timeout_seconds: int,
 ) -> None:
     """Transform the preserved SPDX source to CycloneDX JSON."""
-
     target_file.parent.mkdir(parents=True, exist_ok=True)
 
     if target_file.exists():
@@ -283,7 +271,6 @@ def run_transformation(
 
 def verify_target(target_file: Path) -> dict[str, Any]:
     """Parse the generated target and verify that it is CycloneDX JSON."""
-
     with target_file.open(
         "r",
         encoding="utf-8-sig",
@@ -302,7 +289,6 @@ def run_evaluator(
     result_file: Path,
 ) -> dict[str, Any]:
     """Run the frozen evaluator and preserve its complete JSON output."""
-
     completed = run_command(
         [
             sys.executable,
@@ -339,7 +325,6 @@ def get_example_result(
     example_ref: str,
 ) -> dict[str, Any]:
     """Return the evaluator result for the historical example component."""
-
     results = evaluator_result.get("results")
 
     if not isinstance(results, list):
@@ -364,7 +349,6 @@ def get_applicable_results(
     evaluator_result: dict[str, Any],
 ) -> list[dict[str, Any]]:
     """Return evaluator results to which the commitment applies."""
-
     results = evaluator_result.get("results")
 
     if not isinstance(results, list):
@@ -389,7 +373,6 @@ def summarize_release(
     evaluator_result: dict[str, Any],
 ) -> dict[str, Any]:
     """Build the aggregate result for one release."""
-
     example_result = get_example_result(
         evaluator_result,
         config.example_ref,
@@ -439,7 +422,6 @@ def run_release(
     release: ReleaseSpec,
 ) -> dict[str, Any]:
     """Download, execute, evaluate, and summarize one release."""
-
     executable = config.binary_directory / f"cyclonedx-cli-{release.version}.exe"
 
     release_directory = config.artifact_directory / release.version
@@ -556,7 +538,6 @@ def write_results(
     releases: list[dict[str, Any]],
 ) -> None:
     """Write the complete aggregate sweep result."""
-
     matches_expected = all(
         bool(item["matches_expected"]) and bool(item["all_applicable_match_expected"])
         for item in releases
@@ -593,7 +574,6 @@ def write_results(
 
 def main() -> int:
     """Run the complete deterministic release sweep."""
-
     config, releases = load_configuration(DEFAULT_CONFIG_FILE)
 
     verify_source(config)

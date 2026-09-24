@@ -1,1 +1,1 @@
-"Preservation test package"
+"""Preservation test package."""

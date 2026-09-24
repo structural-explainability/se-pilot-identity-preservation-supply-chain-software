@@ -10,13 +10,11 @@
 name = "se-pilot-identity-preservation-supply-chain-software"
 description = "Test source-grounded identity-preservation conformance across software supply-chain representations."
 dynamic = ["version"]
-license = {file = "LICENSE"}
+license-files = ["LICENSE"]                                                                                          # Updated: 2026-09-24
 readme = "README.md"
 requires-python = ">=3.14"
 
-dependencies = [
-  "packageurl-python",
-]
+dependencies = ["packageurl-python"]
 
 [dependency-groups]
 # WHY: Development dependencies support maintaining and validating the project
@@ -24,11 +22,12 @@ dependencies = [
 
 dev = [
     # REQ.DEV.DEPS: External packages used for linting, testing, type checking, etc.
-    "pre-commit", # WHY: Pre-commit hooks for consistent formatting and linting.
+    "prek",       # WHY: Pre-commit hooks for consistent formatting and linting (replaces pre-commit).
     "pytest>=9",  # WHY: Test framework for unit and integration tests.
     "pytest-cov", # WHY: Test coverage reporting for quality metrics and CI gating.
     "ruff",       # WHY: Fast linting and formatting for Python code.
     "ty",         # WHY: Type checking for static analysis and type safety.
+    "zizmor",     # WHY: Audit GitHub Actions workflows for security issues.
 ]
 docs = [
     # REQ.DOCS.DEPS: External packages used to generate project documentation.
@@ -59,11 +58,18 @@ filterwarnings = [
 ]
 
 # === RUFF (PYTHON FORMATTING AND LINTING) ===
+[tool.ruff]
+# CUSTOM for this research project
+extend-exclude = [
+    "generalization/sources",
+    "generalization/results",
+    "validation",
+]
 
 [tool.ruff.lint] # WHY: Evolve with Ruff's defaults; production might pin an explicit set.
 extend-select = [
     # --- turn on for additional linting rules ---
-    # "D",  # WHY: Require docstrings; VS Code helps generate them.
+    "D", # WHY: Require docstrings; VS Code helps generate them.
 ]
 
 [tool.ruff.lint.isort] # WHY: Sort plain-import and from-import lines together within each section.
@@ -71,9 +77,13 @@ force-sort-within-sections = true
 
 [tool.ruff.lint.per-file-ignores] # WHY: Some file types need lint exceptions.
 "src/**/__init__.py" = ["F401"] # Allow re-export patterns.
-"src/**/_version.py" = ["ALL"]  # Auto-generated file; do not lint.
+"src/**/_version.py" = ["ALL"] # Auto-generated file; do not lint.
 "tests/**/*.py" = ["D", "B018"] # Tests need no docstrings; B018 is default-on.
-"notebooks/**/*.py" = ["D", "PLR1711", "RUF059"]   # marimo cells: bare returns + cell-scoped unused vars are the format, not defects
+"notebooks/**/*.py" = [
+    "D",
+    "PLR1711",
+    "RUF059",
+] # marimo cells: bare returns + cell-scoped unused vars are the format, not defects
 
 [tool.ruff.lint.pydocstyle] # WHY: Use Google docstring style when D is enabled.
 convention = "google"
@@ -85,6 +95,9 @@ convention = "google"
 # OBS: This keeps the canonical `uv sync` command identical across project types
 #      and ensures all repository features work after setup.
 default-groups = "all"
+# WHY: Give a bit of time to find hijacked releases before installing.
+# CUSTOM: Should match `uv run prek update --freeze --cooldown-days 7`
+exclude-newer = "7 days"
 
 # ============================================================
 # SECTION 3: BUILD SYSTEM
@@ -112,7 +125,9 @@ packages = ["src/preservation_test"]
 fallback-version = "0.3.0"
 # WHY: Version derived from git tags at build time.
 source = "vcs"
+tag-pattern = "^(?:v)?(?P<version>\\d+\\.\\d+\\.\\d+)$"
+
+[tool.hatch.version.raw-options]
 # WHY: Allow hatch-vcs to find the Git root when built from a subdirectory,
 # temporary build directory, or isolated build env.
 search_parent_directories = true
-tag-pattern = "^(?:v)?(?P<version>\\d+\\.\\d+\\.\\d+)$"

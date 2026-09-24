@@ -4,7 +4,7 @@
 ============================================================
 sit.ps1 (ALL-PY-SRC-REPOS)
 ============================================================
-Updated: 2026-08-15 (uses pyproject.toml [dependency-groups]; uv sync installs dev and docs groups by default)
+Updated: 2026-09-24 (uses pyproject.toml [dependency-groups]; uv sync installs dev and docs groups by default)
 
 Situate project dependencies, lint, test, and build docs.
 For Python tooling repos only.
@@ -44,20 +44,22 @@ uv python install
 uv lock --upgrade
 uv sync
 
-uv run pre-commit install
-uv run pre-commit autoupdate
+uv run prek install -f
+uv run prek update --freeze --cooldown-days 7
 
 git add -A
-uv run pre-commit run --all-files
+uv run prek run --all-files
 # repeat if changes were made
-uv run pre-commit run --all-files
+uv run prek run --all-files
 
-# run common chores
+# run common chores (formats Python in .md files also)
 uv run ruff format .
 uv run ruff check . --fix
 uv run ty check
 uv run python -m pytest
 uv run python -m zensical build
+# audit dependencies (advisory: findings are reported, nothing blocks)
+uv audit --frozen
 
-Write-Host "All commands executed successfully."
+Write-Host "All commands executed successfully. Review any warnings above."
 Write-Host "Run a Python module to verify .venv/ is working correctly."
