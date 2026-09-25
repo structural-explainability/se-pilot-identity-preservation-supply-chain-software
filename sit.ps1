@@ -47,6 +47,16 @@ uv sync
 uv run prek install -f
 uv run prek update --freeze --cooldown-days 7
 
+# pin GitHub Actions to commit SHAs (needs a GitHub CLI login; skipped otherwise)
+if (Get-Command gh -ErrorAction SilentlyContinue) {
+    gh auth status *> $null
+    if ($LASTEXITCODE -eq 0) {
+        uv run zizmor --gh-token (gh auth token) --fix=all .github/
+    }
+}
+
+git add -A
+
 git add -A
 uv run prek run --all-files
 # repeat if changes were made

@@ -69,9 +69,9 @@ from preservation_test.generalization.utils.toml_writer import (
     render_document,
     write_new_file,
 )
-from preservation_test.generalization.verification.verify_corpus import (
+from preservation_test.generalization.verification.verify_02_corpus import (
     CorpusVerificationError,
-    verify_corpus,
+    verify_02_corpus,
 )
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
@@ -103,6 +103,8 @@ class CorpusMember:
     repository_relative_path: str
     sha256: str
     source_standard: str
+    source_format: str
+    source_spec_version: str
 
 
 @dataclass(frozen=True)
@@ -159,6 +161,16 @@ def _load_corpus_members(path: Path) -> tuple[CorpusMember, ...]:
                 source_standard=_required_string(
                     row,
                     "source_standard",
+                    where,
+                ),
+                source_format=_required_string(
+                    row,
+                    "source_format",
+                    where,
+                ),
+                source_spec_version=_required_string(
+                    row,
+                    "source_spec_version",
                     where,
                 ),
             )
@@ -348,6 +360,8 @@ def _source_row(
         "repository_relative_path": member.repository_relative_path,
         "git_blob_id": item.git_blob_id,
         "source_standard": member.source_standard,
+        "source_format": member.source_format,
+        "source_spec_version": member.source_spec_version,
         "corpus_sha256": member.sha256,
         "preserved_path": relative_to_root(
             item.preserved_path,
@@ -405,7 +419,7 @@ def preserve_sources(clone_root: Path) -> int:
     try:
         _require_clean_destination(sources_dir, sources_record)
 
-        verify_corpus(REPOSITORY_ROOT)
+        verify_02_corpus(REPOSITORY_ROOT)
 
         members = _load_corpus_members(corpus_path)
 

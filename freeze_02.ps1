@@ -9,7 +9,7 @@ $ErrorActionPreference = "Stop"
 # Require clean committed state, correct repository, etc.
 # ...
 
-uv run python -m preservation_test.generalization.verification.verify_freeze_02
+uv run python -m preservation_test.generalization.verification.verify_05_freeze_02
 
 if ($LASTEXITCODE -ne 0) {
     throw "Freeze 02 verification failed."

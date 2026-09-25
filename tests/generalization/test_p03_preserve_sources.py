@@ -95,6 +95,8 @@ def test_materialize_reads_exact_git_blob_bytes(
         repository_relative_path="bom.json",
         sha256=sha256_bytes(data),
         source_standard="cyclonedx",
+        source_format="cyclonedx",
+        source_spec_version="1.5",
     )
 
     sources_dir = tmp_path / "sources"
@@ -139,6 +141,8 @@ def test_materialize_refuses_blob_hash_mismatch(
         repository_relative_path="bom.json",
         sha256="0" * 64,
         source_standard="cyclonedx",
+        source_format="cyclonedx",
+        source_spec_version="1.5",
     )
 
     with pytest.raises(

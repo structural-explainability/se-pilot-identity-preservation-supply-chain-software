@@ -56,7 +56,9 @@ jobs:
       # ============================================================
 
       - name: A1) Checkout repository code
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
         # WHY: Syft must inspect the checked-out repository and its
         # dependency metadata to construct the SBOM.
 
@@ -65,7 +67,7 @@ jobs:
       # ============================================================
 
       - name: B1) Generate SPDX JSON SBOM
-        uses: step-security/sbom-action@v0
+        uses: step-security/sbom-action@441a6c842e49122eed5d694f983ce4acae259c99 # v0
         with:
           path: .
           format: spdx-json
@@ -77,7 +79,7 @@ jobs:
         # inventory to GitHub's Dependency Graph.
 
       - name: B2) Generate CycloneDX JSON SBOM
-        uses: step-security/sbom-action@v0
+        uses: step-security/sbom-action@441a6c842e49122eed5d694f983ce4acae259c99 # v0
         with:
           path: .
           format: cyclonedx-json

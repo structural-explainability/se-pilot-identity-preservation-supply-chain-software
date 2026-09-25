@@ -217,10 +217,17 @@ Follow these steps exactly when creating a new release.
 ### Task 2. Validate
 
 ```shell
+uvx pup-clean --delete
 npx markdownlint-cli2 --fix
 uvx se-manifest-schema validate-manifest --strict
 uvx cffconvert --validate
 .\sit.ps1
+
+# Update GitHub Actions and pin all action references to immutable SHAs
+uvx gha-tools autoupdate --pin=all --write .github/workflows
+
+# Then audit the resulting GitHub configuration for security findings
+uvx zizmor@latest .github/
 ```
 
 ### Task 3. Commit, push, tag

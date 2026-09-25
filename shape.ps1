@@ -21,6 +21,7 @@
 #      content rather than authored project structure.
 
 $excludedDirectories = @(
+    ".bin/",
     ".git",
     ".venv",
     "__pycache__",

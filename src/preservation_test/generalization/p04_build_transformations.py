@@ -112,9 +112,9 @@ from preservation_test.generalization.utils.toml_writer import (
     render_document,
     write_new_file,
 )
-from preservation_test.generalization.verification.verify_sources import (
+from preservation_test.generalization.verification.verify_03_sources import (
     SourcesVerificationError,
-    verify_sources,
+    verify_03_sources,
 )
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[3]
@@ -145,12 +145,13 @@ class TransformationPlanError(RuntimeError):
 
 @dataclass(frozen=True)
 class Source:
-    """One preserved held-out source with its selected source format."""
+    """One preserved held-out source with its selected source representation."""
 
     study_id: str
     preserved_path: str
     preserved_sha256: str
     source_standard: str
+    source_format: str
     source_spec_version: str
 
 
@@ -191,6 +192,7 @@ class RoutePlan:
     source_path: str
     source_sha256: str
     source_standard: str
+    source_format: str
     source_spec_version: str
     direction: str
     status: str
@@ -215,41 +217,10 @@ def _required_string(data: dict[str, Any], key: str, where: str) -> str:
     return value
 
 
-def _load_corpus_versions(path: Path) -> dict[str, str]:
-    """Return source specification versions keyed by study_id."""
-    with path.open("rb") as handle:
-        data = tomllib.load(handle)
-
-    rows = data.get("member")
-    if not isinstance(rows, list) or not rows:
-        raise TransformationPlanError("03-corpus.toml contains no [[member]] entries")
-
-    versions: dict[str, str] = {}
-
-    for index, row in enumerate(rows):
-        where = f"member[{index}]"
-
-        if not isinstance(row, dict):
-            raise TransformationPlanError(f"{where} must be a table")
-
-        study_id = _required_string(row, "study_id", where)
-        spec_version = _required_string(row, "source_spec_version", where)
-
-        if study_id in versions:
-            raise TransformationPlanError(f"duplicate corpus study_id: {study_id}")
-
-        versions[study_id] = spec_version
-
-    return versions
-
-
 def _load_sources(
     sources_path: Path,
-    corpus_path: Path,
 ) -> tuple[Source, ...]:
-    """Load preserved sources and join them to their selected spec versions."""
-    versions = _load_corpus_versions(corpus_path)
-
+    """Load the preserved sources and their frozen source representations."""
     with sources_path.open("rb") as handle:
         data = tomllib.load(handle)
 
@@ -271,11 +242,6 @@ def _load_sources(
         if study_id in seen:
             raise TransformationPlanError(f"duplicate source study_id: {study_id}")
 
-        if study_id not in versions:
-            raise TransformationPlanError(
-                f"{study_id} exists in 04-sources.toml but not 03-corpus.toml"
-            )
-
         source = Source(
             study_id=study_id,
             preserved_path=_required_string(row, "preserved_path", where),
@@ -289,8 +255,22 @@ def _load_sources(
                 "source_standard",
                 where,
             ),
-            source_spec_version=versions[study_id],
+            source_format=_required_string(
+                row,
+                "source_format",
+                where,
+            ),
+            source_spec_version=_required_string(
+                row,
+                "source_spec_version",
+                where,
+            ),
         )
+
+        if source.source_format != "json":
+            raise TransformationPlanError(
+                f"{study_id} source_format must be 'json', not {source.source_format!r}"
+            )
 
         preserved = REPOSITORY_ROOT / source.preserved_path
 
@@ -311,12 +291,6 @@ def _load_sources(
 
         sources.append(source)
         seen.add(study_id)
-
-    if set(versions) != seen:
-        missing = sorted(set(versions) - seen)
-        raise TransformationPlanError(
-            f"corpus members missing from 04-sources.toml: {missing}"
-        )
 
     return tuple(sources)
 
@@ -442,6 +416,7 @@ def _unsupported(
         source_path=source.preserved_path,
         source_sha256=source.preserved_sha256,
         source_standard=source.source_standard,
+        source_format=source.source_format,
         source_spec_version=source.source_spec_version,
         direction=direction,
         status=UNSUPPORTED,
@@ -509,6 +484,7 @@ def _planned(
         source_path=source.preserved_path,
         source_sha256=source.preserved_sha256,
         source_standard=source.source_standard,
+        source_format=source.source_format,
         source_spec_version=source.source_spec_version,
         direction=direction,
         status=PLANNED,
@@ -817,6 +793,7 @@ def _route_row(route: RoutePlan) -> dict[str, Any]:
         "source_path": route.source_path,
         "source_sha256": route.source_sha256,
         "source_standard": route.source_standard,
+        "source_format": route.source_format,
         "source_spec_version": route.source_spec_version,
         "direction": route.direction,
         "status": route.status,
@@ -909,11 +886,10 @@ def build_transformations(
         return EXIT_REFUSED
 
     try:
-        verify_sources(REPOSITORY_ROOT)
+        verify_03_sources(REPOSITORY_ROOT)
 
         sources = _load_sources(
             REPOSITORY_ROOT / SOURCES_RECORD,
-            REPOSITORY_ROOT / CORPUS_FILE,
         )
 
         converters = (

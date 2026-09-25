@@ -1,13 +1,34 @@
-"""Verify that all artifacts recorded in Freeze 01 remain byte-identical.
+"""Verification stage 01: verify Freeze 01 commitment/evaluator integrity.
 
-This module reads the SHA-256 hashes recorded in
-contracts/FREEZE_01_COMMITMENT_EVALUATOR.md and compares them with the
-current repository files.
+Purpose
+-------
+Freeze 01 fixes the commitment, evaluator, and other artifacts whose behavior
+must remain unchanged during engineering validation and held-out
+generalization.
 
-The verifier does not require the current Git commit to equal the commit
-recorded when Freeze 01 was created. Subsequent validation work and other
-non-frozen repository changes are permitted. Freeze integrity depends on
-the recorded frozen artifacts remaining byte-identical.
+This verifier establishes that the current repository still contains the exact
+bytes recorded in contracts/FREEZE_01_COMMITMENT_EVALUATOR.md.
+
+For every artifact recorded in the Freeze 01 content-hash section, this stage:
+
+1. reads the recorded repository-relative path and SHA-256,
+2. requires the referenced file to exist,
+3. hashes the file's current exact bytes, and
+4. requires the observed SHA-256 to equal the frozen SHA-256.
+
+The current Git commit is not required to equal the commit at which Freeze 01
+was created.
+Later validation work, documentation, tests, and other non-frozen
+repository changes are permitted.
+
+The required invariant is:
+
+    Freeze 01 recorded SHA-256
+        ==
+    current frozen-artifact SHA-256
+
+A mismatch means the frozen commitment/evaluator state is no longer
+byte-identical to the state declared by Freeze 01.
 
 This verifier performs no writes.
 """
@@ -99,7 +120,7 @@ def verify_frozen_artifact(
         )
 
 
-def verify_freeze_01(repository_root: Path) -> tuple[Path, ...]:
+def verify_01_freeze_01(repository_root: Path) -> tuple[Path, ...]:
     """Verify every artifact recorded in the Freeze 01 content-hash section."""
     freeze_path = repository_root / FREEZE_FILE
     frozen_hashes = read_frozen_hashes(freeze_path)
@@ -117,7 +138,7 @@ def verify_freeze_01(repository_root: Path) -> tuple[Path, ...]:
 def main() -> None:
     """Verify Freeze 01 from the current repository."""
     repository_root = find_repository_root(Path.cwd())
-    verified_files = verify_freeze_01(repository_root)
+    verified_files = verify_01_freeze_01(repository_root)
 
     print("Freeze 01 verified.")
     print(f"Frozen artifacts verified: {len(verified_files)}")

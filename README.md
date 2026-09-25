@@ -119,10 +119,16 @@ This repository uses `uv`.
 ```shell
 uv self update
 uv python pin 3.14
-
 uv python install
 uv lock --upgrade
 uv sync
+uv audit
+
+# Update GitHub Actions and pin all action references to immutable SHAs
+uvx gha-tools autoupdate --pin=all --write .github/workflows
+
+# Then audit the resulting GitHub configuration for security findings
+uvx zizmor@latest .github/
 
 uv run prek install -f
 uv run prek update --freeze --cooldown-days 7
@@ -152,7 +158,7 @@ Do not rerun it.
 # uv run python -m preservation_test.fixtures.build_and_selftest
 
 # Verify that the frozen commitment and evaluator still match Freeze 01:
-uv run python -m preservation_test.generalization.verification.verify_freeze_01
+uv run python -m preservation_test.generalization.verification.verify_01_freeze_01
 ```
 
 ### Generalization Preparation
@@ -167,6 +173,9 @@ input has intentionally changed and the resulting downstream records are being
 explicitly invalidated and rebuilt.
 
 ```shell
+# Verify the frozen commitment/evaluator before generalization preparation
+uv run python -m preservation_test.generalization.verification.verify_01_freeze_01
+
 # Derive prior-validation exclusions for the sampling specification
 uv run python -m preservation_test.generalization.p01_build_candidates `
     --print-derived-exclusions
@@ -177,22 +186,24 @@ uv run python -m preservation_test.generalization.p01_build_candidates `
 uv run python -m preservation_test.generalization.p01_prepare_sampling_frame
 
 # Build the complete source-only candidate inventory
-Remove-Item generalization/02-candidates.toml
 uv run python -m preservation_test.generalization.p01_build_candidates
 
 # Build the deterministic held-out corpus from eligible candidate units
-Remove-Item generalization/03-corpus.toml
 uv run python -m preservation_test.generalization.p02_build_corpus
 
+# Verify sampling, candidate, and corpus provenance
+uv run python -m preservation_test.generalization.verification.verify_02_corpus
+
 # Preserve the exact selected source bytes and provenance
-Remove-Item generalization/04-sources.toml
 uv run python -m preservation_test.generalization.p03_preserve_sources
 
-# Install tools
+# Verify the preserved source bytes against the frozen corpus
+uv run python -m preservation_test.generalization.verification.verify_03_sources
+
+# Install the exact repository-local transformation toolchain
 .\install_generalization_tools.ps1
 
 # Construct the complete pre-outcome transformation plan
-Remove-Item generalization/05-transformations.toml
 uv run python -m preservation_test.generalization.p04_build_transformations `
     --syft bin/generalization/syft.exe `
     --syft-version "1.52.0" `
@@ -204,6 +215,13 @@ uv run python -m preservation_test.generalization.p04_build_transformations `
     --java-version "21.0.12.1+1" `
     --sbom-utility bin/generalization/sbom-utility.exe `
     --sbom-utility-version "0.19.2"
+
+# Verify sources, tool artifacts, runtime hashes, validator, and matrix
+uv run python -m preservation_test.generalization.verification.verify_04_transformations
+
+# Final pre-freeze integrity gate
+uv run python -m preservation_test.generalization.verification.verify_05_freeze_02
+
 
 # save progress
 git add -A

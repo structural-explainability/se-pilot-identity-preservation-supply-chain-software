@@ -98,6 +98,7 @@ def corpus_row(selected: SelectedUnit) -> dict[str, Any]:
         "repository_relative_path": member.repository_relative_path,
         "sha256": member.sha256,
         "source_standard": member.source_standard,
+        "source_format": member.source_format,
         "source_spec_version": member.source_spec_version,
         "subject": member.subject,
         "subject_method": member.subject_method,

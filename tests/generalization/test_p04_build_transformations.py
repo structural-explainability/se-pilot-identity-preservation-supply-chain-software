@@ -17,6 +17,7 @@ from preservation_test.generalization.p04_build_transformations import (
 def _source(
     *,
     standard: str,
+    source_format: str = "json",
     version: str,
 ) -> Source:
     return Source(
@@ -24,6 +25,7 @@ def _source(
         preserved_path=f"generalization/sources/source.{standard}.json",
         preserved_sha256="a" * 64,
         source_standard=standard,
+        source_format=source_format,
         source_spec_version=version,
     )
 

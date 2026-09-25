@@ -20,15 +20,15 @@ The output is write-once and byte-identical on rerun with identical inputs.
 
 Usage (relative paths resolve against the repository root):
 
-    uv run python -m preservation_test.generalization.01_build_candidates
+    uv run python -m preservation_test.generalization.p01_build_candidates
 
-    uv run python -m preservation_test.generalization.01_build_candidates `
+    uv run python -m preservation_test.generalization.p01_build_candidates `
         --config generalization/01-sampling.toml `
         --clone-root ../generalization-clones `
         --out generalization/02-candidates.toml
 
     # Print the validation exclusions derived from this repository:
-    uv run python -m preservation_test.generalization.01_build_candidates `
+    uv run python -m preservation_test.generalization.p01_build_candidates `
         --print-derived-exclusions
 
 Clones live at <clone-root>/<repository-name>, for example

@@ -137,6 +137,12 @@ exclusion_criteria = [
 # Exclusion is based only on information known before the
 # generalization corpus is constructed.
 
+# Derive prior-validation exclusions for the sampling specification
+# by running the following command:
+# uv run python -m preservation_test.generalization.p01_build_candidates `
+#     --print-derived-exclusions
+# And pasting the results below.
+
 [[validation_exclusion]]
 kind = "sha256"
 value = "0dd99e63e7af35823ed05089ae68d8b2724696aabe945c4fc3940c00bb133320"
