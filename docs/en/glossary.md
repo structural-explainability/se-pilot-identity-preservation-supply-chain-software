@@ -4,54 +4,59 @@ Key terms used in the project.
 
 ## Experimental Design and Execution
 
+### Source and Target
+
+The source is the preserved input document of a transformation.
+The target is the document the converter generates from that source.
+
+Source and target refer to the two sides of one transformation route.
+They do not refer to an instance selected for testing.
+
+### Execution Failure
+
+An attempted planned route in which the converter exits nonzero or produces no
+target document.
+
+A target document that exists but fails validation is not an execution failure.
+
 ### Adjudication
 
-Application of predeclared decision rules to experimental evidence to assign a
-formal verdict or classification.
+Confirmation or rejection of a candidate preservation violation against the
+frozen commitment and its authoritative sources, following the procedure in
+`docs/en/run.md`.
 
-Adjudication may be performed automatically when the decision rules are
-sufficiently explicit and machine-executable.
+Adjudication applies only to evaluator results with a `VIOLATED_*` verdict.
+It does not assign, change, or relabel an evaluator verdict.
 
-Adjudication is distinct from observation and evaluation.
+A candidate violation is confirmed only when:
 
-The intended sequence is:
+1. the source PURL occupies the semantic role required by the frozen
+   commitment;
+2. the target representation supports that role;
+3. the source and target components are validly associated under the frozen
+   anchoring procedure; and
+4. the target fails the frozen preservation obligation by dropping,
+   relocating, or altering the PURL.
 
-```text
-Observation
-    |
-    v
-Evaluation
-    |
-    v
-Adjudication
-    |
-    v
-Verdict
-```
-
-An observation records what occurred.
-
-Evaluation determines how the observation relates to the declared experimental
-commitment or criterion.
-
-Adjudication applies the predeclared decision rules.
-
-The verdict is the resulting formal classification.
+A confirmed violation is classified as rediscovered or new confirmed.
+A candidate violation that does not survive adjudication is a false positive.
 
 ### Anchoring
 
-The process of locating and selecting a target anchor within an artifact under
-the predeclared eligibility and target-selection rules.
+The process of establishing correspondence between a source component and a
+target component under the frozen component-matching procedure.
 
-Anchoring identifies the particular instance on which the experiment will
-operate.
+Anchoring uses evidence independent of the identifier whose preservation is
+being evaluated.
 
-Anchoring should not be confused with the semantic target itself.
+For the initial PURL-preservation commitment, a source component corresponds
+to a target component when they share a declared content hash, after the
+frozen normalization of hash-algorithm labels and hash-value casing.
+The PURL under evaluation is not used to establish correspondence.
 
-The semantic target defines what kind of information or structure is required.
-
-Anchoring determines which specific instance of that target is selected in a
-particular artifact.
+The evaluator reports `UNANCHORABLE` when the source component has no usable
+content hash, when no target component shares one, or when shared content
+hashes resolve to more than one target component.
 
 ### Candidate Set
 
@@ -91,13 +96,11 @@ A candidate may be eligible without ultimately becoming a corpus member.
 
 ### Eligibility Rule
 
-A predeclared condition that a candidate artifact or potential target instance
-must satisfy before it may participate in the corresponding stage of the
-experiment.
+A predeclared condition that a candidate artifact must satisfy before it may
+participate in corpus selection.
 
 Eligibility establishes permission to be selected.
-
-It does not itself perform selection.
+It does not perform selection.
 
 Conceptually:
 
@@ -117,7 +120,7 @@ controls, or implementation constraints.
 ### Eligible Candidate
 
 A member of the candidate set that satisfies the predeclared eligibility
-criteria and is therefore permitted to participate in corpus selection.
+criteria and is permitted to participate in corpus selection.
 
 Eligibility does not guarantee corpus membership.
 
@@ -140,7 +143,6 @@ Depending on the stage of the study, frozen elements may include:
 - transformation implementations;
 - tool versions;
 - transformation routes;
-- target-selection rules;
 - evaluation rules;
 - adjudication rules; and
 - verdict definitions.
@@ -180,21 +182,6 @@ If its relevant downstream behavior was already used to develop, debug,
 validate, demonstrate, or select the method, it cannot serve the same
 held-out evidentiary role.
 
-### One-Term Transformation
-
-A controlled transformation in which one declared identity-relevant term is
-changed while the relevant counterpart and other controlled features are held
-fixed according to the experimental protocol.
-
-A `term` is a semantic element of the identity relation under examination.
-
-It is not necessarily a single textual token, character sequence, field, or
-syntactic unit.
-
-The purpose of a one-term transformation is to isolate the effect of a
-declared identity-relevant difference sufficiently to support interpretation
-under the corresponding commitment.
-
 ### Rediscovery
 
 Detection in held-out experimental material of a predeclared defect shape or
@@ -217,7 +204,24 @@ Pattern detected in held-out evidence
 Rediscovery
 ```
 
-Rediscovery therefore differs from post hoc discovery.
+Rediscovery differs from post hoc discovery.
+Any defect shape used to classify a held-out finding as rediscovered must be
+recorded in `known/known_violations.toml` before Freeze 02.
+
+### Result Classes
+
+After evaluation and, for `VIOLATED_*` verdicts, adjudication, each evaluator
+result belongs to exactly one result class:
+
+- rediscovered: a confirmed violation matching a predeclared defect shape;
+- new confirmed: a confirmed violation matching no predeclared defect shape;
+- false positive: a `VIOLATED_*` verdict that does not survive adjudication;
+- preserved: a `PRESERVED` verdict;
+- expected or refused: an `UNSUPPORTED` or `NOT_APPLICABLE` verdict;
+- underdetermined: an `UNDERDETERMINED` verdict; and
+- unanchorable: an `UNANCHORABLE` verdict.
+
+All result classes are reported explicitly; none are silently discarded.
 
 ### Sampling Frame
 
@@ -230,7 +234,7 @@ experimental design.
 For a repository-based frame, the repository identity alone is insufficient
 for exact reproducibility when the repository can change over time.
 
-The frame therefore includes the fixed repository state required by the
+The frame includes the fixed repository state required by the
 sampling specification, including the declared revision.
 
 The sampling frame should not be interpreted as necessarily statistically
@@ -239,78 +243,58 @@ representativeness is separately established.
 
 ### Semantic Target
 
-The kind of information, relation, or structure required by the experiment.
+The kind of identity information or semantic role required for the experiment
+to apply.
 
 The semantic target answers:
 
-> What kind of thing must be present for this experiment to operate?
+> What kind of information must be present for this experiment to test the
+> declared preservation commitment?
 
-It does not identify the particular instance within a specific artifact.
+For the initial pilot, the semantic target is PURL identity information in the
+representation-specific semantic role required by the frozen commitment.
 
-For example, an experiment may require identity-bearing package information of
-a declared kind.
+A valid SBOM may lack that information and be unsuitable for this
+particular experiment without being invalid or defective as an SBOM.
 
-That requirement describes the semantic target.
+The semantic target should not be confused with the independent evidence used
+to establish correspondence between source and target components.
 
-The particular component selected from a particular SBOM is the target anchor.
+### Target Document Validation
 
-Thus:
+The determination of whether a converter-generated target document conforms to
+the declared target representation, using the declared target validator.
 
-```text
-Semantic target
-    =
-WHAT kind of information or structure is required
+Target document validation is recorded separately from transformation
+execution and from identity-preservation evaluation.
 
-Target anchor
-    =
-WHICH specific instance is selected
-```
+When the frozen evaluator can process the target document, evaluation proceeds
+regardless of the validation result.
 
-### Target Anchor
-
-The specific instance of the semantic target selected within an experimental
-artifact according to the predeclared anchoring rules.
-
-A target anchor must satisfy the applicable eligibility and target-selection
-requirements.
-
-The target anchor provides the concrete experimental subject on which the
-declared transformation and evaluation operate.
-
-The term should not be confused with other uses of `anchor`, such as an
-independent content-hash anchor used to establish component correspondence.
-
-### Target Validity
-
-Whether a selected target anchor actually satisfies the requirements declared
-for a valid experimental target.
-
-Target validity is evaluated separately from transformation execution success
-and separately from the eventual preservation verdict.
-
-This distinction prevents an invalidly selected target from being interpreted
-as evidence about the identity-preservation hypothesis.
-
-Conceptually:
+Validation never overrides, relabels, or modifies an evaluator verdict.
+Validation result and evaluator verdict are reported as separate dimensions.
 
 ```text
-Was a legitimate target selected?
-        |
-        v
-TARGET VALIDITY
-
-Did the transformation execute?
+Did the converter execute and produce a target document?
         |
         v
 EXECUTION STATUS
 
-What happened to the declared identity relation?
+Is the target document valid under its declared representation?
         |
         v
-EVALUATION / ADJUDICATION
-```
+TARGET DOCUMENT VALIDATION
 
-These are separate questions.
+What happened to each source PURL?
+        |
+        v
+EVALUATOR VERDICT
+
+Does a VIOLATED_* verdict survive the frozen adjudication criteria?
+        |
+        v
+ADJUDICATION
+```
 
 ### Transformation Execution
 
@@ -325,47 +309,36 @@ Execution produces experimental output and execution evidence.
 
 Installation or acquisition of a transformation tool is not transformation
 execution.
-
 Similarly, a matrix row declared `unsupported_pre_execution` is not an
 executed transformation and should not be interpreted as a transformation
 failure.
 
 ### UNANCHORABLE
 
-A classification indicating that no target anchor can legitimately be selected
-from an artifact under the frozen anchoring and target-validity rules.
+A verdict indicating that the evaluator cannot establish the required
+source-to-target component correspondence under the frozen anchoring
+procedure using the required independent evidence.
 
-`UNANCHORABLE` does not mean that the source artifact is defective.
-
-It does not mean that the transformation implementation failed.
-
-It does not establish failure of the identity-preservation hypothesis.
-
-It means that the experiment cannot legitimately instantiate the required
-target on that artifact under the predeclared rules.
-
-This distinction is important because the absence of a valid experimental
-target is different from an implementation failure.
+`UNANCHORABLE` does not mean that the source artifact is defective,
+that the transformation implementation failed, or that the
+identity-preservation commitment was violated.
 
 Conceptually:
 
 ```text
-Artifact available
+Source component
         |
         v
-Apply frozen anchoring rules
+Apply frozen anchoring procedure
         |
-        +----------------------+
-        |                      |
-        v                      v
-Valid target found      No legitimate target
-        |                      |
-        v                      v
-Continue experiment        UNANCHORABLE
+        +---------------------------+
+        |                           |
+        v                           v
+Correspondence established    Correspondence not established
+        |                           |
+        v                           v
+Continue evaluation              UNANCHORABLE
 ```
-
-`UNANCHORABLE` therefore represents a limitation on experimental
-applicability for that artifact, not an adverse preservation verdict.
 
 ## Important Controlled Distinctions
 
@@ -427,75 +400,89 @@ development and relevant prior observation.
 `Generalization` describes the evidentiary purpose of applying the method to
 that material.
 
-An artifact can therefore be described as held out because of how it was
+An artifact can be described as held out because of how it was
 treated before execution and as generalization evidence because of the role it
 plays in the study.
 
-### Semantic Target vs. Target Anchor
+### Semantic Target vs. Content-Hash Anchor
 
-The semantic target is the required kind of experimental information or
-structure.
+The semantic target is the kind of identity information or semantic role
+required for the experiment.
 
-The target anchor is the particular instance selected from a particular
-artifact.
+A content-hash anchor is independent evidence used to establish correspondence
+between source and target components.
 
 ```text
 Semantic target
     =
-WHAT
+WHAT identity information is under investigation
 
-Target anchor
+Content-hash anchor
     =
-WHICH ONE
+WHAT independent evidence supports component correspondence
 ```
 
-### Target Anchor vs. Content-Hash Anchor
+For the initial pilot, PURL is the identity information under investigation.
 
-A target anchor is the specific experimental instance selected for the
-declared identity-preservation test.
+The PURL under evaluation is not used to establish source-to-target component
+correspondence.
 
-A content-hash anchor is independent information used by the protocol to
-support component correspondence.
+### Anchoring vs. Target-Document Validation
 
-The two uses of `anchor` serve different purposes and should remain explicitly
-distinguished.
+Anchoring establishes correspondence between a source component and a target
+component under the frozen component-matching procedure.
 
-### Anchoring vs. Target Validity
+Target document validation determines whether the generated target SBOM
+conforms to the declared target representation.
 
-Anchoring is the process of locating and selecting a proposed target anchor.
-
-Target validity asks whether that selected anchor actually satisfies the
-requirements for a legitimate experimental target.
+These are independent questions.
 
 ```text
-Anchoring
+Source component
     |
-    | selects proposed target
+    | independent content-hash evidence
     v
-Target-validity determination
+ANCHORING
     |
-    +-- valid ------> continue
+    v
+Corresponding target component
+
+Generated target SBOM
     |
-    +-- no legitimate target --> UNANCHORABLE
+    | standards-aware validation
+    v
+TARGET DOCUMENT VALIDATION
 ```
 
-### Target Validity vs. Execution Success
+Failure to establish source-to-target component correspondence may produce
+`UNANCHORABLE`.
 
-Target validity concerns whether the experiment has a legitimate subject.
+Failure of target document validation records that the generated SBOM is
+invalid under the applicable target representation.
+
+Neither condition should be confused with converter execution failure.
+
+### Target Document Validation vs. Execution Success
+
+Target document validation concerns whether a generated transformation output
+conforms to the declared target representation.
 
 Execution success concerns whether the declared transformation operation
-successfully ran.
+completed and produced the expected output artifact.
 
-A target-validity problem must not be classified as a converter execution
-failure.
+A converter may execute successfully and still produce a target document that
+fails validation.
 
-### Unsupported Route vs. Failed Transformation
+A target document validation failure must not be classified as a converter
+execution failure.
+
+### Unsupported Route vs. Execution Failure
 
 An unsupported route is identified before execution from the declared
-capabilities of the frozen transformation implementation.
+capabilities of the transformation implementation.
 
-A failed transformation is an attempted executable route that does not
-complete according to the execution-success criteria.
+An execution failure is an attempted planned route in which the converter
+does not complete according to the execution-success criteria.
 
 ```text
 unsupported_pre_execution
@@ -504,40 +491,67 @@ route not attempted because declared capability does not support it
 
 execution failure
     =
-declared executable route was attempted but did not complete successfully
+planned route was attempted but did not complete successfully
 ```
 
 The distinction prevents known tool capability boundaries from being
-misrepresented as experimental failures.
+misrepresented as execution failures.
 
-### Observation vs. Evaluation vs. Adjudication vs. Verdict
+### Unsupported Route vs. `UNSUPPORTED` Verdict
 
-These terms describe successive conceptual stages.
+`unsupported_pre_execution` is a route status.
+The converter's declared capability does not cover the source,
+so the route is not executed.
+
+`UNSUPPORTED` is an evaluator verdict.
+The target format does not support the required PURL representation,
+so loss is expected rather than counted as a violation.
+
+The first concerns whether a transformation runs.
+The second concerns a component within a transformation that did run.
+
+### Execution vs. Evaluation vs. Adjudication
+
+These terms describe distinct stages for each planned route that executes
+successfully.
+Adjudication applies only to `VIOLATED_*` evaluator verdicts.
 
 ```text
-OBSERVATION
-What happened?
+EXECUTION
+Did the converter run and produce a target document?
+
+        |
+        v
+
+TARGET DOCUMENT VALIDATION
+Is the target document valid?
+(recorded; does not gate evaluation when the evaluator can process the target)
 
         |
         v
 
 EVALUATION
-How does what happened relate to the declared criterion or commitment?
+The frozen evaluator assigns a verdict to each source PURL.
 
         |
         v
 
 ADJUDICATION
-Which predeclared decision rule applies?
+Does each VIOLATED_* verdict survive the frozen criteria?
 
         |
         v
 
-VERDICT
-What formal classification follows?
+RESULT CLASS
+Rediscovered, new confirmed, false positive, or a
+non-violation class.
 ```
 
-Keeping these stages separate prevents raw observations from being treated as
+Keeping these stages separate prevents execution status, target document
+validity, anchoring limitations, evaluator verdicts, and adjudication outcomes
+from being conflated.
+Target document validation remains independent evidence,
+and adjudication does not rewrite evaluator verdicts.
 
 ---
 

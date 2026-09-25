@@ -1393,21 +1393,16 @@ tool-population rationale.
 The runtime must be controlled because it participates in execution of the
 selected converter.
 
-## `sbom-utility`: Role to Verify Before Freeze
+## `sbom-utility`: Target-Document Validation
 
-CycloneDX `sbom-utility` was acquired during preparation of the generalization
-toolchain.
+CycloneDX `sbom-utility` is part of the frozen generalization apparatus as the
+independent validator applied to generated target SBOMs before preservation
+evaluation.
 
 It is not one of the three converter implementations defining the 10 × 3
 transformation matrix.
 
-Its exact experimental role must therefore be verified before Freeze 02.
-
-One plausible role, consistent with its capabilities and with the earlier
-execution history, is independent standards-aware validation of generated SBOM
-outputs.
-
-If that is what the implementation actually does, its role is conceptually:
+Its role is therefore distinct from transformation:
 
 ```text
 Source SBOM
@@ -1416,50 +1411,44 @@ Source SBOM
 Selected converter
     |
     v
-Transformed SBOM
+Generated target SBOM
     |
     v
 sbom-utility validation
     |
-    v
-Validated experimental output
+    +-- valid ------> study evaluation
     |
-    v
-Study evaluation
+    +-- invalid ----> retain validation evidence;
+                      no preservation verdict
 ```
 
-If so, `sbom-utility` should remain in the toolchain, but it should be
-documented as part of the validation apparatus rather than as a fourth
-converter.
+This separation prevents a structurally invalid generated document from being
+interpreted as evidence that an identity-preservation commitment was violated.
 
-If no frozen transformation, validation, or other experimental procedure
-actually requires it, it should not be retained merely because acquisition
-logic has already been implemented.
-
-The decision must be based on its actual role in the experiment.
-
-The pre-freeze action is therefore:
+The study therefore distinguishes three questions:
 
 ```text
-Trace every sbom-utility reference
+Did the declared transformation execute?
         |
         v
-Identify the operation that requires it
-        |
-        +----------------------------+
-        |                            |
-        v                            v
-Required by protocol          Not required by protocol
-        |                            |
-        v                            v
-Document exact role           Remove before freeze
+EXECUTION STATUS
+
+Is the generated target valid under its declared representation?
         |
         v
-Freeze version and provenance
+TARGET-DOCUMENT VALIDATION
+
+What happened to the declared identity relation?
+        |
+        v
+PRESERVATION EVALUATION
 ```
 
-No rationale should be invented retrospectively merely to justify software
-that happens to have been downloaded.
+`sbom-utility` belongs to the validation apparatus rather than the converter
+population.
+
+Its exact version and executable digest are recorded as part of the
+pre-execution transformation plan and verified before Freeze 02.
 
 ## Installation Is Not Experimental Execution
 

@@ -182,10 +182,16 @@ The release sweep remains engineering-validation evidence because its release
 history and results are examined before any separately frozen generalization
 corpus.
 
-No held-out generalization evidence is currently claimed.
+The held-out generalization corpus, preserved source artifacts, transformation
+matrix, converter artifacts, runtime dependencies, and target validator have
+been constructed under the pre-outcome preparation procedure.
 
-The generalization corpus and execution conditions will be fixed separately
-before any generalization execution.
+The complete pre-Freeze-02 verification gate currently passes.
+
+Freeze 02 has not yet been created, and no held-out generalization
+transformation has been executed or examined.
+
+No held-out generalization evidence is currently claimed.
 
 For freeze, execution, corpus, and adjudication procedures, see the
 [Run Protocol](./run.md).
