@@ -202,6 +202,21 @@ through `05-transformations.toml` and runs the required verification gates.
 Do not run it after Freeze 02 is established or after formal generalization
 execution has begun.
 
+#### Count Canonical SPDX Source PURLs
+
+Before Freeze 02, count the canonical PURL occurrences in the preserved SPDX
+sources used by the SPDX-to-CycloneDX direction.
+
+This is a source-only characterization step.
+It reads only the already-preserved SPDX source files.
+
+Run from the repository root: `.\count.ps1`.
+
+The SPDX-to-CycloneDX direction contains 6 canonical source PURL occurrences
+across those 2 held-out SPDX sources.
+Record the reported total of 6 in
+`contracts/FREEZE_02_GENERALIZATION.md`.
+
 After it succeeds, review and commit the resulting pre-freeze state before
 establishing Freeze 02.
 

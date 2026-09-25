@@ -219,6 +219,55 @@ output.
 `evaluation_error` is not an evaluator verdict and is not a preservation
 violation.
 
+## Adjudication and Interpretation
+
+Every evaluator result is retained and reported.
+
+Evaluator verdicts are interpreted according to the frozen Freeze 01
+commitment and evaluator.
+
+A candidate `VIOLATED_DROPPED`, `VIOLATED_RELOCATED`, or
+`VIOLATED_ALTERED` result is subjected to adjudication.
+
+A candidate preservation violation is confirmed only when:
+
+1. the source PURL is present in the source semantic role;
+2. the target representation supports the required PURL semantic role;
+3. the source and target records are validly associated under the frozen
+   anchoring procedure; and
+4. the target fails the frozen preservation obligation by dropping,
+   relocating, or altering the PURL.
+
+Adjudication confirms or rejects the candidate preservation violation.
+It does not change or relabel the evaluator's violation subtype.
+
+Formal route results are reported using the following result classes:
+
+- `rediscovered`: a confirmed `VIOLATED_*` result matching a defect shape
+  declared in `known/known_violations.toml` before Freeze 02;
+- `new confirmed`: a confirmed `VIOLATED_*` result for which no predeclared
+  defect shape matches;
+- `false positive`: a candidate `VIOLATED_*` result rejected by adjudication;
+- `preserved`: evaluator verdict `PRESERVED`;
+- `expected/refused`: evaluator verdict `UNSUPPORTED` or `NOT_APPLICABLE`;
+- `underdetermined`: an underdetermined result where applicable;
+- `unanchorable`: evaluator verdict `UNANCHORABLE`; and
+- `evaluation_error`: the frozen evaluator could not complete evaluation.
+
+No result class is silently discarded.
+
+If `known/known_violations.toml` declares no defect shapes before Freeze 02,
+no result from the generalization experiment is classified as `rediscovered`.
+
+`UNANCHORABLE` results are reported in full, including their count and
+fraction by route. No post hoc threshold is used to remove a route or source
+from interpretation.
+
+The transformation route, defined by one preserved source and one converter,
+is the primary execution unit. Component-level and PURL-level observations
+within a route are nested observations and are not treated as independent
+experimental replicates.
+
 ## Known Limitations and Disclosures
 
 The experiment is a bounded generalization pilot and is not a statistically
@@ -230,23 +279,22 @@ Conclusions therefore apply to this declared frame and
 should not be interpreted as prevalence estimates for software
 supply chains generally.
 
-The 10-member corpus contains 8 CycloneDX sources and 2 SPDX sources.
-
+The 10-member corpus contains **8 CycloneDX sources and 2 SPDX sources**.
 The planned transformation matrix is directionally unbalanced:
 
 - 16 planned routes are CycloneDX-to-SPDX; and
-- 4 planned routes are SPDX-to-CycloneDX, over 2 held-out SPDX sources.
+- 4 planned routes are SPDX-to-CycloneDX, over **2 held-out SPDX sources**.
 
-The SPDX-to-CycloneDX direction contains [EXACT COUNT] applicable source PURLs
-across those 2 held-out sources.
+The SPDX-to-CycloneDX direction contains **6 canonical source PURL occurrences**
+across those 2 held-out sources (see `.\count.ps1`).
+
+- 4 canonical PURL occurrences in `gen-spdx-e38ee905f9c0.spdx.json`
+- 2 canonical PURL occurrences in `gen-spdx-0d278129197b.spdx.json`
+- 6 total packages with exactly one canonical PURL
+- 5 of those 6 also have a content hash
 
 This direction therefore supports more limited generalization evidence than
 the larger CycloneDX-to-SPDX route population.
-
-Corpus members are not assumed to be statistically independent.
-The transformation route is the primary execution unit, and component-level
-or PURL-level observations are nested within routes and source artifacts rather
-than treated as independent experimental replicates.
 
 The selected converter population is deliberately bounded and is not claimed
 to be exhaustive or statistically representative of all SBOM transformation
@@ -257,6 +305,28 @@ Some declared source-by-converter combinations are recorded as
 the converter's documented capability.
 These routes remain in the complete matrix and are not replaced
 by different corpus members.
+
+The deterministic within-unit selection rule selected CycloneDX 1.2 or 1.3
+documents for every CycloneDX corpus member, including selection units that
+also contained later-version documents.
+
+Those selected CycloneDX versions fall outside Protobom's declared JSON input
+support for CycloneDX 1.4 through 1.7.
+
+Consequently, Protobom has no planned CycloneDX-to-SPDX route in this
+experiment.
+Its 8 corresponding source-by-converter routes remain in the matrix as
+`unsupported_pre_execution` rather than being replaced by different
+source artifacts.
+
+Freeze 01 grounds the CycloneDX canonical PURL location in the CycloneDX 1.6
+specification.
+
+Applying the frozen evaluator to CycloneDX 1.2 and 1.3 source documents assumes
+that `component.purl` has the same relevant preservation semantics in those
+versions.
+
+That assumption is disclosed as a limitation of the generalization scope.
 
 The cdx2spdx CycloneDX routes are planned attempts even though the converter
 does not publish a source-version support matrix comparable to the one
