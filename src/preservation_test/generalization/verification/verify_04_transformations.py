@@ -40,10 +40,15 @@ This stage first invokes the preserved-source verifier and then verifies:
 11. every source/converter pair occurs exactly once;
 12. the matrix is the complete cross-product of frozen sources and converters;
 13. planned and unsupported route counts match the generated route records;
-14. planned routes contain transformation and target-validation commands;
-15. unsupported routes contain no executable command and record their
+14. planned transformation commands invoke the exact recorded converter
+    artifact or recorded converter runtime;
+15. runtime-based converter commands reference the exact recorded converter
+    artifact;
+16. planned target-validation commands invoke the exact recorded target
+    validator;
+17. unsupported routes contain no executable command and record their
     pre-execution reason; and
-16. the plan still declares that execution has not started and no
+18. the plan still declares that execution has not started and no
     generalization transformation outputs have been examined.
 
 An unsupported route remains part of the matrix. It is verified as a declared
@@ -231,6 +236,7 @@ def verify_04_transformations(repository_root: Path) -> Path:
         )
 
     converter_ids: set[str] = set()
+    converter_execution: dict[str, tuple[str, str | None]] = {}
 
     for index, converter in enumerate(converters):
         where = f"converter[{index}]"
@@ -281,6 +287,8 @@ def verify_04_transformations(repository_root: Path) -> Path:
             )
         )
 
+        runtime_executable: str | None = None
+
         if runtime_fields_present:
             if not all(
                 isinstance(value, str) and value
@@ -295,6 +303,9 @@ def verify_04_transformations(repository_root: Path) -> Path:
                     "must be recorded together"
                 )
 
+            assert isinstance(runtime_path, str)
+            assert isinstance(runtime_sha256, str)
+
             try:
                 verify_file_hash(
                     repository_root,
@@ -305,6 +316,13 @@ def verify_04_transformations(repository_root: Path) -> Path:
 
             except HashVerificationError as error:
                 raise TransformationsVerificationError(str(error)) from error
+
+            runtime_executable = runtime_path
+
+        converter_execution[converter_id] = (
+            artifact_path,
+            runtime_executable,
+        )
 
     validator_path = _required_string(
         validator,
@@ -414,6 +432,28 @@ def verify_04_transformations(repository_root: Path) -> Path:
                     f"{route_id} is planned but has no command_argv"
                 )
 
+            converter_artifact, runtime_executable = converter_execution[converter_id]
+
+            if runtime_executable is None:
+                if command_argv[0] != converter_artifact:
+                    raise TransformationsVerificationError(
+                        f"{route_id} command_argv does not invoke the "
+                        "recorded converter artifact"
+                    )
+
+            else:
+                if command_argv[0] != runtime_executable:
+                    raise TransformationsVerificationError(
+                        f"{route_id} command_argv does not invoke the "
+                        "recorded converter runtime"
+                    )
+
+                if converter_artifact not in command_argv[1:]:
+                    raise TransformationsVerificationError(
+                        f"{route_id} command_argv does not reference the "
+                        "recorded converter artifact"
+                    )
+
             if validation_required is not True:
                 raise TransformationsVerificationError(
                     f"{route_id} is planned but validation_required is not true"
@@ -422,6 +462,12 @@ def verify_04_transformations(repository_root: Path) -> Path:
             if not isinstance(validation_argv, list) or not validation_argv:
                 raise TransformationsVerificationError(
                     f"{route_id} is planned but has no validation_command_argv"
+                )
+
+            if validation_argv[0] != validator_path:
+                raise TransformationsVerificationError(
+                    f"{route_id} validation_command_argv does not invoke the "
+                    "recorded target validator"
                 )
 
         else:

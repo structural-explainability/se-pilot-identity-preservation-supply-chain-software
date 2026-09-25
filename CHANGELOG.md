@@ -245,6 +245,18 @@ git tag vX.Y.Z -m "X.Y.Z"
 git push origin vX.Y.Z
 ```
 
+A software release may be created before Freeze 02 is established.
+
+A software release tag does not establish Freeze 02 and does not prevent
+additional pre-freeze work.
+For changes before Freeze 02, make, validate, and commit those changes normally.
+
+Freeze 02 is established separately by the research-freeze procedure below
+against the exact committed pre-freeze state.
+A final software release tag may also be created for that state,
+but the software tag and the research freeze
+remain separate lifecycle events.
+
 ## Research Freeze Procedure
 
 Research freezes are deliberate experimental boundaries and are not created
@@ -306,14 +318,108 @@ in `docs/en/run.md` and create a new applicable freeze.
 
 ### Generalization Freeze
 
-After engineering validation, freeze the generalization corpus and execution
-conditions separately before examining any generalization outputs.
-
-The applicable procedure is defined in `docs/en/run.md`.
+After engineering validation, the generalization corpus and execution
+conditions are frozen separately before any generalization output is examined.
 
 The generalization freeze does not replace the commitment/evaluator freeze.
-It records the corpus and execution conditions under which the frozen evaluator
-is tested.
+It records the corpus and execution conditions under which the frozen
+Freeze 01 evaluator is tested.
+
+Before Freeze 02 is established,
+`contracts/FREEZE_02_GENERALIZATION.md` is a draft and may be revised.
+
+#### Prepare the Final Pre-Freeze-02 State
+
+Complete all intended changes to the generalization design, preparation
+implementation, verification, execution procedure, disclosures, and Freeze 02
+draft before establishing the freeze.
+
+Dependency updates must already be complete.
+Do not run `uv lock --upgrade` as part of this procedure.
+When the repository is ready for its final pre-Freeze-02 rebuild, run:
+
+```powershell
+.\run.ps1
+```
+
+`run.ps1` may be used only before Freeze 02 is established.
+It rebuilds the generated generalization artifacts from
+`02-candidates.toml` through `05-transformations.toml` and runs the applicable
+pre-freeze verification gates.
+
+Review the resulting pre-freeze state, then run the normal repository
+validation:
+
+```powershell
+.\sit.ps1
+```
+
+Review all changes before committing.
+
+```powershell
+git add -A
+git commit -m "Prepare generalization freeze"
+git push -u origin main
+```
+
+A software release tag may be created for this exact pre-freeze state if
+desired, using the normal release procedure above.
+The software tag is useful provenance but is not itself Freeze 02.
+After committing the final pre-freeze state, do not rerun `run.ps1`.
+Verify the committed state without rebuilding it:
+
+```powershell
+uv run --locked python -m preservation_test.generalization.verification.verify_05_freeze_02
+
+git status
+```
+
+The verification must succeed and `git status` must report a clean working
+tree before Freeze 02 is created.
+
+If verification fails or the working tree is not clean, do not create
+Freeze 02.
+Correct the pre-freeze state, commit the correction, rerun the verification,
+and again confirm a clean working tree.
+
+#### Establish Freeze 02
+
+After the final pre-freeze state is committed, verified, and clean, establish
+Freeze 02 explicitly:
+
+```powershell
+.\freeze_02.ps1
+```
+
+The Freeze 02 procedure must not execute a generalization transformation or
+inspect any generalization transformation or evaluator output.
+Review the finalized freeze record at:
+
+```text
+contracts/FREEZE_02_GENERALIZATION.md
+```
+
+Confirm that it records the intended corpus, execution conditions, environment,
+artifact hashes, limitations, and applicable Freeze 01 commitment/evaluator.
+Commit the Freeze 02 record:
+
+```powershell
+git add contracts/FREEZE_02_GENERALIZATION.md
+git commit -m "Record generalization freeze"
+git push -u origin main
+```
+
+Do not overwrite `contracts/FREEZE_02_GENERALIZATION.md` after Freeze 02 has
+been established.
+Do not run `run.ps1` after Freeze 02 has been established.
+
+Formal held-out generalization execution may begin only after the Freeze 02
+record has been reviewed and committed.
+
+If a frozen corpus definition, execution condition, environment dependency,
+or other Freeze 02 artifact must change after Freeze 02 is established,
+follow the freeze-break procedure in `docs/en/run.md`, create a new applicable
+generalization freeze, and identify subsequent evidence with that new freeze.
 
 ## Only As Needed (delete a tag)
 

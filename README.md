@@ -118,11 +118,13 @@ This repository uses `uv`.
 
 ```shell
 uv self update
-uv python pin 3.14
-uv python install
-uv lock --upgrade
-uv sync
-uv audit
+
+# Verify that uv.lock still matches pyproject.toml.
+# Do not update dependency resolution during ordinary development.
+uv lock --check
+
+uv sync --locked
+uv audit --frozen
 
 # Update GitHub Actions and pin all action references to immutable SHAs
 uvx gha-tools autoupdate --pin=all --write .github/workflows
@@ -130,23 +132,50 @@ uvx gha-tools autoupdate --pin=all --write .github/workflows
 # Then audit the resulting GitHub configuration for security findings
 uvx zizmor@latest .github/
 
-uv run prek install -f
-uv run prek update --freeze --cooldown-days 7
+uv run --locked prek install -f
+uv run --locked prek update --freeze --cooldown-days 7
 
 git add -A
-uv run prek run --all-files
+uv run --locked prek run --all-files
 # repeat if changes were made
-uv run prek run --all-files
+uv run --locked prek run --all-files
 
 # run common chores (formats Python in .md files also)
-uv run ruff format .
-uv run ruff check . --fix
-uv run ty check
-uv run python -m pytest
-uv run python -m zensical build
+uv run --locked ruff format .
+uv run --locked ruff check . --fix
+uv run --locked ty check
+uv run --locked python -m pytest
+uv run --locked python -m zensical build
 # audit dependencies (advisory: findings are reported, nothing blocks)
 uv audit --frozen
 ```
+
+### Dependency Updates
+
+Dependency updates are deliberate maintenance operations and are not part of
+ordinary development, SIT, engineering validation, or generalization
+execution.
+
+For the current experiment, dependency updates have stopped.
+
+Engineering validation is complete, and the generalization preparation
+artifacts have already been generated.
+Do not run `uv lock --upgrade` again before or during Freeze 02 execution.
+
+For a future maintenance cycle, before beginning a new experimental preparation
+sequence, dependencies may be updated with:
+
+```shell
+uv lock --upgrade
+uv sync --locked
+git diff -- pyproject.toml uv.lock .python-version
+uv run --locked ty check
+uv run --locked python -m pytest
+uv run --locked python -m zensical build
+```
+
+Review and commit any dependency changes explicitly before beginning the next
+experimental preparation sequence.
 
 ### Engineering Validation
 
@@ -155,74 +184,28 @@ Do not rerun it.
 
 ```shell
 # Historical engineering-validation command:
-# uv run python -m preservation_test.fixtures.build_and_selftest
+# uv run --locked python -m preservation_test.fixtures.build_and_selftest
 
 # Verify that the frozen commitment and evaluator still match Freeze 01:
-uv run python -m preservation_test.generalization.verification.verify_01_freeze_01
+uv run --locked python -m preservation_test.generalization.verification.verify_01_freeze_01
 ```
 
 ### Generalization Preparation
 
-The numbered generalization steps are deterministic, write-once preparation steps.
+Generalization preparation is performed by the repository-root `run.ps1`
+script.
+Run `.\run.ps1` **only before Freeze 02 is established**.
 
-They intentionally do not overwrite existing scientific records or preserved
-evidence.
-Do not delete an existing numbered artifact to make a step run again.
-Before Freeze 02, an artifact should be regenerated only when its upstream
-input has intentionally changed and the resulting downstream records are being
-explicitly invalidated and rebuilt.
+It rebuilds the generated generalization artifacts from `02-candidates.toml`
+through `05-transformations.toml` and runs the required verification gates.
+
+Do not run it after Freeze 02 is established or after formal generalization
+execution has begun.
+
+After it succeeds, review and commit the resulting pre-freeze state before
+establishing Freeze 02.
 
 ```shell
-# Verify the frozen commitment/evaluator before generalization preparation
-uv run python -m preservation_test.generalization.verification.verify_01_freeze_01
-
-# Derive prior-validation exclusions for the sampling specification
-uv run python -m preservation_test.generalization.p01_build_candidates `
-    --print-derived-exclusions
-
-# Copy the derived exclusions to generalization/01-sampling.toml.
-
-# Prepare the fixed external sampling frame
-uv run python -m preservation_test.generalization.p01_prepare_sampling_frame
-
-# Build the complete source-only candidate inventory
-uv run python -m preservation_test.generalization.p01_build_candidates
-
-# Build the deterministic held-out corpus from eligible candidate units
-uv run python -m preservation_test.generalization.p02_build_corpus
-
-# Verify sampling, candidate, and corpus provenance
-uv run python -m preservation_test.generalization.verification.verify_02_corpus
-
-# Preserve the exact selected source bytes and provenance
-uv run python -m preservation_test.generalization.p03_preserve_sources
-
-# Verify the preserved source bytes against the frozen corpus
-uv run python -m preservation_test.generalization.verification.verify_03_sources
-
-# Install the exact repository-local transformation toolchain
-.\install_generalization_tools.ps1
-
-# Construct the complete pre-outcome transformation plan
-uv run python -m preservation_test.generalization.p04_build_transformations `
-    --syft bin/generalization/syft.exe `
-    --syft-version "1.52.0" `
-    --sbom-convert bin/generalization/sbom-convert.exe `
-    --sbom-convert-version "0.0.8" `
-    --cdx2spdx-jar bin/generalization/cdx2spdx.jar `
-    --cdx2spdx-version "0.1.5" `
-    --java "bin/generalization/jdk-21.0.12.1+1/bin/java.exe" `
-    --java-version "21.0.12.1+1" `
-    --sbom-utility bin/generalization/sbom-utility.exe `
-    --sbom-utility-version "0.19.2"
-
-# Verify sources, tool artifacts, runtime hashes, validator, and matrix
-uv run python -m preservation_test.generalization.verification.verify_04_transformations
-
-# Final pre-freeze integrity gate
-uv run python -m preservation_test.generalization.verification.verify_05_freeze_02
-
-
 # save progress
 git add -A
 git commit -m "your message here"

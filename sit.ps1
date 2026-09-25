@@ -2,12 +2,15 @@
 
 <#
 ============================================================
-sit.ps1 (ALL-PY-SRC-REPOS)
+sit.ps1 (CUSTOM-FREEZE-ALL-PY-SRC-REPOS)
 ============================================================
-Updated: 2026-09-24 (uses pyproject.toml [dependency-groups]; uv sync installs dev and docs groups by default)
+Updated: 2026-09-25
 
-Situate project dependencies, lint, test, and build docs.
+Situate the locked project environment, lint, test, and build docs.
 For Python tooling repos only.
+
+This script does NOT update uv.lock.
+Dependency upgrades must be performed deliberately outside SIT.
 
 Run with:
 .\sit.ps1
@@ -18,17 +21,17 @@ $ErrorActionPreference = "Stop"
 
 # ============================================================
 # Precheck: pyproject.toml must use [dependency-groups], not the
-# old [project.optional-dependencies]. With the old table, `uv sync`
-# succeeds but does NOT install dev/docs, and later steps fail confusingly.
+# old [project.optional-dependencies].
 # ============================================================
+
 if (Test-Path "pyproject.toml") {
     $pyproject = Get-Content "pyproject.toml" -Raw
+
     if ($pyproject -match '(?m)^\[project\.optional-dependencies\]') {
         Write-Host ""
         Write-Host "ERROR: pyproject.toml uses the old [project.optional-dependencies] table." -ForegroundColor Red
         Write-Host ""
-        Write-Host "This repo has not been migrated. 'uv sync' would run but NOT install" -ForegroundColor Yellow
-        Write-Host "the dev and docs dependencies, so linting, tests, and docs would fail." -ForegroundColor Yellow
+        Write-Host "This repo has not been migrated to [dependency-groups]." -ForegroundColor Yellow
         Write-Host ""
         Write-Host "FIX: open pyproject.toml and rename this one line:" -ForegroundColor Cyan
         Write-Host "    [project.optional-dependencies]   ->   [dependency-groups]" -ForegroundColor Cyan
@@ -39,37 +42,66 @@ if (Test-Path "pyproject.toml") {
     }
 }
 
-uv self update
-uv python install
-uv lock --upgrade
-uv sync
+# ============================================================
+# Verify and synchronize the locked Python environment.
+#
+# SIT must not update uv.lock.
+# ============================================================
 
-uv run prek install -f
-uv run prek update --freeze --cooldown-days 7
+uv lock --check
+uv sync --locked
 
-# pin GitHub Actions to commit SHAs (needs a GitHub CLI login; skipped otherwise)
+# ============================================================
+# Update and run repository hooks.
+# ============================================================
+
+uv run --locked prek install -f
+uv run --locked prek update --freeze --cooldown-days 7
+
+# ============================================================
+# Audit/fix GitHub configuration when GitHub CLI is available.
+# ============================================================
+
 if (Get-Command gh -ErrorAction SilentlyContinue) {
     gh auth status *> $null
+
     if ($LASTEXITCODE -eq 0) {
-        uv run zizmor --gh-token (gh auth token) --fix=all .github/
+        uv run --locked zizmor --gh-token (gh auth token) --fix=all .github/
     }
 }
 
-git add -A
+# ============================================================
+# Stage generated or automatically corrected files.
+# ============================================================
 
 git add -A
-uv run prek run --all-files
-# repeat if changes were made
-uv run prek run --all-files
 
-# run common chores (formats Python in .md files also)
-uv run ruff format .
-uv run ruff check . --fix
-uv run ty check
-uv run python -m pytest
-uv run python -m zensical build
-# audit dependencies (advisory: findings are reported, nothing blocks)
+# ============================================================
+# Run repository checks.
+# ============================================================
+
+uv run --locked prek run --all-files
+# Repeat because the first pass may modify files.
+uv run --locked prek run --all-files
+
+# ============================================================
+# Run common chores.
+# Ruff also formats Python code embedded in supported Markdown.
+# ============================================================
+
+uv run --locked ruff format .
+uv run --locked ruff check . --fix
+uv run --locked ty check
+uv run --locked python -m pytest
+uv run --locked python -m zensical build
+
+# ============================================================
+# Audit locked dependencies.
+# Advisory only: findings are reported but do not modify uv.lock.
+# ============================================================
+
 uv audit --frozen
 
+Write-Host ""
 Write-Host "All commands executed successfully. Review any warnings above."
-Write-Host "Run a Python module to verify .venv/ is working correctly."
+Write-Host "The dependency lockfile was verified and was not updated."
