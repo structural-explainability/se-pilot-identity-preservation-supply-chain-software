@@ -125,6 +125,9 @@ CORPUS_FILE = Path("generalization/03-corpus.toml")
 SOURCES_RECORD = Path("generalization/04-sources.toml")
 OUT_FILE = Path("generalization/05-transformations.toml")
 RESULTS_DIR = Path("generalization/results")
+TIMEOUT_SECONDS = (
+    300  # Preliminary; replace from executor smoke-test durations before Freeze 02.
+)
 
 EXIT_OK = 0
 EXIT_REFUSED = 2
@@ -183,6 +186,19 @@ class TargetValidator:
 
 
 @dataclass(frozen=True)
+class RoutePaths:
+    """Predeclared evidence paths for one transformation route."""
+
+    target_path: str
+    validation_path: str
+    evaluation_path: str
+    log_path: str
+    validation_log_path: str
+    evaluation_log_path: str
+    execution_path: str
+
+
+@dataclass(frozen=True)
 class RoutePlan:
     """One source/converter transformation decision."""
 
@@ -203,6 +219,9 @@ class RoutePlan:
     validation_required: bool
     evaluation_path: str
     log_path: str
+    validation_log_path: str
+    evaluation_log_path: str
+    execution_path: str
     capability_basis: str
     unsupported_reason: str
     command_argv: tuple[str, ...]
@@ -379,17 +398,20 @@ def _target_paths(
     source: Source,
     converter_id: str,
     target_standard: str,
-) -> tuple[str, str, str, str]:
-    """Return predeclared target, validation, evaluation, and log paths."""
+) -> RoutePaths:
+    """Return the predeclared evidence paths for one transformation route."""
     directory = RESULTS_DIR / source.study_id / converter_id
 
     suffix = "spdx.json" if target_standard == "spdx" else "cdx.json"
 
-    return (
-        (directory / f"target.{suffix}").as_posix(),
-        (directory / "target-validation.json").as_posix(),
-        (directory / "evaluation.json").as_posix(),
-        (directory / "transform.log").as_posix(),
+    return RoutePaths(
+        target_path=(directory / f"target.{suffix}").as_posix(),
+        validation_path=(directory / "target-validation.json").as_posix(),
+        evaluation_path=(directory / "evaluation.json").as_posix(),
+        log_path=(directory / "transform.log").as_posix(),
+        validation_log_path=(directory / "validation.log").as_posix(),
+        evaluation_log_path=(directory / "evaluation.log").as_posix(),
+        execution_path=(directory / "execution.json").as_posix(),
     )
 
 
@@ -403,7 +425,7 @@ def _unsupported(
     reason: str,
 ) -> RoutePlan:
     """Return one explicitly unsupported pre-execution route."""
-    target_path, validation_path, evaluation_path, log_path = _target_paths(
+    paths = _target_paths(
         source,
         converter.converter_id,
         target_standard,
@@ -422,11 +444,14 @@ def _unsupported(
         status=UNSUPPORTED,
         target_standard=target_standard,
         target_spec_version=target_spec_version,
-        target_path=target_path,
-        validation_path=validation_path,
+        target_path=paths.target_path,
+        validation_path=paths.validation_path,
         validation_required=False,
-        evaluation_path=evaluation_path,
-        log_path=log_path,
+        evaluation_path=paths.evaluation_path,
+        log_path=paths.log_path,
+        validation_log_path=paths.validation_log_path,
+        evaluation_log_path=paths.evaluation_log_path,
+        execution_path=paths.execution_path,
         capability_basis=capability_basis,
         unsupported_reason=reason,
         command_argv=(),
@@ -445,7 +470,7 @@ def _planned(
     command_argv: tuple[str, ...],
 ) -> RoutePlan:
     """Return one predeclared transformation route."""
-    target_path, validation_path, evaluation_path, log_path = _target_paths(
+    paths = _target_paths(
         source,
         converter.converter_id,
         target_standard,
@@ -454,7 +479,7 @@ def _planned(
     expanded = tuple(
         argument.replace("{source}", source.preserved_path).replace(
             "{target}",
-            target_path,
+            paths.target_path,
         )
         for argument in command_argv
     )
@@ -468,13 +493,13 @@ def _planned(
         validator_executable,
         "validate",
         "-i",
-        target_path,
+        paths.target_path,
         "--format",
         "json",
         "--error-value=false",
         "--quiet",
         "-o",
-        validation_path,
+        paths.validation_path,
     )
 
     return RoutePlan(
@@ -490,11 +515,14 @@ def _planned(
         status=PLANNED,
         target_standard=target_standard,
         target_spec_version=target_spec_version,
-        target_path=target_path,
-        validation_path=validation_path,
+        target_path=paths.target_path,
+        validation_path=paths.validation_path,
         validation_required=True,
-        evaluation_path=evaluation_path,
-        log_path=log_path,
+        evaluation_path=paths.evaluation_path,
+        log_path=paths.log_path,
+        validation_log_path=paths.validation_log_path,
+        evaluation_log_path=paths.evaluation_log_path,
+        execution_path=paths.execution_path,
         capability_basis=capability_basis,
         unsupported_reason="",
         command_argv=expanded,
@@ -519,7 +547,7 @@ def _syft_route(
     )
 
     if source.source_standard == "cyclonedx":
-        target_path, _, _, _ = _target_paths(
+        paths = _target_paths(
             source,
             converter.converter_id,
             "spdx",
@@ -538,12 +566,12 @@ def _syft_route(
                 "convert",
                 "{source}",
                 "-o",
-                f"spdx-json@2.3={target_path}",
+                f"spdx-json@2.3={paths.target_path}",
             ),
         )
 
     if source.source_standard == "spdx":
-        target_path, _, _, _ = _target_paths(
+        paths = _target_paths(
             source,
             converter.converter_id,
             "cyclonedx",
@@ -562,7 +590,7 @@ def _syft_route(
                 "convert",
                 "{source}",
                 "-o",
-                f"cyclonedx-json@1.6={target_path}",
+                f"cyclonedx-json@1.6={paths.target_path}",
             ),
         )
 
@@ -586,8 +614,10 @@ def _protobom_route(
     cyclonedx_versions = ", ".join(PROTOBOM_CYCLONEDX_READ_VERSIONS)
 
     basis = (
-        f"Protobom v{PROTOBOM_LIBRARY_VERSION} documents JSON read support "
-        f"for SPDX {spdx_versions} and CycloneDX {cyclonedx_versions}"
+        f"Protobom v{PROTOBOM_LIBRARY_VERSION} "
+        f"(https://github.com/protobom/protobom/tree/v{PROTOBOM_LIBRARY_VERSION}) "
+        f"documents JSON read support for {spdx_versions} "
+        f"and CycloneDX {cyclonedx_versions}"
     )
 
     if source.source_standard == "spdx":
@@ -804,6 +834,9 @@ def _route_row(route: RoutePlan) -> dict[str, Any]:
         "validation_required": route.validation_required,
         "evaluation_path": route.evaluation_path,
         "log_path": route.log_path,
+        "validation_log_path": route.validation_log_path,
+        "evaluation_log_path": route.evaluation_log_path,
+        "execution_path": route.execution_path,
         "capability_basis": route.capability_basis,
     }
 
@@ -850,6 +883,9 @@ def _render(
                 "execution_state": "not_started",
                 "transformation_outputs_examined": False,
                 "results_directory": RESULTS_DIR.as_posix(),
+                "run_manifest_path": (RESULTS_DIR / "run.json").as_posix(),
+                "timeout_seconds": TIMEOUT_SECONDS,
+                "retry_directory_pattern": "retry-{n}",
             },
             "target_validator": _target_validator_row(validator),
             "transformations_code_sha256": screening_code_hashes(

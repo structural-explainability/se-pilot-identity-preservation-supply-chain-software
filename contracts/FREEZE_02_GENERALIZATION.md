@@ -413,7 +413,7 @@ The verification procedure confirms:
 The prerequisite gate is run with:
 
 ```powershell
-uv run python -m preservation_test.generalization.verification.verify_05_freeze_02
+uv run --frozen python -m preservation_test.generalization.verification.verify_05_freeze_02
 ```
 
 Freeze 02 must not be established if this verification fails.
@@ -440,12 +440,17 @@ The recorded set includes at least:
 - the generalization execution implementation;
 - the Freeze 02 verification implementation;
 - `known/known_violations.toml`, which may declare no defect shapes; if it
-  declares none, no generalization result is classified as rediscovered; and
-- this Freeze 02 record.
+  declares none, no generalization result is classified as rediscovered.
 
 The exact digest values are generated from the repository state used to
 establish Freeze 02 and are not manually inferred from version labels.
 
+The Freeze 02 record is not included in its own content-hash set.
+Its exact contents are fixed by the Git commit
+that records the established freeze
+after this record is generated and reviewed.
+
 Any later change to an artifact covered by this freeze requires application of
-the applicable freeze-break procedure before affected generalization evidence
+the appropriate freeze-break procedure
+before affected generalization evidence
 can be interpreted under a new freeze.
