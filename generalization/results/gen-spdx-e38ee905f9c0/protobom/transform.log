@@ -1,0 +1,4 @@
+[stdout]
+
+[stderr]
+serializing SBOM to native format: unable to serialize multiroot (2) cyclonedx, (mod.CYCLONEDX_MULTIROOT_HEADLESS disabled)

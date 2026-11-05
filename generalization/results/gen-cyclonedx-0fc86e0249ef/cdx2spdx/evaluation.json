@@ -1,0 +1,6697 @@
+{
+  "source_format": "cyclonedx",
+  "target_format": "spdx-2.3",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "@babel/helper-string-parser@7.19.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40babel/helper-string-parser@7.19.4#packages/babel-helper-string-parser",
+      "detail": ""
+    },
+    {
+      "ref": "@babel/helper-validator-identifier@7.19.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40babel/helper-validator-identifier@7.19.1#packages/babel-helper-validator-identifier",
+      "detail": ""
+    },
+    {
+      "ref": "@babel/parser@7.21.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40babel/parser@7.21.2#packages/babel-parser",
+      "detail": ""
+    },
+    {
+      "ref": "@babel/types@7.21.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40babel/types@7.21.2#packages/babel-types",
+      "detail": ""
+    },
+    {
+      "ref": "@colors/colors@1.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40colors/colors@1.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "@dabh/diagnostics@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40dabh/diagnostics@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "@gar/promisify@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40gar/promisify@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40mapbox/node-pre-gyp@1.0.10",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|ansi-regex@5.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|are-we-there-yet@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/are-we-there-yet@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|detect-libc@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/detect-libc@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|gauge@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/gauge@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|is-fullwidth-code-point@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|make-dir@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-dir@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|make-dir@3.1.0|semver@6.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/semver@6.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|nopt@5.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/nopt@5.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|npmlog@5.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npmlog@5.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|readable-stream@3.6.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@3.6.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|string-width@4.2.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string-width@4.2.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@mapbox/node-pre-gyp@1.0.10|strip-ansi@6.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@nlpjs/core-loader@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/core-loader@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/core@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/core@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/evaluator@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/evaluator@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-all@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-all@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ar@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ar@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-bn@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-bn@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ca@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ca@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-cs@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-cs@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-da@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-da@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-de@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-de@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-el@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-el@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-en-min@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-en-min@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-en@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-en@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-es@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-es@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-eu@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-eu@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-fa@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-fa@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-fi@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-fi@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-fr@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-fr@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ga@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ga@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-gl@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-gl@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-hi@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-hi@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-hu@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-hu@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-hy@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-hy@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-id@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-id@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-it@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-it@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ja@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ja@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ko@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ko@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-lt@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-lt@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ms@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ms@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ne@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ne@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-nl@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-nl@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-no@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-no@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-pl@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-pl@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-pt@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-pt@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ro@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ro@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ru@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ru@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-sl@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-sl@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-sr@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-sr@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-sv@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-sv@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-ta@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-ta@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-th@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-th@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-tl@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-tl@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-tr@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-tr@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-uk@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-uk@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/lang-zh@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/lang-zh@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/language-min@4.25.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/language-min@4.25.0",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/language@4.25.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/language@4.25.0",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/ner@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/ner@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/neural@4.25.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/neural@4.25.0",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/nlg@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/nlg@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/nlp@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/nlp@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/nlu@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/nlu@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/request@4.25.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/request@4.25.0",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/sentiment@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/sentiment@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/similarity@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/similarity@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@nlpjs/slot@4.26.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40nlpjs/slot@4.26.1",
+      "detail": ""
+    },
+    {
+      "ref": "@npmcli/fs@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40npmcli/fs@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "@npmcli/move-file@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40npmcli/move-file@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "@npmcli/move-file@1.1.2|mkdirp@1.0.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/mkdirp@1.0.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "@otplib/core@12.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40otplib/core@12.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "@otplib/plugin-crypto@12.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40otplib/plugin-crypto@12.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "@otplib/plugin-thirty-two@12.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40otplib/plugin-thirty-two@12.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "@otplib/preset-default@12.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40otplib/preset-default@12.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "@otplib/preset-v11@12.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40otplib/preset-v11@12.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "@sindresorhus/is@0.7.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40sindresorhus/is@0.7.0",
+      "detail": ""
+    },
+    {
+      "ref": "@swc/helpers@0.3.17",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40swc/helpers@0.3.17",
+      "detail": ""
+    },
+    {
+      "ref": "@tokenizer/token@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40tokenizer/token@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "@tootallnate/once@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40tootallnate/once@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "@types/component-emitter@1.2.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/component-emitter@1.2.11#types/component-emitter",
+      "detail": ""
+    },
+    {
+      "ref": "@types/cookie@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/cookie@0.4.1#types/cookie",
+      "detail": ""
+    },
+    {
+      "ref": "@types/cors@2.8.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/cors@2.8.13#types/cors",
+      "detail": ""
+    },
+    {
+      "ref": "@types/debug@4.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/debug@4.1.7#types/debug",
+      "detail": ""
+    },
+    {
+      "ref": "@types/ms@0.7.31",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/ms@0.7.31#types/ms",
+      "detail": ""
+    },
+    {
+      "ref": "@types/node@18.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/node@18.14.1#types/node",
+      "detail": ""
+    },
+    {
+      "ref": "@types/strip-bom@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/strip-bom@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "@types/strip-json-comments@0.0.30",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/strip-json-comments@0.0.30",
+      "detail": ""
+    },
+    {
+      "ref": "@types/triple-beam@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/triple-beam@1.3.2#types/triple-beam",
+      "detail": ""
+    },
+    {
+      "ref": "@types/validator@13.7.12",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/validator@13.7.12#types/validator",
+      "detail": ""
+    },
+    {
+      "ref": "abbrev@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/abbrev@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "accepts@1.3.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/accepts@1.3.8",
+      "detail": ""
+    },
+    {
+      "ref": "acorn-walk@8.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn-walk@8.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "acorn@7.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn@7.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "agent-base@6.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/agent-base@6.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "agent-base@6.0.2|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "agent-base@6.0.2|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "agentkeepalive@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/agentkeepalive@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "agentkeepalive@4.2.1|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "agentkeepalive@4.2.1|depd@1.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/depd@1.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "agentkeepalive@4.2.1|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "aggregate-error@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aggregate-error@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "ajv@6.12.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ajv@6.12.6",
+      "detail": ""
+    },
+    {
+      "ref": "ansi-regex@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-regex@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "ansi-styles@3.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-styles@3.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "anymatch@3.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/anymatch@3.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "anymatch@3.1.3|normalize-path@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/normalize-path@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "append-field@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/append-field@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "aproba@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aproba@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "archive-type@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/archive-type@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "archive-type@4.0.0|file-type@4.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@4.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "archiver-utils@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/archiver-utils@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "archiver@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/archiver@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "are-we-there-yet@1.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/are-we-there-yet@1.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "arg@4.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arg@4.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "argparse@1.0.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/argparse@1.0.10",
+      "detail": ""
+    },
+    {
+      "ref": "argparse@1.0.10|sprintf-js@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sprintf-js@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "arr-diff@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arr-diff@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "arr-flatten@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arr-flatten@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "arr-union@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arr-union@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "array-each@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-each@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "array-flatten@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-flatten@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "array-slice@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-slice@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "array-unique@0.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-unique@0.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "asap@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/asap@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "asn1@0.2.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/asn1@0.2.6",
+      "detail": ""
+    },
+    {
+      "ref": "assert-never@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/assert-never@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "assert-plus@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/assert-plus@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "assign-symbols@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/assign-symbols@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "async@2.6.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/async@2.6.4",
+      "detail": ""
+    },
+    {
+      "ref": "asynckit@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/asynckit@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "at-least-node@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/at-least-node@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "atob@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/atob@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "available-typed-arrays@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/available-typed-arrays@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "aws-sign2@0.7.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aws-sign2@0.7.0",
+      "detail": ""
+    },
+    {
+      "ref": "aws4@1.12.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aws4@1.12.0",
+      "detail": ""
+    },
+    {
+      "ref": "babel-walk@3.0.0-canary-5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/babel-walk@3.0.0-canary-5",
+      "detail": ""
+    },
+    {
+      "ref": "balanced-match@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/balanced-match@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "base@0.11.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base@0.11.2",
+      "detail": ""
+    },
+    {
+      "ref": "base@0.11.2|define-property@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@1.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "base64-arraybuffer@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64-arraybuffer@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "base64-js@1.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64-js@1.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "base64id@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64id@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "base64url@0.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64url@0.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "basic-auth@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/basic-auth@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "batch@0.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/batch@0.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "bcrypt-pbkdf@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bcrypt-pbkdf@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "big-integer@1.6.51",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/big-integer@1.6.51",
+      "detail": ""
+    },
+    {
+      "ref": "binary-extensions@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/binary-extensions@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "binary@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/binary@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "bindings@1.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bindings@1.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "bintrees@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bintrees@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "bl@1.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bl@1.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "bluebird@3.7.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bluebird@3.7.2",
+      "detail": ""
+    },
+    {
+      "ref": "body-parser@1.20.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/body-parser@1.20.2",
+      "detail": ""
+    },
+    {
+      "ref": "bower-config@1.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bower-config@1.4.3#master",
+      "detail": ""
+    },
+    {
+      "ref": "bower-config@1.4.3|minimist@0.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimist@0.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "brace-expansion@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/brace-expansion@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "braces@2.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/braces@2.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "braces@2.3.2|extend-shallow@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "braces@2.3.2|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "brotli@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/brotli@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "buffer-alloc-unsafe@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-alloc-unsafe@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "buffer-alloc@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-alloc@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "buffer-crc32@0.2.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-crc32@0.2.13",
+      "detail": ""
+    },
+    {
+      "ref": "buffer-fill@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-fill@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "buffer-from@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-from@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "buffer-indexof-polyfill@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-indexof-polyfill@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "buffer@5.7.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer@5.7.1",
+      "detail": ""
+    },
+    {
+      "ref": "buffers@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffers@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "busboy@0.2.14",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/busboy@0.2.14",
+      "detail": ""
+    },
+    {
+      "ref": "busboy@0.2.14|isarray@0.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/isarray@0.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "busboy@0.2.14|readable-stream@1.1.14",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@1.1.14",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "busboy@0.2.14|string_decoder@0.10.31",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string_decoder@0.10.31",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "byline@4.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/byline@4.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "bytes@3.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bytes@3.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "cacache@15.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cacache@15.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "cacache@15.3.0|mkdirp@1.0.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/mkdirp@1.0.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "cache-base@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cache-base@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "cacheable-request@2.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cacheable-request@2.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "cacheable-request@2.1.4|get-stream@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/get-stream@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "cacheable-request@2.1.4|lowercase-keys@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lowercase-keys@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "call-bind@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/call-bind@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "camelcase@5.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/camelcase@5.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "caseless@0.12.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/caseless@0.12.0",
+      "detail": ""
+    },
+    {
+      "ref": "chainsaw@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chainsaw@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "chalk@2.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chalk@2.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "character-parser@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/character-parser@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "check-dependencies@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/check-dependencies@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "check-dependencies@1.1.0|semver@5.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/semver@5.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "check-types@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/check-types@6.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "chokidar@3.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chokidar@3.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "chokidar@3.5.3|braces@3.0.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/braces@3.0.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "chokidar@3.5.3|fill-range@7.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/fill-range@7.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "chokidar@3.5.3|is-glob@4.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-glob@4.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "chokidar@3.5.3|is-number@7.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-number@7.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "chokidar@3.5.3|normalize-path@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/normalize-path@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "chokidar@3.5.3|to-regex-range@5.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/to-regex-range@5.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "chownr@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chownr@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "clarinet@0.12.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clarinet@0.12.5",
+      "detail": ""
+    },
+    {
+      "ref": "class-utils@0.3.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/class-utils@0.3.6",
+      "detail": ""
+    },
+    {
+      "ref": "class-utils@0.3.6|define-property@0.2.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@0.2.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "class-utils@0.3.6|is-accessor-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "class-utils@0.3.6|is-accessor-descriptor@0.1.6|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "class-utils@0.3.6|is-data-descriptor@0.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-data-descriptor@0.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "class-utils@0.3.6|is-data-descriptor@0.1.4|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "class-utils@0.3.6|is-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "class-utils@0.3.6|kind-of@5.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@5.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "clean-stack@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clean-stack@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "cliui@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cliui@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "cliui@5.0.0|ansi-regex@4.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-regex@4.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "cliui@5.0.0|emoji-regex@7.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/emoji-regex@7.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "cliui@5.0.0|is-fullwidth-code-point@2.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-fullwidth-code-point@2.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "cliui@5.0.0|string-width@3.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string-width@3.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "cliui@5.0.0|strip-ansi@5.2.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/strip-ansi@5.2.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "clone-response@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clone-response@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "clone@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clone@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "code-point-at@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/code-point-at@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "collection-visit@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/collection-visit@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "color-convert@1.9.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-convert@1.9.3",
+      "detail": ""
+    },
+    {
+      "ref": "color-name@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-name@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "color-string@1.9.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-string@1.9.1",
+      "detail": ""
+    },
+    {
+      "ref": "color-support@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-support@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "color@3.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color@3.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "colors@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/colors@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "colorspace@1.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/colorspace@1.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "combined-stream@1.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/combined-stream@1.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "commander@2.20.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/commander@2.20.3",
+      "detail": ""
+    },
+    {
+      "ref": "component-emitter@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-emitter@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "component-type@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-type@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "compress-commons@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/compress-commons@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "compressible@2.0.18",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/compressible@2.0.18",
+      "detail": ""
+    },
+    {
+      "ref": "compression@1.7.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/compression@1.7.4",
+      "detail": ""
+    },
+    {
+      "ref": "compression@1.7.4|bytes@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bytes@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "concat-map@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/concat-map@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "concat-stream@1.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/concat-stream@1.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "concurrently@5.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/concurrently@5.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "concurrently@5.3.0|supports-color@6.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@6.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "config@3.3.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/config@3.3.9",
+      "detail": ""
+    },
+    {
+      "ref": "console-control-strings@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/console-control-strings@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "constantinople@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/constantinople@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "content-disposition@0.5.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/content-disposition@0.5.4",
+      "detail": ""
+    },
+    {
+      "ref": "content-disposition@0.5.4|safe-buffer@5.2.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "content-type@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/content-type@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "cookie-parser@1.4.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie-parser@1.4.6",
+      "detail": ""
+    },
+    {
+      "ref": "cookie-signature@1.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie-signature@1.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "cookie@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "copy-descriptor@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/copy-descriptor@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "core-util-is@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/core-util-is@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "cors@2.8.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cors@2.8.5",
+      "detail": ""
+    },
+    {
+      "ref": "crc@3.8.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/crc@3.8.0",
+      "detail": ""
+    },
+    {
+      "ref": "crc32-stream@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/crc32-stream@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "create-require@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/create-require@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "crypto-js@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/crypto-js@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "dashdash@1.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dashdash@1.14.1",
+      "detail": ""
+    },
+    {
+      "ref": "date-fns@2.29.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/date-fns@2.29.3",
+      "detail": ""
+    },
+    {
+      "ref": "dateformat@4.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dateformat@4.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "debug@2.6.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/debug@2.6.9",
+      "detail": ""
+    },
+    {
+      "ref": "decamelize@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decamelize@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "decode-uri-component@0.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decode-uri-component@0.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-response@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-response@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-tar@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-tar@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-tar@4.1.1|file-type@5.2.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/file-type@5.2.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "decompress-tarbz2@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-tarbz2@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-tarbz2@4.1.1|file-type@6.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@6.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-targz@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-targz@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-targz@4.1.1|file-type@5.2.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/file-type@5.2.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "decompress-unzip@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-unzip@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-unzip@4.0.1|file-type@3.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@3.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-unzip@4.0.1|get-stream@2.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-stream@2.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "decompress-unzip@4.0.1|pify@2.3.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/pify@2.3.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "decompress@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "decompress@4.2.1|make-dir@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-dir@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "decompress@4.2.1|make-dir@1.3.0|pify@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/pify@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "decompress@4.2.1|pify@2.3.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/pify@2.3.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "deep-equal@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/deep-equal@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "deep-extend@0.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/deep-extend@0.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "deep-is@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/deep-is@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "define-properties@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/define-properties@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "define-property@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/define-property@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "delayed-stream@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/delayed-stream@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "delegates@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/delegates@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "depd@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/depd@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "destroy@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/destroy@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "detect-file@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/detect-file@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "detect-libc@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/detect-libc@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "dfa@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dfa@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "dicer@0.2.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dicer@0.2.5",
+      "detail": ""
+    },
+    {
+      "ref": "dicer@0.2.5|isarray@0.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/isarray@0.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "dicer@0.2.5|readable-stream@1.1.14",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@1.1.14",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "dicer@0.2.5|string_decoder@0.10.31",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string_decoder@0.10.31",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "diff@4.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/diff@4.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "doctypes@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/doctypes@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "domelementtype@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/domelementtype@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "domhandler@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/domhandler@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "domutils@1.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/domutils@1.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "dottie@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dottie@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "double-ended-queue@0.9.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/double-ended-queue@0.9.7",
+      "detail": ""
+    },
+    {
+      "ref": "doublearray@0.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/doublearray@0.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "download@8.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/download@8.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "download@8.0.0|file-type@11.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@11.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "duplexer2@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/duplexer2@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "duplexer3@0.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/duplexer3@0.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "dynamic-dedupe@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dynamic-dedupe@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "ecc-jsbn@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ecc-jsbn@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "ee-first@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ee-first@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "eivindfjeldstad-dot@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/eivindfjeldstad-dot@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "emoji-regex@8.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "enabled@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/enabled@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "encodeurl@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/encodeurl@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "encoding@0.1.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/encoding@0.1.13",
+      "detail": ""
+    },
+    {
+      "ref": "encoding@0.1.13|iconv-lite@0.6.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/iconv-lite@0.6.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "end-of-stream@1.4.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/end-of-stream@1.4.4",
+      "detail": ""
+    },
+    {
+      "ref": "engine.io-parser@4.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/engine.io-parser@4.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "engine.io@4.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/engine.io@4.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "engine.io@4.1.2|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "engine.io@4.1.2|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "env-paths@2.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/env-paths@2.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "err-code@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/err-code@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "error-ex@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/error-ex@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "errorhandler@1.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/errorhandler@1.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "es-get-iterator@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es-get-iterator@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "escape-html@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escape-html@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "escape-string-regexp@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escape-string-regexp@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "escodegen@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escodegen@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "esprima@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esprima@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "estraverse@5.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/estraverse@5.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "esutils@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esutils@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "etag@1.8.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/etag@1.8.1",
+      "detail": ""
+    },
+    {
+      "ref": "eventemitter2@0.4.14",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/eventemitter2@0.4.14",
+      "detail": ""
+    },
+    {
+      "ref": "eventemitter3@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/eventemitter3@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "exif@0.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/exif@0.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "exit@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/exit@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "expand-brackets@2.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/expand-brackets@2.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "expand-brackets@2.1.4|define-property@0.2.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@0.2.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|extend-shallow@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|is-accessor-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|is-accessor-descriptor@0.1.6|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|is-data-descriptor@0.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-data-descriptor@0.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|is-data-descriptor@0.1.4|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|is-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-brackets@2.1.4|kind-of@5.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@5.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "expand-template@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/expand-template@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "expand-tilde@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/expand-tilde@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "express-ipfilter@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-ipfilter@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "express-jwt@0.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-jwt@0.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "express-jwt@0.1.3|jsonwebtoken@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "express-jwt@0.1.3|moment@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/moment@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "express-rate-limit@5.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-rate-limit@5.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "express-robots-txt@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-robots-txt@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "express-security.txt@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-security.txt@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "express@4.18.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express@4.18.2",
+      "detail": ""
+    },
+    {
+      "ref": "express@4.18.2|body-parser@1.20.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/body-parser@1.20.1",
+      "detail": ""
+    },
+    {
+      "ref": "express@4.18.2|cookie@0.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie@0.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "express@4.18.2|raw-body@2.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/raw-body@2.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "express@4.18.2|safe-buffer@5.2.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "ext-list@2.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ext-list@2.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "ext-name@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ext-name@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "extend-shallow@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extend-shallow@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "extend@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extend@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "extglob@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extglob@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "extglob@2.0.4|define-property@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@1.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "extglob@2.0.4|extend-shallow@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "extglob@2.0.4|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "extsprintf@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extsprintf@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "fast-deep-equal@3.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-deep-equal@3.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "fast-json-stable-stringify@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-json-stable-stringify@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "fast-levenshtein@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-levenshtein@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "fast.js@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast.js@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "fd-slicer@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fd-slicer@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "feature-policy@0.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/feature-policy@0.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "fecha@4.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fecha@4.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "file-js@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-js@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "file-js@0.3.0|brace-expansion@1.1.11",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "file-js@0.3.0|minimatch@3.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/minimatch@3.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "file-stream-rotator@0.5.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-stream-rotator@0.5.7",
+      "detail": ""
+    },
+    {
+      "ref": "file-type@16.5.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@16.5.4",
+      "detail": ""
+    },
+    {
+      "ref": "file-uri-to-path@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-uri-to-path@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "filehound@1.17.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/filehound@1.17.6",
+      "detail": ""
+    },
+    {
+      "ref": "filename-reserved-regex@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/filename-reserved-regex@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "filenamify@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/filenamify@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "filesniffer@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/filesniffer@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "fill-range@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fill-range@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "fill-range@4.0.0|extend-shallow@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "fill-range@4.0.0|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "finale-rest@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/finale-rest@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "finalhandler@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/finalhandler@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "find-up@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/find-up@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "findup-sync@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/findup-sync@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "fined@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fined@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "flagged-respawn@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/flagged-respawn@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "fn.name@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fn.name@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "fontkit@1.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fontkit@1.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "for-each@0.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/for-each@0.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "for-in@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/for-in@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "for-own@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/for-own@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "foreachasync@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/foreachasync@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "forever-agent@0.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/forever-agent@0.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "form-data@2.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/form-data@2.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "formatio@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/formatio@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "forwarded@0.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/forwarded@0.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "fragment-cache@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fragment-cache@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "fresh@0.5.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fresh@0.5.2",
+      "detail": ""
+    },
+    {
+      "ref": "from2@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/from2@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "fs-constants@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-constants@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "fs-extra@9.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-extra@9.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "fs-minipass@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-minipass@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "fs.realpath@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs.realpath@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "fstream@1.0.12",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fstream@1.0.12",
+      "detail": ""
+    },
+    {
+      "ref": "fstream@1.0.12|rimraf@2.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/rimraf@2.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "function-bind@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/function-bind@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "functions-have-names@1.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/functions-have-names@1.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "fuzzball@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fuzzball@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "gauge@2.7.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/gauge@2.7.4",
+      "detail": ""
+    },
+    {
+      "ref": "geojson-utils@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/geojson-utils@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "get-caller-file@2.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-caller-file@2.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "get-intrinsic@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-intrinsic@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "get-stream@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-stream@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "get-value@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-value@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "getobject@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/getobject@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "getpass@0.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/getpass@0.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "github-from-package@0.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/github-from-package@0.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "glob-parent@5.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/glob-parent@5.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "glob-parent@5.1.2|is-glob@4.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-glob@4.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "glob@7.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/glob@7.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "glob@7.2.3|brace-expansion@1.1.11",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "glob@7.2.3|minimatch@3.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/minimatch@3.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "global-modules@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/global-modules@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "global-prefix@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/global-prefix@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "global-prefix@1.0.2|which@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "gopd@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/gopd@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "got@8.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/got@8.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "got@8.3.2|get-stream@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/get-stream@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "got@8.3.2|pify@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/pify@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "graceful-fs@4.2.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/graceful-fs@4.2.10",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-cli@1.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-cli@1.4.3",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-cli@1.4.3|nopt@4.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/nopt@4.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt-contrib-compress@1.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-contrib-compress@1.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-contrib-compress@1.6.0|ansi-styles@2.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-styles@2.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-contrib-compress@1.6.0|chalk@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chalk@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-contrib-compress@1.6.0|supports-color@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-known-options@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-known-options@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-legacy-log-utils@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0|ansi-styles@4.3.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0|chalk@4.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chalk@4.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0|color-convert@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/color-convert@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0|color-name@1.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/color-name@1.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0|has-flag@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-flag@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-log-utils@2.1.0|supports-color@7.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@7.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-log@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-legacy-log@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-log@3.0.0|colors@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/colors@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-util@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-legacy-util@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "grunt-legacy-util@2.0.1|async@3.2.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/async@3.2.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt-replace-json@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-replace-json@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt@1.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt@1.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "grunt@1.6.1|brace-expansion@1.1.11",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|braces@3.0.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/braces@3.0.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|fill-range@7.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/fill-range@7.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|findup-sync@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/findup-sync@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "grunt@1.6.1|glob@7.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/glob@7.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "grunt@1.6.1|iconv-lite@0.6.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/iconv-lite@0.6.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|is-glob@4.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-glob@4.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|is-number@7.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-number@7.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|micromatch@4.0.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/micromatch@4.0.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "grunt@1.6.1|minimatch@3.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimatch@3.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "grunt@1.6.1|to-regex-range@5.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/to-regex-range@5.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "handlebars@4.7.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/handlebars@4.7.7",
+      "detail": ""
+    },
+    {
+      "ref": "handlebars@4.7.7|wordwrap@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wordwrap@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "har-schema@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/har-schema@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "har-validator@5.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/har-validator@5.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "has-ansi@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-ansi@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has-bigints@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-bigints@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "has-flag@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-flag@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has-property-descriptors@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-property-descriptors@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has-symbol-support-x@1.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-symbol-support-x@1.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "has-symbols@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-symbols@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "has-to-string-tag-x@1.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-to-string-tag-x@1.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "has-tostringtag@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-tostringtag@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has-unicode@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-unicode@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "has-value@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-value@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has-values@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-values@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has-values@1.0.0|kind-of@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kind-of@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "has@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "hashids@2.2.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hashids@2.2.11",
+      "detail": ""
+    },
+    {
+      "ref": "hbs@4.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hbs@4.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "he@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/he@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "heap@0.2.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/heap@0.2.7",
+      "detail": ""
+    },
+    {
+      "ref": "helmet@4.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/helmet@4.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "hoister@0.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hoister@0.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "homedir-polyfill@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/homedir-polyfill@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "hooker@0.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hooker@0.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "hosted-git-info@2.8.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hosted-git-info@2.8.9",
+      "detail": ""
+    },
+    {
+      "ref": "html-entities@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/html-entities@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "htmlparser2@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/htmlparser2@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "htmlparser2@3.3.0|isarray@0.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/isarray@0.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "htmlparser2@3.3.0|readable-stream@1.0.34",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-stream@1.0.34",
+      "detail": ""
+    },
+    {
+      "ref": "htmlparser2@3.3.0|string_decoder@0.10.31",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string_decoder@0.10.31",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "http-cache-semantics@3.8.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-cache-semantics@3.8.1",
+      "detail": ""
+    },
+    {
+      "ref": "http-errors@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-errors@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "http-proxy-agent@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-proxy-agent@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "http-proxy-agent@5.0.0|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "http-proxy-agent@5.0.0|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "http-signature@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-signature@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "https-proxy-agent@5.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/https-proxy-agent@5.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "https-proxy-agent@5.0.1|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "https-proxy-agent@5.0.1|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "humanize-ms@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/humanize-ms@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "i18n@0.11.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/i18n@0.11.1",
+      "detail": ""
+    },
+    {
+      "ref": "iconv-lite@0.4.24",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/iconv-lite@0.4.24",
+      "detail": ""
+    },
+    {
+      "ref": "ieee754@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ieee754@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "ignore-walk@3.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ignore-walk@3.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "ignore-walk@3.0.4|brace-expansion@1.1.11",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "ignore-walk@3.0.4|minimatch@3.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/minimatch@3.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "iltorb@2.4.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/iltorb@2.4.5",
+      "detail": ""
+    },
+    {
+      "ref": "imurmurhash@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/imurmurhash@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "indent-string@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/indent-string@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "infer-owner@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/infer-owner@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "inflection@1.13.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inflection@1.13.4",
+      "detail": ""
+    },
+    {
+      "ref": "inflight@1.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inflight@1.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "inherits@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inherits@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "ini@1.3.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ini@1.3.8",
+      "detail": ""
+    },
+    {
+      "ref": "internal-slot@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/internal-slot@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "interpret@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/interpret@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "into-stream@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/into-stream@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "invariant@2.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/invariant@2.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "ip@1.1.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ip@1.1.8",
+      "detail": ""
+    },
+    {
+      "ref": "ip6@0.2.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ip6@0.2.10",
+      "detail": ""
+    },
+    {
+      "ref": "ipaddr.js@1.9.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ipaddr.js@1.9.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-absolute@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-absolute@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-accessor-descriptor@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-accessor-descriptor@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-arguments@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-arguments@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-array-buffer@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-array-buffer@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-arrayish@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-arrayish@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-bigint@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-bigint@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "is-binary-path@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-binary-path@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-boolean-object@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-boolean-object@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-buffer@1.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-buffer@1.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "is-callable@1.2.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-callable@1.2.7",
+      "detail": ""
+    },
+    {
+      "ref": "is-core-module@2.11.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-core-module@2.11.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-data-descriptor@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-data-descriptor@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-date-object@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-date-object@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "is-descriptor@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-descriptor@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-docker@2.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-docker@2.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-expression@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-expression@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-extendable@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-extendable@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-extglob@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-extglob@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-fullwidth-code-point@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-generator-function@1.0.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-generator-function@1.0.10",
+      "detail": ""
+    },
+    {
+      "ref": "is-glob@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-glob@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-heroku@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-heroku@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-lambda@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-lambda@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-map@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-map@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-natural-number@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-natural-number@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-number-like@1.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-number-like@1.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "is-number-object@1.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-number-object@1.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "is-number@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-number@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-number@3.0.0|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "is-object@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-object@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-plain-obj@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-plain-obj@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-plain-object@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-plain-object@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "is-promise@2.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-promise@2.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-regex@1.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-regex@1.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "is-relative@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-relative@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-retry-allowed@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-retry-allowed@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-set@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-set@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-shared-array-buffer@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-shared-array-buffer@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-stream@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-stream@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-string@1.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-string@1.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "is-symbol@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-symbol@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "is-typed-array@1.1.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-typed-array@1.1.10",
+      "detail": ""
+    },
+    {
+      "ref": "is-typedarray@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-typedarray@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-unc-path@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-unc-path@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "is-weakmap@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-weakmap@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "is-weakset@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-weakset@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "is-windows@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-windows@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "isarray@2.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isarray@2.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "isexe@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isexe@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "isobject@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isobject@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "isstream@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isstream@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "isurl@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isurl@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "js-stringify@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/js-stringify@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "js-tokens@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/js-tokens@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "js-yaml@3.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/js-yaml@3.14.1",
+      "detail": ""
+    },
+    {
+      "ref": "jsbn@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsbn@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "json-buffer@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-buffer@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "json-parse-better-errors@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-parse-better-errors@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "json-schema-traverse@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-schema-traverse@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "json-schema@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-schema@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "json-stringify-safe@5.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-stringify-safe@5.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "json5@2.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json5@2.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "jsonfile@6.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsonfile@6.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "jsonwebtoken@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "jsprim@1.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsprim@1.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "jssha@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jssha@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "jstransformer@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jstransformer@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "juicy-chat-bot@0.6.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/juicy-chat-bot@0.6.6",
+      "detail": ""
+    },
+    {
+      "ref": "jwa@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jwa@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "jws@0.2.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jws@0.2.6",
+      "detail": ""
+    },
+    {
+      "ref": "keyv@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/keyv@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "kind-of@6.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kind-of@6.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "kuler@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kuler@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "kuromoji@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kuromoji@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "lazystream@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lazystream@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "levn@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/levn@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "libxmljs2@0.30.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/libxmljs2@0.30.1",
+      "detail": ""
+    },
+    {
+      "ref": "libxmljs2@0.30.1|nan@2.15.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nan@2.15.0",
+      "detail": ""
+    },
+    {
+      "ref": "liftup@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/liftup@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "liftup@3.0.1|braces@3.0.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/braces@3.0.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "liftup@3.0.1|fill-range@7.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/fill-range@7.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "liftup@3.0.1|findup-sync@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/findup-sync@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "liftup@3.0.1|is-glob@4.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-glob@4.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "liftup@3.0.1|is-number@7.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-number@7.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "liftup@3.0.1|micromatch@4.0.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/micromatch@4.0.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "liftup@3.0.1|to-regex-range@5.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/to-regex-range@5.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "linebreak@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/linebreak@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "linebreak@1.1.0|base64-js@0.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64-js@0.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "listenercount@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/listenercount@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "locate-path@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/locate-path@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "lodash.camelcase@4.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash.camelcase@4.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "lodash.isfinite@3.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash.isfinite@3.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "lodash.set@4.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash.set@4.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "lodash@4.17.21",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash@4.17.21",
+      "detail": ""
+    },
+    {
+      "ref": "logform@2.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/logform@2.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "logform@2.5.1|ms@2.1.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "lolex@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lolex@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "loose-envify@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/loose-envify@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "lowercase-keys@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lowercase-keys@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "lru-cache@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lru-cache@6.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "make-dir@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-dir@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "make-dir@2.1.0|semver@5.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/semver@5.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "make-error@1.3.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-error@1.3.6",
+      "detail": ""
+    },
+    {
+      "ref": "make-fetch-happen@9.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-fetch-happen@9.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "make-fetch-happen@9.1.0|@tootallnate/once@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40tootallnate/once@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "make-fetch-happen@9.1.0|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "make-fetch-happen@9.1.0|http-cache-semantics@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-cache-semantics@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "make-fetch-happen@9.1.0|http-proxy-agent@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-proxy-agent@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "make-fetch-happen@9.1.0|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "make-iterator@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-iterator@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "make-plural@6.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-plural@6.2.2#packages/plurals",
+      "detail": ""
+    },
+    {
+      "ref": "map-cache@0.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/map-cache@0.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "map-visit@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/map-visit@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "marsdb@0.6.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/marsdb@0.6.11",
+      "detail": ""
+    },
+    {
+      "ref": "math-interval-parser@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/math-interval-parser@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "media-typer@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/media-typer@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "merge-descriptors@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/merge-descriptors@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "messageformat-formatters@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/messageformat-formatters@2.0.1#packages/formatters",
+      "detail": ""
+    },
+    {
+      "ref": "messageformat-parser@4.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/messageformat-parser@4.1.3#packages/parser",
+      "detail": ""
+    },
+    {
+      "ref": "messageformat@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/messageformat@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "messageformat@2.3.0|make-plural@4.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-plural@4.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "methods@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/methods@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "micromatch@3.1.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/micromatch@3.1.10",
+      "detail": ""
+    },
+    {
+      "ref": "mime-db@1.52.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mime-db@1.52.0",
+      "detail": ""
+    },
+    {
+      "ref": "mime-types@2.1.35",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mime-types@2.1.35",
+      "detail": ""
+    },
+    {
+      "ref": "mime@1.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mime@1.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "mimic-response@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mimic-response@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "minimatch@5.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimatch@5.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "minimist@1.2.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimist@1.2.8",
+      "detail": ""
+    },
+    {
+      "ref": "minipass-collect@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass-collect@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "minipass-fetch@1.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass-fetch@1.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "minipass-flush@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass-flush@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "minipass-pipeline@1.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass-pipeline@1.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "minipass-sized@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass-sized@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "minipass@3.3.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass@3.3.6",
+      "detail": ""
+    },
+    {
+      "ref": "minizlib@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minizlib@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "mixin-deep@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mixin-deep@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "mkdirp-classic@0.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mkdirp-classic@0.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "mkdirp@0.5.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mkdirp@0.5.6",
+      "detail": ""
+    },
+    {
+      "ref": "moment-timezone@0.5.40",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/moment-timezone@0.5.40",
+      "detail": ""
+    },
+    {
+      "ref": "moment@2.29.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/moment@2.29.4",
+      "detail": ""
+    },
+    {
+      "ref": "morgan@1.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/morgan@1.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "morgan@1.10.0|on-finished@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/on-finished@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "mout@1.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mout@1.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "ms@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ms@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "multer@1.4.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/multer@1.4.4",
+      "detail": ""
+    },
+    {
+      "ref": "mustache@4.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mustache@4.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "nan@2.17.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nan@2.17.0",
+      "detail": ""
+    },
+    {
+      "ref": "nanomatch@1.2.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nanomatch@1.2.13",
+      "detail": ""
+    },
+    {
+      "ref": "napi-build-utils@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/napi-build-utils@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "needle@2.9.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/needle@2.9.1",
+      "detail": ""
+    },
+    {
+      "ref": "needle@2.9.1|debug@3.2.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/debug@3.2.7",
+      "detail": ""
+    },
+    {
+      "ref": "needle@2.9.1|ms@2.1.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "negotiator@0.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/negotiator@0.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "neo-async@2.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/neo-async@2.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "node-abi@2.30.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-abi@2.30.1",
+      "detail": ""
+    },
+    {
+      "ref": "node-abi@2.30.1|semver@5.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/semver@5.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-addon-api@4.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-addon-api@4.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "node-fetch@2.6.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-fetch@2.6.9",
+      "detail": ""
+    },
+    {
+      "ref": "node-gyp@8.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-gyp@8.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "node-gyp@8.4.1|ansi-regex@5.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-gyp@8.4.1|are-we-there-yet@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/are-we-there-yet@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "node-gyp@8.4.1|gauge@4.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/gauge@4.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "node-gyp@8.4.1|is-fullwidth-code-point@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-gyp@8.4.1|nopt@5.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/nopt@5.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-gyp@8.4.1|npmlog@6.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npmlog@6.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "node-gyp@8.4.1|readable-stream@3.6.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@3.6.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-gyp@8.4.1|string-width@4.2.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string-width@4.2.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-gyp@8.4.1|strip-ansi@6.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-pre-gyp@0.15.0",
+      "detail": ""
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|chownr@1.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/chownr@1.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|fs-minipass@1.2.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-minipass@1.2.7",
+      "detail": ""
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|minipass@2.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass@2.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|minizlib@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minizlib@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|nopt@4.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/nopt@4.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|rimraf@2.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/rimraf@2.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|safe-buffer@5.2.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|semver@5.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/semver@5.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|tar@4.4.19",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar@4.4.19",
+      "detail": ""
+    },
+    {
+      "ref": "node-pre-gyp@0.15.0|yallist@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yallist@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "noop-logger@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/noop-logger@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "nopt@3.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nopt@3.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "normalize-package-data@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/normalize-package-data@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "normalize-package-data@2.5.0|semver@5.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/semver@5.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "normalize-path@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/normalize-path@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "normalize-url@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/normalize-url@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "notevil@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/notevil@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "notevil@1.3.3|esprima@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esprima@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "npm-bundled@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-bundled@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "npm-normalize-package-bin@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-normalize-package-bin@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "npm-packlist@1.4.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-packlist@1.4.8",
+      "detail": ""
+    },
+    {
+      "ref": "npmlog@4.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npmlog@4.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "number-is-nan@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/number-is-nan@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "oauth-sign@0.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/oauth-sign@0.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "object-assign@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-assign@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "object-copy@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-copy@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "object-copy@0.1.0|define-property@0.2.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@0.2.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "object-copy@0.1.0|is-accessor-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "object-copy@0.1.0|is-data-descriptor@0.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-data-descriptor@0.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "object-copy@0.1.0|is-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "object-copy@0.1.0|is-descriptor@0.1.6|kind-of@5.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@5.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "object-copy@0.1.0|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "object-inspect@1.12.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-inspect@1.12.3",
+      "detail": ""
+    },
+    {
+      "ref": "object-is@1.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-is@1.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "object-keys@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-keys@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "object-visit@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-visit@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "object.assign@4.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.assign@4.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "object.defaults@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.defaults@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "object.map@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.map@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "object.pick@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.pick@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "on-finished@2.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/on-finished@2.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "on-headers@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/on-headers@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "once@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/once@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "one-time@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/one-time@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "opentype.js@0.7.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/opentype.js@0.7.3",
+      "detail": ""
+    },
+    {
+      "ref": "optionator@0.8.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/optionator@0.8.3",
+      "detail": ""
+    },
+    {
+      "ref": "os-homedir@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/os-homedir@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "os-tmpdir@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/os-tmpdir@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "osenv@0.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/osenv@0.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "otplib@12.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/otplib@12.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "p-cancelable@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-cancelable@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "p-event@2.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-event@2.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "p-finally@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-finally@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "p-is-promise@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-is-promise@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "p-limit@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-limit@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "p-locate@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-locate@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "p-map@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-map@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "p-timeout@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-timeout@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "p-try@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-try@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pako@0.2.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pako@0.2.9",
+      "detail": ""
+    },
+    {
+      "ref": "parse-filepath@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parse-filepath@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "parse-json@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parse-json@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "parse-passwd@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parse-passwd@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "parseurl@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parseurl@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pascalcase@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pascalcase@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "path-exists@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-exists@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "path-is-absolute@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-is-absolute@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "path-parse@1.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-parse@1.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "path-root-regex@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-root-regex@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "path-root@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-root@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "path-to-regexp@0.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-to-regexp@0.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "pdfkit@0.11.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pdfkit@0.11.0",
+      "detail": ""
+    },
+    {
+      "ref": "peek-readable@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/peek-readable@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pend@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pend@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "performance-now@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/performance-now@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pg-connection-string@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pg-connection-string@2.5.0#packages/pg-connection-string",
+      "detail": ""
+    },
+    {
+      "ref": "picomatch@2.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/picomatch@2.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pify@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pify@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pinkie-promise@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pinkie-promise@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pinkie@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pinkie@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "png-js@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/png-js@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "portscanner@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/portscanner@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "posix-character-classes@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/posix-character-classes@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "prebuild-install@5.3.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prebuild-install@5.3.6",
+      "detail": ""
+    },
+    {
+      "ref": "prelude-ls@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prelude-ls@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "prepend-http@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prepend-http@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pretty-bytes@4.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pretty-bytes@4.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "process-nextick-args@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/process-nextick-args@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "prom-client@12.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prom-client@12.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "promise-inflight@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/promise-inflight@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "promise-retry@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/promise-retry@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "promise-retry@2.0.1|err-code@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/err-code@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "promise-retry@2.0.1|retry@0.12.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/retry@0.12.0",
+      "detail": ""
+    },
+    {
+      "ref": "promise@7.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/promise@7.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "proper-lockfile@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/proper-lockfile@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "proxy-addr@2.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/proxy-addr@2.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "psl@1.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/psl@1.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "pug-attrs@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-attrs@3.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-code-gen@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-code-gen@3.0.2#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-error@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-error@2.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-filters@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-filters@4.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-lexer@5.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-lexer@5.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-linker@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-linker@4.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-load@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-load@3.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-parser@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-parser@6.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-runtime@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-runtime@3.0.1#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-strip-comments@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-strip-comments@2.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug-walk@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-walk@2.0.0#master",
+      "detail": ""
+    },
+    {
+      "ref": "pug@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug@3.0.2#master",
+      "detail": ""
+    },
+    {
+      "ref": "pump@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pump@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "punycode@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/punycode@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "qs@6.11.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/qs@6.11.0",
+      "detail": ""
+    },
+    {
+      "ref": "query-string@5.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/query-string@5.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "range_check@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/range_check@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "range-parser@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/range-parser@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "raw-body@2.5.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/raw-body@2.5.2",
+      "detail": ""
+    },
+    {
+      "ref": "rc@1.2.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rc@1.2.8",
+      "detail": ""
+    },
+    {
+      "ref": "read-pkg@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/read-pkg@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "read-pkg@4.0.1|pify@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/pify@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "readable-stream@2.3.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-stream@2.3.8",
+      "detail": ""
+    },
+    {
+      "ref": "readable-stream@2.3.8|isarray@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/isarray@1.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "readable-web-to-node-stream@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-web-to-node-stream@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "readable-web-to-node-stream@3.0.2|readable-stream@3.6.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@3.6.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "readdirp@3.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readdirp@3.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "rechoir@0.7.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rechoir@0.7.1",
+      "detail": ""
+    },
+    {
+      "ref": "regex-not@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/regex-not@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "regexp.prototype.flags@1.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/regexp.prototype.flags@1.4.3",
+      "detail": ""
+    },
+    {
+      "ref": "remove-trailing-separator@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/remove-trailing-separator@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "repeat-element@1.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/repeat-element@1.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "repeat-string@1.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/repeat-string@1.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/replace@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|ansi-regex@5.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-regex@5.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|ansi-styles@4.3.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-styles@4.3.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|brace-expansion@1.1.11",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|cliui@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cliui@6.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|color-convert@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/color-convert@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|color-name@1.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/color-name@1.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|find-up@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/find-up@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|is-fullwidth-code-point@3.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|locate-path@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/locate-path@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|minimatch@3.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimatch@3.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|p-locate@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-locate@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|path-exists@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-exists@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|string-width@4.2.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string-width@4.2.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|strip-ansi@6.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/strip-ansi@6.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "replace@1.2.2|wrap-ansi@6.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wrap-ansi@6.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|yargs-parser@18.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs-parser@18.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "replace@1.2.2|yargs@15.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs@15.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "request@2.88.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/request@2.88.2",
+      "detail": ""
+    },
+    {
+      "ref": "request@2.88.2|qs@6.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/qs@6.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "require-directory@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/require-directory@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "require-main-filename@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/require-main-filename@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "resolve-dir@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve-dir@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "resolve-url@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve-url@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "resolve@1.22.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve@1.22.1",
+      "detail": ""
+    },
+    {
+      "ref": "responselike@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/responselike@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "restructure@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/restructure@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "ret@0.1.15",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ret@0.1.15",
+      "detail": ""
+    },
+    {
+      "ref": "retry-as-promised@7.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/retry-as-promised@7.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "retry@0.10.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/retry@0.10.1",
+      "detail": ""
+    },
+    {
+      "ref": "rimraf@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rimraf@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "rxjs@6.6.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rxjs@6.6.7",
+      "detail": ""
+    },
+    {
+      "ref": "rxjs@6.6.7|tslib@1.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tslib@1.14.1",
+      "detail": ""
+    },
+    {
+      "ref": "safe-buffer@5.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safe-buffer@5.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "safe-regex@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safe-regex@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "safe-stable-stringify@2.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safe-stable-stringify@2.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "safer-buffer@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safer-buffer@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "samsam@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/samsam@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "sanitize-filename@1.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sanitize-filename@1.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "sanitize-html@1.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "sanitize-html@1.4.2|lodash@2.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "sax@1.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sax@1.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "seek-bzip@1.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/seek-bzip@1.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "semver@7.3.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/semver@7.3.8",
+      "detail": ""
+    },
+    {
+      "ref": "send@0.18.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/send@0.18.0",
+      "detail": ""
+    },
+    {
+      "ref": "send@0.18.0|ms@2.1.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "sequelize-pool@7.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sequelize-pool@7.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "sequelize@6.29.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sequelize@6.29.0",
+      "detail": ""
+    },
+    {
+      "ref": "sequelize@6.29.0|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "sequelize@6.29.0|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "sequelize@6.29.0|uuid@8.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uuid@8.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "serve-index@1.9.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/serve-index@1.9.1",
+      "detail": ""
+    },
+    {
+      "ref": "serve-index@1.9.1|depd@1.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/depd@1.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "serve-index@1.9.1|http-errors@1.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-errors@1.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "serve-index@1.9.1|inherits@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inherits@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "serve-index@1.9.1|setprototypeof@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/setprototypeof@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "serve-index@1.9.1|statuses@1.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/statuses@1.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "serve-static@1.15.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/serve-static@1.15.0",
+      "detail": ""
+    },
+    {
+      "ref": "set-blocking@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/set-blocking@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "set-value@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/set-value@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "set-value@2.0.1|extend-shallow@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "set-value@2.0.1|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "setimmediate@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/setimmediate@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "setprototypeof@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/setprototypeof@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "side-channel@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/side-channel@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "signal-exit@3.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/signal-exit@3.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "simple-concat@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/simple-concat@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "simple-get@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/simple-get@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "simple-get@3.1.1|decompress-response@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-response@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "simple-get@3.1.1|mimic-response@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mimic-response@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "simple-swizzle@0.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/simple-swizzle@0.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "simple-swizzle@0.2.2|is-arrayish@0.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-arrayish@0.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "sinon@1.17.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sinon@1.17.7",
+      "detail": ""
+    },
+    {
+      "ref": "smart-buffer@4.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/smart-buffer@4.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "snapdragon-node@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/snapdragon-node@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "snapdragon-node@2.1.1|define-property@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@1.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon-util@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/snapdragon-util@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "snapdragon-util@3.0.1|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/snapdragon@0.8.2",
+      "detail": ""
+    },
+    {
+      "ref": "snapdragon@0.8.2|define-property@0.2.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@0.2.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|extend-shallow@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|is-accessor-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|is-accessor-descriptor@0.1.6|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|is-data-descriptor@0.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-data-descriptor@0.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|is-data-descriptor@0.1.4|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|is-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|kind-of@5.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@5.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "snapdragon@0.8.2|source-map@0.5.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map@0.5.7",
+      "detail": ""
+    },
+    {
+      "ref": "socket.io-adapter@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io-adapter@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "socket.io-parser@4.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io-parser@4.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "socket.io-parser@4.0.5|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "socket.io-parser@4.0.5|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "socket.io@3.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io@3.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "socket.io@3.1.2|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "socket.io@3.1.2|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "socks-proxy-agent@6.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socks-proxy-agent@6.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "socks-proxy-agent@6.2.1|debug@4.3.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.3.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "socks-proxy-agent@6.2.1|ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "socks@2.7.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socks@2.7.1",
+      "detail": ""
+    },
+    {
+      "ref": "socks@2.7.1|ip@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ip@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "sort-keys-length@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sort-keys-length@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "sort-keys-length@1.0.1|sort-keys@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sort-keys@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "sort-keys@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sort-keys@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "source-map-resolve@0.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map-resolve@0.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "source-map-support@0.5.21",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map-support@0.5.21",
+      "detail": ""
+    },
+    {
+      "ref": "source-map-url@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map-url@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "source-map@0.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map@0.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "spawn-command@0.0.2-1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spawn-command@0.0.2-1",
+      "detail": ""
+    },
+    {
+      "ref": "spdx-correct@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-correct@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "spdx-exceptions@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-exceptions@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "spdx-expression-parse@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-expression-parse@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "spdx-license-ids@3.0.12",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-license-ids@3.0.12",
+      "detail": ""
+    },
+    {
+      "ref": "split-string@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/split-string@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "sprintf-js@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sprintf-js@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "sqlite3@5.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sqlite3@5.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "sshpk@1.17.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sshpk@1.17.0",
+      "detail": ""
+    },
+    {
+      "ref": "ssri@8.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ssri@8.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "stack-trace@0.0.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/stack-trace@0.0.10",
+      "detail": ""
+    },
+    {
+      "ref": "static-extend@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/static-extend@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "static-extend@0.1.2|define-property@0.2.5",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/define-property@0.2.5",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "static-extend@0.1.2|is-accessor-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "static-extend@0.1.2|is-accessor-descriptor@0.1.6|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "static-extend@0.1.2|is-data-descriptor@0.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-data-descriptor@0.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "static-extend@0.1.2|is-data-descriptor@0.1.4|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "static-extend@0.1.2|is-descriptor@0.1.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-descriptor@0.1.6",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "static-extend@0.1.2|kind-of@5.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@5.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "statuses@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/statuses@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "stop-iteration-iterator@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/stop-iteration-iterator@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "stream-buffers@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/stream-buffers@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "streamsearch@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/streamsearch@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "strict-uri-encode@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strict-uri-encode@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "string_decoder@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string_decoder@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "string-width@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string-width@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "string.fromcodepoint@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string.fromcodepoint@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "string.prototype.codepointat@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string.prototype.codepointat@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "strip-ansi@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-ansi@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "strip-bom@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-bom@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "strip-dirs@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-dirs@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "strip-json-comments@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-json-comments@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "strip-outer@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-outer@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "strtok3@6.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strtok3@6.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "supports-color@5.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@5.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "supports-preserve-symlinks-flag@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-preserve-symlinks-flag@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "svg-captcha@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/svg-captcha@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "swagger-ui-dist@4.16.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/swagger-ui-dist@4.16.0",
+      "detail": ""
+    },
+    {
+      "ref": "swagger-ui-express@4.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/swagger-ui-express@4.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "tar-fs@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar-fs@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "tar-fs@2.1.1|bl@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bl@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "tar-fs@2.1.1|chownr@1.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/chownr@1.1.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "tar-fs@2.1.1|readable-stream@3.6.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@3.6.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "tar-fs@2.1.1|tar-stream@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar-stream@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "tar-stream@1.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar-stream@1.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "tar@6.1.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar@6.1.13",
+      "detail": ""
+    },
+    {
+      "ref": "tar@6.1.13|minipass@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "tar@6.1.13|mkdirp@1.0.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/mkdirp@1.0.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "tdigest@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tdigest@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "text-hex@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/text-hex@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "thirty-two@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/thirty-two@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "through@2.3.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/through@2.3.8",
+      "detail": ""
+    },
+    {
+      "ref": "timed-out@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/timed-out@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "tiny-inflate@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tiny-inflate@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "to-buffer@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-buffer@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "to-fast-properties@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-fast-properties@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "to-object-path@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-object-path@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "to-object-path@0.3.0|kind-of@3.2.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "to-regex-range@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-regex-range@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "to-regex@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-regex@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "toidentifier@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/toidentifier@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "token-stream@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/token-stream@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "token-types@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/token-types@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "toposort-class@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/toposort-class@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "tough-cookie@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tough-cookie@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "tr46@0.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tr46@0.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "traverse@0.3.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/traverse@0.3.9",
+      "detail": ""
+    },
+    {
+      "ref": "tree-kill@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tree-kill@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "trim-repeated@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/trim-repeated@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "triple-beam@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/triple-beam@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "truncate-utf8-bytes@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/truncate-utf8-bytes@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "ts-node-dev@1.1.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ts-node-dev@1.1.8",
+      "detail": ""
+    },
+    {
+      "ref": "ts-node-dev@1.1.8|mkdirp@1.0.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/mkdirp@1.0.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "ts-node-dev@1.1.8|rimraf@2.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/rimraf@2.7.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "ts-node@9.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ts-node@9.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "tsconfig@7.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tsconfig@7.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "tslib@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tslib@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "tunnel-agent@0.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tunnel-agent@0.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "tweetnacl@0.14.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tweetnacl@0.14.5",
+      "detail": ""
+    },
+    {
+      "ref": "type-check@0.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/type-check@0.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "type-is@1.6.18",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/type-is@1.6.18",
+      "detail": ""
+    },
+    {
+      "ref": "typecast@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/typecast@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "typedarray@0.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/typedarray@0.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "typescript@4.9.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/typescript@4.9.5",
+      "detail": ""
+    },
+    {
+      "ref": "uglify-js@3.17.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uglify-js@3.17.4",
+      "detail": ""
+    },
+    {
+      "ref": "unbzip2-stream@1.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unbzip2-stream@1.4.3",
+      "detail": ""
+    },
+    {
+      "ref": "unc-path-regex@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unc-path-regex@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "underscore.string@3.3.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/underscore.string@3.3.6",
+      "detail": ""
+    },
+    {
+      "ref": "unicode-properties@1.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unicode-properties@1.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "unicode-trie@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unicode-trie@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "union-value@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/union-value@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "union-value@1.0.1|is-extendable@0.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "unique-filename@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unique-filename@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "unique-slug@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unique-slug@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "unit-compare@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unit-compare@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "universalify@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/universalify@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "unpipe@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unpipe@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "unset-value@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unset-value@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "unset-value@1.0.0|has-value@0.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-value@0.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "unset-value@1.0.0|has-value@0.3.1|isobject@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isobject@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "unset-value@1.0.0|has-values@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-values@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "unset-value@1.0.0|isarray@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/isarray@1.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "untildify@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/untildify@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "unzipper@0.9.15",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unzipper@0.9.15",
+      "detail": ""
+    },
+    {
+      "ref": "unzipper@0.9.15|bluebird@3.4.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bluebird@3.4.7",
+      "detail": ""
+    },
+    {
+      "ref": "uri-js@4.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uri-js@4.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "urix@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/urix@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "url-parse-lax@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/url-parse-lax@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "url-to-options@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/url-to-options@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "use@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/use@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "utf8-byte-length@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/utf8-byte-length@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "util-deprecate@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/util-deprecate@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "util@0.12.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/util@0.12.5",
+      "detail": ""
+    },
+    {
+      "ref": "utils-merge@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/utils-merge@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "uuid@3.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uuid@3.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "v8flags@3.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/v8flags@3.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "validate-npm-package-license@3.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/validate-npm-package-license@3.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "validate@4.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/validate@4.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "validator@13.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/validator@13.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "vary@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/vary@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "verror@1.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/verror@1.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "verror@1.10.0|core-util-is@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/core-util-is@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "vm2@3.9.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/vm2@3.9.11",
+      "detail": ""
+    },
+    {
+      "ref": "vm2@3.9.11|acorn@8.8.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn@8.8.2",
+      "detail": ""
+    },
+    {
+      "ref": "void-elements@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/void-elements@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "walk@2.3.15",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/walk@2.3.15",
+      "detail": ""
+    },
+    {
+      "ref": "walkdir@0.0.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/walkdir@0.0.11",
+      "detail": ""
+    },
+    {
+      "ref": "webidl-conversions@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/webidl-conversions@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "whatwg-url@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/whatwg-url@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "which-boxed-primitive@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-boxed-primitive@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "which-collection@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-collection@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "which-module@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-module@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "which-pm-runs@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-pm-runs@1.1.0#main",
+      "detail": ""
+    },
+    {
+      "ref": "which-typed-array@1.1.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-typed-array@1.1.9",
+      "detail": ""
+    },
+    {
+      "ref": "which@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "wide-align@1.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wide-align@1.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "winston-transport@4.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/winston-transport@4.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "winston-transport@4.5.0|readable-stream@3.6.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@3.6.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "winston@3.8.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/winston@3.8.2",
+      "detail": ""
+    },
+    {
+      "ref": "winston@3.8.2|async@3.2.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/async@3.2.4",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "winston@3.8.2|is-stream@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-stream@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "winston@3.8.2|readable-stream@3.6.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@3.6.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "with@7.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/with@7.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "wkx@0.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wkx@0.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "word-wrap@1.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/word-wrap@1.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "wordwrap@0.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wordwrap@0.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "wrap-ansi@5.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wrap-ansi@5.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "wrap-ansi@5.1.0|ansi-regex@4.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-regex@4.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "wrap-ansi@5.1.0|emoji-regex@7.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/emoji-regex@7.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "wrap-ansi@5.1.0|is-fullwidth-code-point@2.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-fullwidth-code-point@2.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "wrap-ansi@5.1.0|string-width@3.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string-width@3.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "wrap-ansi@5.1.0|strip-ansi@5.2.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/strip-ansi@5.2.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "wrappy@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wrappy@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "ws@7.4.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ws@7.4.6",
+      "detail": ""
+    },
+    {
+      "ref": "xtend@4.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/xtend@4.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "y18n@4.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/y18n@4.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "yallist@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yallist@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "yaml-schema-validator@1.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yaml-schema-validator@1.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "yargs-parser@13.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs-parser@13.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "yargs@13.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs@13.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "yargs@13.3.2|ansi-regex@4.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ansi-regex@4.1.1",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "yargs@13.3.2|emoji-regex@7.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/emoji-regex@7.0.3",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "yargs@13.3.2|is-fullwidth-code-point@2.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/is-fullwidth-code-point@2.0.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "yargs@13.3.2|string-width@3.1.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string-width@3.1.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "yargs@13.3.2|strip-ansi@5.2.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/strip-ansi@5.2.0",
+      "detail": "content-hash anchors resolve to multiple target components"
+    },
+    {
+      "ref": "yauzl@2.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yauzl@2.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "yn@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yn@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "z85@0.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/z85@0.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "zip-stream@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/zip-stream@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "zlibjs@0.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/zlibjs@0.3.1",
+      "detail": ""
+    }
+  ]
+}

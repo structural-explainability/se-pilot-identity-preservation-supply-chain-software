@@ -1,0 +1,5047 @@
+{
+  "source_format": "cyclonedx",
+  "target_format": "spdx-2.3",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "pkg:npm/body-parser@1.19.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/body-parser@1.19.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bytes@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bytes@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/content-type@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/content-type@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/debug@2.6.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/debug@2.6.9",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ms@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ms@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/depd@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/depd@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/http-errors@1.7.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-errors@1.7.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/inherits@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inherits@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/setprototypeof@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/setprototypeof@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/statuses@1.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/statuses@1.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/toidentifier@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/toidentifier@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/iconv-lite@0.4.24",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/iconv-lite@0.4.24",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/safer-buffer@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safer-buffer@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/on-finished@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/on-finished@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ee-first@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ee-first@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/qs@6.7.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/qs@6.7.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/raw-body@2.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/raw-body@2.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unpipe@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unpipe@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/type-is@1.6.18",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/type-is@1.6.18",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/media-typer@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/media-typer@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mime-types@2.1.27",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mime-types@2.1.27",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mime-db@1.44.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mime-db@1.44.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/check-dependencies@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/check-dependencies@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bower-config@1.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bower-config@1.4.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/graceful-fs@4.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/graceful-fs@4.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/minimist@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimist@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mout@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mout@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/osenv@0.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/osenv@0.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/os-homedir@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/os-homedir@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/os-tmpdir@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/os-tmpdir@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/untildify@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/untildify@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wordwrap@0.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wordwrap@0.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/chalk@2.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chalk@2.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-styles@3.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-styles@3.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/color-convert@1.9.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-convert@1.9.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/color-name@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-name@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/escape-string-regexp@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escape-string-regexp@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/supports-color@5.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@5.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-flag@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-flag@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/findup-sync@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/findup-sync@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/detect-file@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/detect-file@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-glob@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-glob@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-extglob@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-extglob@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/micromatch@3.1.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/micromatch@3.1.10",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/arr-diff@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arr-diff@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/array-unique@0.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-unique@0.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/braces@2.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/braces@2.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/arr-flatten@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arr-flatten@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/extend-shallow@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extend-shallow@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-extendable@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-extendable@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fill-range@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fill-range@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-number@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-number@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/kind-of@3.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kind-of@3.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-buffer@1.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-buffer@1.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/repeat-string@1.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/repeat-string@1.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/to-regex-range@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-regex-range@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isobject@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isobject@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/repeat-element@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/repeat-element@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/snapdragon@0.8.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/snapdragon@0.8.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/base@0.11.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base@0.11.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cache-base@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cache-base@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/collection-visit@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/collection-visit@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/map-visit@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/map-visit@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-visit@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-visit@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/component-emitter@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-emitter@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/get-value@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-value@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-value@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-value@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-values@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-values@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/kind-of@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kind-of@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/set-value@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/set-value@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-plain-object@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-plain-object@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/split-string@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/split-string@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/extend-shallow@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extend-shallow@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/assign-symbols@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/assign-symbols@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-extendable@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-extendable@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/to-object-path@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-object-path@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/union-value@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/union-value@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/arr-union@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arr-union@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unset-value@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unset-value@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-value@0.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-value@0.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-values@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-values@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isobject@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isobject@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isarray@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isarray@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/class-utils@0.3.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/class-utils@0.3.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/define-property@0.2.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/define-property@0.2.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-descriptor@0.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-descriptor@0.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-accessor-descriptor@0.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-data-descriptor@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-data-descriptor@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/kind-of@5.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kind-of@5.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/static-extend@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/static-extend@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-copy@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-copy@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/copy-descriptor@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/copy-descriptor@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/define-property@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/define-property@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-descriptor@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-descriptor@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-accessor-descriptor@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-accessor-descriptor@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/kind-of@6.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kind-of@6.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-data-descriptor@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-data-descriptor@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mixin-deep@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mixin-deep@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/for-in@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/for-in@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pascalcase@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pascalcase@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/map-cache@0.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/map-cache@0.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/source-map@0.5.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map@0.5.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/source-map-resolve@0.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map-resolve@0.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/atob@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/atob@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decode-uri-component@0.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decode-uri-component@0.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/resolve-url@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve-url@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/source-map-url@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map-url@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/urix@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/urix@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/use@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/use@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/snapdragon-node@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/snapdragon-node@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/snapdragon-util@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/snapdragon-util@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/to-regex@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-regex@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/define-property@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/define-property@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/regex-not@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/regex-not@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/safe-regex@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safe-regex@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ret@0.1.15",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ret@0.1.15",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/extglob@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extglob@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/expand-brackets@2.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/expand-brackets@2.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/posix-character-classes@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/posix-character-classes@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fragment-cache@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fragment-cache@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/nanomatch@1.2.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nanomatch@1.2.13",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-windows@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-windows@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object.pick@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.pick@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/resolve-dir@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve-dir@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/expand-tilde@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/expand-tilde@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/homedir-polyfill@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/homedir-polyfill@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/parse-passwd@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parse-passwd@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/global-modules@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/global-modules@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/global-prefix@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/global-prefix@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ini@1.3.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ini@1.3.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/which@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isexe@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isexe@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lodash.camelcase@4.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash.camelcase@4.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/minimist@1.2.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimist@1.2.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/semver@5.7.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/semver@5.7.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/clarinet@0.12.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clarinet@0.12.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/colors@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/colors@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/compression@1.7.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/compression@1.7.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/accepts@1.3.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/accepts@1.3.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/negotiator@0.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/negotiator@0.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bytes@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bytes@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/compressible@2.0.18",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/compressible@2.0.18",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/on-headers@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/on-headers@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/safe-buffer@5.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/safe-buffer@5.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/vary@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/vary@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/concurrently@5.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/concurrently@5.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/date-fns@2.14.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/date-fns@2.14.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lodash@4.17.19",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash@4.17.19",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/read-pkg@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/read-pkg@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/normalize-package-data@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/normalize-package-data@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hosted-git-info@2.8.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hosted-git-info@2.8.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/resolve@1.17.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve@1.17.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-parse@1.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-parse@1.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/validate-npm-package-license@3.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/validate-npm-package-license@3.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/spdx-correct@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-correct@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/spdx-expression-parse@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-expression-parse@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/spdx-exceptions@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-exceptions@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/spdx-license-ids@3.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spdx-license-ids@3.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/parse-json@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parse-json@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/error-ex@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/error-ex@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-arrayish@0.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-arrayish@0.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/json-parse-better-errors@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-parse-better-errors@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pify@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pify@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/rxjs@6.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rxjs@6.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tslib@1.13.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tslib@1.13.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/spawn-command@0.0.2-1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/spawn-command@0.0.2-1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/supports-color@6.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@6.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tree-kill@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tree-kill@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yargs@13.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs@13.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cliui@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cliui@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string-width@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string-width@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/emoji-regex@7.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/emoji-regex@7.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-fullwidth-code-point@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-fullwidth-code-point@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-ansi@5.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-ansi@5.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-regex@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-regex@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wrap-ansi@5.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wrap-ansi@5.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/find-up@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/find-up@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/locate-path@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/locate-path@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-locate@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-locate@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-limit@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-limit@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-try@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-try@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-exists@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-exists@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/get-caller-file@2.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-caller-file@2.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/require-directory@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/require-directory@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/require-main-filename@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/require-main-filename@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/set-blocking@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/set-blocking@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/which-module@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-module@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/y18n@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/y18n@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yargs-parser@13.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs-parser@13.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/camelcase@5.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/camelcase@5.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decamelize@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decamelize@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/config@3.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/config@3.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/json5@2.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json5@2.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cookie-parser@1.4.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie-parser@1.4.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cookie@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cookie-signature@1.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie-signature@1.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cors@2.8.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cors@2.8.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-assign@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-assign@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dottie@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dottie@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/download@7.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/download@7.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/archive-type@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/archive-type@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-type@4.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@4.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/caw@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/caw@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/get-proxy@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-proxy@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/npm-conf@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-conf@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/config-chain@1.1.12",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/config-chain@1.1.12",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/proto-list@1.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/proto-list@1.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isurl@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isurl@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-to-string-tag-x@1.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-to-string-tag-x@1.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-symbol-support-x@1.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-symbol-support-x@1.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-object@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-object@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tunnel-agent@0.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tunnel-agent@0.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/url-to-options@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/url-to-options@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/content-disposition@0.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/content-disposition@0.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress-tar@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-tar@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-type@5.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@5.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-stream@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-stream@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tar-stream@1.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar-stream@1.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bl@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bl@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/readable-stream@2.3.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-stream@2.3.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/core-util-is@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/core-util-is@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/process-nextick-args@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/process-nextick-args@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string_decoder@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string_decoder@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/util-deprecate@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/util-deprecate@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-alloc@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-alloc@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-alloc-unsafe@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-alloc-unsafe@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-fill@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-fill@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/end-of-stream@1.4.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/end-of-stream@1.4.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/once@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/once@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wrappy@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wrappy@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fs-constants@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-constants@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/to-buffer@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-buffer@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/xtend@4.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/xtend@4.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress-tarbz2@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-tarbz2@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-type@6.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@6.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/seek-bzip@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/seek-bzip@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/commander@2.8.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/commander@2.8.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/graceful-readlink@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/graceful-readlink@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unbzip2-stream@1.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unbzip2-stream@1.4.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer@5.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer@5.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/base64-js@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64-js@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ieee754@1.1.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ieee754@1.1.13",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/through@2.3.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/through@2.3.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress-targz@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-targz@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress-unzip@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-unzip@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-type@3.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@3.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/get-stream@2.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-stream@2.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pinkie-promise@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pinkie-promise@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pinkie@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pinkie@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pify@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pify@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yauzl@2.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yauzl@2.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-crc32@0.2.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-crc32@0.2.13",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fd-slicer@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fd-slicer@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pend@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pend@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/make-dir@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-dir@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-dirs@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-dirs@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-natural-number@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-natural-number@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ext-name@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ext-name@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ext-list@2.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ext-list@2.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sort-keys-length@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sort-keys-length@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sort-keys@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sort-keys@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-plain-obj@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-plain-obj@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-type@8.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@8.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/filenamify@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/filenamify@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/filename-reserved-regex@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/filename-reserved-regex@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-outer@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-outer@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/trim-repeated@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/trim-repeated@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/get-stream@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-stream@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/got@8.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/got@8.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/%40sindresorhus/is@0.7.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40sindresorhus/is@0.7.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cacheable-request@2.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cacheable-request@2.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/clone-response@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clone-response@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mimic-response@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mimic-response@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/http-cache-semantics@3.8.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-cache-semantics@3.8.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/keyv@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/keyv@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/json-buffer@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-buffer@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lowercase-keys@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lowercase-keys@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/normalize-url@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/normalize-url@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/prepend-http@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prepend-http@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/query-string@5.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/query-string@5.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strict-uri-encode@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strict-uri-encode@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sort-keys@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sort-keys@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/responselike@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/responselike@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lowercase-keys@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lowercase-keys@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress-response@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-response@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/duplexer3@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/duplexer3@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/into-stream@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/into-stream@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/from2@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/from2@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-is-promise@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-is-promise@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-retry-allowed@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-retry-allowed@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-cancelable@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-cancelable@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-timeout@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-timeout@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-finally@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-finally@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/timed-out@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/timed-out@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/url-parse-lax@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/url-parse-lax@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-event@2.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-event@2.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/errorhandler@1.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/errorhandler@1.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/escape-html@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escape-html@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/express@4.17.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express@4.17.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/array-flatten@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-flatten@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/encodeurl@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/encodeurl@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/etag@1.8.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/etag@1.8.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/finalhandler@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/finalhandler@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/parseurl@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parseurl@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fresh@0.5.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fresh@0.5.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/merge-descriptors@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/merge-descriptors@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/methods@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/methods@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-to-regexp@0.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-to-regexp@0.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/proxy-addr@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/proxy-addr@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/forwarded@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/forwarded@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ipaddr.js@1.9.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ipaddr.js@1.9.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/range-parser@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/range-parser@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/send@0.17.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/send@0.17.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/destroy@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/destroy@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mime@1.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mime@1.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ms@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ms@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/serve-static@1.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/serve-static@1.14.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/utils-merge@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/utils-merge@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/express-jwt@0.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-jwt@0.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jsonwebtoken@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsonwebtoken@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jws@0.2.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jws@0.2.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/base64url@0.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64url@0.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jwa@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jwa@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/moment@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/moment@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/express-rate-limit@5.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-rate-limit@5.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/express-robots-txt@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-robots-txt@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/express-security.txt@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/express-security.txt@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-stream-rotator@0.5.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-stream-rotator@0.5.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/moment@2.27.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/moment@2.27.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-type@12.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-type@12.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/finale-rest@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/finale-rest@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bluebird@3.7.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bluebird@3.7.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/inflection@1.12.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inflection@1.12.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fs-extra@8.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-extra@8.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jsonfile@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsonfile@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/universalify@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/universalify@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/glob@7.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/glob@7.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fs.realpath@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs.realpath@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/inflight@1.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inflight@1.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/minimatch@3.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/brace-expansion@1.1.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/balanced-match@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/balanced-match@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/concat-map@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/concat-map@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-is-absolute@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-is-absolute@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dateformat@3.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dateformat@3.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/eventemitter2@0.4.14",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/eventemitter2@0.4.14",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/exit@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/exit@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/findup-sync@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/findup-sync@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/glob@5.0.15",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/glob@5.0.15",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-cli@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-cli@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-known-options@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-known-options@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/interpret@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/interpret@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/liftoff@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/liftoff@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/extend@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extend@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fined@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fined@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object.defaults@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.defaults@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/array-each@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-each@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/array-slice@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-slice@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/for-own@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/for-own@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/parse-filepath@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parse-filepath@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-absolute@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-absolute@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-relative@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-relative@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-unc-path@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-unc-path@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unc-path-regex@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unc-path-regex@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-root@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-root@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-root-regex@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-root-regex@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/flagged-respawn@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/flagged-respawn@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object.map@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.map@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/make-iterator@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-iterator@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/rechoir@0.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rechoir@0.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/nopt@4.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nopt@4.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/abbrev@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/abbrev@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/v8flags@3.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/v8flags@3.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-legacy-log@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-legacy-log@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/colors@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/colors@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-legacy-log-utils@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-legacy-log-utils@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hooker@0.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hooker@0.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-legacy-util@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-legacy-util@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/async@1.5.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/async@1.5.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/getobject@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/getobject@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/underscore.string@3.3.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/underscore.string@3.3.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sprintf-js@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sprintf-js@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/js-yaml@3.14.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/js-yaml@3.14.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/argparse@1.0.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/argparse@1.0.10",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sprintf-js@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sprintf-js@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/esprima@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esprima@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mkdirp@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mkdirp@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/nopt@3.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nopt@3.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/rimraf@3.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rimraf@3.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-contrib-compress@1.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-contrib-compress@1.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/archiver@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/archiver@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/archiver-utils@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/archiver-utils@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lazystream@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lazystream@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/normalize-path@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/normalize-path@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/remove-trailing-separator@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/remove-trailing-separator@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/async@2.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/async@2.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/walkdir@0.0.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/walkdir@0.0.11",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/zip-stream@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/zip-stream@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/compress-commons@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/compress-commons@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/crc32-stream@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/crc32-stream@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/crc@3.8.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/crc@3.8.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/chalk@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chalk@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-styles@2.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-styles@2.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-ansi@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-ansi@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-regex@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-regex@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-ansi@3.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-ansi@3.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/supports-color@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/supports-color@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pretty-bytes@4.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pretty-bytes@4.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/stream-buffers@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/stream-buffers@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/grunt-replace-json@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/grunt-replace-json@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lodash.set@4.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash.set@4.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hashids@2.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hashids@2.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/helmet@3.23.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/helmet@3.23.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/depd@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/depd@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dont-sniff-mimetype@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dont-sniff-mimetype@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/feature-policy@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/feature-policy@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/helmet-crossdomain@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/helmet-crossdomain@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/helmet-csp@2.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/helmet-csp@2.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bowser@2.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bowser@2.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/camelize@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/camelize@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/content-security-policy-builder@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/content-security-policy-builder@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dasherize@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dasherize@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hide-powered-by@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hide-powered-by@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hpkp@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hpkp@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hsts@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hsts@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/nocache@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nocache@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/referrer-policy@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/referrer-policy@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/x-xss-protection@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/x-xss-protection@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/html-entities@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/html-entities@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/i18n@0.8.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/i18n@0.8.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/make-plural@6.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-plural@6.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/math-interval-parser@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/math-interval-parser@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/messageformat@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/messageformat@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/make-plural@4.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/make-plural@4.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/messageformat-formatters@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/messageformat-formatters@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/messageformat-parser@4.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/messageformat-parser@4.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mustache@4.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mustache@4.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-docker@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-docker@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-heroku@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-heroku@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jsonwebtoken@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsonwebtoken@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jssha@2.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jssha@2.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/libxmljs2@0.25.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/libxmljs2@0.25.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bindings@1.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bindings@1.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/file-uri-to-path@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/file-uri-to-path@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/nan@2.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/nan@2.14.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/node-pre-gyp@0.15.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-pre-gyp@0.15.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/detect-libc@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/detect-libc@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mkdirp@0.5.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mkdirp@0.5.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/needle@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/needle@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/debug@3.2.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/debug@3.2.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ms@2.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sax@1.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sax@1.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/npm-packlist@1.4.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-packlist@1.4.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ignore-walk@3.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ignore-walk@3.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/npm-bundled@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-bundled@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/npm-normalize-package-bin@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npm-normalize-package-bin@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/npmlog@4.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/npmlog@4.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/are-we-there-yet@1.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/are-we-there-yet@1.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/delegates@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/delegates@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/console-control-strings@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/console-control-strings@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/gauge@2.7.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/gauge@2.7.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/aproba@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aproba@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-unicode@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-unicode@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/signal-exit@3.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/signal-exit@3.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string-width@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string-width@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/code-point-at@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/code-point-at@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-fullwidth-code-point@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-fullwidth-code-point@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/number-is-nan@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/number-is-nan@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wide-align@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wide-align@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string-width@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string-width@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-ansi@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-ansi@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-regex@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-regex@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/rc@1.2.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rc@1.2.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/deep-extend@0.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/deep-extend@0.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-json-comments@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-json-comments@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/rimraf@2.7.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/rimraf@2.7.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tar@4.4.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar@4.4.13",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/chownr@1.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chownr@1.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fs-minipass@1.2.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fs-minipass@1.2.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/minipass@2.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minipass@2.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yallist@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yallist@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/minizlib@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/minizlib@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/marsdb@0.6.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/marsdb@0.6.11",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/check-types@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/check-types@6.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/double-ended-queue@0.9.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/double-ended-queue@0.9.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/eventemitter3@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/eventemitter3@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fast.js@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast.js@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/geojson-utils@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/geojson-utils@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/invariant@2.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/invariant@2.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/loose-envify@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/loose-envify@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/js-tokens@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/js-tokens@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/morgan@1.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/morgan@1.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/basic-auth@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/basic-auth@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/multer@1.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/multer@1.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/append-field@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/append-field@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/busboy@0.2.14",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/busboy@0.2.14",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dicer@0.2.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dicer@0.2.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/readable-stream@1.1.14",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-stream@1.1.14",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isarray@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isarray@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string_decoder@0.10.31",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string_decoder@0.10.31",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/streamsearch@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/streamsearch@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/concat-stream@1.6.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/concat-stream@1.6.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-from@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-from@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/typedarray@0.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/typedarray@0.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/node-pre-gyp@0.14.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-pre-gyp@0.14.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/notevil@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/notevil@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/esprima@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esprima@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/hoister@0.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/hoister@0.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/otplib@11.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/otplib@11.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/thirty-two@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/thirty-two@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pdfkit@0.11.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pdfkit@0.11.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/crypto-js@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/crypto-js@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fontkit@1.8.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fontkit@1.8.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/babel-runtime@6.26.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/babel-runtime@6.26.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/core-js@2.6.11",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/core-js@2.6.11",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/regenerator-runtime@0.11.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/regenerator-runtime@0.11.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/brfs@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/brfs@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/quote-stream@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/quote-stream@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-equal@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-equal@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/through2@2.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/through2@2.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/static-module@3.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/static-module@3.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/acorn-node@1.8.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn-node@1.8.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/acorn@7.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn@7.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/acorn-walk@7.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn-walk@7.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/convert-source-map@1.7.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/convert-source-map@1.7.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/duplexer2@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/duplexer2@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/escodegen@1.14.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escodegen@1.14.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/estraverse@4.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/estraverse@4.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/esutils@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esutils@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/optionator@0.8.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/optionator@0.8.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/deep-is@0.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/deep-is@0.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fast-levenshtein@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-levenshtein@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/levn@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/levn@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/prelude-ls@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prelude-ls@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/type-check@0.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/type-check@0.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/word-wrap@1.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/word-wrap@1.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/source-map@0.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map@0.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/function-bind@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/function-bind@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/magic-string@0.25.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/magic-string@0.25.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sourcemap-codec@1.4.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sourcemap-codec@1.4.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/merge-source-map@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/merge-source-map@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-inspect@1.8.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-inspect@1.8.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/scope-analyzer@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/scope-analyzer@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/array-from@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/array-from@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dash-ast@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dash-ast@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es6-map@0.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es6-map@0.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/d@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/d@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es5-ext@0.10.53",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es5-ext@0.10.53",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es6-iterator@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es6-iterator@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es6-symbol@3.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es6-symbol@3.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ext@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ext@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/type@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/type@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/next-tick@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/next-tick@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/type@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/type@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es6-set@0.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es6-set@0.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es6-symbol@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es6-symbol@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/event-emitter@0.3.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/event-emitter@0.3.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/estree-is-function@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/estree-is-function@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/get-assigned-identifiers@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/get-assigned-identifiers@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/shallow-copy@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/shallow-copy@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/static-eval@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/static-eval@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/brotli@1.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/brotli@1.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/browserify-optional@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/browserify-optional@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ast-transform@0.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ast-transform@0.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/escodegen@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/escodegen@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/estraverse@1.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/estraverse@1.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/esutils@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/esutils@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/source-map@0.1.43",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/source-map@0.1.43",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/amdefine@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/amdefine@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ast-types@0.7.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ast-types@0.7.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/browser-resolve@1.11.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/browser-resolve@1.11.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/resolve@1.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/resolve@1.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/clone@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clone@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/deep-equal@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/deep-equal@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-arguments@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-arguments@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-date-object@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-date-object@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-regex@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-regex@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-symbols@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-symbols@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-is@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-is@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/define-properties@1.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/define-properties@1.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-keys@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-keys@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es-abstract@1.17.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es-abstract@1.17.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/es-to-primitive@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/es-to-primitive@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-callable@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-callable@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-symbol@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-symbol@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object.assign@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object.assign@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string.prototype.trimend@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string.prototype.trimend@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string.prototype.trimstart@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string.prototype.trimstart@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/regexp.prototype.flags@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/regexp.prototype.flags@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dfa@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dfa@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/restructure@0.5.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/restructure@0.5.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tiny-inflate@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tiny-inflate@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unicode-properties@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unicode-properties@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unicode-trie@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unicode-trie@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pako@0.2.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pako@0.2.9",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unicode-trie@0.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unicode-trie@0.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/linebreak@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/linebreak@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/base64-js@0.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64-js@0.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unicode-trie@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unicode-trie@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/png-js@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/png-js@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/portscanner@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/portscanner@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-number-like@1.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-number-like@1.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lodash.isfinite@3.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash.isfinite@3.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/prom-client@11.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prom-client@11.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tdigest@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tdigest@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bintrees@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bintrees@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-code-gen@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-code-gen@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/constantinople@3.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/constantinople@3.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/%40types/babel-types@7.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/babel-types@7.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/%40types/babylon@6.16.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/babylon@6.16.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/babel-types@6.26.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/babel-types@6.26.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/to-fast-properties@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-fast-properties@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/babylon@6.18.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/babylon@6.18.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/doctypes@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/doctypes@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/js-stringify@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/js-stringify@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-attrs@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-attrs@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-runtime@2.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-runtime@2.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-error@1.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-error@1.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/void-elements@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/void-elements@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/with@5.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/with@5.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/acorn@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/acorn-globals@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn-globals@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/acorn@4.0.13",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/acorn@4.0.13",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-filters@3.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-filters@3.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/clean-css@4.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/clean-css@4.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jstransformer@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jstransformer@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-promise@2.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-promise@2.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/promise@7.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/promise@7.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/asap@2.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/asap@2.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-walk@1.1.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-walk@1.1.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/uglify-js@2.8.29",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uglify-js@2.8.29",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yargs@3.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs@3.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/camelcase@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/camelcase@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cliui@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cliui@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/center-align@0.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/center-align@0.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/align-text@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/align-text@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/longest@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/longest@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lazy-cache@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lazy-cache@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/right-align@0.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/right-align@0.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wordwrap@0.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wordwrap@0.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/window-size@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/window-size@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-lexer@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-lexer@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/character-parser@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/character-parser@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-expression@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-expression@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-linker@3.0.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-linker@3.0.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-load@2.0.12",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-load@2.0.12",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-parser@5.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-parser@5.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/token-stream@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/token-stream@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pug-strip-comments@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pug-strip-comments@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/replace@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/replace@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yargs@15.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs@15.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cliui@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cliui@6.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/string-width@4.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/string-width@4.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/emoji-regex@8.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/emoji-regex@8.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-fullwidth-code-point@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/strip-ansi@6.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/strip-ansi@6.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-regex@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-regex@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wrap-ansi@6.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wrap-ansi@6.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ansi-styles@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ansi-styles@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/%40types/color-name@1.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/color-name@1.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/color-convert@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-convert@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/color-name@1.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-name@1.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/find-up@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/find-up@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/locate-path@5.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/locate-path@5.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/p-locate@4.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/p-locate@4.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/path-exists@4.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/path-exists@4.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yargs-parser@18.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yargs-parser@18.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/request@2.88.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/request@2.88.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/aws-sign2@0.7.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aws-sign2@0.7.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/aws4@1.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/aws4@1.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/caseless@0.12.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/caseless@0.12.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/combined-stream@1.0.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/combined-stream@1.0.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/delayed-stream@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/delayed-stream@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/forever-agent@0.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/forever-agent@0.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/form-data@2.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/form-data@2.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/asynckit@0.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/asynckit@0.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/har-validator@5.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/har-validator@5.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ajv@6.12.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ajv@6.12.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fast-deep-equal@3.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-deep-equal@3.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fast-json-stable-stringify@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-json-stable-stringify@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/json-schema-traverse@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-schema-traverse@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/uri-js@4.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uri-js@4.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/punycode@2.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/punycode@2.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/har-schema@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/har-schema@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/http-signature@1.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-signature@1.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/assert-plus@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/assert-plus@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jsprim@1.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsprim@1.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/extsprintf@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/extsprintf@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/json-schema@0.2.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-schema@0.2.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/verror@1.10.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/verror@1.10.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sshpk@1.16.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sshpk@1.16.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/asn1@0.2.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/asn1@0.2.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bcrypt-pbkdf@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bcrypt-pbkdf@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tweetnacl@0.14.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tweetnacl@0.14.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/dashdash@1.14.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/dashdash@1.14.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ecc-jsbn@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ecc-jsbn@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/jsbn@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/jsbn@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/getpass@0.1.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/getpass@0.1.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-typedarray@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-typedarray@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isstream@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isstream@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/json-stringify-safe@5.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/json-stringify-safe@5.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/oauth-sign@0.9.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/oauth-sign@0.9.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/performance-now@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/performance-now@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/qs@6.5.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/qs@6.5.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tough-cookie@2.5.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tough-cookie@2.5.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/psl@1.8.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/psl@1.8.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/uuid@3.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uuid@3.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sanitize-filename@1.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sanitize-filename@1.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/truncate-utf8-bytes@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/truncate-utf8-bytes@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/utf8-byte-length@1.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/utf8-byte-length@1.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sanitize-html@1.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sanitize-html@1.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/he@0.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/he@0.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/htmlparser2@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/htmlparser2@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/domelementtype@1.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/domelementtype@1.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/domhandler@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/domhandler@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/domutils@1.1.6",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/domutils@1.1.6",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/readable-stream@1.0.34",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-stream@1.0.34",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/lodash@2.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/lodash@2.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/semver@7.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/semver@7.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sequelize@5.22.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sequelize@5.22.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cls-bluebird@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cls-bluebird@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-bluebird@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-bluebird@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/shimmer@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/shimmer@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/debug@4.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/debug@4.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/moment-timezone@0.5.31",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/moment-timezone@0.5.31",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/retry-as-promised@3.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/retry-as-promised@3.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/any-promise@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/any-promise@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/semver@6.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/semver@6.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sequelize-pool@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sequelize-pool@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/toposort-class@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/toposort-class@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/validator@10.11.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/validator@10.11.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/wkx@0.4.8",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/wkx@0.4.8",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/%40types/node@14.0.23",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40types/node@14.0.23",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sequelize-noupdate-attributes@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sequelize-noupdate-attributes@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/serve-index@1.9.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/serve-index@1.9.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/batch@0.6.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/batch@0.6.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/http-errors@1.6.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/http-errors@1.6.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/setprototypeof@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/setprototypeof@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/socket.io@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/engine.io@3.4.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/engine.io@3.4.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/base64id@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64id@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/cookie@0.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/cookie@0.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/engine.io-parser@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/engine.io-parser@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/after@0.8.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/after@0.8.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/arraybuffer.slice@0.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/arraybuffer.slice@0.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/base64-arraybuffer@0.1.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/base64-arraybuffer@0.1.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/blob@0.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/blob@0.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-binary2@1.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-binary2@1.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/isarray@2.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/isarray@2.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ws@7.3.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ws@7.3.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/socket.io-adapter@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io-adapter@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/socket.io-client@2.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io-client@2.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/backo2@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/backo2@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/component-bind@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-bind@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/component-emitter@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-emitter@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/engine.io-client@3.4.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/engine.io-client@3.4.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/component-inherit@0.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-inherit@0.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/has-cors@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/has-cors@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/indexof@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/indexof@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/parseqs@0.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parseqs@0.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/better-assert@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/better-assert@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/callsite@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/callsite@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/parseuri@0.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/parseuri@0.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/ws@6.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/ws@6.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/async-limiter@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/async-limiter@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/xmlhttprequest-ssl@1.5.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/xmlhttprequest-ssl@1.5.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yeast@0.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yeast@0.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/object-component@0.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/object-component@0.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/socket.io-parser@3.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io-parser@3.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/debug@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/debug@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/to-array@0.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/to-array@0.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/socket.io-parser@3.4.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/socket.io-parser@3.4.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/sqlite3@4.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/sqlite3@4.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/node-pre-gyp@0.11.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-pre-gyp@0.11.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/svg-captcha@1.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/svg-captcha@1.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/opentype.js@0.7.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/opentype.js@0.7.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/swagger-ui-express@4.1.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/swagger-ui-express@4.1.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/swagger-ui-dist@3.28.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/swagger-ui-dist@3.28.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/unzipper@0.9.15",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/unzipper@0.9.15",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/big-integer@1.6.48",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/big-integer@1.6.48",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/binary@0.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/binary@0.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffers@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffers@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/chainsaw@0.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/chainsaw@0.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/traverse@0.3.9",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/traverse@0.3.9",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bluebird@3.4.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bluebird@3.4.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/buffer-indexof-polyfill@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/buffer-indexof-polyfill@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fstream@1.0.12",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fstream@1.0.12",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/listenercount@1.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/listenercount@1.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/setimmediate@1.0.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/setimmediate@1.0.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/winston@3.3.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/winston@3.3.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/%40dabh/diagnostics@2.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/%40dabh/diagnostics@2.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/colorspace@1.1.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/colorspace@1.1.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/color@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/color-string@1.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/color-string@1.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/simple-swizzle@0.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/simple-swizzle@0.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-arrayish@0.3.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-arrayish@0.3.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/text-hex@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/text-hex@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/enabled@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/enabled@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/kuler@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/kuler@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/async@3.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/async@3.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/is-stream@2.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/is-stream@2.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/logform@2.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/logform@2.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fast-safe-stringify@2.0.7",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fast-safe-stringify@2.0.7",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fecha@4.2.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fecha@4.2.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/triple-beam@1.3.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/triple-beam@1.3.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/one-time@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/one-time@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/fn.name@1.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/fn.name@1.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/readable-stream@3.6.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/readable-stream@3.6.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/stack-trace@0.0.10",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/stack-trace@0.0.10",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/winston-transport@4.4.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/winston-transport@4.4.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/yaml-schema-validator@1.2.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/yaml-schema-validator@1.2.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/commander@2.20.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/commander@2.20.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/validate@4.5.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/validate@4.5.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/component-type@1.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/component-type@1.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/eivindfjeldstad-dot@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/eivindfjeldstad-dot@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/typecast@0.0.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/typecast@0.0.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/z85@0.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/z85@0.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/expand-template@2.0.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/expand-template@2.0.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/github-from-package@0.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/github-from-package@0.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/iltorb@2.4.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/iltorb@2.4.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/prebuild-install@5.3.5",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/prebuild-install@5.3.5",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/napi-build-utils@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/napi-build-utils@1.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/node-abi@2.18.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/node-abi@2.18.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/noop-logger@0.1.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/noop-logger@0.1.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/pump@3.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/pump@3.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/simple-get@3.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/simple-get@3.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/decompress-response@4.2.1",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/decompress-response@4.2.1",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mimic-response@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mimic-response@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/simple-concat@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/simple-concat@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tar-fs@2.1.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar-fs@2.1.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/mkdirp-classic@0.5.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/mkdirp-classic@0.5.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/tar-stream@2.1.3",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/tar-stream@2.1.3",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/bl@4.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/bl@4.0.2",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/inherits@2.0.4",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/inherits@2.0.4",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/which-pm-runs@1.0.0",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/which-pm-runs@1.0.0",
+      "detail": ""
+    },
+    {
+      "ref": "pkg:npm/uglify-to-browserify@1.0.2",
+      "verdict": "PRESERVED",
+      "purl": "pkg:npm/uglify-to-browserify@1.0.2",
+      "detail": ""
+    }
+  ]
+}

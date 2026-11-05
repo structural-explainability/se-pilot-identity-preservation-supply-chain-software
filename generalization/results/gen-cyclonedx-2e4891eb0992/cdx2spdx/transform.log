@@ -1,0 +1,69 @@
+[stdout]
+Completed with the following warnings:
+	Missing required SHA1 Checksum for puppeteer
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for debug
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for concat-stream
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for buffer-from
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for readable-stream
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for process-nextick-args
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for safe-buffer
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for string_decoder
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for debug
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for https-proxy-agent
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for agent-base
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for es6-promise
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for mime
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for progress
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for rimraf
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for ws
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for async-limiter
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for lhc-vdm-editor
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+
+[stderr]
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.

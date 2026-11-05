@@ -1,0 +1,13 @@
+[stdout]
+Completed with the following warnings:
+	SPDX does not support property or property value metadata.tools for SPDX type SpdxDocument.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for com.example:example-app
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+
+[stderr]
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.

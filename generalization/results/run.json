@@ -1,0 +1,201 @@
+{
+  "mode": "formal",
+  "status": "finished",
+  "started_utc": "2026-11-05T14:36:09.537310+00:00",
+  "plan_sha256": "c7a46bdc72de53426e260f10c3b957ea4957c363fa6f42a33db629adcf677c65",
+  "freeze_02_sha256": "f932a5e93204cbe2d9179da50281168f972a43556b7936be24466dd5f64854fa",
+  "python": "3.14.7",
+  "interpreter": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "system": "Windows",
+  "architecture": "AMD64",
+  "syft_config_check": {
+    "checked": [
+      "C:\\Users\\edaci\\.syft.*",
+      "C:\\Users\\edaci\\.syft\\config.*",
+      "C:\\Users\\edaci\\syft\\config.*",
+      "C:\\Users\\edaci\\.config\\.syft.*",
+      "C:\\Users\\edaci\\.config\\.syft\\config.*",
+      "C:\\Users\\edaci\\.config\\syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Local\\.syft.*",
+      "C:\\Users\\edaci\\AppData\\Local\\.syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Local\\syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Roaming\\.syft.*",
+      "C:\\Users\\edaci\\AppData\\Roaming\\.syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Roaming\\syft\\config.*",
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.syft.*",
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.syft\\config.*",
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\syft\\config.*"
+    ],
+    "found": []
+  },
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "routes": [
+    {
+      "route_id": "gen-cyclonedx-9dcf635da297--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-9dcf635da297/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-9dcf635da297--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-9dcf635da297--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-001a52237a69--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-001a52237a69/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-001a52237a69--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-001a52237a69--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-001a52237a69/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-9179c4025ab4--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-9179c4025ab4--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-9179c4025ab4--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-9179c4025ab4/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-f1c2f23c4645--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-f1c2f23c4645/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-f1c2f23c4645--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-f1c2f23c4645--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-f1c2f23c4645/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-0fc86e0249ef--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-0fc86e0249ef/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-0fc86e0249ef--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-0fc86e0249ef--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-0fc86e0249ef/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-2e4891eb0992--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-2e4891eb0992/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-2e4891eb0992--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-2e4891eb0992--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-2e4891eb0992/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-445136956fe1--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-445136956fe1/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-445136956fe1--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-445136956fe1--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-445136956fe1/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-a2e17be40185--syft",
+      "execution_path": "generalization/results/gen-cyclonedx-a2e17be40185/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-cyclonedx-a2e17be40185--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-cyclonedx-a2e17be40185--cdx2spdx",
+      "execution_path": "generalization/results/gen-cyclonedx-a2e17be40185/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-spdx-e38ee905f9c0--syft",
+      "execution_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-spdx-e38ee905f9c0--protobom",
+      "execution_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/execution.json",
+      "execution_outcome": "execution_failure"
+    },
+    {
+      "route_id": "gen-spdx-e38ee905f9c0--cdx2spdx",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "gen-spdx-0d278129197b--syft",
+      "execution_path": "generalization/results/gen-spdx-0d278129197b/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-spdx-0d278129197b--protobom",
+      "execution_path": "generalization/results/gen-spdx-0d278129197b/protobom/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "gen-spdx-0d278129197b--cdx2spdx",
+      "outcome": "unsupported_pre_execution"
+    }
+  ],
+  "repository_commit": "9baa72323301e287a4f3c821cb638f5165b3a29a",
+  "syft_effective_config": {
+    "argv": [
+      "bin/generalization/syft.exe",
+      "config",
+      "--load"
+    ],
+    "started_utc": "2026-11-05T14:36:09.592729+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:09.672029+00:00",
+    "duration_seconds": 0.07931339996866882
+  },
+  "ended_utc": "2026-11-05T14:37:02.830395+00:00"
+}

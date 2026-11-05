@@ -1,0 +1,268 @@
+[stdout]
+{
+  "source_format": "cyclonedx",
+  "target_format": "spdx-2.3",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "pkg:npm/puppeteer@1.19.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/puppeteer@1.19.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/debug@4.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@4.1.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/ms@2.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.1.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/extract-zip@1.6.7",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/extract-zip@1.6.7",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/concat-stream@1.6.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/concat-stream@1.6.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/buffer-from@1.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/buffer-from@1.1.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/inherits@2.0.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/inherits@2.0.4",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/readable-stream@2.3.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/readable-stream@2.3.6",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/core-util-is@1.0.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/core-util-is@1.0.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/isarray@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/isarray@1.0.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/process-nextick-args@2.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/process-nextick-args@2.0.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/safe-buffer@5.1.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/safe-buffer@5.1.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/string_decoder@1.1.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/string_decoder@1.1.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/util-deprecate@1.0.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/util-deprecate@1.0.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/typedarray@0.0.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/typedarray@0.0.6",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/debug@2.6.9",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@2.6.9",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/ms@2.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ms@2.0.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/mkdirp@0.5.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/mkdirp@0.5.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/minimist@0.0.8",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/minimist@0.0.8",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/yauzl@2.4.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/yauzl@2.4.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/fd-slicer@1.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/fd-slicer@1.0.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/pend@1.2.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/pend@1.2.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/https-proxy-agent@2.2.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/https-proxy-agent@2.2.4",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/agent-base@4.3.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/agent-base@4.3.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/es6-promisify@5.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/es6-promisify@5.0.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/es6-promise@4.2.8",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/es6-promise@4.2.8",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/debug@3.2.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/debug@3.2.6",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/mime@2.4.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/mime@2.4.4",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/progress@2.0.3",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/progress@2.0.3",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/proxy-from-env@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/proxy-from-env@1.0.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/rimraf@2.7.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/rimraf@2.7.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/glob@7.1.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/glob@7.1.4",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/fs.realpath@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/fs.realpath@1.0.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/inflight@1.0.6",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/inflight@1.0.6",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/once@1.4.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/once@1.4.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/wrappy@1.0.2",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/wrappy@1.0.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/minimatch@3.0.4",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/minimatch@3.0.4",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/brace-expansion@1.1.11",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/brace-expansion@1.1.11",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/balanced-match@1.0.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/balanced-match@1.0.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/concat-map@0.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/concat-map@0.0.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/path-is-absolute@1.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/path-is-absolute@1.0.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/ws@6.2.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/ws@6.2.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:npm/async-limiter@1.0.1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:npm/async-limiter@1.0.1",
+      "detail": "no target component shares a declared content-hash anchor"
+    }
+  ]
+}
+
+[stderr]

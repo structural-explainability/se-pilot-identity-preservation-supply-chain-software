@@ -1,0 +1,57 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:3414371c-5e92-5d96-af7c-4cf1b1b47014",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-05-12T18:30:22Z",
+    "authors": [
+      {
+        "name": "Gary O'Neall (gary@sourceauditor.com)"
+      }
+    ],
+    "component": {
+      "bom-ref": "Package",
+      "type": "application",
+      "supplier": {
+        "name": "SPDX (Spdx-tech@lists.spdx.org)"
+      },
+      "name": "tools-java",
+      "version": "1.5.1",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "e01bcba3c55fa7f0c82d08d0cdce9061b21bf32f"
+        }
+      ],
+      "purl": "pkg:github/spdx/tools-java@2235d5d7f7fe46ce1e0d54b7831c5681633b25cc"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "xlsx",
+      "type": "application",
+      "supplier": {
+        "name": "Webjar"
+      },
+      "name": "xlsx",
+      "version": "0.16.6",
+      "hashes": [
+        {
+          "alg": "SHA-1",
+          "content": "8f2715fa4ea3619b08615aa8f57828a80e6eb703"
+        }
+      ],
+      "purl": "pkg:maven/org.webjars.npm/xlsx@0.16.6"
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "Package",
+      "dependsOn": [
+        "xlsx"
+      ]
+    }
+  ]
+}

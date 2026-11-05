@@ -1,0 +1,414 @@
+[stdout]
+Completed with the following warnings:
+	SPDX does not support property or property value metadata.tools for SPDX type SpdxDocument.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/0xAX/notificator
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/AndreasBriese/bbloom
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/BurntSushi/toml
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/BurntSushi/xgb
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing CycloneDX license ID for license name GooglePatentClause
+	Missing required SHA1 Checksum for github.com/CloudyKit/fastprinter
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/CloudyKit/jet/v3
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/Joker/hpp
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/Masterminds/semver/v3
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-autostart
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-crypto
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-imap-id
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-mime
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-rfc5322
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-vcard
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/gopenpgp/v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/PuerkitoBio/goquery
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/Shopify/goreferrer
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/abiosoft/ishell
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/abiosoft/readline
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ajg/form
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/allan-simon/go-singleinstance
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/andybalholm/cascadia
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/antlr/antlr4
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/armon/consul-api
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/aymerick/raymond
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/chzyer/logex
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/chzyer/test
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/codegangsta/inject
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/coreos/etcd
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/coreos/go-etcd
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/coreos/go-semver
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/cpuguy83/go-md2man
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/cpuguy83/go-md2man/v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/creack/pty
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/cucumber/godog
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/danieljoos/wincred
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/davecgh/go-spew
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/dgraph-io/badger
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/dgrijalva/jwt-go
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/dgryski/go-farm
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/docker-credential-helpers
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/dustin/go-humanize
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/eknkc/amber
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/go-imap
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-imap-appendlimit
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-imap-idle
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-imap-move
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-imap-quota
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-imap-unselect
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-mbox
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-message
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-sasl
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-smtp
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-textwrapper
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/emersion/go-vcard
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/etcd-io/bbolt
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/fasthttp-contrib/websocket
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/fatih/color
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/fatih/structs
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/flynn-archive/go-shlex
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/fsnotify/fsnotify
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gavv/httpexpect
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/getsentry/sentry-go
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gin-contrib/sse
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gin-gonic/gin
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/go-check/check
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/go-errors/errors
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/go-martini/martini
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/go-resty/resty/v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gobwas/httphead
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gobwas/pool
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gobwas/ws
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/golang/mock
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/golang/protobuf
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gomodule/redigo
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/google/go-cmp
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/google/go-querystring
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/google/gofuzz
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/google/uuid
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gopherjs/gopherjs
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/gorilla/websocket
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/hashicorp/errwrap
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/hashicorp/go-multierror
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/hashicorp/go-version
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/hashicorp/hcl
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/hpcloud/tail
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/imkira/go-interpol
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/inconshreveable/mousetrap
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/iris-contrib/blackfriday
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/iris-contrib/go.uuid
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/iris-contrib/jade
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/iris-contrib/pongo2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/iris-contrib/schema
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/bcrypt
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/jaytaylor/html2text
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/json-iterator/go
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/jtolds/gls
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/k0kubun/colorstring
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kataras/golog
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kataras/iris/v12
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kataras/neffos
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kataras/pio
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kataras/sitemap
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/keybase/go-keychain
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/keybase/go.dbus
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/klauspost/compress
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/klauspost/cpuid
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/konsorten/go-windows-terminal-sequences
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kr/pretty
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kr/pty
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/kr/text
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/labstack/echo/v4
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/labstack/gommon
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/logrusorgru/aurora
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/magiconair/properties
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/martinlindhe/base36
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mattn/go-colorable
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mattn/go-isatty
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mattn/go-runewidth
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mattn/goveralls
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mediocregopher/radix/v3
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/microcosm-cc/bluemonday
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/miekg/dns
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mitchellh/go-homedir
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/mitchellh/mapstructure
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/modern-go/concurrent
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/modern-go/reflect2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/moul/http2curl
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/nats-io/jwt
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/nats-io/nats.go
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/nats-io/nkeys
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/nats-io/nuid
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/niemeyer/pretty
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/nsf/jsondiff
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/olekukonko/tablewriter
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/onsi/ginkgo
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/onsi/gomega
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/pelletier/go-toml
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/pingcap/errors
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/pkg/errors
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/pmezard/go-difflib
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/russross/blackfriday
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/russross/blackfriday/v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ryanuber/columnize
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/schollz/closestmatch
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/sergi/go-diff
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/shurcooL/sanitized_anchor_name
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/sirupsen/logrus
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/skratchdot/open-golang
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/smartystreets/assertions
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/smartystreets/goconvey
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/spf13/afero
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/spf13/cast
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/spf13/cobra
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/spf13/jwalterweatherman
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/spf13/pflag
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/spf13/viper
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ssor/bom
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/stretchr/objx
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/stretchr/testify
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/therecipe/qt
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ugorji/go
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ugorji/go/codec
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/urfave/cli/v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/urfave/negroni
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/valyala/bytebufferpool
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/valyala/fasthttp
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/valyala/fasttemplate
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/valyala/tcplisten
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/vmihailenco/msgpack/v5
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/vmihailenco/tagparser
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/xeipuuv/gojsonpointer
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/xeipuuv/gojsonreference
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/xeipuuv/gojsonschema
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/xordataexchange/crypt
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/yalp/jsonpath
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/yudai/gojsondiff
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/yudai/golcs
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/yudai/pp
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for go.etcd.io/bbolt
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for github.com/ProtonMail/crypto
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/exp
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/image
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/mobile
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/mod
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/net
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/sync
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/sys
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/term
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/text
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/tools
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for golang.org/x/xerrors
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/check.v1
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/fsnotify.v1
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/go-playground/assert.v1
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/go-playground/validator.v8
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/ini.v1
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/mgo.v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/tomb.v1
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/yaml.v2
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	Missing required SHA1 Checksum for gopkg.in/yaml.v3
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+	From dependency component ref does not exist: pkg:golang/github.com/ProtonMail/proton-bridge@v1.8.0
+	Missing required SHA1 Checksum for github.com/ProtonMail/proton-bridge
+	SPDX does not support property or property value componentType for SPDX type Package.  An annotation was added to the element to capture this information.
+
+[stderr]
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.

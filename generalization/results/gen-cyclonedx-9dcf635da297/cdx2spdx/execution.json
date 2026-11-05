@@ -1,0 +1,101 @@
+{
+  "route_id": "gen-cyclonedx-9dcf635da297--cdx2spdx",
+  "attempt": 1,
+  "status": "finished",
+  "started_utc": "2026-11-05T14:36:12.176401+00:00",
+  "source_sha256": "9dcf635da297fbc9ce6c2d4d78c6998ac1b00ef44514d771ad8663510ef444be",
+  "converter": {
+    "id": "cdx2spdx",
+    "name": "SPDX cdx2spdx",
+    "version": "0.1.5",
+    "artifact_path": "bin/generalization/cdx2spdx.jar",
+    "artifact_sha256": "8a570cf7f19fada550f850b3724d07ac9b67109d1fc8136fcf7306946b9162fa",
+    "runtime": "repo-local Java executable",
+    "documentation": "https://github.com/spdx/cdx2spdx/tree/v0.1.5",
+    "runtime_artifact_path": "bin/generalization/jdk-21.0.12.1+1/bin/java.exe",
+    "runtime_version": "21.0.12.1+1",
+    "runtime_sha256": "82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55"
+  },
+  "cwd": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software",
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "evidence_paths": {
+    "target_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json",
+    "validation_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target-validation.json",
+    "evaluation_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/evaluation.json",
+    "log_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/transform.log",
+    "validation_log_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/validation.log",
+    "evaluation_log_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/evaluation.log",
+    "execution_path": "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/execution.json"
+  },
+  "validation_outcome": "valid",
+  "evaluation_outcome": "completed",
+  "transformation": {
+    "argv": [
+      "bin/generalization/jdk-21.0.12.1+1/bin/java.exe",
+      "-jar",
+      "bin/generalization/cdx2spdx.jar",
+      "generalization/sources/gen-cyclonedx-9dcf635da297.cdx.json",
+      "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json"
+    ],
+    "started_utc": "2026-11-05T14:36:12.176966+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:14.125199+00:00",
+    "duration_seconds": 1.9482776999939233
+  },
+  "target_sha256": "ee81c12bc8386e0ddd543826bd492f492141a4993e1d7ac75a0916b4637259b3",
+  "execution_outcome": "completed",
+  "validation": {
+    "argv": [
+      "bin/generalization/sbom-utility.exe",
+      "validate",
+      "-i",
+      "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json",
+      "--format",
+      "json",
+      "--error-value=false",
+      "--quiet",
+      "-o",
+      "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target-validation.json"
+    ],
+    "started_utc": "2026-11-05T14:36:14.133006+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:14.166149+00:00",
+    "duration_seconds": 0.03315379994455725
+  },
+  "evaluation": {
+    "argv": [
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.venv\\Scripts\\python.exe",
+      "-m",
+      "preservation_test.evaluator.evaluate",
+      "generalization/sources/gen-cyclonedx-9dcf635da297.cdx.json",
+      "generalization/results/gen-cyclonedx-9dcf635da297/cdx2spdx/target.spdx.json",
+      "--json",
+      "--commitment-file",
+      "contracts/commitments.toml",
+      "--commitment-id",
+      "purl_preservation_v1"
+    ],
+    "started_utc": "2026-11-05T14:36:14.166963+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:14.267802+00:00",
+    "duration_seconds": 0.10085119993891567
+  },
+  "ended_utc": "2026-11-05T14:36:14.280727+00:00"
+}

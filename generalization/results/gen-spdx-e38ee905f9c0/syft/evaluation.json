@@ -1,0 +1,31 @@
+{
+  "source_format": "spdx-2.3",
+  "target_format": "cyclonedx",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "SPDXRef-Package-hello-server-src",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:deb/debian/libselinux1-dev@3.1-3?arch=s390x",
+      "detail": "source component has no usable content-hash anchor"
+    },
+    {
+      "ref": "SPDXRef-Package-SPDXRef-Package-cargo-hyper-0.14",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:cargo/hyper@0.14",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "SPDXRef-Package-SPDXRef-Package-cargo-tokio-1",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:cargo/tokio@1.19.2",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "SPDXRef-Package-SPDXRef-Package-cargo-pretty-env-logger-0.4.0",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:cargo/pretty_env_logger@0.4.0",
+      "detail": "no target component shares a declared content-hash anchor"
+    }
+  ]
+}

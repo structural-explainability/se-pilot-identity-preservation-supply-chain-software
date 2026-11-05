@@ -1,0 +1,22 @@
+[stdout]
+{
+  "source_format": "spdx-2.3",
+  "target_format": "cyclonedx",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "SPDXRef-Package",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:github/spdx/tools-java@2235d5d7f7fe46ce1e0d54b7831c5681633b25cc",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "SPDXRef-xlsx",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:maven/org.webjars.npm/xlsx@0.16.6",
+      "detail": "no target component shares a declared content-hash anchor"
+    }
+  ]
+}
+
+[stderr]

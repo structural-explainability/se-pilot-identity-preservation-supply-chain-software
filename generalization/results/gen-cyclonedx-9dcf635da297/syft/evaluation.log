@@ -1,0 +1,28 @@
+[stdout]
+{
+  "source_format": "cyclonedx",
+  "target_format": "spdx-2.3",
+  "commitment": "purl_preservation_v1",
+  "results": [
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.10.0?type=jar",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.10.0?type=jar",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.10.0?type=jar",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.10.0?type=jar",
+      "detail": "no target component shares a declared content-hash anchor"
+    },
+    {
+      "ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.10.0?type=jar",
+      "verdict": "UNANCHORABLE",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.10.0?type=jar",
+      "detail": "no target component shares a declared content-hash anchor"
+    }
+  ]
+}
+
+[stderr]

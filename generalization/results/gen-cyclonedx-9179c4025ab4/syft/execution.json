@@ -1,0 +1,98 @@
+{
+  "route_id": "gen-cyclonedx-9179c4025ab4--syft",
+  "attempt": 1,
+  "status": "finished",
+  "started_utc": "2026-11-05T14:36:21.097645+00:00",
+  "source_sha256": "9179c4025ab445b794c41465daca70f1a70a04d241811e5644879a5e5c0fc767",
+  "converter": {
+    "id": "syft",
+    "name": "Anchore Syft",
+    "version": "1.52.0",
+    "artifact_path": "bin/generalization/syft.exe",
+    "artifact_sha256": "dc71719e9995813f44115f87d6753456685efb0d4cd691373be165b0bb6efa07",
+    "runtime": "native executable",
+    "documentation": "https://github.com/anchore/syft/tree/v1.52.0"
+  },
+  "cwd": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software",
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "evidence_paths": {
+    "target_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json",
+    "validation_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target-validation.json",
+    "evaluation_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/evaluation.json",
+    "log_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/transform.log",
+    "validation_log_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/validation.log",
+    "evaluation_log_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/evaluation.log",
+    "execution_path": "generalization/results/gen-cyclonedx-9179c4025ab4/syft/execution.json"
+  },
+  "validation_outcome": "valid",
+  "evaluation_outcome": "completed",
+  "transformation": {
+    "argv": [
+      "bin/generalization/syft.exe",
+      "convert",
+      "generalization/sources/gen-cyclonedx-9179c4025ab4.cdx.json",
+      "-o",
+      "spdx-json@2.3=generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json"
+    ],
+    "started_utc": "2026-11-05T14:36:21.098139+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:21.183570+00:00",
+    "duration_seconds": 0.08544430008623749
+  },
+  "target_sha256": "4f288e7cb95f902640c391f3466e2cd492a7838305b2f0ae4772c4982d626102",
+  "execution_outcome": "completed",
+  "validation": {
+    "argv": [
+      "bin/generalization/sbom-utility.exe",
+      "validate",
+      "-i",
+      "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json",
+      "--format",
+      "json",
+      "--error-value=false",
+      "--quiet",
+      "-o",
+      "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target-validation.json"
+    ],
+    "started_utc": "2026-11-05T14:36:21.186249+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:21.224750+00:00",
+    "duration_seconds": 0.038513700012117624
+  },
+  "evaluation": {
+    "argv": [
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.venv\\Scripts\\python.exe",
+      "-m",
+      "preservation_test.evaluator.evaluate",
+      "generalization/sources/gen-cyclonedx-9179c4025ab4.cdx.json",
+      "generalization/results/gen-cyclonedx-9179c4025ab4/syft/target.spdx.json",
+      "--json",
+      "--commitment-file",
+      "contracts/commitments.toml",
+      "--commitment-id",
+      "purl_preservation_v1"
+    ],
+    "started_utc": "2026-11-05T14:36:21.225671+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:21.338882+00:00",
+    "duration_seconds": 0.11322339996695518
+  },
+  "ended_utc": "2026-11-05T14:36:21.354428+00:00"
+}

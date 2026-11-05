@@ -1,0 +1,1555 @@
+{
+  "SPDXID" : "SPDXRef-DOCUMENT",
+  "spdxVersion" : "SPDX-2.3",
+  "creationInfo" : {
+    "comment" : "Converted from CycloneDX spec version 1.2",
+    "created" : "2020-08-03T01:28:52Z",
+    "creators" : [ "Tool: CycloneDX:Node.js module-2.0.0", "Tool: CycloneToSpdx-0.1.4" ],
+    "licenseListVersion" : "3.29.0"
+  },
+  "name" : "SBOM-for-lhc-vdm-editor",
+  "dataLicense" : "CC0-1.0",
+  "documentNamespace" : "https://cyclonedx/699b6458-60da-4f52-b1b3-34915dc01eb6_1",
+  "packages" : [ {
+    "SPDXID" : "SPDXRef-pkg-npm-puppeteer-1.19.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:42Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "d92e84eb2829a2a70409a6a00db068a6848e3c3bf4a4066f4db9c181463eea1ab4fd70c50ce2c430d94717f48a265cdc699f5c9222a3283bae79623714dfd65f"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "A high-level API to control headless Chrome over the DevTools Protocol",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/puppeteer@1.19.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/GoogleChrome/puppeteer.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/GoogleChrome/puppeteer/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/GoogleChrome/puppeteer#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "puppeteer",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.19.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-debug-4.1.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:42Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "a58008cde468f09e8a3c4689d1558e8793f391bc3f45eb6ecde84633b411457e617b87cf1f1dab74a301db9e9e8490a45fe5d1426d7a7992ea2cd4bc45265767"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "small debugging utility",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/visionmedia/debug.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/visionmedia/debug/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/debug@4.1.1",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/visionmedia/debug#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "debug",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "4.1.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-ms-2.1.2",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:42Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "d09d1f357b443f493382a8eb3ccd183872ae6009"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Tiny millisecond conversion utility",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/ms@2.1.2",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/zeit/ms.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/zeit/ms/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/zeit/ms#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "ms",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.1.2"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-extract-zip-1.6.7",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:42Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "a840b4b8af6403264c8db57f4f1a74333ef81fe9"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "unzip a zip file into a directory using 100% javascript",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/maxogden/extract-zip/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/extract-zip@1.6.7",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/maxogden/extract-zip.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/maxogden/extract-zip#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "BSD-2-Clause",
+    "name" : "extract-zip",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.6.7"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-concat-stream-1.6.2",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "dbb1c18212718e266d224dd872f9ffe246c993fd6e66e2457ee3c49ece8b684be9bc6d5fd214de6bc96296ba2eca8f6655cd8659d70467c38ba0699200396b0b"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "writable stream that concatenates strings or binary data and calls a callback with the result",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "http://github.com/maxogden/concat-stream/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/concat-stream@1.6.2",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+ssh://git@github.com/maxogden/concat-stream.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/maxogden/concat-stream#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "concat-stream",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.6.2"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-buffer-from-1.1.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "3107171146c22ad128edb86a12ceb9eb41f27785daa2f6653bf93d57786355417fcf05bb28155d48ae2022dfdbcf04bd31b479aa86fe1798eeb19b1bd1840ad8"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "A [ponyfill](https://ponyfill.com) for `Buffer.from`, uses native implementation if available.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/LinusU/buffer-from.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/LinusU/buffer-from/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/buffer-from@1.1.1",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/LinusU/buffer-from#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "buffer-from",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.1.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-inherits-2.0.4",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "0fa2c64f932917c3433a0ded55363aae37416b7c"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Browser-friendly inheritance fully compatible with standard node.js inherits()",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/inherits@2.0.4",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/isaacs/inherits.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/inherits/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/inherits#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "inherits",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.0.4"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-readable-stream-2.3.6",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "b50b4a03d588021045dfe54b02c7b232a65e0635b4007268c4eb58a92519349c5ab84ae62db566d855b5cbe27f600f5d52b002dfd2137a39595a1548c1ac242b"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Streams3, a user-land copy of the stream library from Node.js",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/nodejs/readable-stream.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/nodejs/readable-stream/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/readable-stream@2.3.6",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/nodejs/readable-stream#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "readable-stream",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.3.6"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-core-util-is-1.0.2",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "b5fd54220aa2bc5ab57aab7140c940754503c1a7"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "The `util.is*` functions introduced in Node v0.12.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/core-util-is@1.0.2",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/isaacs/core-util-is.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/core-util-is/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/core-util-is#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "core-util-is",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.2"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-isarray-1.0.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "bb935d48582cba168c06834957a54a3e07124f11"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Array#isArray for older browsers",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/juliangruber/isarray/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/juliangruber/isarray.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/isarray@1.0.0",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/juliangruber/isarray",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "isarray",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-process-nextick-args-2.0.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "de8b943a9421b60adb39ad7b27bfaec4e4e92136166863fbfc0868477f80fbfd5ef6c92bcde9468bf757cc4632bdbc6e6c417a5a7db2a6c7132a22891459f56a"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "process.nextTick but always with args",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/calvinmetcalf/process-nextick-args.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/calvinmetcalf/process-nextick-args/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/process-nextick-args@2.0.1",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/calvinmetcalf/process-nextick-args",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "process-nextick-args",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.0.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-safe-buffer-5.1.2",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "19dd94641243917958ec66c9c5fb04f3f9ef2a45045351b7f1cd6c88de903fa6bd3d3f4c98707c1a7a6c71298c252a05f0b388aedf2e77fc0fb688f2b381bafa"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Safer Node.js Buffer API",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/feross/safe-buffer/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/safe-buffer@5.1.2",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/feross/safe-buffer.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/feross/safe-buffer",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "safe-buffer",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "5.1.2"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-string-decoder-1.1.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "9ff4a19ef0e2e851db6d57ef8aba3e5a88e2173bfeb3c30f30705ccd578f7d4a4324bc282d3d21b759786300426e2f29240bde104767907c8fc933ff9b345fc2"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "The string_decoder module from Node core",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/nodejs/string_decoder/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/string_decoder@1.1.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/nodejs/string_decoder.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/nodejs/string_decoder",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "string_decoder",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.1.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-util-deprecate-1.0.2",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "450d4dc9fa70de732762fbd2d4a28981419a0ccf"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "The Node.js `util.deprecate()` function with browser support",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/TooTallNate/util-deprecate.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/TooTallNate/util-deprecate/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/util-deprecate@1.0.2",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/TooTallNate/util-deprecate",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "util-deprecate",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.2"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-typedarray-0.0.6",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "867ac74e3864187b1d3d47d996a78ec5c8830777"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "TypedArray polyfill for old browsers",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/typedarray@0.0.6",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/substack/typedarray.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/substack/typedarray/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/substack/typedarray",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "typedarray",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "0.0.6"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-debug-2.6.9",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "6c2ec496b7496899cf6c03fed44a2d62fa99b1bdde725e708ba05f8ba0494d470da30a7a72fb298348d7ce74532838e6fc4ec076014155e00f54c35c286b0730"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "small debugging utility",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/visionmedia/debug.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/visionmedia/debug/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/debug@2.6.9",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/visionmedia/debug#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "debug",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.6.9"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-ms-2.0.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "5608aeadfc00be6c2901df5f9861788de0d597c8"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Tiny milisecond conversion utility",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/zeit/ms/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/ms@2.0.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/zeit/ms.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/zeit/ms#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "ms",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-mkdirp-0.5.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "30057438eac6cf7f8c4767f38648d6697d75c903"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Recursively mkdir, like `mkdir -p`",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/substack/node-mkdirp/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/mkdirp@0.5.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/substack/node-mkdirp.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/substack/node-mkdirp#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "mkdirp",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "0.5.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-minimist-0.0.8",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "857fcabfc3397d2625b8228262e86aa7a011b05d"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "parse argument options",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/minimist@0.0.8",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/substack/minimist.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/substack/minimist/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/substack/minimist",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "minimist",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "0.0.8"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-yauzl-2.4.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "9528f442dab1b2284e58b4379bb194e22e0c4005"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "yet another unzip library for node",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/yauzl@2.4.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/thejoshwolfe/yauzl.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/thejoshwolfe/yauzl/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/thejoshwolfe/yauzl",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "yauzl",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.4.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-fd-slicer-1.0.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "8b5bcbd9ec327c5041bf9ab023fd6750f1177e65"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "safely create multiple ReadStream or WriteStream objects from the same file descriptor",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/fd-slicer@1.0.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/andrewrk/node-fd-slicer.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/andrewrk/node-fd-slicer/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/andrewrk/node-fd-slicer#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "fd-slicer",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-pend-1.2.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "7a57eb550a6783f9115331fcf4663d5c8e007a50"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "dead-simple optimistic async helper",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/pend@1.2.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/andrewrk/node-pend.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/andrewrk/node-pend/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/andrewrk/node-pend#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "pend",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.2.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-https-proxy-agent-2.2.4",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "3a6bdfa10e7758b8ed03d1de60ff5136b58c273cc0cf524669216bd678a38343d547525a0ffc5b26ad667442089711a95e9f5e49efced8b814f432664cf77412"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "An HTTP(s) proxy `http.Agent` implementation for HTTPS",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/TooTallNate/node-https-proxy-agent.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/TooTallNate/node-https-proxy-agent/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/https-proxy-agent@2.2.4",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/TooTallNate/node-https-proxy-agent#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "https-proxy-agent",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.2.4"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-agent-base-4.3.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "b1a95c1a78a75749cfaf0a46367e154d705bd523ae5d0062a9bacd5e87a2cc9b07aec2fa11114cd8d7b725448159113a69e34923644e3ff5841080d48837b772"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Turn a function into an `http.Agent` instance",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/agent-base@4.3.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/TooTallNate/node-agent-base.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/TooTallNate/node-agent-base/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/TooTallNate/node-agent-base#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "agent-base",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "4.3.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-es6-promisify-5.0.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "5109d62f3e56ea967c4b63505aef08291c8a5203"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Converts callback-based functions to ES6 Promises",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "http://github.com/digitaldesignlabs/es6-promisify/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/digitaldesignlabs/es6-promisify.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/es6-promisify@5.0.0",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/digitaldesignlabs/es6-promisify#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "es6-promisify",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "5.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-es6-promise-4.2.8",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "1c90c6c7975ac5e22fc5d071bc6d9c6fd838b44bf0224de2f3e9e15f4c86ad89995336e4760f106c37af85e0c1f20774fffb8f8f8735110b9af10f8c5624f4ff"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "A lightweight library that provides tools for organizing asynchronous code",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/stefanpenner/es6-promise.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/stefanpenner/es6-promise/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/es6-promise@4.2.8",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/stefanpenner/es6-promise",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "es6-promise",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "4.2.8"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-debug-3.2.6",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "e83d17de16d8a7efb7717edbe5fb10135eee629b"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "small debugging utility",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/debug@3.2.6",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/visionmedia/debug.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/visionmedia/debug/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/visionmedia/debug#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "debug",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "3.2.6"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-mime-2.4.4",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "2d1c66370ce22cf4fcdbccfee1890dce5a02142d98338c2b07df64f8057965b1327c63567c6f123b51545cb98b0c14a8f3d36b259e0321678b8f2d421c684c18"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "A comprehensive library for mime-type mapping",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/broofa/node-mime/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/mime@2.4.4",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/broofa/node-mime.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/broofa/node-mime#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "mime",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.4.4"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-progress-2.0.3",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "ecf887b4b965e4b767288330d74d08fbcc495d1e605b6430598913ea226f6b46d78ad64a6bf5ccad26dd9a0debd979da89dcfd42e99dd153da32b66517d57db0"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Flexible ascii progress bar",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/visionmedia/node-progress.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/visionmedia/node-progress/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/progress@2.0.3",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/visionmedia/node-progress#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "progress",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.0.3"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-proxy-from-env-1.0.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "33c50398f70ea7eb96d21f7b817630a55791c7ee"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Offers getProxyForUrl to get the proxy URL for a URL, respecting the *_PROXY (e.g. HTTP_PROXY) and NO_PROXY environment variables.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/Rob--W/proxy-from-env.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/Rob--W/proxy-from-env/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/proxy-from-env@1.0.0",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/Rob--W/proxy-from-env#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "proxy-from-env",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-rimraf-2.7.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "b968db68a20add3d4e495a6dcd7ecd97a3ef437a801ad284b5546346e6b38df2f7071e5e238d3d5594aa80d0fee143679b32d574f8fd16a14934fa81645bdee3"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "A deep deletion module for node (like `rm -rf`)",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/rimraf/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/rimraf@2.7.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/isaacs/rimraf.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/rimraf#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "rimraf",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.7.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-glob-7.1.4",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "a little globber",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/glob@7.1.4",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/isaacs/node-glob.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/node-glob/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/node-glob#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "glob",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "7.1.4"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-fs.realpath-1.0.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "1504ad2523158caa40db4a2787cb01411994ea4f"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Use node's fs.realpath, but fall back to the JS implementation if the native one fails",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/fs.realpath/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/fs.realpath@1.0.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/isaacs/fs.realpath.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/fs.realpath#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "fs.realpath",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-inflight-1.0.6",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "49bd6331d7d02d0c09bc910a1075ba8165b56df9"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Add callbacks to requests in flight to avoid async duplication",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/npm/inflight.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/inflight/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/inflight@1.0.6",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/inflight",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "inflight",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.6"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-once-1.4.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "583b1aa775961d4b113ac17d9c50baef9dd76bd1"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Run a function exactly one time",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/once@1.4.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/isaacs/once.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/once/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/once#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "once",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.4.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-wrappy-1.0.2",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Callback wrapping utility",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/npm/wrappy/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/wrappy@1.0.2",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/npm/wrappy.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/npm/wrappy",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "wrappy",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.2"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-minimatch-3.0.4",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "5166e286457f03306064be5497e8dbb0c3d32083"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "a glob matcher in javascript",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/isaacs/minimatch.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/isaacs/minimatch/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/minimatch@3.0.4",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/isaacs/minimatch#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "ISC",
+    "name" : "minimatch",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "3.0.4"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-brace-expansion-1.1.11",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Brace expansion as known from sh/bash",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/juliangruber/brace-expansion.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/juliangruber/brace-expansion/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/brace-expansion@1.1.11",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/juliangruber/brace-expansion",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "brace-expansion",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.1.11"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-balanced-match-1.0.0",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "89b4d199ab2bee49de164ea02b89ce462d71b767"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Match balanced character pairs, like \"{\" and \"}\"",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/juliangruber/balanced-match/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/balanced-match@1.0.0",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/juliangruber/balanced-match.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/juliangruber/balanced-match",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "balanced-match",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.0"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-concat-map-0.0.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "d8a96bd77fd68df7793a73036a3ba0d5405d477b"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "concatenative mapdashery",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/substack/node-concat-map/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/concat-map@0.0.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git://github.com/substack/node-concat-map.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/substack/node-concat-map#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "concat-map",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "0.0.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-path-is-absolute-1.0.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA1",
+      "checksumValue" : "174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Node.js 0.12 path.isAbsolute() ponyfill",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/path-is-absolute@1.0.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/sindresorhus/path-is-absolute.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/sindresorhus/path-is-absolute/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/sindresorhus/path-is-absolute#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "path-is-absolute",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-ws-6.2.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "188c805c2d9c07b2e3be980cb7d10a4b695daabd0c4eb3916a57a23a7a3a4f0799eabdd32ada054166b2ff63dc789dd1b816ac387cd7367e4baf0d57d1b123a8"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/websockets/ws/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/ws@6.2.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/websockets/ws.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/websockets/ws",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "ws",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "6.2.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-async-limiter-1.0.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "checksums" : [ {
+      "algorithm" : "SHA512",
+      "checksumValue" : "72c3a558601c44525a23a9be17658a76730aaf81e1761155064d07fd06c914c0abfae3b6930a21c1740fc70ffd382c69d39af9821541152ca2a22c71de07e435"
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "asynchronous function queue with adjustable concurrency",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/async-limiter@1.0.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/strml/async-limiter.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    }, {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/strml/async-limiter/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/strml/async-limiter#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "MIT",
+    "name" : "async-limiter",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "1.0.1"
+  }, {
+    "SPDXID" : "SPDXRef-pkg-npm-lhc-vdm-editor-0.0.1",
+    "annotations" : [ {
+      "annotationDate" : "2026-11-05T14:36:43Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "description" : "A code and file editor for VdM scans.",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "OTHER",
+      "referenceLocator" : "https://github.com/CERN/lhc-vdm-editor/issues",
+      "referenceType" : "http://cyclonedx.org/referenctype/issue-tracker"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:npm/lhc-vdm-editor@0.0.1",
+      "referenceType" : "purl"
+    }, {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "git+https://github.com/CERN/lhc-vdm-editor.git",
+      "referenceType" : "http://cyclonedx.org/referenctype/other-package-manager"
+    } ],
+    "filesAnalyzed" : false,
+    "homepage" : "https://github.com/CERN/lhc-vdm-editor#readme",
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "Apache-2.0",
+    "name" : "lhc-vdm-editor",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "0.0.1"
+  } ],
+  "relationships" : [ {
+    "spdxElementId" : "SPDXRef-DOCUMENT",
+    "relationshipType" : "DESCRIBES",
+    "relatedSpdxElement" : "SPDXRef-pkg-npm-lhc-vdm-editor-0.0.1"
+  } ]
+}

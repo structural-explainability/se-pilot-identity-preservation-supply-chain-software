@@ -1,0 +1,98 @@
+{
+  "route_id": "gen-spdx-e38ee905f9c0--syft",
+  "attempt": 1,
+  "status": "finished",
+  "started_utc": "2026-11-05T14:36:58.736263+00:00",
+  "source_sha256": "e38ee905f9c006755e4facc4691af57d4e637a7ef97c3468887c94e0c0f46060",
+  "converter": {
+    "id": "syft",
+    "name": "Anchore Syft",
+    "version": "1.52.0",
+    "artifact_path": "bin/generalization/syft.exe",
+    "artifact_sha256": "dc71719e9995813f44115f87d6753456685efb0d4cd691373be165b0bb6efa07",
+    "runtime": "native executable",
+    "documentation": "https://github.com/anchore/syft/tree/v1.52.0"
+  },
+  "cwd": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software",
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "evidence_paths": {
+    "target_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json",
+    "validation_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/target-validation.json",
+    "evaluation_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/evaluation.json",
+    "log_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/transform.log",
+    "validation_log_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/validation.log",
+    "evaluation_log_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/evaluation.log",
+    "execution_path": "generalization/results/gen-spdx-e38ee905f9c0/syft/execution.json"
+  },
+  "validation_outcome": "valid",
+  "evaluation_outcome": "completed",
+  "transformation": {
+    "argv": [
+      "bin/generalization/syft.exe",
+      "convert",
+      "generalization/sources/gen-spdx-e38ee905f9c0.spdx.json",
+      "-o",
+      "cyclonedx-json@1.6=generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json"
+    ],
+    "started_utc": "2026-11-05T14:36:58.736732+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:58.808851+00:00",
+    "duration_seconds": 0.07213079999201
+  },
+  "target_sha256": "5d50e980c691b4150eef306d16b9aeb17f6e50c5f25f2a3ebddc4340569ec2ae",
+  "execution_outcome": "completed",
+  "validation": {
+    "argv": [
+      "bin/generalization/sbom-utility.exe",
+      "validate",
+      "-i",
+      "generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json",
+      "--format",
+      "json",
+      "--error-value=false",
+      "--quiet",
+      "-o",
+      "generalization/results/gen-spdx-e38ee905f9c0/syft/target-validation.json"
+    ],
+    "started_utc": "2026-11-05T14:36:58.810364+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:58.847691+00:00",
+    "duration_seconds": 0.03733900003135204
+  },
+  "evaluation": {
+    "argv": [
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.venv\\Scripts\\python.exe",
+      "-m",
+      "preservation_test.evaluator.evaluate",
+      "generalization/sources/gen-spdx-e38ee905f9c0.spdx.json",
+      "generalization/results/gen-spdx-e38ee905f9c0/syft/target.cdx.json",
+      "--json",
+      "--commitment-file",
+      "contracts/commitments.toml",
+      "--commitment-id",
+      "purl_preservation_v1"
+    ],
+    "started_utc": "2026-11-05T14:36:58.848662+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:36:58.952613+00:00",
+    "duration_seconds": 0.10396039998158813
+  },
+  "ended_utc": "2026-11-05T14:36:58.957700+00:00"
+}

@@ -1,0 +1,60 @@
+{
+  "route_id": "gen-spdx-e38ee905f9c0--protobom",
+  "attempt": 1,
+  "status": "finished",
+  "started_utc": "2026-11-05T14:37:00.094114+00:00",
+  "source_sha256": "e38ee905f9c006755e4facc4691af57d4e637a7ef97c3468887c94e0c0f46060",
+  "converter": {
+    "id": "protobom",
+    "name": "Protobom sbom-convert",
+    "version": "0.0.8",
+    "artifact_path": "bin/generalization/sbom-convert.exe",
+    "artifact_sha256": "8e1afc0ef0e128be8f4514c60e3d9119263c0584f1ac149a4e3719b5009556c2",
+    "runtime": "native executable",
+    "documentation": "https://github.com/protobom/sbom-convert/tree/v0.0.8"
+  },
+  "cwd": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software",
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "evidence_paths": {
+    "target_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/target.cdx.json",
+    "validation_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/target-validation.json",
+    "evaluation_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/evaluation.json",
+    "log_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/transform.log",
+    "validation_log_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/validation.log",
+    "evaluation_log_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/evaluation.log",
+    "execution_path": "generalization/results/gen-spdx-e38ee905f9c0/protobom/execution.json"
+  },
+  "validation_outcome": "not_attempted",
+  "evaluation_outcome": "not_attempted",
+  "transformation": {
+    "argv": [
+      "bin/generalization/sbom-convert.exe",
+      "convert",
+      "generalization/sources/gen-spdx-e38ee905f9c0.spdx.json",
+      "-f",
+      "cyclonedx-1.4",
+      "-o",
+      "generalization/results/gen-spdx-e38ee905f9c0/protobom/target.cdx.json"
+    ],
+    "started_utc": "2026-11-05T14:37:00.094907+00:00",
+    "exit_code": 1,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T14:37:00.126089+00:00",
+    "duration_seconds": 0.031196400057524443
+  },
+  "target_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "execution_outcome": "execution_failure",
+  "ended_utc": "2026-11-05T14:37:00.128059+00:00"
+}
