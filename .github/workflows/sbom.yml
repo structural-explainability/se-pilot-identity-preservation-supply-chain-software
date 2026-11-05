@@ -67,7 +67,7 @@ jobs:
       # ============================================================
 
       - name: B1) Generate SPDX JSON SBOM
-        uses: step-security/sbom-action@441a6c842e49122eed5d694f983ce4acae259c99 # v0.24.0
+        uses: step-security/sbom-action@28bb7d0d2869c9ab0e5571c93591747945819d39 # v0.24.2
         with:
           path: .
           format: spdx-json
@@ -79,7 +79,7 @@ jobs:
         # inventory to GitHub's Dependency Graph.
 
       - name: B2) Generate CycloneDX JSON SBOM
-        uses: step-security/sbom-action@441a6c842e49122eed5d694f983ce4acae259c99 # v0.24.0
+        uses: step-security/sbom-action@28bb7d0d2869c9ab0e5571c93591747945819d39 # v0.24.2
         with:
           path: .
           format: cyclonedx-json
