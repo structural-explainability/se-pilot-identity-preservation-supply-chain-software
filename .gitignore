@@ -1,7 +1,7 @@
 # ============================================================
 # .gitignore (CUSTOM-SE-PILOT)
 # ============================================================
-# Updated: 2026-10-05
+# Updated: 2026-11-05
 
 # === CUSTOM: Additional ignores ===
 
@@ -316,3 +316,8 @@ coverage/
 # NOTE: Remove this rule when pup-up directly reconciles the managed Ruff
 # configuration in pyproject.toml and no longer creates this fragment.
 /pyproject.toml.ruff
+
+# === ADDITIONAL CUSTOM RULES ===
+
+# Retain executor smoke logs as research evidence.
+!validation/executor-smoke/results/**/*.log
