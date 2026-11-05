@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 import preservation_test.generalization.verification.verify_04_transformations as verify_module
+import preservation_test.generalization.verification.verify_04_transformations_utils as verify_utils
 
 
 def _make_java_route_planned(transformations_path: Path) -> None:
@@ -136,6 +137,10 @@ def _write_transformations(
             "matrix_rows = 2",
             "planned_routes = 1",
             "unsupported_routes = 1",
+            'results_directory = "generalization/results"',
+            'run_manifest_path = "generalization/results/run.json"',
+            "timeout_seconds = 300",
+            'retry_directory_pattern = "retry-{n}"',
             'execution_state = "not_started"',
             "transformation_outputs_examined = false",
             "",
@@ -169,6 +174,13 @@ def _write_transformations(
             "",
             "[[route]]",
             'route_id = "source-a--native"',
+            'target_path = "generalization/results/native/target.json"',
+            'validation_path = "generalization/results/native/validation.json"',
+            'evaluation_path = "generalization/results/native/evaluation.json"',
+            'log_path = "generalization/results/native/transform.log"',
+            'validation_log_path = "generalization/results/native/validation.log"',
+            'evaluation_log_path = "generalization/results/native/evaluation.log"',
+            'execution_path = "generalization/results/native/execution.json"',
             'study_id = "source-a"',
             'converter_id = "native"',
             f'source_path = "{source_path}"',
@@ -180,6 +192,13 @@ def _write_transformations(
             "",
             "[[route]]",
             'route_id = "source-a--java-converter"',
+            'target_path = "generalization/results/java/target.json"',
+            'validation_path = "generalization/results/java/validation.json"',
+            'evaluation_path = "generalization/results/java/evaluation.json"',
+            'log_path = "generalization/results/java/transform.log"',
+            'validation_log_path = "generalization/results/java/validation.log"',
+            'evaluation_log_path = "generalization/results/java/evaluation.log"',
+            'execution_path = "generalization/results/java/execution.json"',
             'study_id = "source-a"',
             'converter_id = "java-converter"',
             f'source_path = "{source_path}"',
@@ -261,7 +280,7 @@ def _prepare_valid_repository(
     )
 
     monkeypatch.setattr(
-        verify_module,
+        verify_utils,
         "verify_03_sources",
         lambda repository_root: sources_path,
     )
@@ -301,16 +320,16 @@ def test_verify_04_transformations_propagates_sources_failure(
     """Failure of stage 03 blocks transformation verification."""
 
     def fail_sources(repository_root: Path) -> Path:
-        raise verify_module.SourcesVerificationError("source verification failed")
+        raise verify_utils.SourcesVerificationError("source verification failed")
 
     monkeypatch.setattr(
-        verify_module,
+        verify_utils,
         "verify_03_sources",
         fail_sources,
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="source verification failed",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -330,7 +349,7 @@ def test_verify_04_transformations_rejects_missing_plan(
     assert artifacts["sources"].is_file()
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="transformation matrix not found",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -350,7 +369,7 @@ def test_verify_04_transformations_rejects_changed_sources_record(
         handle.write("\n# changed\n")
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="sources record hash mismatch",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -370,7 +389,7 @@ def test_verify_04_transformations_rejects_changed_corpus_record(
         handle.write("\n# changed\n")
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="corpus record hash mismatch",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -389,7 +408,7 @@ def test_verify_04_transformations_rejects_converter_hash_mismatch(
     artifacts["native"].write_bytes(b"tampered-native-converter\n")
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="converter native hash mismatch",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -408,7 +427,7 @@ def test_verify_04_transformations_rejects_runtime_hash_mismatch(
     artifacts["java"].write_bytes(b"tampered-java-runtime\n")
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="converter java-converter runtime hash mismatch",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -434,7 +453,7 @@ def test_verify_04_transformations_requires_complete_runtime_identity(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="runtime path, version, and SHA-256 must be recorded together",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -453,7 +472,7 @@ def test_verify_04_transformations_rejects_validator_hash_mismatch(
     artifacts["validator"].write_bytes(b"tampered-validator\n")
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="target validator hash mismatch",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -476,7 +495,7 @@ def test_verify_04_transformations_rejects_route_source_mismatch(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="source path/hash does not match 04-sources.toml",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -499,7 +518,7 @@ def test_verify_04_transformations_rejects_incorrect_route_id(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="does not equal expected route id",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -525,7 +544,7 @@ def test_verify_04_transformations_rejects_incomplete_cross_product(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="transformation matrix is not the complete cross-product",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -548,7 +567,7 @@ def test_verify_04_transformations_requires_planned_command(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="is planned but has no command_argv",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -571,7 +590,7 @@ def test_verify_04_transformations_requires_planned_validation_command(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="is planned but has no validation_command_argv",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -597,7 +616,7 @@ def test_verify_04_transformations_rejects_command_on_unsupported_route(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="is unsupported but has command_argv",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -620,7 +639,7 @@ def test_verify_04_transformations_requires_unsupported_reason(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="unsupported_reason must be a non-empty string",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -643,7 +662,7 @@ def test_verify_04_transformations_rejects_planned_count_mismatch(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match=r"\[transformations\]\.planned_routes",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -666,7 +685,7 @@ def test_verify_04_transformations_requires_not_started_state(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="execution_state must be 'not_started'",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -689,7 +708,7 @@ def test_verify_04_transformations_requires_outputs_unexamined(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="transformation_outputs_examined must be false",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -712,7 +731,7 @@ def test_verify_04_transformations_rejects_wrong_native_converter_command(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="does not invoke the recorded converter artifact",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -742,7 +761,7 @@ def test_verify_04_transformations_rejects_wrong_runtime_command(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="does not invoke the recorded converter runtime",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -772,7 +791,7 @@ def test_verify_04_transformations_requires_runtime_converter_artifact(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="does not reference the recorded converter artifact",
     ):
         verify_module.verify_04_transformations(tmp_path)
@@ -795,7 +814,7 @@ def test_verify_04_transformations_rejects_wrong_validator_command(
     )
 
     with pytest.raises(
-        verify_module.TransformationsVerificationError,
+        verify_utils.TransformationsVerificationError,
         match="does not invoke the recorded target validator",
     ):
         verify_module.verify_04_transformations(tmp_path)

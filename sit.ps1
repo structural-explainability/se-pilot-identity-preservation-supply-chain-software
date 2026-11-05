@@ -19,6 +19,10 @@ Run with:
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+# CUSTOM: Check native command exit codes explicitly.
+# WHY: Required checks must stop on failure; uv audit remains advisory.
+$PSNativeCommandUseErrorActionPreference = $false
+
 # ============================================================
 # Verify and synchronize the locked Python environment.
 #
@@ -26,14 +30,26 @@ $ErrorActionPreference = "Stop"
 # ============================================================
 
 uv lock --check
+if ($LASTEXITCODE -ne 0) {
+    throw "Dependency lockfile verification failed."
+}
+
 uv sync --locked
+if ($LASTEXITCODE -ne 0) {
+    throw "Locked environment synchronization failed."
+}
 
 # ============================================================
 # Update and run repository hooks.
 # ============================================================
 
 uv run --locked prek install -f
-uv run --locked prek update --freeze --cooldown-days 7
+if ($LASTEXITCODE -ne 0) {
+    throw "Repository hook installation failed."
+}
+
+# DO NOT RUN THIS:
+# uv run --locked prek update --freeze --cooldown-days 7
 
 # ============================================================
 # Audit/fix GitHub configuration when GitHub CLI is available.
@@ -44,6 +60,9 @@ if (Get-Command gh -ErrorAction SilentlyContinue) {
 
     if ($LASTEXITCODE -eq 0) {
         uv run --locked zizmor --gh-token (gh auth token) --fix=all .github/
+        if ($LASTEXITCODE -ne 0) {
+            throw "GitHub configuration audit failed."
+        }
     }
 }
 
@@ -52,25 +71,59 @@ if (Get-Command gh -ErrorAction SilentlyContinue) {
 # ============================================================
 
 git add -A
+if ($LASTEXITCODE -ne 0) {
+    throw "Staging repository changes failed."
+}
 
 # ============================================================
 # Run repository checks.
 # ============================================================
 
 uv run --locked prek run --all-files
+if ($LASTEXITCODE -ne 0) {
+    throw "Repository hooks failed or modified files. Review changes, stage them, and rerun SIT."
+}
+
 # Repeat because the first pass may modify files.
+# CUSTOM: A failing first pass now stops SIT for review.
 uv run --locked prek run --all-files
+if ($LASTEXITCODE -ne 0) {
+    throw "Second repository hook pass failed or modified files. Review changes, stage them, and rerun SIT."
+}
 
 # ============================================================
 # Run common chores.
 # Ruff also formats Python code embedded in supported Markdown.
 # ============================================================
 
-uv run --locked ruff format .
-uv run --locked ruff check . --fix
+# DO NOT RUN WITH FIX FLAGS
+# uv run --locked ruff format .
+# uv run --locked ruff check . --fix
+
+uv run --locked ruff format --check .
+if ($LASTEXITCODE -ne 0) {
+    throw "Ruff formatting check failed."
+}
+
+uv run --locked ruff check .
+if ($LASTEXITCODE -ne 0) {
+    throw "Ruff lint check failed."
+}
+
 uv run --locked ty check
+if ($LASTEXITCODE -ne 0) {
+    throw "Python type checking failed."
+}
+
 uv run --locked python -m pytest
+if ($LASTEXITCODE -ne 0) {
+    throw "Python tests failed."
+}
+
 uv run --locked python -m zensical build
+if ($LASTEXITCODE -ne 0) {
+    throw "Documentation build failed."
+}
 
 # ============================================================
 # Audit locked dependencies.
@@ -78,7 +131,24 @@ uv run --locked python -m zensical build
 # ============================================================
 
 uv audit --frozen
+if ($LASTEXITCODE -ne 0) {
+    Write-Warning "Dependency audit returned exit code $LASTEXITCODE. Review its output; this audit is advisory."
+}
+
+# ============================================================
+# Verify the pre FREEZE 02 apparatus.
+# ============================================================
+
+uv run --frozen python -m preservation_test.generalization.smoke_generalization --verify
+if ($LASTEXITCODE -ne 0) {
+    throw "Pre-Freeze-02 smoke evidence verification failed."
+}
+
+uv run --frozen python -m preservation_test.generalization.verification.verify_05_freeze_02
+if ($LASTEXITCODE -ne 0) {
+    throw "Freeze 02 prerequisite verification failed."
+}
 
 Write-Host ""
-Write-Host "All commands executed successfully. Review any warnings above."
+Write-Host "All required checks passed. Review any warnings above."
 Write-Host "The dependency lockfile was verified and was not updated."
