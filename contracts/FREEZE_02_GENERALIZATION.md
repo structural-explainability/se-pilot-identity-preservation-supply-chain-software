@@ -153,7 +153,9 @@ in the declared command arguments resolve from the same location.
 
 Each converter runs with an environment built from an explicit allowlist.
 The allowlist holds
-`SystemRoot`, `WINDIR`, `TEMP`, `TMP`, `USERPROFILE`, `APPDATA`, `LOCALAPPDATA`,
+`SystemRoot`, `WINDIR`, `TEMP`, `TMP`, `TMPDIR`, `HOME`,
+`USERPROFILE`, `APPDATA`, `LOCALAPPDATA`,
+`XDG_CONFIG_HOME`, and `XDG_CONFIG_DIRS`,
 a minimal `PATH`, `SYFT_CHECK_FOR_APP_UPDATE=false`, and
 a `JAVA_HOME` pinned to the repository-local JDK.
 Undeclared `SYFT_*` variables, Java options, Python options,
@@ -193,8 +195,10 @@ No attempt is silently replaced or selected for a better outcome.
 
 ## Evidence Layout
 
-Every evidence path is predeclared in `05-transformations.toml`.
-The executor does not choose evidence locations.
+Every route evidence path and the run manifest path are predeclared
+in `05-transformations.toml`.
+The executor writes the effective Syft configuration log to
+`syft-config.log` within the declared `results_directory`.
 
 Each planned route declares paths for the target document,
 the validation result, the evaluator result, the converter log,

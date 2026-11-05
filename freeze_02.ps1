@@ -20,12 +20,12 @@ $PSNativeCommandUseErrorActionPreference = $true
 
 Push-Location $PSScriptRoot
 
-$Status = git status --porcelain --untracked-files=all
-if ($Status) {
-    throw "Working tree is not clean. Commit the final pre-freeze state first."
-}
-
 try {
+    $Status = git status --porcelain --untracked-files=all
+    if ($Status) {
+        throw "Working tree is not clean. Commit the final pre-freeze state first."
+    }
+
     uv run --frozen python -m preservation_test.generalization.freeze_02 --establish
 
     if ($LASTEXITCODE -ne 0) {
