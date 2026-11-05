@@ -321,3 +321,9 @@ coverage/
 
 # Retain executor smoke logs as research evidence.
 !validation/executor-smoke/results/**/*.log
+
+# === LOCAL PAPER DRAFTS ===
+# WHY: Local paper drafts are not part of the source code and should not be tracked.
+
+/2027_chainsec_purl_preservation_proposal.tex
+/2027_chainsec_purl_preservation_proposal.pdf
