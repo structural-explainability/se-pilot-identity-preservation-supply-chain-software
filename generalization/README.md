@@ -338,11 +338,33 @@ The `results/` directory is reserved for generated targets,
 evaluator outputs, logs, and other experimental evidence produced only
 after the generalization preparation has been frozen and execution begins.
 
-## Preparation
+## Execution Workflow
 
-Run the smoke test from the local repository root:
+Run commands from the local repository root in PowerShell.
+Run each stage only after the preceding stage succeeds.
 
-```shell
+The software release, research freeze, formal execution, and preservation of
+results are separate events.
+
+A software tag such as `v0.4.0` identifies a released software state.
+It does not establish Freeze 02.
+
+## 1. Prepare and Validate the Engineering Smoke Test
+
+This stage uses previously examined engineering-validation sources.
+It does not execute held-out generalization transformations.
+
+The repository-local converter artifacts must match the paths and hashes
+recorded in `generalization/05-transformations.toml`.
+
+Restore the complete repository-local Java distribution, including its
+libraries, modules, and release metadata.
+The freeze inventory covers every file in that runtime directory.
+
+Before recording evidence, confirm that Git attributes preserve its exact
+bytes and that formatting hooks exclude preserved evidence.
+
+```powershell
 uv sync --locked
 
 uv run --frozen python -m preservation_test.generalization.smoke_generalization --refresh-plan
@@ -354,15 +376,250 @@ uv run --frozen python -m preservation_test.generalization.smoke_generalization 
 uv run --frozen python -m preservation_test.generalization.smoke_generalization --verify
 ```
 
-## Pre-Run Commit
+The smoke plan and evidence are retained under:
 
-```shell
+```text
+validation/executor-smoke/
+```
+
+The first three smoke commands are preparation and execution operations.
+They are not routine verification commands to repeat after successful
+preparation.
+
+Once smoke evidence exists, verify it with `--verify`.
+Do not delete or overwrite an existing smoke attempt to obtain another result.
+
+If the apparatus needs correction, preserve the original smoke plan and
+evidence separately before preparing another engineering attempt.
+
+The formal timeout must allow at least four times the longest observed
+smoke-step duration plus 30 seconds, with a 60-second minimum.
+The smoke verifier checks this margin.
+
+## 2. Validate and Commit the Final Pre-Freeze State
+
+Review `generalization/PREDICTIONS.md` before the first held-out execution.
+
+The prediction record contains baseline predictions and hypotheses for a
+later IdentityOps comparison.
+The later comparison requires its own completed specification and freeze.
+
+After smoke preparation is complete, use the repository's pre-freeze SIT
+workflow:
+
+```powershell
+.\sit.ps1
+```
+
+SIT must complete successfully, including its smoke-evidence and Freeze 02
+prerequisite checks.
+
+These verification commands may also be run directly:
+
+```powershell
+uv run --frozen python -m preservation_test.generalization.smoke_generalization --verify
+
 uv run --frozen python -m preservation_test.generalization.verification.verify_05_freeze_02
+```
+
+Review and commit the complete pre-freeze state, including the predictions,
+refreshed transformation plan, implementation, and smoke evidence:
+
+```powershell
+git status
+git diff
 
 git add -A
-git commit -m "Prepare Freeze 02 apparatus, predictions, and Windows smoke evidence"
+git diff --cached --stat
 
+git commit -m "Prepare final SBOM Freeze 02 state"
+git push origin main
+```
+
+Confirm that the working tree is clean:
+
+```powershell
+git status --short
+```
+
+That command must produce no output before freeze creation.
+
+A release may be tagged using the repository's normal release procedure.
+Do not move an existing published release tag to include later commits.
+
+After successful smoke preparation, do not rerun `run.ps1` or regenerate
+the sampling, corpus, preserved sources, or transformation plan merely
+to verify their integrity.
+
+Dependency upgrades are separate maintenance operations.
+Do not run `uv lock --upgrade` during this workflow.
+
+## 3. Establish Freeze 02
+
+Create the freeze from the clean, committed pre-freeze state:
+
+```powershell
 .\freeze_02.ps1
+```
 
+This command verifies prerequisites and smoke evidence, then records:
+
+- frozen status and UTC timestamp;
+- the pre-freeze Git commit;
+- the exact required artifact inventory; and
+- SHA-256 digests, including every file in the Java runtime.
+
+It does not run held-out transformations.
+
+Review the generated freeze record:
+
+```powershell
 git diff -- contracts/FREEZE_02_GENERALIZATION.md
 ```
+
+Commit and push the freeze record separately:
+
+```powershell
+git add contracts/FREEZE_02_GENERALIZATION.md
+git commit -m "Establish SBOM Freeze 02"
+git push origin main
+```
+
+Verify the established freeze:
+
+```powershell
+uv run --frozen python -m preservation_test.generalization.verification.verify_06_freeze_02
+```
+
+Freeze 02 is now the applicable experimental boundary.
+Do not edit its covered artifacts or regenerate its inputs.
+
+The freeze record is not included in its own hash inventory.
+Its committed contents identify the record, and the executor captures its
+SHA-256 digest in the formal run manifest.
+
+## 4. Execute the Held-Out Generalization Experiment
+
+Only after Freeze 02 has been reviewed, committed, and verified, run:
+
+```powershell
+uv run --frozen python -m preservation_test.generalization.execute_generalization
+```
+
+This command starts the formal experiment on the declared Windows x64
+platform using the frozen plan and apparatus.
+
+Only routes declared `planned` are attempted.
+Routes declared `unsupported_pre_execution` remain in the matrix and are
+not classified as execution failures.
+
+Formal evidence is written under:
+
+```text
+generalization/results/
+```
+
+The retained evidence includes:
+
+- the run manifest and effective Syft configuration log;
+- generated target documents;
+- converter stdout and stderr;
+- target-validation results and logs;
+- evaluator output and logs; and
+- per-route execution records.
+
+Execution, target validation, and preservation evaluation have separate
+outcomes.
+An invalid target is retained, and evaluation proceeds when the frozen
+evaluator can process it.
+
+The executor refuses populated results directories.
+It does not automatically retry, resume, or overwrite a formal attempt.
+
+## 5. Preserve Post-Run Evidence
+
+Preserve the first formal attempt before editing reports or beginning
+a later comparison.
+
+Recheck the frozen apparatus:
+
+```powershell
+uv run --frozen python -m preservation_test.generalization.verification.verify_06_freeze_02
+```
+
+This verifier accepts populated results directories.
+It checks the apparatus and its inventory; it does not certify that every
+route completed successfully.
+
+Inspect the run manifest and working-tree status:
+
+```powershell
+Get-Content generalization/results/run.json
+git status --short
+```
+
+Stage the entire formal results directory.
+The explicit force-add is limited to experimental evidence so globally
+ignored log files are retained too.
+
+```powershell
+git add -f -- generalization/results/
+git diff --cached --stat
+
+git commit -m "Record SBOM Freeze 02 generalization results"
+git push origin main
+```
+
+If execution was interrupted, preserve the partial evidence with an
+accurate commit message instead:
+
+```powershell
+git add -f -- generalization/results/
+git diff --cached --stat
+
+git commit -m "Preserve interrupted SBOM Freeze 02 execution evidence"
+git push origin main
+```
+
+Use the commit appropriate to the observed execution state.
+A finished executor run may still contain individual route failures;
+report those outcomes explicitly.
+
+Do not delete partial results or rerun the executor over them.
+Retain the original attempt and document any proposed recovery procedure
+under the applicable freeze-break process.
+
+## 6. Interpret and Report Results
+
+After preserving the raw execution evidence:
+
+- report every declared route and its execution status;
+- distinguish target validity from preservation verdicts;
+- adjudicate candidate violations using the frozen criteria;
+- distinguish rediscovered shapes from new confirmed findings;
+- retain refusal, underdetermined, unanchorable, and not-applicable outcomes;
+- assess the pre-execution predictions; and
+- record limitations and disagreements.
+
+Commit interpretation and reporting separately from the raw run evidence.
+
+The pre-freeze SIT workflow includes gates that require formal execution
+not to have started.
+After execution begins, use the post-freeze verifier for apparatus integrity
+rather than treating those pre-freeze gates as post-run checks.
+
+## 7. Later IdentityOps Comparison
+
+Preserve the baseline experiment before applying IdentityOps to its outputs.
+
+Before running the language comparison, separately freeze its:
+
+- implementation and adapter;
+- retained baseline inputs;
+- identity criteria and probes;
+- normalization and outcome mapping;
+- predictions; and
+- both missing-value policies.
+
+Report the DISTINCT and SHARED policy results separately.
+The baseline predictions do not substitute for that comparison freeze.
