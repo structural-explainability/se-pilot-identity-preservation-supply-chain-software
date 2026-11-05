@@ -1,0 +1,89 @@
+{
+  "mode": "engineering",
+  "status": "finished",
+  "started_utc": "2026-11-05T11:34:32.204255+00:00",
+  "plan_sha256": "b9d1e0a5be9d87687cde396e9ef3f6a67fe9bd85540593bc3c0b6fe21556c024",
+  "freeze_02_sha256": null,
+  "python": "3.14.7",
+  "interpreter": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "system": "Windows",
+  "architecture": "AMD64",
+  "syft_config_check": {
+    "checked": [
+      "C:\\Users\\edaci\\.syft.*",
+      "C:\\Users\\edaci\\.syft\\config.*",
+      "C:\\Users\\edaci\\syft\\config.*",
+      "C:\\Users\\edaci\\.config\\.syft.*",
+      "C:\\Users\\edaci\\.config\\.syft\\config.*",
+      "C:\\Users\\edaci\\.config\\syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Local\\.syft.*",
+      "C:\\Users\\edaci\\AppData\\Local\\.syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Local\\syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Roaming\\.syft.*",
+      "C:\\Users\\edaci\\AppData\\Roaming\\.syft\\config.*",
+      "C:\\Users\\edaci\\AppData\\Roaming\\syft\\config.*",
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.syft.*",
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.syft\\config.*",
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\syft\\config.*"
+    ],
+    "found": []
+  },
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "routes": [
+    {
+      "route_id": "validation-spdx--syft",
+      "execution_path": "validation/executor-smoke/results/validation-spdx/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "validation-spdx--protobom",
+      "execution_path": "validation/executor-smoke/results/validation-spdx/protobom/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "validation-spdx--cdx2spdx",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "validation-cdx--syft",
+      "execution_path": "validation/executor-smoke/results/validation-cdx/syft/execution.json",
+      "execution_outcome": "completed"
+    },
+    {
+      "route_id": "validation-cdx--protobom",
+      "outcome": "unsupported_pre_execution"
+    },
+    {
+      "route_id": "validation-cdx--cdx2spdx",
+      "execution_path": "validation/executor-smoke/results/validation-cdx/cdx2spdx/execution.json",
+      "execution_outcome": "completed"
+    }
+  ],
+  "repository_commit": "f9c676ba79b1fec1fe78dba015103998dd0193c7",
+  "syft_effective_config": {
+    "argv": [
+      "bin/generalization/syft.exe",
+      "config",
+      "--load"
+    ],
+    "started_utc": "2026-11-05T11:34:32.257413+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T11:34:32.372306+00:00",
+    "duration_seconds": 0.11491999996360391
+  },
+  "ended_utc": "2026-11-05T11:34:37.862085+00:00"
+}

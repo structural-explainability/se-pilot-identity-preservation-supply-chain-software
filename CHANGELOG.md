@@ -11,8 +11,29 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+---
+
+## [0.4.0] - 2026-11-05
+
+Validated generalization preparation and execution apparatus before SBOM Freeze 02.
+This release does not establish the research freeze
+or include held-out generalization results.
+
 ## Added
 
+- Added the generalization executor with separate transformation,
+  target-validation, and preservation-evaluation evidence.
+- Added explicit subprocess timeouts, controlled execution environments,
+  execution records, and refusal to overwrite existing results.
+- Added explicit Freeze 02 creation and post-freeze integrity verification.
+- Added complete Java runtime inventory and SHA-256 verification covering
+  every file in the repository-local JDK.
+- Added a known-source Windows smoke-test workflow using the pinned
+  converters, Java runtime, validator, and frozen evaluator.
+- Added narrow execution-plan regeneration that retains corpus membership,
+  route classifications, and converter identities.
+- Added pre-execution baseline predictions and IdentityOps comparison
+  hypotheses in `generalization/PREDICTIONS.md`.
 - added Freeze 01 integrity verification against the hashes recorded in `contracts/FREEZE_01_COMMITMENT_EVALUATOR.md`
 - added validation evidence hash tests for retained release-sweep targets
 - added the Freeze 02 generalization sampling specification in `generalization/01-sampling.toml`
@@ -57,7 +78,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - added separate target-validity handling so whole-document validity can be
   recorded independently from frozen identity-preservation evaluation
 
-## Updated
+## Changed
 
 - updated `.gitattributes` to preserve research evidence bytes without Git line-ending normalization
 - updated `.pre-commit-config.yaml` to prevent line-ending and
@@ -77,6 +98,16 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
   Java runtime used by `cdx2spdx`
 - updated Protobom capability declarations to derive supported source versions
   and target versions from centralized constants
+
+### Validated
+
+- Completed the Windows x64 engineering smoke test and its verification.
+- Exercised all three declared converters on known validation sources.
+- Recorded a maximum subprocess duration of approximately 3.92 seconds
+  against the declared 300-second timeout.
+- Retained smoke plans, generated targets, evaluator outputs, validation
+  results, logs, and execution records under `validation/executor-smoke/`.
+- Kept engineering smoke evidence separate from held-out generalization.
 
 ---
 
@@ -124,7 +155,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
-## [0.2.0] - 2026-09-20
+## Includes earlier work from 2026-09-20
 
 ### Added
 
@@ -208,13 +239,24 @@ and do not constitute held-out evidence of generalization.
 
 Follow these steps exactly when creating a new release.
 
+### One-Time Zenodo Authorization
+
+1. Sign in to Zenodo.
+2. Open your profile menu in the upper-right.
+3. Select GitHub.
+4. Click Sync now.
+5. Find structural-explainability/ this repo.
+6. Turn on the repository toggle/slider.
+7. Refresh the page and confirm it appears as enabled.
+8. Zenodo will ingest future GitHub Releases from this repo.
+
 ### Task 1. Update release metadata (manual edits)
 
 1.1. `CITATION.cff` - update `version` and `date-released`
 1.2. `CHANGELOG.md` - add section, move unreleased entries, update links
 1.3. `pyproject.toml` - update build system `fallback-version`
 
-### Task 2. Validate
+### Task 2. Set Up and Validate
 
 ```shell
 uvx pup-clean --delete
@@ -230,11 +272,11 @@ uvx gha-tools autoupdate --pin=all --write .github/workflows
 uvx zizmor@latest .github/
 ```
 
-### Task 3. Commit, push, tag
+### Task 3. Git Add-Commit-Push, Then Tag
 
 ```shell
 git add -A
-git commit -m "Prepare X.Y.Z"
+git commit -m "Prep X.Y.Z"
 git push -u origin main
 ```
 
@@ -244,6 +286,32 @@ Verify actions run on GitHub. After success:
 git tag vX.Y.Z -m "X.Y.Z"
 git push origin vX.Y.Z
 ```
+
+### Task 4. Verify the Release and Zenodo archive
+
+The release-on-tag workflow publishes a GitHub Release
+for MAJOR and MINOR tags only (vX.Y.0).
+PATCH tags (vX.Y.Z, Z > 0) stay as tags.
+
+To verify:
+
+```shell
+gh release view vX.Y.Z  # confirm Release exists with notes + artifacts
+gh run list --workflow=release-pypi.yml   # confirm the workflow succeeded
+```
+
+If Zenodo archiving is enabled, confirm that the release has a
+version-specific DOI and is linked to the repository's concept DOI.
+Record the DOI in CITATION.cff only when it has been assigned and verified.
+
+```shell
+uvx --from se-manifest-schema se-manifest check-version --require-tag
+```
+
+Confirms CITATION.cff version matches the pushed git tag.
+Run this after `git push origin vX.Y.Z`; it will fail before that point.
+
+## Notes on Freeze
 
 A software release may be created before Freeze 02 is established.
 
@@ -430,9 +498,9 @@ git push origin :refs/tags/vX.Y.Z
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.4.0
 [0.3.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.3.0
-[0.2.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.2.0
 [0.1.0]: https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software/releases/tag/v0.1.0
 
 <!-- markdownlint-enable MD024 -->

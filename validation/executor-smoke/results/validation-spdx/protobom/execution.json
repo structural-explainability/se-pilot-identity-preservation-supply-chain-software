@@ -1,0 +1,100 @@
+{
+  "route_id": "validation-spdx--protobom",
+  "attempt": 1,
+  "status": "finished",
+  "started_utc": "2026-11-05T11:34:32.915716+00:00",
+  "source_sha256": "969e75ab32bb499957298365c43896b6a2f204951d7ef9fa12db9482ab7504e2",
+  "converter": {
+    "id": "protobom",
+    "name": "Protobom sbom-convert",
+    "version": "0.0.8",
+    "artifact_path": "bin/generalization/sbom-convert.exe",
+    "artifact_sha256": "8e1afc0ef0e128be8f4514c60e3d9119263c0584f1ac149a4e3719b5009556c2",
+    "runtime": "native executable",
+    "documentation": "https://github.com/protobom/sbom-convert/tree/v0.0.8"
+  },
+  "cwd": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software",
+  "environment": {
+    "SystemRoot": "C:\\WINDOWS",
+    "WINDIR": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\edaci\\AppData\\Local\\Temp",
+    "USERPROFILE": "C:\\Users\\edaci",
+    "APPDATA": "C:\\Users\\edaci\\AppData\\Roaming",
+    "LOCALAPPDATA": "C:\\Users\\edaci\\AppData\\Local",
+    "PATH": "C:\\WINDOWS\\System32",
+    "SYFT_CHECK_FOR_APP_UPDATE": "false",
+    "JAVA_HOME": "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\bin\\generalization\\jdk-21.0.12.1+1"
+  },
+  "evidence_paths": {
+    "target_path": "validation/executor-smoke/results/validation-spdx/protobom/target.cdx.json",
+    "validation_path": "validation/executor-smoke/results/validation-spdx/protobom/target-validation.json",
+    "evaluation_path": "validation/executor-smoke/results/validation-spdx/protobom/evaluation.json",
+    "log_path": "validation/executor-smoke/results/validation-spdx/protobom/transform.log",
+    "validation_log_path": "validation/executor-smoke/results/validation-spdx/protobom/validation.log",
+    "evaluation_log_path": "validation/executor-smoke/results/validation-spdx/protobom/evaluation.log",
+    "execution_path": "validation/executor-smoke/results/validation-spdx/protobom/execution.json"
+  },
+  "validation_outcome": "valid",
+  "evaluation_outcome": "completed",
+  "transformation": {
+    "argv": [
+      "bin/generalization/sbom-convert.exe",
+      "convert",
+      "validation/cyclonedx-cli-424/source.spdx.json",
+      "-f",
+      "cyclonedx-1.4",
+      "-o",
+      "validation/executor-smoke/results/validation-spdx/protobom/target.cdx.json"
+    ],
+    "started_utc": "2026-11-05T11:34:32.916294+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T11:34:33.010695+00:00",
+    "duration_seconds": 0.09442769992165267
+  },
+  "target_sha256": "2b8d910f983fb7da5ad04368c14398a8f64150a7ccc0e7fee7d9eba8541f2d9f",
+  "execution_outcome": "completed",
+  "validation": {
+    "argv": [
+      "bin/generalization/sbom-utility.exe",
+      "validate",
+      "-i",
+      "validation/executor-smoke/results/validation-spdx/protobom/target.cdx.json",
+      "--format",
+      "json",
+      "--error-value=false",
+      "--quiet",
+      "-o",
+      "validation/executor-smoke/results/validation-spdx/protobom/target-validation.json"
+    ],
+    "started_utc": "2026-11-05T11:34:33.014032+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T11:34:33.055049+00:00",
+    "duration_seconds": 0.0410361000103876
+  },
+  "evaluation": {
+    "argv": [
+      "C:\\Users\\edaci\\Documents\\structural-explainability\\se-pilot-identity-preservation-supply-chain-software\\.venv\\Scripts\\python.exe",
+      "-m",
+      "preservation_test.evaluator.evaluate",
+      "validation/cyclonedx-cli-424/source.spdx.json",
+      "validation/executor-smoke/results/validation-spdx/protobom/target.cdx.json",
+      "--json",
+      "--commitment-file",
+      "contracts/commitments.toml",
+      "--commitment-id",
+      "purl_preservation_v1"
+    ],
+    "started_utc": "2026-11-05T11:34:33.056069+00:00",
+    "exit_code": 0,
+    "timeout": false,
+    "launch_error": null,
+    "ended_utc": "2026-11-05T11:34:33.174568+00:00",
+    "duration_seconds": 0.11852599994745106
+  },
+  "ended_utc": "2026-11-05T11:34:33.189491+00:00"
+}

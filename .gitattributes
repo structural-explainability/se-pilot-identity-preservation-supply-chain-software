@@ -1,7 +1,7 @@
 # ============================================================
 # .gitattributes (CUSTOM-SE-PILOT)
 # ============================================================
-# Updated: 2026-10-05
+# Updated: 2026-11-05
 #
 # REQ: Preserve critical research evidence bytes without Git line-ending
 # normalization.
@@ -227,3 +227,6 @@ validation/**/target.*.json            -text
 validation/**/attestation.jsonl        -text
 generalization/sources/**              -text
 generalization/results/** -text
+
+# Preserve all executor smoke evidence exactly as generated.
+validation/executor-smoke/** -text

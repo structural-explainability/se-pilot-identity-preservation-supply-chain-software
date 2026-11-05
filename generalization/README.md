@@ -337,3 +337,32 @@ used by the formal experiment.
 The `results/` directory is reserved for generated targets,
 evaluator outputs, logs, and other experimental evidence produced only
 after the generalization preparation has been frozen and execution begins.
+
+## Preparation
+
+Run the smoke test from the local repository root:
+
+```shell
+uv sync --locked
+
+uv run --frozen python -m preservation_test.generalization.smoke_generalization --refresh-plan
+
+uv run --frozen python -m preservation_test.generalization.smoke_generalization --prepare
+
+uv run --frozen python -m preservation_test.generalization.smoke_generalization --run
+
+uv run --frozen python -m preservation_test.generalization.smoke_generalization --verify
+```
+
+## Pre-Run Commit
+
+```shell
+uv run --frozen python -m preservation_test.generalization.verification.verify_05_freeze_02
+
+git add -A
+git commit -m "Prepare Freeze 02 apparatus, predictions, and Windows smoke evidence"
+
+.\freeze_02.ps1
+
+git diff -- contracts/FREEZE_02_GENERALIZATION.md
+```

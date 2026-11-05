@@ -20,29 +20,6 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 # ============================================================
-# Precheck: pyproject.toml must use [dependency-groups], not the
-# old [project.optional-dependencies].
-# ============================================================
-
-if (Test-Path "pyproject.toml") {
-    $pyproject = Get-Content "pyproject.toml" -Raw
-
-    if ($pyproject -match '(?m)^\[project\.optional-dependencies\]') {
-        Write-Host ""
-        Write-Host "ERROR: pyproject.toml uses the old [project.optional-dependencies] table." -ForegroundColor Red
-        Write-Host ""
-        Write-Host "This repo has not been migrated to [dependency-groups]." -ForegroundColor Yellow
-        Write-Host ""
-        Write-Host "FIX: open pyproject.toml and rename this one line:" -ForegroundColor Cyan
-        Write-Host "    [project.optional-dependencies]   ->   [dependency-groups]" -ForegroundColor Cyan
-        Write-Host ""
-        Write-Host "Then run .\sit.ps1 again." -ForegroundColor Cyan
-        Write-Host ""
-        exit 1
-    }
-}
-
-# ============================================================
 # Verify and synchronize the locked Python environment.
 #
 # SIT must not update uv.lock.

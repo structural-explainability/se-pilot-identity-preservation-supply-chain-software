@@ -1,0 +1,181 @@
+# ============================================================
+# .github/workflows/release-on-tag.yml (ALL-REPOS)
+# ============================================================
+# Updated: 2026-11-03
+#
+# WHAT: Publish a GitHub Release for version tags vX.Y.0.
+#
+# WHY: Separate routine development tags from significant
+#      releases suitable for distribution, archiving, or citation.
+#
+# WHY: Repositories optionally connected to Zenodo can receive
+#      persistent DOIs for their published GitHub Releases.
+#
+# REQ: Version tags use vMAJOR.MINOR.PATCH.
+# REQ: Publish only when PATCH is 0 (vX.Y.0).
+# REQ: PATCH tags (vX.Y.Z, Z > 0) are not published.
+# REQ: Required CI checks MUST pass before tagging.
+# REQ: Never create or modify Git tags automatically.
+# REQ: Never publish a duplicate GitHub Release.
+#
+# NOTE: CI verification is a maintainer prerequisite.
+#       This workflow does not independently verify CI.
+# NOTE: A GitHub Release is not the same as a Git tag.
+# NOTE: Zenodo is optional and configured outside this workflow.
+# NOTE: No repository-specific configuration is required.
+#
+# ============================================================
+# OPTIONAL: ZENODO ARCHIVING AND DOI GENERATION
+# ============================================================
+#
+# CONSIDER ZENODO FOR CITED REPOSITORIES
+#
+# 1. CITATION
+#    Provides a persistent Digital Object Identifier (DOI)
+#    for a published version of software or research artifacts.
+#
+# 2. PRESERVATION
+#    Archives a versioned snapshot independently of the
+#    continuously changing GitHub repository.
+#
+# 3. REPRODUCIBILITY
+#    Allows publications to cite the particular version
+#    of an artifact used to produce their results.
+#
+# 4. DISCOVERABILITY
+#    Makes research artifacts easier to find, reference,
+#    and connect to scholarly publications.
+#
+# 5. VERSION HISTORY
+#    Zenodo provides version-specific DOIs and a concept DOI
+#    representing the collection of archived versions.
+#
+# IMPORTANT:
+#    A DOI identifies an archived artifact.
+#    It does not certify scientific correctness.
+#
+# ============================================================
+# IMPORTANT: CONFIGURE ZENODO BEFORE THE FIRST RELEASE
+# ============================================================
+#
+# Zenodo automatically ingests NEW published GitHub Releases
+# after repository integration has been enabled.
+#
+# Existing releases are NOT automatically backfilled.
+#
+# Therefore, for repositories requiring Zenodo DOIs,
+# enable Zenodo BEFORE publishing the first GitHub Release.
+#
+# Git tags alone do not trigger Zenodo archiving.
+#
+# NOTE: This workflow creates the release with the built-in GITHUB_TOKEN.
+#       Confirm on the first release (step 11 below) that Zenodo receives it.
+#       If no Zenodo record appears, delete that GitHub Release (not the tag)
+#       and publish it again from the GitHub web page.
+#
+# ONE-TIME SETUP (PER REPOSITORY):
+#
+# 1. Ensure the GitHub repository is public.
+# 2. Sign in to https://zenodo.org.
+# 3. Connect the GitHub account if not already connected.
+# 4. Open the Zenodo profile menu and select GitHub.
+# 5. Click "Sync now".
+# 6. Find the desired GitHub repository.
+# 7. Enable the repository using its toggle.
+# 8. Refresh and confirm that it remains enabled.
+# 9. Review CITATION.cff, authorship, and license metadata.
+# 10. Only then publish the first GitHub Release.
+# 11. Confirm that Zenodo creates an archived record and DOI.
+#
+# NOTE: Organization repositories may require authorization
+#       from a GitHub organization owner.
+#
+# NOTE: If both CITATION.cff and .zenodo.json exist,
+#       Zenodo uses .zenodo.json for archival metadata.
+#
+# NOTE: No Zenodo token or secret is required by this workflow
+#       when using Zenodo's native GitHub integration.
+#
+# OFFICIAL DOCUMENTATION:
+# https://help.zenodo.org/docs/github/enable-repository/
+# https://help.zenodo.org/docs/github/describe-software/
+# https://help.zenodo.org/docs/github/archive-software/github-upload/
+# https://zenodo.org/help/versioning
+#
+# ============================================================
+# RELEASE POLICY
+# ============================================================
+#
+# v1.0.0 -> GitHub Release (Zenodo DOI if enabled)
+# v1.0.1 -> Git tag only
+# v1.1.0 -> GitHub Release (Zenodo DOI if enabled)
+# v1.1.1 -> Git tag only
+# v2.0.0 -> GitHub Release (Zenodo DOI if enabled)
+#
+# ============================================================
+
+name: Release on Tag (MAJOR and MINOR only)
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish GitHub Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: A1) Classify release tag
+        id: classify
+        env:
+          TAG: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          if [[ ! "$TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]; then
+            echo "Invalid release tag: $TAG"
+            echo "Expected vMAJOR.MINOR.PATCH."
+            exit 1
+          fi
+
+          if [[ "${BASH_REMATCH[3]}" == "0" ]]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "Release tag $TAG: GitHub Release will be published."
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "Patch tag $TAG: no GitHub Release."
+          fi
+
+      - name: A2) Check for existing release
+        id: existing
+        if: steps.classify.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Release $TAG already exists."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: A3) Publish GitHub Release
+        if: steps.classify.outputs.publish == 'true' && steps.existing.outputs.exists == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ github.ref_name }}
+        shell: bash
+        run: |
+          gh release create "$TAG" \
+            --verify-tag \
+            --title "${TAG#v}" \
+            --generate-notes
