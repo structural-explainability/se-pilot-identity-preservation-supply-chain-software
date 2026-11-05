@@ -1,5 +1,6 @@
 # SE Pilot: Identity Preservation in Software Supply Chains
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23979460.svg)](https://doi.org/10.5281/zenodo.23979460)
 [![Docs Site](https://img.shields.io/badge/docs-site-blue?logo=github)](https://structural-explainability.github.io/se-pilot-identity-preservation-supply-chain-software/)
 [![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/structural-explainability/se-pilot-identity-preservation-supply-chain-software)
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
