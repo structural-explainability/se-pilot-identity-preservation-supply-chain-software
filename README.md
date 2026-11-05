@@ -97,20 +97,23 @@ contracts/
     commitments.toml
     sources.toml
     FREEZE_01_COMMITMENT_EVALUATOR.md
+    FREEZE_02_GENERALIZATION.md
 
-src/
-    preservation_test/
-
+src/preservation_test/
 tests/
+known/known_violations.toml
 
-known/
-    known_violations.toml
+generalization/
+    README.md
+    01-sampling.toml
+    02-candidates.toml
+    03-corpus.toml
+    04-sources.toml
+    05-transformations.toml
+    PREDICTIONS.md
+    sources/
 
-docs/
-    en/
-        index.md
-        run.md
-        test.md
+validation/executor-smoke/
 ```
 
 ## Development
@@ -123,31 +126,7 @@ uv self update
 # Verify that uv.lock still matches pyproject.toml.
 # Do not update dependency resolution during ordinary development.
 uv lock --check
-
 uv sync --locked
-uv audit --frozen
-
-# Update GitHub Actions and pin all action references to immutable SHAs
-uvx gha-tools autoupdate --pin=all --write .github/workflows
-
-# Then audit the resulting GitHub configuration for security findings
-uvx zizmor@latest .github/
-
-uv run --locked prek install -f
-uv run --locked prek update --freeze --cooldown-days 7
-
-git add -A
-uv run --locked prek run --all-files
-# repeat if changes were made
-uv run --locked prek run --all-files
-
-# run common chores (formats Python in .md files also)
-uv run --locked ruff format .
-uv run --locked ruff check . --fix
-uv run --locked ty check
-uv run --locked python -m pytest
-uv run --locked python -m zensical build
-# audit dependencies (advisory: findings are reported, nothing blocks)
 uv audit --frozen
 ```
 
@@ -193,15 +172,16 @@ uv run --locked python -m preservation_test.generalization.verification.verify_0
 
 ### Generalization Preparation
 
-Generalization preparation is performed by the repository-root `run.ps1`
+Generalization preparation was performed by the repository-root `run.ps1`
 script.
-Run `.\run.ps1` **only before Freeze 02 is established**.
 
-It rebuilds the generated generalization artifacts from `02-candidates.toml`
-through `05-transformations.toml` and runs the required verification gates.
+It rebuilt the generated generalization artifacts from `02-candidates.toml`
+through `05-transformations.toml` and ran the verification gates.
 
-Do not run it after Freeze 02 is established or after formal generalization
-execution has begun.
+**Important:** Do not run it
+after the engineering smoke test has been prepared.
+Do not run it after Freeze 02 is established or
+after formal generalization execution has begun.
 
 #### Count Canonical SPDX Source PURLs
 
@@ -228,32 +208,36 @@ git commit -m "your message here"
 git push -u origin main
 ```
 
-## Generalization Overview
-
-- [README.md](./generalization/README.md)
-
-## Generalization Inputs
-
-- [01-sampling.toml](./generalization/01-sampling.toml)
-
-## Generalization Toolchain
-
-- [install_generalization_tools.ps1](./install_generalization_tools.ps1)
-
-## Generalization Generated Artifacts
-
-- [02-candidates.toml](./generalization/02-candidates.toml)
-- [03-corpus.toml](./generalization/03-corpus.toml)
-- [04-sources.toml](./generalization/04-sources.toml)
-- [05-transformations.toml](./generalization/05-transformations.toml)
+---
 
 ## Annotations
 
 [.annotations/annotations.md](./.annotations/annotations.md)
 
+## Changelog
+
+[Changelog](./CHANGELOG.md)
+
 ## Citation
 
 Citation metadata is available in [CITATION.cff](./CITATION.cff).
+
+## Documentation Site
+
+[Documentation](https://structural-explainability.github.io/se-pilot-identity-preservation-supply-chain-software/)
+
+## Generalization
+
+- [Overview: README.md](./generalization/README.md)
+- [Inputs: 01-sampling.toml](./generalization/01-sampling.toml)
+- [Toolchain: install_generalization_tools.ps1](./install_generalization_tools.ps1)
+
+Generated Artifacts:
+
+- [02-candidates.toml](./generalization/02-candidates.toml)
+- [03-corpus.toml](./generalization/03-corpus.toml)
+- [04-sources.toml](./generalization/04-sources.toml)
+- [05-transformations.toml](./generalization/05-transformations.toml)
 
 ## License
 
@@ -261,5 +245,4 @@ Citation metadata is available in [CITATION.cff](./CITATION.cff).
 
 ## Repository Manifest
 
-The repository's role, scope, and dependencies are declared in
-[SE_MANIFEST.toml](./SE_MANIFEST.toml).
+[SE_MANIFEST.toml](./SE_MANIFEST.toml) - repository's role, scope, and dependencies

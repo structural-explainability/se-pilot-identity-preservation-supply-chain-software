@@ -94,16 +94,16 @@ The frozen Freeze 01 evaluator delegates PURL canonicalization to
 Generalization evaluation therefore depends on the resolved Python dependency
 environment as well as on the files hashed by Freeze 01.
 
-Evaluation is performed using:
-
-- the Python version declared in `.python-version`;
-- the dependency versions resolved in `uv.lock`, including the resolved
-  `packageurl-python` version; and
-- `uv run --frozen`, so `uv.lock` is used as the dependency source of truth
-  and is not updated during execution.
-
-The actual Python version used during formal execution is recorded with the
-execution evidence.
+Evaluation is performed with the Python version declared in `.python-version`.
+Dependency versions are those resolved in `uv.lock`,
+including the resolved `packageurl-python` version.
+The executor is launched with `uv run --frozen`,
+so `uv.lock` is the dependency source of truth and is not updated during execution.
+The executor invokes the frozen evaluator with its own interpreter:
+`python -m preservation_test.evaluator.evaluate <source> <target> --json --commitment-file contracts/commitments.toml --commitment-id purl_preservation_v1`.
+The actual Python version used during formal execution is recorded in the run manifest.
+The frozen evaluator rejects a target document that begins with a UTF-8 byte-order mark.
+Such a target yields `evaluation_error`.
 
 The generalization experiment evaluates commitment
 `purl_preservation_v1` from `contracts/commitments.toml`.
@@ -151,15 +151,26 @@ apparatus and must be hash-recorded before Freeze 02 is established.
 Every planned route is executed from the repository root so that relative paths
 in the declared command arguments resolve from the same location.
 
-For Syft execution:
+Each converter runs with an environment built from an explicit allowlist.
+The allowlist holds
+`SystemRoot`, `WINDIR`, `TEMP`, `TMP`, `USERPROFILE`, `APPDATA`, `LOCALAPPDATA`,
+a minimal `PATH`, `SYFT_CHECK_FOR_APP_UPDATE=false`, and
+a `JAVA_HOME` pinned to the repository-local JDK.
+Undeclared `SYFT_*` variables, Java options, Python options,
+and proxy variables are not inherited.
 
-- `SYFT_CHECK_FOR_APP_UPDATE=false` is set;
-- undeclared `SYFT_*` environment variables must not affect execution; and
-- Syft configuration files outside the declared experimental apparatus must not
-  affect execution.
+Before the first route, the executor refuses to run
+if a Syft configuration file exists in the
+local, user, or XDG locations that Syft searches.
+The effective Syft configuration is captured before any route runs.
+The effective environment supplied to each converter is recorded with the execution evidence.
 
-The effective environment supplied to each converter is recorded with the
-execution evidence.
+Every subprocess runs under the `timeout_seconds`
+declared in `05-transformations.toml`.
+A timeout terminates the process tree and retains the available output.
+A converter timeout is an execution failure.
+A validator timeout is `validation_error`.
+An evaluator timeout is `evaluation_error`.
 
 Converter-generated targets are not assumed to be byte-reproducible across
 executions because converters may generate timestamps, namespaces, or other
@@ -168,9 +179,42 @@ execution-derived values.
 The target produced by the formal execution of a route is retained as the
 experimental evidence.
 
-A route is not silently re-executed to obtain a different target.
-If another execution is required, the original attempt is retained and the
-additional execution is separately identified.
+The first formal execution of each planned route is the evidence of record.
+No formal retry or resume is implemented under this freeze.
+The executor refuses any invocation against a populated results directory.
+`retry_directory_pattern` in `05-transformations.toml`
+is a reserved field and authorizes no re-execution.
+A host interruption leaves its evidence in place.
+
+Completing an interrupted execution requires
+an explicit amendment or new freeze,
+with evidence kept in a separately located directory.
+No attempt is silently replaced or selected for a better outcome.
+
+## Evidence Layout
+
+Every evidence path is predeclared in `05-transformations.toml`.
+The executor does not choose evidence locations.
+
+Each planned route declares paths for the target document,
+the validation result, the evaluator result, the converter log,
+the validator log, the evaluator log, and an `execution.json` record.
+
+The `execution.json` record is written
+with status `started` before the converter
+is launched and is updated after each step.
+It records route identity, attempt number, start and end times,
+source and target SHA-256 digests,
+converter identity, exact command arguments,
+working directory, effective environment,
+each exit code, timeout status, and the validation and evaluation outcomes.
+
+The run manifest at `run_manifest_path` records the mode,
+repository commit, interpreter, platform, plan digest,
+the SHA-256 of this record, the Syft configuration check,
+route progression, and completion state.
+
+An execution record still at `started` after an interruption is not resumed.
 
 ## Target Document Validation
 
@@ -209,8 +253,15 @@ Target document validation has three recorded outcomes:
 `validation_error` is neither an execution failure nor an `invalid` result.
 It is reported separately.
 
-For SPDX 2.3 targets, sbom-utility uses its applicable SPDX 2.3 schema variant
-for validation.
+Validator exit code 0 is `valid` and exit code 2 is `invalid`,
+provided a result file exists.
+A validator timeout, a launch error, any other exit code,
+or a missing result file is `validation_error`.
+The recorded validation decision is the exit code.
+The result file is retained as evidence and may be empty.
+
+For SPDX 2.3 targets, sbom-utility uses its applicable
+SPDX 2.3 schema variant for validation.
 
 When the frozen evaluator cannot process a generated target document, the
 route records `evaluation_error` together with the evaluator's complete error
@@ -240,27 +291,50 @@ A candidate preservation violation is confirmed only when:
 
 Adjudication confirms or rejects the candidate preservation violation.
 It does not change or relabel the evaluator's violation subtype.
+Adjudication inspects the raw source and target documents and
+does not reuse evaluator output as evidence.
+
+For each adjudicated finding, the adjudication record contains:
+
+- the source component's JSON as it appears in the source document;
+- the anchored target component's JSON as it appears in the target document;
+- every location in the target document where the source PURL string
+  or its canonical form occurs; and
+- the decision for each of the four criteria, with a reason.
 
 Formal route results are reported using the following result classes:
 
-- `rediscovered`: a confirmed `VIOLATED_*` result matching a defect shape
-  declared in `known/known_violations.toml` before Freeze 02;
+- `rediscovered`: a confirmed `VIOLATED_*` result
+  matching a defect shape declared in `known/known_violations.toml` before Freeze 02.
+  A match is on direction, verdict, and where given target location.
+  It does not assert the same cause, converter, or version as the established case;
 - `new confirmed`: a confirmed `VIOLATED_*` result for which no predeclared
   defect shape matches;
 - `false positive`: a candidate `VIOLATED_*` result rejected by adjudication;
 - `preserved`: evaluator verdict `PRESERVED`;
 - `expected/refused`: evaluator verdict `UNSUPPORTED` or `NOT_APPLICABLE`;
-- `underdetermined`: an underdetermined result where applicable;
-- `unanchorable`: evaluator verdict `UNANCHORABLE`; and
-- `evaluation_error`: the frozen evaluator could not complete evaluation.
+- `underdetermined`: evaluator verdict `UNDERDETERMINED`; and
+- `unanchorable`: evaluator verdict `UNANCHORABLE`.
+
+Result classes apply to individual source PURLs within evaluated routes.
+Route-level outcomes are reported per route:
+execution failure, validation outcome, and `evaluation_error`.
 
 No result class is silently discarded.
 
-If `known/known_violations.toml` declares no defect shapes before Freeze 02,
-no result from the generalization experiment is classified as `rediscovered`.
+`known/known_violations.toml` declares two defect shapes.
+`purl-to-cyclonedx-properties` is SPDX to CycloneDX with verdict `VIOLATED_RELOCATED`.
+`purl-absent-from-spdx-canonical-ref` is CycloneDX to SPDX with verdict `VIOLATED_DROPPED`.
+Matching depends on direction, verdict, and, where given, target location.
+It does not depend on converter, package, or anchor.
+Because `VIOLATED_RELOCATED` cannot occur for SPDX targets,
+every confirmed CycloneDX-to-SPDX `VIOLATED_DROPPED` result
+matches a predeclared shape.
+Only `VIOLATED_ALTERED` can therefore be `new confirmed` in that direction.
 
 `UNANCHORABLE` results are reported in full, including their count and
-fraction by route. No post hoc threshold is used to remove a route or source
+fraction by route.
+No post hoc threshold is used to remove a route or source
 from interpretation.
 
 The transformation route, defined by one preserved source and one converter,
@@ -300,9 +374,13 @@ The selected converter population is deliberately bounded and is not claimed
 to be exhaustive or statistically representative of all SBOM transformation
 implementations.
 
-Some declared source-by-converter combinations are recorded as
-`unsupported_pre_execution` because the source representation falls outside
-the converter's documented capability.
+Ten declared source-by-converter combinations are recorded
+as `unsupported_pre_execution`.
+Eight are Protobom routes over CycloneDX 1.2 and 1.3 sources,
+which fall outside its documented JSON input support.
+Two are cdx2spdx routes over SPDX sources,
+because cdx2spdx implements CycloneDX-to-SPDX conversion only.
+
 These routes remain in the complete matrix and are not replaced
 by different corpus members.
 
@@ -437,10 +515,12 @@ The recorded set includes at least:
 - every converter artifact referenced by `05-transformations.toml`;
 - every required runtime artifact referenced by `05-transformations.toml`;
 - the target-validator artifact referenced by `05-transformations.toml`;
-- the generalization execution implementation;
-- the Freeze 02 verification implementation;
-- `known/known_violations.toml`, which may declare no defect shapes; if it
-  declares none, no generalization result is classified as rediscovered.
+- every file in the repository-local Java runtime;
+- every Python module of the apparatus except the generated `_version.py`, including the execution implementation and the pre-freeze and post-freeze verification implementations;
+- `freeze_02.ps1`;
+- `generalization/PREDICTIONS.md`;
+- the smoke plan and smoke evidence under `validation/executor-smoke/`; and
+- `known/known_violations.toml`.
 
 The exact digest values are generated from the repository state used to
 establish Freeze 02 and are not manually inferred from version labels.

@@ -20,6 +20,7 @@ globs:
 
 ignores:
   # WHY: Virtual environments and dependency trees are not authored Markdown.
+  - "docs/en/run.md" # CUSTOM: FROZEN FILE, DO NOT LINT
   - ".venv/**"
   - "**/.venv/**"
   - "node_modules/**"

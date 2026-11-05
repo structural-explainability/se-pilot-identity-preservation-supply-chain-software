@@ -47,22 +47,6 @@ command, unsupported-route, and complete-matrix checks were preserved.
 
 ## 6. contracts/FREEZE_02_GENERALIZATION.md
 
-Evaluator Environment: replace the three bullets that begin "Evaluation is performed using:" with:
-
-```markdown
-The executor is launched with `uv run --frozen`, so `uv.lock` is the dependency
-source of truth and is not updated during execution.
-
-The executor invokes the frozen evaluator with the same interpreter
-(`sys.executable -m preservation_test.evaluator.evaluate --json`), so the
-python version recorded in the run manifest is the interpreter that performed
-evaluation.
-
-The frozen evaluator reads documents with `encoding="utf-8"`.
-A target document beginning with a UTF-8 byte-order mark therefore produces
-`evaluation_error`.
-```
-
 New section after Transformation Execution: "Evidence Layout".
 
 ````markdown

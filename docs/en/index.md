@@ -42,8 +42,6 @@ The relevant conformance question is:
 
 ## Initial Method
 
-## Initial Method
-
 ```mermaid
 flowchart TD
     A["Authoritative specifications"] --> B["Typed representation-preservation commitment"]
@@ -197,10 +195,12 @@ and archived with version-specific DOI
 
 The software release and research freeze are separate events.
 
-Freeze 02 has not yet been established, and no held-out generalization
-transformation has been executed or examined.
-
-No held-out generalization evidence is currently claimed.
+Freeze 02 is established only by the committed final record
+`contracts/FREEZE_02_GENERALIZATION.md`.
+Before that record is committed,
+no held-out generalization transformation is executed or examined.
+Held-out generalization evidence is claimed only for
+results produced under an established generalization freeze.
 
 ## Procedures and Commands
 
@@ -251,6 +251,8 @@ No held-out generalization evidence is currently claimed.
   evaluator outputs, logs, and execution records.
 
 ## Repository Guidance
+
+[Glossary](glossary.md)
 
 For repository setup, development commands, citation, licensing, and repository
 structure, see the

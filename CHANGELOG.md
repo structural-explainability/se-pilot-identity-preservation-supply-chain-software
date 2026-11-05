@@ -11,6 +11,37 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ## [Unreleased]
 
+### Added
+
+- Added `docs/en/executor.md` documenting executor evidence, environment controls, timeouts, and interruption policy.
+- Added an Evidence Layout section to the Freeze 02 draft record
+  describing predeclared evidence paths, `execution.json` lifecycle, and the run manifest.
+- Added validator exit-code decision rules, subprocess timeout rules,
+  and the executor environment allowlist to the Freeze 02 draft record.
+- Added the required contents of an adjudication record to the Freeze 02 draft record.
+- Added the complete Freeze 02 artifact-hash inventory to the Freeze 02 draft record,
+  including the Java runtime, apparatus modules, predictions, and smoke evidence.
+- Added an untracked-file check to the clean-tree guard in `freeze_02.ps1`.
+
+### Changed
+
+- Changed the Freeze 02 draft record to state that the first formal execution of each route is the evidence of record
+  and that no retry or resume is implemented under the freeze.
+- Changed the Freeze 02 draft record to describe the evaluator invocation as made by the executor's own interpreter
+  and to record the Python version in the run manifest.
+- Changed the Freeze 02 draft record to name the two defect shapes declared in `known/known_violations.toml`
+  and to state that a `rediscovered` match is on direction, verdict, and target location, not on cause.
+- Changed the Freeze 02 draft record to separate the eight Protobom and two cdx2spdx `unsupported_pre_execution` routes.
+- Changed `README.md` repository structure and Development guidance.
+  It now forbids dependency upgrades and reruns of `run.ps1` once smoke preparation is complete.
+- Changed the Release Procedure in `CHANGELOG.md` to forbid rerunning `.\run.ps1` after smoke evidence exists.
+
+### Fixed
+
+- Fixed the 0.4.0 section headings in `CHANGELOG.md`.
+- Fixed the doubled parenthesis in the Documentation link in `README.md`.
+- Fixed the dangling conjunction in the Freeze 02 draft result classes.
+
 ---
 
 ## [0.4.0] - 2026-11-05
@@ -19,8 +50,9 @@ Validated generalization preparation and execution apparatus before SBOM Freeze 
 This release does not establish the research freeze
 or include held-out generalization results.
 
-## Added
+### Added
 
+- Added `count.ps1` for the source-only count of canonical SPDX source PURLs.
 - Added the generalization executor with separate transformation,
   target-validation, and preservation-evaluation evidence.
 - Added explicit subprocess timeouts, controlled execution environments,
@@ -78,7 +110,7 @@ or include held-out generalization results.
 - added separate target-validity handling so whole-document validity can be
   recorded independently from frozen identity-preservation evaluation
 
-## Changed
+### Changed
 
 - updated `.gitattributes` to preserve research evidence bytes without Git line-ending normalization
 - updated `.pre-commit-config.yaml` to prevent line-ending and
@@ -198,7 +230,7 @@ or include held-out generalization results.
 - Updated study status to distinguish completed engineering validation from
   future held-out generalization execution.
 
-These results remain \*_engineering-validation_- evidence
+These results remain engineering-validation evidence
 and do not constitute held-out evidence of generalization.
 
 ---
@@ -404,19 +436,15 @@ draft before establishing the freeze.
 
 Dependency updates must already be complete.
 Do not run `uv lock --upgrade` as part of this procedure.
-When the repository is ready for its final pre-Freeze-02 rebuild, run:
 
-```powershell
-.\run.ps1
-```
+Generalization preparation with `.\run.ps1` and the
+Windows x64 engineering smoke test must already be complete.
 
-`run.ps1` may be used only before Freeze 02 is established.
-It rebuilds the generated generalization artifacts from
-`02-candidates.toml` through `05-transformations.toml` and runs the applicable
-pre-freeze verification gates.
+IMPORTANT: Do not rerun `.\run.ps1` once the smoke evidence exists.
+It regenerates `05-transformations.toml`, which the smoke evidence was recorded against.
+The ordered commands are in the Execution Workflow of `generalization/README.md`.
 
-Review the resulting pre-freeze state, then run the normal repository
-validation:
+Review the pre-freeze state, then run the normal repository validation:
 
 ```powershell
 .\sit.ps1
