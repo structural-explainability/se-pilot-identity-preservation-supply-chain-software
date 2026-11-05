@@ -239,6 +239,10 @@ Generated Artifacts:
 - [04-sources.toml](./generalization/04-sources.toml)
 - [05-transformations.toml](./generalization/05-transformations.toml)
 
+Post experiment Notes:
+
+- [FREEZE_02_POST_EXPERIMENT.md](./generalization/FREEZE_02_POST_EXPERIMENT.md)
+
 ## License
 
 [MIT](./LICENSE)

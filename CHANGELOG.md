@@ -13,7 +13,11 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ### Added
 
+- Added [Freeze 02 Post-Experiment Notes](./generalization/FREEZE_02_POST_EXPERIMENT.md)
+  with route outcomes, preservation verdict counts, and per-route anchoring coverage.
 - Added `docs/en/executor.md` documenting executor evidence, environment controls, timeouts, and interruption policy.
+- Added formal Freeze 02 generalization execution evidence under `generalization/results/`.
+  19 of 20 planned routes completed; one Protobom route recorded an execution failure.
 - Added an Evidence Layout section to the Freeze 02 draft record
   describing predeclared evidence paths, `execution.json` lifecycle, and the run manifest.
 - Added validator exit-code decision rules, subprocess timeout rules,

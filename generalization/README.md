@@ -623,3 +623,8 @@ Before running the language comparison, separately freeze its:
 
 Report the DISTINCT and SHARED policy results separately.
 The baseline predictions do not substitute for that comparison freeze.
+
+## Post Experiment
+
+[Freeze 02 Post-Experiment Notes](./FREEZE_02_POST_EXPERIMENT.md) records
+the conversion outcomes, preservation verdicts, and per-route UNANCHORABLE counts.

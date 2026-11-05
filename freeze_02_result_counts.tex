@@ -1,0 +1,40 @@
+Run: .\freeze_02_result_count.ps1
+
+Route outcomes
+
+Count Name
+----- ----
+    8 cdx2spdx, completed, valid, completed
+    2 cdx2spdx, unsupported_pre_execution, not_attempted, not_attempted
+    1 protobom, completed, valid, completed
+    1 protobom, execution_failure, not_attempted, not_attempted
+    8 protobom, unsupported_pre_execution, not_attempted, not_attempted
+   10 syft, completed, valid, completed
+
+
+Preservation verdicts by converter
+
+Count Name
+----- ----
+ 3982 cdx2spdx, PRESERVED
+  207 cdx2spdx, UNANCHORABLE
+    1 protobom, PRESERVED
+    1 protobom, UNANCHORABLE
+ 4195 syft, UNANCHORABLE
+
+
+Overall preservation verdicts
+
+Count Name
+----- ----
+ 3983 PRESERVED
+ 4403 UNANCHORABLE
+
+
+UNANCHORABLE explanations
+
+Count Name
+----- ----
+  189 content-hash anchors resolve to multiple target components
+ 4177 no target component shares a declared content-hash anchor
+   37 source component has no usable content-hash anchor
