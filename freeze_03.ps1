@@ -34,7 +34,7 @@ RECORD: contracts/FREEZE_03_KERNEL_MISSING_VALUES.md
 
 The script invokes uv and may populate dependency caches.
 The Check operation creates no formal comparison artifacts.
-Git commits and pushes remain explicit user operations.
+Git commits and pushes are separate operations.
 ============================================================
 #>
 
@@ -56,31 +56,31 @@ Push-Location $PSScriptRoot
 
 try {
     if ($Check) {
-        uv run --no-project comparison/run_l4.py --self-test
+        uv run --no-project comparison/freeze_03_run_l4.py --self-test
         if ($LASTEXITCODE -ne 0) {
             throw "L4 synthetic checks failed."
         }
 
-        uv run --frozen python comparison/prepare.py --self-test
+        uv run --frozen python comparison/freeze_03_prepare.py --self-test
         if ($LASTEXITCODE -ne 0) {
             throw "Comparison preparation checks failed."
         }
 
-        uv run --frozen python comparison/freeze_comparison.py --check
+        uv run --frozen python comparison/freeze_03_control.py --check
         if ($LASTEXITCODE -ne 0) {
             throw "Freeze 03 checks failed."
         }
     }
 
     if ($Establish) {
-        uv run --frozen python comparison/freeze_comparison.py --establish
+        uv run --frozen python comparison/freeze_03_control.py --establish
         if ($LASTEXITCODE -ne 0) {
             throw "Freeze 03 creation failed."
         }
     }
 
     if ($Verify) {
-        uv run --frozen python comparison/freeze_comparison.py --verify
+        uv run --frozen python comparison/freeze_03_control.py --verify
         if ($LASTEXITCODE -ne 0) {
             throw "Freeze 03 verification failed."
         }

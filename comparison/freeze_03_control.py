@@ -2,9 +2,9 @@
 
 From the repository root:
 
-    uv run --frozen python comparison/freeze_comparison.py --check
-    uv run --frozen python comparison/freeze_comparison.py --establish
-    uv run --frozen python comparison/freeze_comparison.py --verify
+    uv run --frozen python comparison/freeze_03_control.py --check
+    uv run --frozen python comparison/freeze_03_control.py --establish
+    uv run --frozen python comparison/freeze_03_control.py --verify
 
 The PowerShell wrapper also runs the preparation and L4 self-tests.
 
@@ -27,10 +27,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 RECORD = "contracts/FREEZE_03_KERNEL_MISSING_VALUES.md"
 FREEZE_02_RECORD = "contracts/FREEZE_02_GENERALIZATION.md"
-DESIGN = "comparison/KERNEL_MISSING_VALUES_DESIGN.md"
-PREPARE = "comparison/prepare.py"
-RUN_L4 = "comparison/run_l4.py"
-SELF = "comparison/freeze_comparison.py"
+DESIGN = "comparison/freeze_03_design.md"
+PREPARE = "comparison/freeze_03_prepare.py"
+RUN_L4 = "comparison/freeze_03_run_l4.py"
+SELF = "comparison/freeze_03_control.py"
 WRAPPER = "freeze_03.ps1"
 
 EVIDENCE_COMMIT = "e1befa159faff965b32a47975ac355bb6a9ccb18"
@@ -142,7 +142,7 @@ The design specifies the canonical-PURL probe, eligible occurrences,
 source–target pairs, hash-authorized frame regime, both missing-value
 policies, and reporting rules.
 
-See [Kernel Missing-Value Comparison Design](../comparison/KERNEL_MISSING_VALUES_DESIGN.md).
+See [Kernel Missing-Value Comparison Design](../comparison/freeze_03_design.md).
 
 ## Chronology
 
@@ -181,7 +181,9 @@ It permits comparison output directories after establishment.
 ```
 
 The pre-execution content commit identifies the preparation state.
-Review and commit this record separately before formal execution.
+The protocol requires separate review and commitment of this record
+before formal execution.
+Record generation does not perform that commitment.
 
 ## Frozen Content Hashes
 

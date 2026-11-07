@@ -2,37 +2,44 @@
 
 ## Status and Chronology
 
-Prepared during 2026-11-05 through 2026-11-07.
+This design was prepared during 2026-11-05 through 2026-11-07.
 
-This design becomes frozen when
-`contracts/FREEZE_03_KERNEL_MISSING_VALUES.md`
-is established and verified.
+The authoritative freeze record is
+`contracts/FREEZE_03_KERNEL_MISSING_VALUES.md`.
+Establishment of that record fixes the design and apparatus identified
+by its artifact hashes.
 
 Hypothesis L4 was recorded before the Freeze 02 experiment.
-The operational design below was completed after examining the baseline
-results and the preparation counts.
+The operational design was completed after examination of the baseline
+results and preparation counts.
 
-The attached development record reports successful synthetic checks and
-an in-memory preparation of the committed Freeze 02 evidence.
-The preparation counts and their implications are recorded below.
+Pre-freeze development checks passed for the synthetic cases.
+Preparation of the committed baseline evidence in memory produced the
+counts recorded below.
 
-Formal execution output will be preserved separately.
-The results report will be `comparison/REPORT_L4.md`.
+These preparation observations precede the formal kernel computation.
+They are not results from formal execution of `comparison/freeze_03_run_l4.py --run`.
+
+Formal execution evidence is recorded separately in
+`comparison/results/l4/run.json`.
+The designated analysis report is `comparison/REPORT_L4.md`.
 
 ## Scope
 
-Freeze 03 executes hypothesis L4 using the interpretive kernel.
+Freeze 03 fixes the execution procedure for hypothesis L4 using the
+interpretive kernel.
 
-It compares DISTINCT and SHARED missing-value policies on one canonical-PURL
-probe, using the same eligible occurrences and frame regime under both policies.
+The study compares DISTINCT and SHARED missing-value policies on one
+canonical-PURL probe. Both policies receive the same eligible occurrences
+and frame regime.
 
-L1–L3 are assigned to the planned
-[IdentityOps language comparison](./IDENTITYOPS_COMPARISON_DESIGN.md).
+L1–L3 are assigned to the separately planned
+[IdentityOps language comparison](./freeze_04_design.md).
 
-The exploratory adapter-scope question concerning `metadata.component`
-and alternative hash locations remains a separate future study.
+Exploration of CycloneDX `metadata.component` and alternative hash
+locations is outside this study's scope.
 
-The historical predictions are preserved in
+The original hypotheses remain preserved in
 [generalization/PREDICTIONS.md](../generalization/PREDICTIONS.md).
 
 ## Pinned Evidence and Implementation
@@ -48,12 +55,12 @@ The baseline execution is recorded in
 [generalization/results/run.json](../generalization/results/run.json).
 
 The kernel dependency is declared in the inline script metadata in
-[run_l4.py](./run_l4.py).
+[freeze_03_run_l4.py](./freeze_03_run_l4.py).
 
 The pilot Python environment and evaluator dependencies are recorded
 under Freeze 02.
 
-## Question
+## Research Question
 
 For the declared canonical-PURL probe, how does changing missing-value
 treatment from DISTINCT to SHARED affect:
@@ -62,12 +69,12 @@ treatment from DISTINCT to SHARED affect:
 - the subset of changed agreements with hash-authorized correspondence; and
 - generated identifications among observed PURL values?
 
-Report each route separately.
+Results are reported separately for each route.
 Source–target pairs within a route are dependent observations.
 
 ## Preparation
 
-`comparison/prepare.py` reads the pinned evidence commit using Git.
+`comparison/freeze_03_prepare.py` reads the pinned evidence commit using Git.
 
 It verifies source and target SHA-256 digests against the recorded values.
 It also checks the imported pilot adapter, evaluator, and normalization
@@ -92,26 +99,26 @@ Their scope excludes CycloneDX `metadata.component`.
 
 ## Correspondence Rule
 
-Use the frozen evaluator's `_anchor_index` and `_anchored_targets`.
+Correspondence is derived using the frozen evaluator's `_anchor_index`
+and `_anchored_targets`.
 
-For each source occurrence, gather the target occurrences reached through
-its normalized content hashes.
+For each source occurrence, the candidate set contains the target
+occurrences reached through its normalized content hashes.
 Exactly one target occurrence authorizes a source–target pair.
 
-Retain the full target occurrence population when deriving candidates.
+The full target occurrence population participates in candidate derivation.
 A malformed or multiple-PURL target can therefore contribute to ambiguity.
-
-Apply probe eligibility after deriving correspondence.
+Probe eligibility is applied after correspondence derivation.
 
 Correspondence is independent of the PURL being compared.
-The implementation reuses the baseline matching rule, so this study
-does not independently validate that rule.
+The implementation reuses the baseline matching rule; this study does
+not independently validate that rule.
 
 ## Probe and Eligibility
 
-Use `purl_canonical.canonical` from the frozen pilot.
+PURL normalization uses `purl_canonical.canonical` from the frozen pilot.
 
-Each occurrence receives one of these probe statuses:
+Each occurrence receives one of the following probe statuses.
 
 | Status    | Rule                                                                              |
 | --------- | --------------------------------------------------------------------------------- |
@@ -126,28 +133,31 @@ is malformed under this preparation rule.
 Repeated raw references that normalize to one valid PURL supply one
 canonical value. Their raw occurrences remain recorded.
 
-The preparation records malformed and multiple-value flags separately.
+Preparation records malformed and multiple-value flags separately.
 Its primary status gives malformed values precedence.
 
 The scalar probe includes observed and missing occurrences.
-Report excluded malformed and multiple occurrences by route and side.
+Malformed and multiple occurrences are excluded; their counts are
+reported by route and side.
 
 ## Direct Comparisons
 
-Within each completed route, compare every eligible source occurrence
-with every eligible target occurrence.
+Within each completed route, the comparison includes every eligible
+source occurrence paired with every eligible target occurrence.
+Each source–target pair occurs once.
+The pair population is identical under both policies.
 
-Include each source–target pair once.
-Keep the same pair population under both policies.
-
-For each policy, compare the outputs returned by the pinned kernel loader:
+Direct agreement is equality of the outputs returned by the pinned
+kernel loader:
 
 - DISTINCT assigns each missing cell a separate output.
 - SHARED assigns missing cells within the probe one shared output.
 
-Record independently whether each changed pair has hash authorization.
+Hash authorization is recorded separately for changed pairs.
+Agreement between missing values supplies no independent evidence
+of source–target correspondence.
 
-For each route, report:
+The route-level results contain:
 
 - eligible source and target counts;
 - excluded counts by side and reason;
@@ -166,44 +176,47 @@ For this single probe, the predicted number of changed direct comparisons is:
 
 `missing source cells x missing target cells`
 
-For a two-missing pair, the prediction is disagreement under DISTINCT
-and agreement under SHARED.
+A two-missing pair is predicted to disagree under DISTINCT and agree
+under SHARED.
 
-For two observed values, the prediction is unchanged agreement.
+A pair of observed values is predicted to retain the same agreement
+outcome under both policies.
 
-If a route has zero two-missing pairs, report the two-missing prediction
-as unevaluable for that route.
-Report the observed-value control separately wherever its eligible pairs exist.
+The two-missing prediction is classified as unevaluable for any route
+with zero two-missing pairs.
+The observed-value control is assessed separately wherever eligible
+observed-value pairs exist.
 
-Keep contrary outcomes in the result record.
+Contrary outcomes remain part of the result record.
 
 ## Frame Regime and Generated Identifications
 
 Each eligible occurrence is a frame identified by side and JSON Pointer
 within its route.
 
-Start with a singleton class for every eligible frame.
-Join the endpoints of each hash-authorized source–target pair whose
-endpoints are both eligible for the probe.
-Take the equivalence closure of those joins.
+The frame partition starts with a singleton class for every eligible frame.
+Each hash-authorized source–target pair with two eligible endpoints
+contributes a join.
+The frame regime is the equivalence closure of those joins.
 
-Use that same frame partition and the canonical-PURL probe under both policies.
+The same frame partition and canonical-PURL probe are used under both policies.
 
 The kernel's generated relation acts on probe outputs.
-Record its blocks under both policies, including the originating frame
-locations of missing outputs.
+Its blocks are recorded under both policies, including the originating
+frame locations of missing outputs.
 
-Compare generated identifications on pairs of distinct observed PURL values
-present under both policies.
-Report gained and lost identifications and retain a changed-pair witness.
+Generated identifications are compared on pairs of distinct observed
+PURL values present under both policies.
+The results contain gained and lost identification counts and a witness
+when an identification changes.
 
 Direct source–target agreement counts and generated output-identification
 counts use different carriers and are reported separately.
 
-## Known Preparation Results Before Freeze 03
+## Preparation Observations Before Freeze 03
 
 The development preparation examined all 19 completed routes in memory.
-Its recorded source-side correspondence counts were:
+It produced the following source-side correspondence counts.
 
 | Correspondence status | Source occurrences across routes |
 | --------------------- | -------------------------------: |
@@ -213,49 +226,54 @@ Its recorded source-side correspondence counts were:
 | no_source_anchor      |                               37 |
 | **Total**             |                        **8,386** |
 
-Every source occurrence was classified observed.
+Every source occurrence was classified as observed.
 There were zero missing, malformed, or multiple-PURL source occurrences.
 
 Nine Syft routes each had one missing target occurrence.
 The Syft route `gen-spdx-0d278129197b--syft` had zero missing target occurrences.
 The cdx2spdx and completed Protobom routes had zero missing target occurrences.
 
-Consequently, the two-missing pair count is already known to be zero
-on every completed route.
+The two-missing pair count was therefore zero on every completed route.
 
-The observed-value control is expected to be met.
-Zero changed direct agreements are expected.
+These preparation observations imply the following expectations for formal
+execution:
 
-Zero changes among generated observed-PURL identifications are expected.
+- zero changed direct agreements;
+- an unchanged observed-value control; and
+- zero changes among generated observed-PURL identifications.
+
 The routes with missing targets have zero hash-authorized pairs.
 Their missing target frames remain singleton classes in the frame partition.
 
-These expectations follow from preparation results inspected before Freeze 03.
-The formal execution records the kernel computation under the frozen procedure.
+These expectations were derived before Freeze 03 from inspected preparation
+results. Formal execution records the kernel computation under the frozen
+procedure; it does not constitute an unanticipated test of those counts.
 
 ## Synthetic Checks
 
 The preparation self-test checks occurrence identity, nested traversal,
 malformed and multiple PURLs, and matching before probe exclusion.
-In the current preparation implementation, it then prepares the real pinned
-evidence in memory and prints its counts.
+It then prepares the pinned baseline evidence in memory and prints
+correspondence and probe-status counts.
 
 The L4 runner self-test uses synthetic records.
 It checks six changed direct agreements, one hash-authorized changed pair,
 an unchanged observed-value control, one gained generated identification,
 and the zero-two-missing-pair case.
 
-Record the actual command output when performing the pre-freeze checks.
+Successful synthetic checks establish behavior on the declared control
+cases. They are separate from the formal baseline comparison.
 
-## Development Commands: Reproducible Setup
+## Development Environment and Checks
 
-Run these commands from the repository root:
+The following commands specify the comparison development setup and checks.
+Their working directory is the repository root.
 
 ```powershell
 uv sync --locked
 if ($LASTEXITCODE -ne 0) { throw "Locked environment synchronization failed." }
 
-uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\run_l4.py
+uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\freeze_03_run_l4.py
 if ($LASTEXITCODE -ne 0) { throw "Comparison dependency setup failed." }
 
 uv run --frozen ruff check comparison
@@ -267,55 +285,60 @@ if ($LASTEXITCODE -ne 0) { throw "Comparison type checks failed." }
 .\freeze_03.ps1 -Check
 ```
 
-The dependency installation reads the kernel pin from `run_l4.py`.
+Dependency installation reads the kernel pin from `freeze_03_run_l4.py`.
 It makes that dependency available to the pilot environment's editor
 and type checker after synchronization.
 
 The formal L4 command uses the script's inline dependency declaration.
 
+The `-Check` operation runs both self-tests and verifies establishment
+prerequisites apart from the clean-tree requirement.
+It creates no formal comparison artifacts.
+
 ## Freeze 03 Inventory
 
-The freeze mechanism hashes:
+The freeze mechanism hashes these files:
 
-- `comparison/KERNEL_MISSING_VALUES_DESIGN.md`
-- `comparison/prepare.py`
-- `comparison/run_l4.py`
-- `comparison/freeze_comparison.py`
+- `comparison/freeze_03_design.md`
+- `comparison/freeze_03_prepare.py`
+- `comparison/freeze_03_run_l4.py`
+- `comparison/freeze_03_control.py`
 - `freeze_03.ps1`
 - `contracts/FREEZE_02_GENERALIZATION.md`
 
 The Freeze 03 verifier also verifies Freeze 02.
 
-The index, planned Freeze 04 design, changelog, and post-run report remain
-outside the Freeze 03 inventory.
+The comparison index, planned Freeze 04 design, changelog, and post-run
+report are outside the Freeze 03 inventory.
 
 At establishment, `comparison/prepared/` and `comparison/results/`
 must both be absent.
-Verification permits them afterward.
+Verification permits those directories after establishment.
 
-## Establishment and Execution
+## Establishment Protocol
 
-Run all commands from the repository root.
+Establishment requires a clean, committed preparation state.
+The preparation state includes the final design and implementation.
+An empty `git status --short` output indicates the required clean tree.
 
-### 1. Check and commit the preparation state
-
-Complete the development checks above.
-Review, commit, and push the final design and implementation.
-Confirm that `git status --short` produces no output.
-
-### 2. Establish Freeze 03
+The establishment command is:
 
 ```powershell
 .\freeze_03.ps1 -Establish
 ```
 
-Review the generated file:
+The command generates and verifies:
 
 `contracts/FREEZE_03_KERNEL_MISSING_VALUES.md`
 
-Commit and push that record before executing the comparison.
+The protocol requires review, commit, and push of that record before
+formal preparation and execution.
+Record generation does not itself perform those Git operations.
 
-### 3. Prepare and execute
+## Formal Execution Protocol
+
+The following sequence specifies formal preparation, execution, and
+the surrounding integrity checks from the repository root.
 
 ```powershell
 & {
@@ -323,14 +346,14 @@ Commit and push that record before executing the comparison.
 
     .\freeze_03.ps1 -Verify
 
-    uv run --frozen python comparison/prepare.py --prepare
+    uv run --frozen python comparison/freeze_03_prepare.py --prepare
     if ($LASTEXITCODE -ne 0) {
         throw "Comparison preparation failed."
     }
 
     .\freeze_03.ps1 -Verify
 
-    uv run --no-project comparison/run_l4.py --run
+    uv run --no-project comparison/freeze_03_run_l4.py --run
     if ($LASTEXITCODE -ne 0) {
         throw "L4 execution failed."
     }
@@ -340,9 +363,14 @@ Commit and push that record before executing the comparison.
 ```
 
 The runners enforce output-file non-overwrite checks.
-The commands above supply the freeze-verification gates.
+The command sequence supplies the freeze-verification gates.
 
-### 4. Preserve the execution evidence
+The prepared input is `comparison/prepared/freeze_02.json`.
+The kernel result is `comparison/results/l4/run.json`.
+
+## Evidence Preservation
+
+The evidence-preservation commands are:
 
 ```powershell
 git add -f -- comparison/prepared/ comparison/results/
@@ -351,14 +379,17 @@ git commit -m "Record Freeze 03 kernel comparison evidence"
 git push origin main
 ```
 
-Preserve any partial output and error information if a command fails.
-Review the failure before authorizing another attempt.
+A failed command requires preservation of any partial output and error
+information. Another attempt requires review and explicit authorization;
+failure does not authorize replacement of existing evidence.
 
-### 5. Write the report
+## Reporting Requirements
 
-Write `comparison/REPORT_L4.md` after preserving the evidence.
+The designated report is `comparison/REPORT_L4.md`.
+It is prepared after preservation of the execution evidence and is outside
+the frozen apparatus.
 
-Report:
+The report records:
 
 - the preparation and result commits;
 - the verified Freeze 03 digest;
@@ -368,7 +399,7 @@ Report:
 - the product check and changed-pair witnesses;
 - generated identification results;
 - met, contradicted, and unevaluable clauses of L4; and
-- what was known from preparation before Freeze 03.
+- the preparation observations known before Freeze 03.
 
 ## Interpretation Limits
 
@@ -376,9 +407,9 @@ The original missing-value hypothesis predates Freeze 02.
 The selected probe, pair population, and operational procedure were completed
 after baseline inspection.
 
-The preparation counts already predict zero direct changes on this dataset.
-Report that chronology when interpreting the formal computation.
+The preparation counts predict zero direct changes on this dataset.
+That chronology limits the interpretation of the formal computation.
 
 The synthetic checks exercise policy-sensitive cases.
-The formal study measures which of those conditions occur in the selected
-preserved documents.
+The formal study assesses whether those conditions occur in the selected
+preserved documents and records the kernel's behavior on those inputs.

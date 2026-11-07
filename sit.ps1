@@ -40,10 +40,10 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # CUSTOM: The Freeze 03 kernel comparison declares its dependency in
-# comparison/run_l4.py.
+# comparison/freeze_03_run_l4.py.
 # Install that declaration into the project environment
 # so VS Code and the repository ty check resolve the same pinned kernel.
-uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\run_l4.py
+uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\freeze_03_run_l4.py
 if ($LASTEXITCODE -ne 0) {
     throw "Comparison dependency setup failed."
 }

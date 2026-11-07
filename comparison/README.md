@@ -30,10 +30,10 @@ The preparation counts were examined before Freeze 03.
 They showed zero missing source PURLs on all completed routes.
 The design records that prior observation and the resulting expectations.
 
-- [Design and commands](./KERNEL_MISSING_VALUES_DESIGN.md)
-- [Preparation](./prepare.py)
-- [L4 runner](./run_l4.py)
-- [Freeze mechanism](./freeze_comparison.py)
+- [Design and commands](./freeze_03_design.md)
+- [Preparation](./freeze_03_prepare.py)
+- [L4 runner](./freeze_03_run_l4.py)
+- [Freeze mechanism](./freeze_03_control.py)
 - [PowerShell entry point](../freeze_03.ps1)
 
 The freeze mechanism creates:
@@ -44,18 +44,17 @@ The formal commands create:
 - `comparison/prepared/freeze_02.json`
 - `comparison/results/l4/run.json`
 
-After preserving the formal output, write:
+The designated post-execution report is:
 `comparison/REPORT_L4.md`
 
-The generated freeze record and execution outputs establish the study's
-actual execution status.
+The report follows preservation of the formal execution evidence.
 
 ## Freeze 04. Planned IdentityOps Language Comparison
 
 The language study requires a completed design, implementation, checks,
 and its own freeze before execution.
 
-- [Planned IdentityOps design](./IDENTITYOPS_COMPARISON_DESIGN.md)
+- [Planned IdentityOps design](./freeze_04_design.md)
 
 The reserved freeze-record path is:
 `contracts/FREEZE_04_IDENTITYOPS_COMPARISON.md`

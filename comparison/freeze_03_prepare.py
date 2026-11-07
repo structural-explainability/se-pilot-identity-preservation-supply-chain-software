@@ -1,25 +1,25 @@
-"""Prepare component occurrences and hash correspondences for the comparison.
+"""freeze_03_prepare.py - Prepare Freeze 02 evidence for the Freeze 03 kernel comparison.
 
-From the repository root, before the comparison freeze:
+The pre-freeze validation command, executed from the repository root, is:
 
-    uv run --frozen python comparison/prepare.py --self-test
+    uv run --frozen python comparison/freeze_03_prepare.py --self-test
 
 The self-test runs synthetic checks, then prepares the committed evidence
-in memory.
-It verifies the evidence commit and document digests, prints
-correspondence status counts, and prints probe-status counts by route.
-It writes nothing.
+in memory. It verifies the evidence commit and document digests and prints
+correspondence and probe-status counts. It creates no formal prepared artifact.
 
-After the separate comparison freeze:
+The formal preparation command follows Freeze 03 establishment:
 
-    uv run --frozen python comparison/prepare.py --prepare
+    uv run --frozen python comparison/freeze_03_prepare.py --prepare
 
 Formal output:
-
     comparison/prepared/freeze_02.json
 
 The output contains route metadata, occurrence rows, and source-to-target
-correspondences. Evaluation verdicts are reserved for later scoring.
+correspondences. Baseline evaluation verdicts are not included.
+
+The formal command refuses to overwrite an existing prepared artifact.
+Freeze verification is supplied by the documented execution sequence.
 """
 
 import argparse

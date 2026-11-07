@@ -16,11 +16,11 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - Added `post_run_counts.ps1`, a read-only count of evaluator verdicts and UNANCHORABLE reasons by route.
 - Added comparison design documentation distinguishing the Freeze 03 kernel
   missing-value comparison from the planned Freeze 04 IdentityOps comparison.
-- Added `comparison/prepare.py` to prepare comparison inputs from the pinned
+- Added `comparison/freeze_03_prepare.py` to prepare comparison inputs from the pinned
   Freeze 02 evidence, with synthetic preparation checks.
-- Added `comparison/run_l4.py` to compare DISTINCT and SHARED missing-value
+- Added `comparison/freeze_03_run_l4.py` to compare DISTINCT and SHARED missing-value
   policies using the pinned interpretive kernel, with synthetic checks.
-- Added `freeze_03.ps1` and `comparison/freeze_comparison.py`,
+- Added `freeze_03.ps1` and `comparison/freeze_03_control.py`,
   which check, establish, and verify Freeze 03.
   Freeze 03 covers the kernel missing-value comparison separately from Freeze 02.
 - Added [Freeze 02 Post-Experiment Notes](./generalization/FREEZE_02_POST_EXPERIMENT.md)

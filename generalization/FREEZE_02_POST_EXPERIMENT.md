@@ -220,9 +220,16 @@ No confirmed CycloneDX-to-SPDX VIOLATED_DROPPED occurred.
 
 ### L1 to L4
 
-Not yet run.
-See: [IDENTITYOPS_COMPARISON.md](../IDENTITYOPS_COMPARISON.md) and
-[generalization/PREDICTIONS.md](./PREDICTIONS.md)
+The original hypotheses are preserved in
+[generalization/PREDICTIONS.md](./PREDICTIONS.md).
+
+L4 is addressed by the
+[Freeze 03 kernel missing-value comparison](../comparison/freeze_03_design.md).
+L1–L3 are assigned to the separately planned
+[Freeze 04 IdentityOps language comparison](../comparison/freeze_04_design.md).
+
+The follow-on studies have separate designs, execution records, and reports.
+Their results are not part of the Freeze 02 baseline execution.
 
 ## UNANCHORABLE Reasons by Converter
 
@@ -239,7 +246,9 @@ See: [IDENTITYOPS_COMPARISON.md](../IDENTITYOPS_COMPARISON.md) and
   to explain the missing matches.
   Inspected so far: `gen-cyclonedx-0fc86e0249ef` and `gen-spdx-0d278129197b`.
   Not yet inspected: the other 7 Syft CycloneDX-to-SPDX routes and `gen-spdx-e38ee905f9c0`.
-- Settle the open decisions in `IDENTITYOPS_COMPARISON.md` before any IdentityOps run.
+- IdentityOps execution requires completion of the decisions recorded in
+  [the Freeze 04 design](../comparison/freeze_04_design.md)
+  and establishment of its separate freeze.
 - Run `verify_06_freeze_02` and confirm Freeze 02 still verifies after the run.
 - Preserve the original verdicts and evidence during that analysis.
 

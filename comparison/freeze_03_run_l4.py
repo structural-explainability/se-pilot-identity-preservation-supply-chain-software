@@ -5,15 +5,15 @@
 # ]
 # ///
 
-"""Run the Freeze 02 L4 missing-value comparison.
+"""freeze_03_run_l4.py - Execute the Freeze 03 kernel missing-value comparison on Freeze 02 evidence.
 
-Before the comparison freeze, use synthetic records only:
+The synthetic validation command, executed from the repository root, is:
 
-    uv run --no-project comparison/run_l4.py --self-test
+    uv run --no-project comparison/freeze_03_run_l4.py --self-test
 
-After the comparison freeze and the formal preparation step:
+The formal command follows Freeze 03 establishment and input preparation:
 
-    uv run --no-project comparison/run_l4.py --run
+    uv run --no-project comparison/freeze_03_run_l4.py --run
 
 Input:
     comparison/prepared/freeze_02.json
@@ -22,7 +22,10 @@ Output:
     comparison/results/l4/run.json
 
 Frame IDs are scoped to one route. Each consists of the document side and
-the JSON Pointer emitted by comparison/prepare.py.
+the JSON Pointer emitted by comparison/freeze_03_prepare.py.
+
+The formal command refuses to overwrite an existing result.
+Freeze verification is supplied by the documented execution sequence.
 """
 
 import argparse

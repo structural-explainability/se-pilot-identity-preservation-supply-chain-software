@@ -19,7 +19,7 @@ Freeze 02 established the baseline preservation results.
 
 Freeze 03 concerns the interpretive kernel's missing-value policies.
 Its design is recorded in
-[KERNEL_MISSING_VALUES_DESIGN.md](./KERNEL_MISSING_VALUES_DESIGN.md).
+[freeze_03_design.md](./freeze_03_design.md).
 
 This planned study addresses the IdentityOps language.
 
