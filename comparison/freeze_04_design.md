@@ -1,17 +1,17 @@
-# IdentityOps Language Comparison — Planned Study
+# IdentityOps Language Comparison - Original Exploratory Design
 
 ## Status
 
-PLANNED. Design incomplete. Execution pending.
+SUPERSEDED for the selected Freeze 04 study.
+This file records the original exploratory framing.
+It is not in the Freeze 04 inventory.
 
-Freeze 04 is reserved for this study.
+The selected study is defined in
+[freeze_04_operation_mapping.md](./freeze_04_operation_mapping.md)
+and [freeze_04_specification.md](./freeze_04_specification.md).
 
-The prospective freeze-record path is:
-
+The freeze-record path is:
 `contracts/FREEZE_04_IDENTITYOPS_COMPARISON.md`
-
-The record will be created only after the design, implementation,
-validation, and execution procedure are complete.
 
 ## Relationship to Earlier Studies
 
@@ -42,7 +42,7 @@ The completed Freeze 04 specification must identify every version actually used.
 
 ## Intended Questions
 
-### L1 — Agreement on the Shared Evaluable Subset
+### L1. Agreement on the Shared Evaluable Subset
 
 Can an IdentityOps program reproduce the pilot's preservation judgment
 for occurrences satisfying the declared common eligibility conditions?
@@ -56,7 +56,7 @@ If matching and normalization are reused from the pilot,
 describe agreement on those stages as inherited from the shared preparation.
 The comparison then tests the program, regime encoding, and outcome mapping.
 
-### L2 — Canonical and Alternative-Slot Probes
+### L2. Canonical and Alternative-Slot Probes
 
 For an independently established relocation case, does the canonical-slot
 probe disagree while a declared recovery probe agrees?
@@ -69,7 +69,7 @@ Any reuse of that evidence must retain its engineering-validation designation.
 
 [IdentityOps Experiment B](https://github.com/structural-explainability/se-identity-ops/tree/v0.1.0/examples/sbom)
 
-### L3 — Evidence Accounting
+### L3. Evidence Accounting
 
 Re-expression of the same observations is expected to reproduce their
 consequences on the shared subset.

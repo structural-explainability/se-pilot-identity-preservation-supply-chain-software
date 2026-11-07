@@ -9,11 +9,11 @@ This directory contains studies using the preserved SBOM generalization evidence
 | 01     | Commitment and evaluator        | Fix the preservation obligation and evaluation procedure.                                                    |
 | 02     | Generalization baseline         | Execute the declared conversions and evaluate preservation under the frozen method.                          |
 | 03     | Kernel missing-value comparison | Measure the effects of DISTINCT and SHARED on canonical-PURL probe agreements and generated identifications. |
-| 04     | IdentityOps language comparison | Planned study of the language representation and execution of preservation judgments.                        |
+| 04     | IdentityOps language comparison | Compare IdentityOps with a Python reference under two anchor-algorithm policies.                             |
 
 Freeze 02 was executed and its results were committed.
 The Freeze 03 design and implementation are available here.
-Freeze 04 remains a planned study.
+The Freeze 04 apparatus is available here.
 
 ## Freeze 02 Baseline
 
@@ -49,15 +49,34 @@ The designated post-execution report is:
 
 The report follows preservation of the formal execution evidence.
 
-## Freeze 04. Planned IdentityOps Language Comparison
+## Freeze 04. IdentityOps Comparison
 
-The language study requires a completed design, implementation, checks,
-and its own freeze before execution.
+The study compares a Python reference arm with an IdentityOps-assisted arm
+under a baseline and a restricted anchor-algorithm policy.
 
-- [Planned IdentityOps design](./freeze_04_design.md)
+The preparation counts and development runs were examined before Freeze 04.
+The specification records that chronology.
 
-The reserved freeze-record path is:
+- [Operation mapping](./freeze_04_operation_mapping.md)
+- [Specification](./freeze_04_specification.md)
+- [Reference arm](./freeze_04_reference.py)
+- [IdentityOps arm](./freeze_04_identityops.py)
+- [Baseline program](./freeze_04_baseline.ido)
+- [Restricted program](./freeze_04_restricted.ido)
+- [Arm comparison](./freeze_04_compare.py)
+- [Freeze mechanism](./freeze_04_control.py)
+- [PowerShell entry point](../freeze_04.ps1)
+- [Original exploratory design](./freeze_04_design.md)
+
+The freeze mechanism creates:
 `contracts/FREEZE_04_IDENTITYOPS_COMPARISON.md`
+
+The formal commands create:
+
+- `comparison/results/freeze_04/reference.json`
+- `comparison/results/freeze_04/anchors.csv`
+- `comparison/results/freeze_04/identityops.json`
+- `comparison/results/freeze_04/transitions.json`
 
 The original L1–L4 predictions remain in their frozen historical record.
 The follow-on designs identify which hypotheses each study addresses.
@@ -72,5 +91,6 @@ Both formal commands refuse to overwrite their output files.
 Freeze 03 records the design, implementation, wrapper, and Freeze 02 record.
 Its verifier also invokes the Freeze 02 integrity verifier.
 
-Freeze 04 implementation and results will receive their own declared paths
-when that study is designed.
+Freeze 04 records the mapping, specification, both arms, both programs,
+the comparison, the wrapper, and the Freeze 02 and Freeze 03 records.
+Its verifier also invokes the Freeze 02 integrity verifier.

@@ -41,11 +41,18 @@ if ($LASTEXITCODE -ne 0) {
 
 # CUSTOM: The Freeze 03 kernel comparison declares its dependency in
 # comparison/freeze_03_run_l4.py.
-# Install that declaration into the project environment
-# so VS Code and the repository ty check resolve the same pinned kernel.
+# The Freeze 04 IdentityOps comparison declares its dependency in
+# comparison/freeze_04_identityops.py.
+# Install those declarations into the project environment
+# so VS Code and the repository ty check resolve the same pinned packages.
 uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\freeze_03_run_l4.py
 if ($LASTEXITCODE -ne 0) {
     throw "Comparison dependency setup failed."
+}
+
+uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\freeze_04_identityops.py
+if ($LASTEXITCODE -ne 0) {
+    throw "IdentityOps dependency setup failed."
 }
 
 # ============================================================
@@ -158,6 +165,16 @@ if (Test-Path -LiteralPath "contracts/FREEZE_03_KERNEL_MISSING_VALUES.md") {
 }
 else {
     .\freeze_03.ps1 -Check
+}
+
+# CUSTOM: The Freeze 04 check runs the three arm self-tests and verifies
+# the freeze prerequisites, including Freeze 02 integrity.
+# It does not establish Freeze 04.
+if (Test-Path -LiteralPath "contracts/FREEZE_04_IDENTITYOPS_COMPARISON.md") {
+    .\freeze_04.ps1 -Verify
+}
+else {
+    .\freeze_04.ps1 -Check
 }
 
 Write-Host ""

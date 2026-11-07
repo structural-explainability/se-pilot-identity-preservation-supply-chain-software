@@ -161,9 +161,9 @@ id = "check-added-large-files"
 name = "C1) Prevent accidental commits of large binaries"
 args = ["--maxkb=2000"]
 # WHY: 2MB is a common threshold for large files
-# CUSTOM: Preserved Freeze 03 input and result evidence exceed 2 MB.
+# CUSTOM: Preserved Freeze 03 and Freeze 04 input and result evidence exceed 2 MB.
 # Other files remain subject to the standard size limit.
-exclude = '^comparison/(prepared/freeze_02\.json|results/l4/run\.json)$'
+exclude = '^comparison/(prepared/freeze_02\.json|results/l4/run\.json|results/freeze_04/(reference|identityops|transitions)\.json|results/freeze_04/anchors\.csv)$'
 
 [[repos.hooks]]
 id = "check-merge-conflict"

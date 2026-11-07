@@ -2,11 +2,11 @@
 
 ## Status
 
-Working mapping.
-It precedes any IdentityOps change and any Freeze 04 implementation.
+Operation mapping for the selected Freeze 04 study.
+It was written before any IdentityOps change and any Freeze 04 implementation.
 It records what exists at the pinned versions below.
 It adopts no language extension.
-This file is designated for inclusion in the Freeze 04 inventory.
+This file is in the Freeze 04 inventory.
 Its contents become frozen when the Freeze 04 record is established.
 
 ## Pinned Subjects

@@ -1,0 +1,27 @@
+# comparison/freeze_04_restricted.ido
+# Freeze 04, restricted anchor policy: SHA-256, SHA-384 and SHA-512, as spelled.
+#
+# This program declares only the regimes of the admitted algorithms.
+# Other algorithm columns exist in the table and are not consulted.
+# SHA-384 here is the spelling used by sources; targets spell it SHA384,
+# so that regime relates no source to a target.
+#
+# The adapter script writes the table. This program does not combine regimes.
+
+source anchors
+    file "results/freeze_04/anchors.csv"
+    sha256 "00897db38b7c3f5c1b27b1a54cae990a9d894ff36a7434a623f0f5fcc4bca3b3"
+    note "one row per occurrence of the 19 completed routes, written by freeze_04_identityops.py from the prepared input"
+
+carrier occurrence from anchors key "frame"
+
+regime sha256 on occurrence by "anchor_SHA-256" source anchors
+    meaning "occurrences of one route sharing a SHA-256 value"
+regime sha384_hyphen on occurrence by "anchor_SHA-384" source anchors
+    meaning "occurrences of one route sharing a value spelled SHA-384"
+regime sha512 on occurrence by "anchor_SHA-512" source anchors
+    meaning "occurrences of one route sharing a SHA-512 value"
+
+check sha256_coverage coverage sha256
+check sha384_hyphen_coverage coverage sha384_hyphen
+check sha512_coverage coverage sha512

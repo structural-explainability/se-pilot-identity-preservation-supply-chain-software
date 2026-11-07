@@ -13,6 +13,17 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ### Added
 
+Freeze 04 uses IdentityOps v0.1.0 without a language extension.
+
+- Added the Freeze 04 apparatus: `comparison/freeze_04_specification.md`,
+  `comparison/freeze_04_reference.py`, `comparison/freeze_04_identityops.py`,
+  `comparison/freeze_04_baseline.ido`, `comparison/freeze_04_restricted.ido`,
+  `comparison/freeze_04_compare.py`, `comparison/freeze_04_control.py`,
+  and `freeze_04.ps1`.
+  The arms classify source correspondences under a baseline and a restricted
+  anchor-algorithm policy.
+  The comparison reports per-occurrence transitions and arm disagreements.
+  Freeze 04 is not yet established.
 - Established Freeze 03 in `contracts/FREEZE_03_KERNEL_MISSING_VALUES.md`,
   recording the kernel comparison apparatus, pinned inputs, and pre-freeze
   preparation chronology.
@@ -27,8 +38,6 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 - Added `comparison/freeze_04_operation_mapping.md` documenting the selected
   per-algorithm regime encoding, language and Python responsibilities,
   designated evidence paths, and the explicitness comparison.
-  Freeze 04 remains a planned study using IdentityOps v0.1.0 without a
-  language extension.
 - Added `post_run_counts.ps1`, a read-only count of evaluator verdicts and UNANCHORABLE reasons by route.
 - Added comparison design documentation distinguishing the Freeze 03 kernel
   missing-value comparison from the planned Freeze 04 IdentityOps comparison.

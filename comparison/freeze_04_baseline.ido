@@ -1,0 +1,45 @@
+# comparison/freeze_04_baseline.ido
+# Freeze 04, baseline anchor policy: every algorithm spelling in the prepared anchors.
+#
+# Each regime relates occurrences of one route that share a value for one
+# algorithm spelling. An empty value places the occurrence in no class.
+# SHA-384 (sources) and SHA384 (targets) are separate regimes, as the frozen
+# evaluator's label normalization leaves them separate.
+#
+# The adapter script writes the table. This program does not combine regimes.
+
+source anchors
+    file "results/freeze_04/anchors.csv"
+    sha256 "00897db38b7c3f5c1b27b1a54cae990a9d894ff36a7434a623f0f5fcc4bca3b3"
+    note "one row per occurrence of the 19 completed routes, written by freeze_04_identityops.py from the prepared input"
+
+carrier occurrence from anchors key "frame"
+
+regime md5 on occurrence by "anchor_MD5" source anchors
+    meaning "occurrences of one route sharing a MD5 value"
+regime sha1 on occurrence by "anchor_SHA-1" source anchors
+    meaning "occurrences of one route sharing a SHA-1 value"
+regime sha256 on occurrence by "anchor_SHA-256" source anchors
+    meaning "occurrences of one route sharing a SHA-256 value"
+regime sha384_hyphen on occurrence by "anchor_SHA-384" source anchors
+    meaning "occurrences of one route sharing a value spelled SHA-384"
+regime sha384_plain on occurrence by "anchor_SHA384" source anchors
+    meaning "occurrences of one route sharing a value spelled SHA384"
+regime sha512 on occurrence by "anchor_SHA-512" source anchors
+    meaning "occurrences of one route sharing a SHA-512 value"
+regime sha3_256 on occurrence by "anchor_SHA3-256" source anchors
+    meaning "occurrences of one route sharing a SHA3-256 value"
+regime sha3_384 on occurrence by "anchor_SHA3-384" source anchors
+    meaning "occurrences of one route sharing a SHA3-384 value"
+regime sha3_512 on occurrence by "anchor_SHA3-512" source anchors
+    meaning "occurrences of one route sharing a SHA3-512 value"
+
+check md5_coverage coverage md5
+check sha1_coverage coverage sha1
+check sha256_coverage coverage sha256
+check sha384_hyphen_coverage coverage sha384_hyphen
+check sha384_plain_coverage coverage sha384_plain
+check sha512_coverage coverage sha512
+check sha3_256_coverage coverage sha3_256
+check sha3_384_coverage coverage sha3_384
+check sha3_512_coverage coverage sha3_512
