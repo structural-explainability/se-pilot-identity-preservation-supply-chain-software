@@ -1,0 +1,77 @@
+# Post Freeze 02 Comparisons
+
+This directory contains studies using the preserved SBOM generalization evidence.
+
+## Study Sequence
+
+| Freeze | Study                           | Purpose                                                                                                      |
+| ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| 01     | Commitment and evaluator        | Fix the preservation obligation and evaluation procedure.                                                    |
+| 02     | Generalization baseline         | Execute the declared conversions and evaluate preservation under the frozen method.                          |
+| 03     | Kernel missing-value comparison | Measure the effects of DISTINCT and SHARED on canonical-PURL probe agreements and generated identifications. |
+| 04     | IdentityOps language comparison | Planned study of the language representation and execution of preservation judgments.                        |
+
+Freeze 02 was executed and its results were committed.
+The Freeze 03 design and implementation are available here.
+Freeze 04 remains a planned study.
+
+## Freeze 02 Baseline
+
+- [Pre-execution predictions](../generalization/PREDICTIONS.md)
+- [Freeze 02 record](../contracts/FREEZE_02_GENERALIZATION.md)
+- [Formal execution record](../generalization/results/run.json)
+- [Post-experiment notes](../generalization/FREEZE_02_POST_EXPERIMENT.md)
+
+## Freeze 03. Kernel Missing-Value Comparison
+
+The study implements hypothesis L4 with `se-interpretive-kernel`.
+
+The preparation counts were examined before Freeze 03.
+They showed zero missing source PURLs on all completed routes.
+The design records that prior observation and the resulting expectations.
+
+- [Design and commands](./KERNEL_MISSING_VALUES_DESIGN.md)
+- [Preparation](./prepare.py)
+- [L4 runner](./run_l4.py)
+- [Freeze mechanism](./freeze_comparison.py)
+- [PowerShell entry point](../freeze_03.ps1)
+
+The freeze mechanism creates:
+`contracts/FREEZE_03_KERNEL_MISSING_VALUES.md`
+
+The formal commands create:
+
+- `comparison/prepared/freeze_02.json`
+- `comparison/results/l4/run.json`
+
+After preserving the formal output, write:
+`comparison/REPORT_L4.md`
+
+The generated freeze record and execution outputs establish the study's
+actual execution status.
+
+## Freeze 04. Planned IdentityOps Language Comparison
+
+The language study requires a completed design, implementation, checks,
+and its own freeze before execution.
+
+- [Planned IdentityOps design](./IDENTITYOPS_COMPARISON_DESIGN.md)
+
+The reserved freeze-record path is:
+`contracts/FREEZE_04_IDENTITYOPS_COMPARISON.md`
+
+The original L1–L4 predictions remain in their frozen historical record.
+The follow-on designs identify which hypotheses each study addresses.
+
+## Evidence Handling
+
+The preparation command reads the pinned Freeze 02 evidence commit.
+The comparison runner reads the prepared JSON.
+
+Both formal commands refuse to overwrite their output files.
+
+Freeze 03 records the design, implementation, wrapper, and Freeze 02 record.
+Its verifier also invokes the Freeze 02 integrity verifier.
+
+Freeze 04 implementation and results will receive their own declared paths
+when that study is designed.

@@ -13,38 +13,55 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ### Added
 
+- Added `post_run_counts.ps1`, a read-only count of evaluator verdicts and UNANCHORABLE reasons by route.
+- Added comparison design documentation distinguishing the Freeze 03 kernel
+  missing-value comparison from the planned Freeze 04 IdentityOps comparison.
+- Added `comparison/prepare.py` to prepare comparison inputs from the pinned
+  Freeze 02 evidence, with synthetic preparation checks.
+- Added `comparison/run_l4.py` to compare DISTINCT and SHARED missing-value
+  policies using the pinned interpretive kernel, with synthetic checks.
+- Added `freeze_03.ps1` and `comparison/freeze_comparison.py`,
+  which check, establish, and verify Freeze 03.
+  Freeze 03 covers the kernel missing-value comparison separately from Freeze 02.
 - Added [Freeze 02 Post-Experiment Notes](./generalization/FREEZE_02_POST_EXPERIMENT.md)
   with route outcomes, preservation verdict counts, and per-route anchoring coverage.
-- Added `docs/en/executor.md` documenting executor evidence, environment controls, timeouts, and interruption policy.
+- Added `docs/en/executor.md` documenting executor evidence, environment controls,
+  timeouts, and interruption policy.
 - Added formal Freeze 02 generalization execution evidence under `generalization/results/`.
-  19 of 20 planned routes completed; one Protobom route recorded an execution failure.
-- Added an Evidence Layout section to the Freeze 02 draft record
-  describing predeclared evidence paths, `execution.json` lifecycle, and the run manifest.
+  Of 30 declared routes, 10 were unsupported before execution.
+  Of the 20 planned for execution, 19 completed and one Protobom route recorded
+  an execution failure.
+- Added an Evidence Layout section to the Freeze 02 record
+  describing predeclared evidence paths, `execution.json` lifecycle, and `generalization/results/run.json`.
 - Added validator exit-code decision rules, subprocess timeout rules,
-  and the executor environment allowlist to the Freeze 02 draft record.
-- Added the required contents of an adjudication record to the Freeze 02 draft record.
-- Added the complete Freeze 02 artifact-hash inventory to the Freeze 02 draft record,
+  and the executor environment allowlist to the Freeze 02 record.
+- Added the required contents of an adjudication record to the Freeze 02 record.
+- Added the complete Freeze 02 artifact-hash inventory,
   including the Java runtime, apparatus modules, predictions, and smoke evidence.
 - Added an untracked-file check to the clean-tree guard in `freeze_02.ps1`.
 
 ### Changed
 
-- Changed the Freeze 02 draft record to state that the first formal execution of each route is the evidence of record
-  and that no retry or resume is implemented under the freeze.
-- Changed the Freeze 02 draft record to describe the evaluator invocation as made by the executor's own interpreter
-  and to record the Python version in the run manifest.
-- Changed the Freeze 02 draft record to name the two defect shapes declared in `known/known_violations.toml`
-  and to state that a `rediscovered` match is on direction, verdict, and target location, not on cause.
-- Changed the Freeze 02 draft record to separate the eight Protobom and two cdx2spdx `unsupported_pre_execution` routes.
+- Changed the Freeze 02 record before establishment to state that the first formal
+  execution of each route is the evidence of record and that no retry or resume
+  is implemented under the freeze.
+- Changed the Freeze 02 record before establishment to describe the evaluator
+  invocation as made by the executor's own interpreter and to record the Python
+  version in `generalization/results/run.json`.
+- Changed the Freeze 02 record before establishment to name the two defect shapes
+  declared in `known/known_violations.toml` and to state that a `rediscovered`
+  match is on direction, verdict, and target location, not on cause.
+- Changed the Freeze 02 record before establishment to separate the eight Protobom
+  and two cdx2spdx `unsupported_pre_execution` routes.
 - Changed `README.md` repository structure and Development guidance.
   It now forbids dependency upgrades and reruns of `run.ps1` once smoke preparation is complete.
-- Changed the Release Procedure in `CHANGELOG.md` to forbid rerunning `.\run.ps1` after smoke evidence exists.
+- Changed the Release Procedure in `CHANGELOG.md` to forbid rerunning
+  `.\run.ps1` after smoke evidence exists.
 
 ### Fixed
 
-- Fixed the 0.4.0 section headings in `CHANGELOG.md`.
-- Fixed the doubled parenthesis in the Documentation link in `README.md`.
-- Fixed the dangling conjunction in the Freeze 02 draft result classes.
+- Fixed the switch-count check in `freeze_03.ps1` to handle a single selected
+  switch under PowerShell strict mode.
 
 ---
 

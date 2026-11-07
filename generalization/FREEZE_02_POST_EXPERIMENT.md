@@ -182,7 +182,56 @@ See:
 - No preservation-violation verdicts currently require adjudication.
 - The Protobom execution failure remains a recorded outcome.
   No retry is authorized under Freeze 02.
-  Any rerun with a changed configuration requires a new freeze.
+  Any rerun with a changed configuration requires the
+  applicable freeze-break process.
+
+## Baseline Predictions
+
+The baseline predictions were recorded before execution in
+[PREDICTIONS.md](./PREDICTIONS.md).
+
+### B1
+
+Result: **Met on the one applicable completed evaluation.**
+
+The source occurrence without a content hash in `gen-spdx-e38ee905f9c0`
+was evaluated only on the Syft route, because the Protobom route failed.
+Its verdict was UNANCHORABLE,
+with the detail "source component has no usable content-hash anchor".
+B1 was met, for the reason the prediction gave.
+See:
+[Syft, gen-spdx-e38ee905f9c0](./results/gen-spdx-e38ee905f9c0/syft/evaluation.json)
+
+### B2
+
+Result: **The predicted zero was observed.**
+
+Met for its first sentence.
+No route reported VIOLATED_RELOCATED.
+No route reported any violation, so the prediction was not tested against a relocation.
+The second sentence is unevaluable:
+no VIOLATED_DROPPED occurred.
+
+### B3
+
+Result: **Unevaluable.**
+
+No confirmed CycloneDX-to-SPDX VIOLATED_DROPPED occurred.
+
+### L1 to L4
+
+Not yet run.
+See: [IDENTITYOPS_COMPARISON.md](../IDENTITYOPS_COMPARISON.md) and
+[generalization/PREDICTIONS.md](./PREDICTIONS.md)
+
+## UNANCHORABLE Reasons by Converter
+
+| Reason recorded by the frozen evaluator                    | cdx2spdx |      Syft | Protobom |     Total |
+| ---------------------------------------------------------- | -------: | --------: | -------: | --------: |
+| No target component shares a declared content-hash anchor  |        0 |     4,176 |        1 |     4,177 |
+| Content-hash anchors resolve to multiple target components |      189 |         0 |        0 |       189 |
+| Source component has no usable content-hash anchor         |       18 |        19 |        0 |        37 |
+| **Total**                                                  |  **207** | **4,195** |    **1** | **4,403** |
 
 ## Remaining Work
 
@@ -190,7 +239,294 @@ See:
   to explain the missing matches.
   Inspected so far: `gen-cyclonedx-0fc86e0249ef` and `gen-spdx-0d278129197b`.
   Not yet inspected: the other 7 Syft CycloneDX-to-SPDX routes and `gen-spdx-e38ee905f9c0`.
-- Tabulate the three UNANCHORABLE reasons by converter.
-- Compare the outcomes with the baseline predictions in `generalization/PREDICTIONS.md`.
+- Settle the open decisions in `IDENTITYOPS_COMPARISON.md` before any IdentityOps run.
 - Run `verify_06_freeze_02` and confirm Freeze 02 still verifies after the run.
 - Preserve the original verdicts and evidence during that analysis.
+
+---
+
+## Post Run Integrity Check
+
+Ran `uv run --frozen python -m preservation_test.generalization.verification.verify_06_freeze_02`
+and results are below.
+
+```text
+Freeze 02 verified: f932a5e93204cbe2d9179da50281168f972a43556b7936be24466dd5f64854fa
+```
+
+---
+
+## Post Run Counts (Output)
+
+Ran `post_run_counts.ps1` and recorded UNANCHORABLE count and fraction by route.
+
+```text
+evaluation.json files found: 19
+
+ROUTE gen-cyclonedx-001a52237a69--cdx2spdx
+  records: 201
+  PRESERVED: 201
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 0
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 0/201 = 0.0%
+
+ROUTE gen-cyclonedx-001a52237a69--syft
+  records: 201
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 201
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 201/201 = 100.0%
+  reason (201): no target component shares a declared content-hash anchor
+
+ROUTE gen-cyclonedx-0fc86e0249ef--cdx2spdx
+  records: 1115
+  PRESERVED: 926
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 189
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 189/1115 = 17.0%
+  reason (189): content-hash anchors resolve to multiple target components
+
+ROUTE gen-cyclonedx-0fc86e0249ef--syft
+  records: 1115
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 1115
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 1115/1115 = 100.0%
+  reason (1115): no target component shares a declared content-hash anchor
+
+ROUTE gen-cyclonedx-2e4891eb0992--cdx2spdx
+  records: 43
+  PRESERVED: 43
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 0
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 0/43 = 0.0%
+
+ROUTE gen-cyclonedx-2e4891eb0992--syft
+  records: 43
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 43
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 43/43 = 100.0%
+  reason (43): no target component shares a declared content-hash anchor
+
+ROUTE gen-cyclonedx-445136956fe1--cdx2spdx
+  records: 903
+  PRESERVED: 903
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 0
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 0/903 = 0.0%
+
+ROUTE gen-cyclonedx-445136956fe1--syft
+  records: 903
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 903
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 903/903 = 100.0%
+  reason (903): no target component shares a declared content-hash anchor
+
+ROUTE gen-cyclonedx-9179c4025ab4--cdx2spdx
+  records: 201
+  PRESERVED: 201
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 0
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 0/201 = 0.0%
+
+ROUTE gen-cyclonedx-9179c4025ab4--syft
+  records: 201
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 201
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 201/201 = 100.0%
+  reason (201): no target component shares a declared content-hash anchor
+
+ROUTE gen-cyclonedx-9dcf635da297--cdx2spdx
+  records: 3
+  PRESERVED: 3
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 0
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 0/3 = 0.0%
+
+ROUTE gen-cyclonedx-9dcf635da297--syft
+  records: 3
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 3
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 3/3 = 100.0%
+  reason (3): no target component shares a declared content-hash anchor
+
+ROUTE gen-cyclonedx-a2e17be40185--cdx2spdx
+  records: 883
+  PRESERVED: 865
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 18
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 18/883 = 2.0%
+  reason (18): source component has no usable content-hash anchor
+
+ROUTE gen-cyclonedx-a2e17be40185--syft
+  records: 883
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 883
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 883/883 = 100.0%
+  reason (865): no target component shares a declared content-hash anchor
+  reason (18): source component has no usable content-hash anchor
+
+ROUTE gen-cyclonedx-f1c2f23c4645--cdx2spdx
+  records: 840
+  PRESERVED: 840
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 0
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 0/840 = 0.0%
+
+ROUTE gen-cyclonedx-f1c2f23c4645--syft
+  records: 840
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 840
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 840/840 = 100.0%
+  reason (840): no target component shares a declared content-hash anchor
+
+ROUTE gen-spdx-0d278129197b--protobom
+  records: 2
+  PRESERVED: 1
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 1
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 1/2 = 50.0%
+  reason (1): no target component shares a declared content-hash anchor
+  record: SPDXRef-Package | UNANCHORABLE | pkg:github/spdx/tools-java@2235d5d7f7fe46ce1e0d54b7831c5681633b25cc | no target component shares a declared content-hash anchor
+  record: SPDXRef-xlsx | PRESERVED | pkg:maven/org.webjars.npm/xlsx@0.16.6 |
+
+ROUTE gen-spdx-0d278129197b--syft
+  records: 2
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 2
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 2/2 = 100.0%
+  reason (2): no target component shares a declared content-hash anchor
+  record: SPDXRef-Package | UNANCHORABLE | pkg:github/spdx/tools-java@2235d5d7f7fe46ce1e0d54b7831c5681633b25cc | no target component shares a declared content-hash anchor
+  record: SPDXRef-xlsx | UNANCHORABLE | pkg:maven/org.webjars.npm/xlsx@0.16.6 | no target component shares a declared content-hash anchor
+
+ROUTE gen-spdx-e38ee905f9c0--syft
+  records: 4
+  PRESERVED: 0
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 4
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+  UNANCHORABLE fraction: 4/4 = 100.0%
+  reason (3): no target component shares a declared content-hash anchor
+  reason (1): source component has no usable content-hash anchor
+  record: SPDXRef-Package-hello-server-src | UNANCHORABLE | pkg:deb/debian/libselinux1-dev@3.1-3?arch=s390x | source component has no usable content-hash anchor
+  record: SPDXRef-Package-SPDXRef-Package-cargo-hyper-0.14 | UNANCHORABLE | pkg:cargo/hyper@0.14 | no target component shares a declared content-hash anchor
+  record: SPDXRef-Package-SPDXRef-Package-cargo-tokio-1 | UNANCHORABLE | pkg:cargo/tokio@1.19.2 | no target component shares a declared content-hash anchor
+  record: SPDXRef-Package-SPDXRef-Package-cargo-pretty-env-logger-0.4.0 | UNANCHORABLE | pkg:cargo/pretty_env_logger@0.4.0 | no target component shares a declared content-hash anchor
+
+BY CONVERTER
+  cdx2spdx: records=4189 PRESERVED=3982 VIOLATED_DROPPED=0 VIOLATED_RELOCATED=0 VIOLATED_ALTERED=0 UNSUPPORTED=0 UNANCHORABLE=207 NOT_APPLICABLE=0 UNDERDETERMINED=0
+  protobom: records=2 PRESERVED=1 VIOLATED_DROPPED=0 VIOLATED_RELOCATED=0 VIOLATED_ALTERED=0 UNSUPPORTED=0 UNANCHORABLE=1 NOT_APPLICABLE=0 UNDERDETERMINED=0
+  syft: records=4195 PRESERVED=0 VIOLATED_DROPPED=0 VIOLATED_RELOCATED=0 VIOLATED_ALTERED=0 UNSUPPORTED=0 UNANCHORABLE=4195 NOT_APPLICABLE=0 UNDERDETERMINED=0
+
+OVERALL
+  records: 8386
+  PRESERVED: 3983
+  VIOLATED_DROPPED: 0
+  VIOLATED_RELOCATED: 0
+  VIOLATED_ALTERED: 0
+  UNSUPPORTED: 0
+  UNANCHORABLE: 4403
+  NOT_APPLICABLE: 0
+  UNDERDETERMINED: 0
+```

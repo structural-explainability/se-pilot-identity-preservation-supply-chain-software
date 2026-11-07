@@ -2,9 +2,9 @@
 
 <#
 ============================================================
-sit.ps1 (CUSTOM-FREEZE-ALL-PY-SRC-REPOS)
+sit.ps1 (CUSTOM-GET-SITUATED as the EXPERIMENT ADVANCES)
 ============================================================
-Updated: 2026-09-25
+Updated: 2026-11-07
 
 Situate the locked project environment, lint, test, and build docs.
 For Python tooling repos only.
@@ -37,6 +37,15 @@ if ($LASTEXITCODE -ne 0) {
 uv sync --locked
 if ($LASTEXITCODE -ne 0) {
     throw "Locked environment synchronization failed."
+}
+
+# CUSTOM: The Freeze 03 kernel comparison declares its dependency in
+# comparison/run_l4.py.
+# Install that declaration into the project environment
+# so VS Code and the repository ty check resolve the same pinned kernel.
+uv pip install --python .\.venv\Scripts\python.exe -r .\comparison\run_l4.py
+if ($LASTEXITCODE -ne 0) {
+    throw "Comparison dependency setup failed."
 }
 
 # ============================================================
@@ -136,18 +145,15 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # ============================================================
-# Verify the pre FREEZE 02 apparatus.
+# Complete the Pre-Freeze-03 checks.
 # ============================================================
 
-uv run --frozen python -m preservation_test.generalization.smoke_generalization --verify
-if ($LASTEXITCODE -ne 0) {
-    throw "Pre-Freeze-02 smoke evidence verification failed."
-}
-
-uv run --frozen python -m preservation_test.generalization.verification.verify_05_freeze_02
-if ($LASTEXITCODE -ne 0) {
-    throw "Freeze 02 prerequisite verification failed."
-}
+# CUSTOM: The kernel dependency was installed after uv sync above.
+# Repository-wide Ruff and ty checks above include comparison/.
+# The Freeze 03 check runs both comparison self-tests and verifies
+# the freeze prerequisites, including Freeze 02 integrity.
+# It does not establish Freeze 03.
+.\freeze_03.ps1 -Check
 
 Write-Host ""
 Write-Host "All required checks passed. Review any warnings above."
