@@ -153,7 +153,12 @@ if ($LASTEXITCODE -ne 0) {
 # The Freeze 03 check runs both comparison self-tests and verifies
 # the freeze prerequisites, including Freeze 02 integrity.
 # It does not establish Freeze 03.
-.\freeze_03.ps1 -Check
+if (Test-Path -LiteralPath "contracts/FREEZE_03_KERNEL_MISSING_VALUES.md") {
+    .\freeze_03.ps1 -Verify
+}
+else {
+    .\freeze_03.ps1 -Check
+}
 
 Write-Host ""
 Write-Host "All required checks passed. Review any warnings above."
