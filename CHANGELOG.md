@@ -13,6 +13,22 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ### Added
 
+- Established Freeze 03 in `contracts/FREEZE_03_KERNEL_MISSING_VALUES.md`,
+  recording the kernel comparison apparatus, pinned inputs, and pre-freeze
+  preparation chronology.
+- Added formal Freeze 03 prepared input at `comparison/prepared/freeze_02.json`
+  and kernel results at `comparison/results/l4/run.json`.
+  All 19 completed baseline routes were evaluated under DISTINCT and SHARED.
+- Added `comparison/REPORT_L4.md` documenting zero direct agreement changes,
+  zero changes in generated observed-value identifications, and an unchanged
+  observed-value control on all 19 evaluated routes.
+  The two-missing prediction was unevaluable on every route because no
+  eligible source occurrence had a missing canonical PURL.
+- Added `comparison/freeze_04_operation_mapping.md` documenting the selected
+  per-algorithm regime encoding, language and Python responsibilities,
+  designated evidence paths, and the explicitness comparison.
+  Freeze 04 remains a planned study using IdentityOps v0.1.0 without a
+  language extension.
 - Added `post_run_counts.ps1`, a read-only count of evaluator verdicts and UNANCHORABLE reasons by route.
 - Added comparison design documentation distinguishing the Freeze 03 kernel
   missing-value comparison from the planned Freeze 04 IdentityOps comparison.
@@ -42,6 +58,13 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ### Changed
 
+- Changed `sit.ps1` to install the comparison dependency from the runner's
+  inline metadata and select Freeze 03 prerequisite checks or integrity
+  verification according to whether the freeze record exists.
+- Changed `prek.toml` to exempt exactly `comparison/prepared/freeze_02.json`
+  and `comparison/results/l4/run.json` from the 2 MB added-file limit,
+  permitting preservation of the formal evidence while retaining the limit
+  for other files.
 - Changed the Freeze 02 record before establishment to state that the first formal
   execution of each route is the evidence of record and that no retry or resume
   is implemented under the freeze.
