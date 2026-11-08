@@ -21,6 +21,14 @@ for the correspondence operations in the mapping?
 The study compares two implementations of one rule.
 It does not test whether either policy is correct.
 
+This study does not evaluate hypotheses L1–L3 recorded in
+`generalization/PREDICTIONS.md`.
+Those hypotheses concern canonical-PURL agreement,
+relocation probes, and evidence accounting.
+Freeze 04 instead evaluates the correspondence
+operations and implementation boundaries specified here.
+No conclusions about L1-L3 are drawn from this comparison.
+
 ## Pinned Inputs
 
 - Baseline evidence commit: `e1befa159faff965b32a47975ac355bb6a9ccb18`
